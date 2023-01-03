@@ -9,3 +9,20 @@ const n1 = prompt('Digite um numero');
 const n2 = prompt('Digite um numero');
 const total = parseFloat(n1) + parseFloat (n2);
 alert('O resultado da operação é' + ' ' + total);*/
+
+/*Aponte para as letras selecionadas*
+A = b 
+B = c 
+C = a */
+
+let varA = 'A';
+let varB = 'B';
+let varC = 'C';
+
+let A = varB;
+let B = varC;
+let C = varA;
+
+console.log(`A= ${A}, B= ${B}, C= ${C}`);
+
+
