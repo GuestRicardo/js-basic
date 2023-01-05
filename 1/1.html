@@ -76,14 +76,41 @@
         <h1>STRINGS</h1>
         <p>Varias formas de usar uma string</p>
 
-        <p style="color: blue; font-size: large;">
-            1- para usar "" em um texto sem dar erro. <br>
+        <p style="color: ; font-size: large;">
+            <strong style="color: yellowgreen;">1</strong> - para usar "" em um texto sem dar erro. <br>
             let umaString = "um \"Texto"\ aq continua normal" <br> <br>
 
-            2- mapeando strings por indices, todas as variaveis tem indices. <br>
+            <strong style="color: yellowgreen;">2</strong> - mapeando strings por indices, todas as variaveis tem indices. <br>
             ---------------------01234567<br>
             let umaString = "um Texto" <br><br>
-            console.log(umaString[4]) = o resultado vai ser a letra na posição 4 q é a letra <span style="color: brown;">E</span>
+            console.log(umaString[4]) = o resultado vai ser a letra na posição 4 q é a letra <span
+                style="color: brown;">E</span> <br> <br>
+
+            <strong style="color: yellowgreen;">3</strong> -Para capturar um elemento dentro da <strong style="color: red;">String</strong> é usado
+            o charAt() <br>
+            exemplo: <br>
+            console.log(umaString.charAt(6)) = o resultado é igual a do exemplo anterior, aq esta sendo pegado na
+            posição 6 q é a letra <span style="color: brown;">T</span> <br> <br>
+
+            <strong style="color: yellowgreen;">4</strong> - em caso de fazer uma conacatenação com o sinal de <strong
+                style="color: red;">+</strong> pode tambem se
+            usar o concat() <br> <br>
+            exemplo: <br>
+            console.log(umaString.concat(' ', 'em', ' ', 'novo',' ','lindo',' ', 'dia')); = Observação o a concatenação
+            mais usada é o template string.. <br> <br>
+
+            <strong style="color: yellowgreen;">5</strong> - pesquisando por um indice é usado o indexOf(), exemplo a sera exibido o indice q a
+            palavra começa<br>
+            exemplo: <br>
+            console.log(umaString.indexOf('texto')) = sera exibido o indice q a palavra começa, q no caso seria o
+            <strong style="color: red;">3</strong> <br>
+            <strong style="color: yellow;"> Observação se caso a palavra q esteja buscando nao tenha na string sera
+                exibido -1, como sinal de inexistencia</strong> <br>
+            E se caso queira fazer uma busca pós o indice q queira: <br>
+            exemplo: <br> <br>
+            console.log(umaString.indexOf('o', 3')) = aq no caso, ira começar a verificação da string apos o indice 3, e
+            sera exibido o valor <strong>7</strong> pois a letra esta na setima posição
+
         </p>
         <script src="aulas.js"></script>
 </body>
