@@ -72,21 +72,24 @@
 
     </div>
     <br>
-    <div style="margin-left: 25px;">
-        <h1>STRINGS</h1>
-        <p>Varias formas de usar uma string</p>
 
-        <p style="color: ; font-size: medium;">
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71)">
+        
+        <h1 style="text-align: center">STRINGS</h1>
+        <p style="color: white ; font-size: medium; margin-left: 25px; ">
+            Varias formas de usar uma string
             <strong style="color: yellowgreen;">1</strong> - para usar "" em um texto sem dar erro. <br>
             let umaString = "um \"Texto"\ aq continua normal" <br> <br>
 
-            <strong style="color: yellowgreen;">2</strong> - mapeando strings por indices, todas as variaveis tem indices. <br>
+            <strong style="color: yellowgreen;">2</strong> - mapeando strings por indices, todas as variaveis tem
+            indices. <br>
             ---------------------01234567<br>
             let umaString = "um Texto" <br><br>
             console.log(umaString[4]) = <br> o resultado vai ser a letra na posição 4 q é a letra <span
                 style="color: brown;">E</span> <br> <br>
 
-            <strong style="color: yellowgreen;">3</strong> -Para capturar um elemento dentro da <strong style="color: red;">String</strong> é usado
+            <strong style="color: yellowgreen;">3</strong> -Para capturar um elemento dentro da <strong
+                style="color: red;">String</strong> é usado
             o charAt() <br>
             exemplo: <br>
             console.log(umaString.charAt(6)) = <br> o resultado é igual a do exemplo anterior, aq esta sendo pegado na
@@ -96,10 +99,12 @@
                 style="color: red;">+</strong> pode tambem se
             usar o concat() <br> <br>
             exemplo: <br>
-            console.log(umaString.concat(' ', 'em', ' ', 'novo',' ','lindo',' ', 'dia')); <br> = Observação o a concatenação
+            console.log(umaString.concat(' ', 'em', ' ', 'novo',' ','lindo',' ', 'dia')); <br> = Observação o a
+            concatenação
             mais usada é o template string.. <br> <br>
 
-            <strong style="color: yellowgreen;">5</strong> - pesquisando por um indice é usado o <strong style="color: red;">indexOf()</strong> , exemplo a sera exibido o indice q a
+            <strong style="color: yellowgreen;">5</strong> - pesquisando por um indice é usado o <strong
+                style="color: red;">indexOf()</strong> , exemplo a sera exibido o indice q a
             palavra começa<br>
             exemplo: <br>
             console.log(umaString.indexOf('texto')) = <br> sera exibido o indice q a palavra começa, q no caso seria o
@@ -108,14 +113,24 @@
                 exibido -1, como sinal de inexistencia</strong> <br>
             E se caso queira fazer uma busca pós o indice q queira: <br>
             exemplo: <br> <br>
-            console.log(umaString.indexOf('o', 3')) <br> = aq no caso, ira começar a verificação da string apos o indice 3, e
+            console.log(umaString.indexOf('o', 3')) <br> = aq no caso, ira começar a verificação da string apos o indice
+            3, e
             sera exibido o valor <strong>7</strong> pois a letra esta na setima posição. <br>
-            Tabem tem como fazer essa busca de forma invertida, "de tras para frente: com o <strong style="color: red;">lastIndexOf()</strong> <br>
+            Tabem tem como fazer essa busca de forma invertida, "de tras para frente: com o <strong
+                style="color: red;">lastIndexOf()</strong> <br>
             exemplo: <br>
             console.log(umaString lastIndexOf('o', 3)) = <br>
-            neste exemplo ira exibir <strong style="color: red;"> -1</strong>, pois nao existe o apartir da posição 3, pois ele vai começar a busca começando pelo 3 ate a posição 0
-
+            neste exemplo ira exibir <strong style="color: red;"> -1</strong>, pois nao existe o apartir da posição 3,
+            pois ele vai começar a busca começando pelo 3 ate a posição 0 <br> <br>
+            <strong style="color: yellowgreen;">6</strong>- para trocar um caractere da string sem editar diretamente na
+            variavel <br>
+            exemplo: <br>
+            console.log(umaString.replace(/u/, '#')); = <br>
+            aq a esta sendo substituido a primeira letra <strong style="color: red;"> u</strong> <br>
+            console.log(umaString.replace(/u/g, '#')); = <br>
+            se usar a letra g pos a letra q deseja substituir, sera substituido todas as letras selecionadas
         </p>
+
         <script src="aulas.js"></script>
 </body>
 
