@@ -37,46 +37,52 @@
                     de outra. </strong></span>
         </p>
     </div>
-    <div>
-        <h2>CONST</h2>
-        <p>`e um tipo de variavel q nao pode modificar o valor de uma constante, exemplo declarar e depois inicializar,
-            diferente da let q aceita declarar e depois inicializala em locais diferentes.
-            <h2 style="color: blueviolet;">declarando e inicializando</h2>
-            const nome = 'Maria Jose dos Santos'<span style="color: yellow;"> //a constante aceita somente desta forma,
-                ela sempre é preciso fazer dessa forma</span>
-            <br> <br>
-            <span style="text-align: center; color: brown;"> <strong> nunca redeclarar uma constante com o mesmo nome ou
-                    retribuir a variavel.
-                    de outra. </strong></span>
-            <strong>Observação:</strong> <br>
-            <span style="text-align: center; color: brown;"> <strong> interessante usar oi const para operações
-                    aritimeticas.
-                    de outra. </strong></span>
-        </p>
-    </div>
-    <div>
-        <h1>Diferenças</h1>
-        se tu criar uma variavel com nome,
-    </div>
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger; ">
+        <div style="margin-left: 25px;">
+            <h2 style="text-align: center;">CONST</h2>
+            <p>`e um tipo de variavel q nao pode modificar o valor de uma constante, exemplo declarar e depois
+                inicializar,
+                diferente da let q aceita declarar e depois inicializala em locais diferentes.
+                <h2 style="color: blueviolet;">declarando e inicializando</h2>
+                const nome = 'Maria Jose dos Santos'<span style="color: yellow;"> //a constante aceita somente desta
+                    forma,
+                    ela sempre é preciso fazer dessa forma</span>
+                <br> <br>
+                <span style="text-align: center; color: brown;"> <strong> nunca redeclarar uma constante com o mesmo
+                        nome ou
+                        retribuir a variavel.
+                        de outra. </strong></span>
+                <strong>Observação:</strong> <br>
+                <span style="text-align: center; color: brown;"> <strong> interessante usar oi const para operações
+                        aritimeticas.
+                        de outra. </strong></span>
+            </p>
+
+            <div>
+                <h1>Diferenças</h1>
+                se tu criar uma variavel com nome,
+            </div>
 
 
-    <div style="color: rgb(253, 253, 163);">
-        <h1>Exercicio</h1>
-        <h3>Calculando o IMC</h3>
-        <p>
-            const peso = 82; <br>
-            const altura = 1.77; <br>
-            imc = peso / (altura * altura);
-            console.log(imc);
-        </p>
+            <div style="color: rgb(253, 253, 163);">
+                <h1>Exercicio</h1>
+                <h3>Calculando o IMC</h3>
+                <p>
+                    const peso = 82; <br>
+                    const altura = 1.77; <br>
+                    imc = peso / (altura * altura);
+                    console.log(imc);
+                </p>
 
+            </div>
+        </div>
     </div>
     <br>
 
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71)">
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger;">
 
         <h1 style="text-align: center">STRINGS</h1>
-        <p style="color: white ; font-size: medium; margin-left: 25px; ">
+        <p style="color: white ; font-size: larger; margin-left: 25px; ">
             Varias formas de usar uma string
             <strong style="color: yellowgreen;">1</strong> - para usar "" em um texto sem dar erro. <br>
             let umaString = "um \"Texto"\ aq continua normal" <br> <br>
@@ -134,7 +140,7 @@
             exemplo: <br>
             console.log(umaString.length); = <br>
             aq sera exibido o valor total de elementos. q é <strong style="color: red;">7</strong> <br> <br>
-            <strong style="color: yellowgreen;">7</strong>- para pegar uma palavra dentro da string(fatiar a string) é
+            <strong style="color: yellowgreen;">8</strong>- para pegar uma palavra dentro da string(fatiar a string) é
             so usar <strong style="color: red;">slice()</strong>, para isso é preciso passa do indice q comeca a palavra
             ate o indice q termina <br>
             exemplo: <br>
@@ -145,6 +151,14 @@
             console.log(umaString.substring(umaString.length -5)) = <br>
             so q aq esta sendo pegado do fim para o inicio. <br>
             <span style="color: yellow;">o recomendado é q utilize o slice</span>
+            <br><br>
+            <strong style="color: yellowgreen;">9</strong> -se caso queira separar uma string, por caracteres em um
+            array, é so usar <strong style="color: red;">split</strong> <br>
+            exemplo: <br>
+            console.log(umaString.split(' '))= neste exemplo esta sendo separado por indices de arrays todos lugares q
+            tem o espaço como modo de divisao da plavra, sera retirado o item q esta sendo marcado pelo split <br>
+            <br> Tabem é possivel delimitar os resultados, q sera exibido, exemplo:
+            <br>  console.log(umaString.split(' ', 2)) = nesse exemplo mostra 2 resultados sendo retirado somente 2 espaços
         </p>
 
         <script src="aulas.js"></script>
