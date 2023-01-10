@@ -13,7 +13,7 @@
     <h1>Revisão JS</h1>
     <div>
         <p>Este arquivo foi feito, para armazenamento de minha revisão em js</p>
-        <p style="font-size: larger;"><strong>1* Variaveis</strong> o js aceita varios tipos de variaveis, segue abaixo
+        <p style="font-size: medium;"><strong>1* Variaveis</strong> o js aceita varios tipos de variaveis, segue abaixo
             os 2
             mais usados </p>
         <p>var = é uma forma mais antiga, ja esta fora de uso <br>
@@ -37,7 +37,7 @@
                     de outra. </strong></span>
         </p>
     </div>
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger; ">
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
         <div style="margin-left: 25px;">
             <h2 style="text-align: center;">CONST</h2>
             <p>`e um tipo de variavel q nao pode modificar o valor de uma constante, exemplo declarar e depois
@@ -79,7 +79,7 @@
     </div>
     <br>
 
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger;">
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium;">
 
         <h1 style="text-align: center">STRINGS</h1>
         <p style="color: white ; font-size: larger; margin-left: 25px; ">
@@ -163,18 +163,36 @@
             <br> <br>
             <strong style="color: yellowgreen;">10</strong> -para exibir tudo em maiusculo é usado o <strong
                 style="color: red;">toUpperCase()</strong> ou minuscula <strong
-                style="color: red;">toLowerCase()</strong>  <br>
+                style="color: red;">toLowerCase()</strong> <br>
             exemplo:
             <br> console.log(umaString.toUpperCase()) = todas as letras estao em maiusculo<br>
             <br> console.log(umaString.toLowerCase()) = todas as letras estao em minusculas<br>
-            <p style="text-align: center;"> <a href="/js-basic/1/exercicio1.html"> Exercicio</a></p>
-        </div>
-        </p>
-        <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger;">
+            <p style="text-align: center;"> <strong style="font-size: larger;"><a href="/js-basic/1/exercicio1.html"> Exercicio</a></strong></p>
+    </div>
+    </p>
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger;">
+        <div style="margin-left: 25px;">
         <h1 style="text-align: center;">Numbers</h1>
-        </div>
+        <p> <strong style="color: yellowgreen;">1</strong>- Arredondando valores, nesse caso pode se usar o <span
+                style="color: brown;">toFixed(quantas casas decimais deseja exibir)</span> <br>
+            exemplo: <br>
+            console.log(n1.toFixed(2)); = sera exibido 2 casas decimais pos virgula <br>
+        </p>
+        <p> <strong style="color: yellowgreen;">2</strong> -para saber se o numero retornado é um numero inteiro,
+            exemplo se estiver recebendo um valor, de uma base de dados, e nao sabe qual o tipo do numero, usa-se <span
+                style="color: brown;">Number.isInteger(variavel)</span> e será retornado um valor verdadeiro ou falso
+            <br>
+            exemplo: <br>
+            console.log(Number.isInteger(num1)) = aq sera retornado true, pois o numero é um numero inteiro. <br>
+            <br> Quando der o erro <span style="color: yellow;">NaN</span>, caso de erro strig no lugar de number é so
+            usar o <span style="color: brown;">Number.isNaN(variavel)</span><br>
+            exemplo: <br>
+            console.log(Number.isNaN(num1));
+        </p>
+    </div>
+    </div>
 
-        <script src="aulas.js"></script>
+    <script src="aulas.js"></script>
 </body>
 
 </html>
