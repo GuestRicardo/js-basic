@@ -35,21 +35,32 @@
                 } <br>
                 saudacao('Ricardo') <br>
                 <br>
-                <span style="color: bisque;"> nesse exemplo nao esta sendo retornado nada, para q ela tenha algum retorno ela precisa ser
+                <span style="color: bisque;"> nesse exemplo nao esta sendo retornado nada, para q ela tenha algum
+                    retorno ela precisa ser
                     armazenada
                     em alguma variavel. </span><br>
                 <span style="color: aquamarine;"> Exemplo:</span><br> <br>
                 function saudacao(nome){ <br>
-                console.log(`Bom dia ${nome}!`);<br>
-                return pronto;
+                return `Bom dia ${nome}!`;<br>
                 } <br>
                 const qualquervariavel = saudacao('Ricardo') <br>
-                console.log(qualquervariavel)<br>
+                console.log(qualquervariavel)<br> <br>
+                <span style="color: bisque;"> A variavel esta recebendo o q a função enviou</span><br>
             </p>
         </div>
     </div>
     <br>
-
+    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: large; ">
+        <h1 style="text-align: center;">Arrow function</h1>
+        <div style="margin: 25px;">
+            <p>É uma forma abreviada de apresentar uma função, deixando ela em uma so linha</p>
+            exemplo:
+            <p style="color: yellowgreen;">
+                const raiz = n => n ** 0.5; <br>
+                console.log (raiz(9));<br>
+            </p>
+        </div>
+    </div>
     <script src="aulas.js"></script>
 </body>
 
