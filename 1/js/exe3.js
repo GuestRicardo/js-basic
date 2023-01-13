@@ -4,8 +4,8 @@
 
 function meuEscopo() {
     const form = document.querySelector(".form"); //selecionando classe usa- se .
-    const resultado = document.querySelector('#resultado');
-    const pessoas = [];
+    const resultado = document.querySelector('#resultado'); //onde sera exibido os resultados
+    const pessoas = []; //para receber o objeto
 
     //***********função para enviar os elementos pegos no form
     function recebeEventoForm(evento) {
