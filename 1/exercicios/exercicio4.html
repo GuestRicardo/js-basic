@@ -12,15 +12,31 @@
     <section>
         <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
             <div style="margin: 25px;">
-                <h1>Resulmo das primeiras 35 aulas</h1>
-                <form class="form">
-                    Nome: <input type="text" name="" id="nome"> <br> <br>
-                    Sobrenome: <input type="text" name="" id="sobrenome"> <br> <br>
-                    Peso: <input type="number" name="" id="peso"> <br> <br>
-                    Altura: <input type="number" name="" id="altura"> <br> <br>
-                    <button class="">Enviar</button>
-                </form>
-                <div id="resultado"></div>
+                <h1>Teste Curto Circuito</h1>
+                <p>Em js tudo pode ser verificado "Avaliado". </p>
+                <p>em js o valor false literalmente é false, sendo avaliado de cara como false é o unico literal, tambem
+                    existe outros valores q sao retornado como false, so q tem as condições <br>
+                    <br>Esses sao considerados os valores FALSYS. <br>
+                    <span style="color: yellow; font-size: larger;"> 0, string vazia ' ', null, undefined, NaN </span>
+                    <br>
+                    <span style="color: rgb(66, 66, 184); font-size: larger;"> Qualquer coisa fora dessa regra é
+                        avaliada como True </span> <br>
+                </p>
+                <p>Exemplo:
+                    <br> console.log('jose' && 'Maria'); <span style="color: red;">true pois os 2 sao strings cheias,
+                        sendo q sera retornadpo maria por ser o ultimo resultado</span>
+                    <br> console.log('jose' && ' ' && 'Maria'); <span style="color: red;">false pois o and, sempre
+                        quando encontra um valor false ele encerra a busca, sendo retornado o ' '</span>
+                </p>
+                <p>Exemplo de curto Circuito: <br>
+                    <br> function falaoi (){
+                        <br> return 'OI';
+                    } <br>
+                    const vaiexecutar = false;
+                    <br>console.log(vaiexecutar && falaoi()); <br>
+                    <span style="color: brown">o resultado sera false, pois o and sempre busca o valor false, e sera exibido</span>
+                </p>
+
             </div>
         </div>
     </section>
