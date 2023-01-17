@@ -28,15 +28,32 @@
                     <br> console.log('jose' && ' ' && 'Maria'); <span style="color: red;">false pois o and, sempre
                         quando encontra um valor false ele encerra a busca, sendo retornado o ' '</span>
                 </p>
-                <p>Exemplo de curto Circuito: <br>
-                    <br> function falaoi (){
+                <div style="border:solid 5px; border-color: red; padding: 10px;">
+                    <h2>&& "and"</h2>
+                    <p>Exemplo de curto Circuito: <br>
+                        <br> function falaoi (){
                         <br> return 'OI';
-                    } <br>
-                    const vaiexecutar = false;
-                    <br>console.log(vaiexecutar && falaoi()); <br>
-                    <span style="color: brown">o resultado sera false, pois o and sempre busca o valor false, e sera exibido</span>
-                </p>
+                        } <br>
+                        const vaiexecutar = false;
+                        <br>console.log(vaiexecutar && falaoi()); <br>
+                        <span style="color: brown">o resultado sera false, pois o and sempre busca o valor false, e sera
+                            exibido</span>
+                    </p> <br>
+                    <h2>or "||"</h2>
+                    <p>
+                        Agora sera apresentado com exemplo do or, ja q o mais usado, pois ele retorna qualquer resultado
+                        verdadeiro, q estiver fora das exeções do and. observação, ele precisa somente de uma expressao
+                        verdadeira, para q retorne true ou o valor da variavel <br>
+                        exemplo: <br> <br>
+                        const corusuario = null; <br>
+                        const corpadrao = corusuario || 'preto'; <br>
+                        <br>
+                        <span style="color: brown">o resultado sera true, pois o segundo valor pois e uma string, e
+                            retornara preto, pois a regra do or, se tiver uma variavel true, ja sera mostrada como
+                            resultado</span>
 
+                    </p>
+                </div>
             </div>
         </div>
     </section>
