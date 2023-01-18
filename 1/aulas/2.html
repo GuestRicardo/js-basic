@@ -5,79 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <!--Introdução-->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
+    <div class="container">
         <h1 style="text-align: center;">Funções primitivas</h1>
-        <div style="margin-left: 25px;">
-            <h2>Segue abaixo algumas funções interna do js</h2>
+        <h2>Segue abaixo algumas funções interna do js</h2>
+        <p>typeof()= pega o tipo da variavel </p>
+        <h1>caixas de aviso</h1>
+        <p>Estas funções ou metodos, pois estao dentro do objeto window, O navegador é o responsavel pelas janelas
+            de
+            exibições.</p>
+        <p>alert = serve para alertar <br>
+            <span style="color: brown;">alert('essa mensagem de alerta')</span>
+        </p>
+        <p>confirm = nesta opção vai exibir 2 botoes, ela é uma função booleana<br>
+            <span style="color: brown;">confirm('deseja continuar?')</span>
+        </p>
+        <p>prompt = nesta opção sera possivel digitar alguma mensagem<br>
+            <span style="color: brown;">prompt('Digite o seu nome')</span>
+        </p>
+        <h1>Exercicio</h1>
+        <p style="color: brown;">
+            /**usando janelas de prompt */ <br> <br>
+            const n1 = prompt('Digite um numero'); <br>
+            const n2 = prompt('Digite um numero'); <br>
+            const total = parseFloat(n1) + parseFloat (n2); <br>
+            alert('O resultado da operação é' + ' ' + total);
+        </p>
+        <p>
+            <span style="color: green;">/*Aponte para as letras selecionadas*/ <br>
+                A = b <br>
+                B = c <br>
+                C = a <br>
+                <br></span>
+            <span style="color: blue;">
+                Resultado: <br>
+                let varA = 'A'; <br>
+                let varB = 'B'; <br>
+                let varC = 'C'; <br>
+                <br>
+                let A = varB; <br>
+                let B = varC; <br>
+                let C = varA; <br>
 
-            <p>typeof()= pega o tipo da variavel </p>
-
-            <h1>caixas de aviso</h1>
-            <p>Estas funções ou metodos, pois estao dentro do objeto window, O navegador é o responsavel pelas janelas
-                de
-                exibições.</p>
-            <p>alert = serve para alertar <br>
-                <span style="color: brown;">alert('essa mensagem de alerta')</span>
-            </p>
-            <p>confirm = nesta opção vai exibir 2 botoes, ela é uma função booleana<br>
-                <span style="color: brown;">confirm('deseja continuar?')</span>
-            </p>
-            <p>prompt = nesta opção sera possivel digitar alguma mensagem<br>
-                <span style="color: brown;">prompt('Digite o seu nome')</span>
-            </p>
-            <h1>Exercicio</h1>
-            <p style="color: brown;">
-                /**usando janelas de prompt */ <br> <br>
-                const n1 = prompt('Digite um numero'); <br>
-                const n2 = prompt('Digite um numero'); <br>
-                const total = parseFloat(n1) + parseFloat (n2); <br>
-                alert('O resultado da operação é' + ' ' + total);
-            </p>
-            <p>
-                <span style="color: green;">/*Aponte para as letras selecionadas*/ <br>
-                    A = b <br>
-                    B = c <br>
-                    C = a <br>
-                    <br></span>
-                <span style="color: blue;">
-                    Resultado: <br>
-                    let varA = 'A'; <br>
-                    let varB = 'B'; <br>
-                    let varC = 'C'; <br>
-                    <br>
-                    let A = varB; <br>
-                    let B = varC; <br>
-                    let C = varA; <br>
-
-                    console.log(`A= ${A}, B= ${B}, C= ${C}`); <br> <br> </span>
-                <span style="color: red;">
-                    segunda forma de resolver, usando arrays <br> <br>
-                    [varA, varB, varC] = [varB, varC, varA]; <br> <br>
-                    console.log(`A= ${varA}, B= ${varB}, C= ${varC}`); <br></span>
-            </p>
-        </div>
-    </div> <br>
+                console.log(`A= ${A}, B= ${B}, C= ${C}`); <br> <br> </span>
+            <span style="color: red;">
+                segunda forma de resolver, usando arrays <br> <br>
+                [varA, varB, varC] = [varB, varC, varA]; <br> <br>
+                console.log(`A= ${varA}, B= ${varB}, C= ${varC}`); <br></span>
+        </p>
+    </div>
     <!--Diferenças de tipo de dados primitivos e valores por referencia-->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
+    <div class="container">
         <h1 style="text-align: center; margin: 5px;">Diferenças de dados primitivos e dados por referencia</h1>
-        <div style="margin: 25px;">
-            <p>Quando é citado tipos de dados, esta sendo citados valores em si. A diferença é que 
+        
+            <p>Quando é citado tipos de dados, esta sendo citados valores em si. A diferença é que
                 o primitivo é copiado, e referencia é apontado</p>
             <p style="color: yellow;">TIPOS DE DADOS PRIMITIVOS(Valores imutaveis) = string, number, boolean, undefined,
                 null, bigint, sybol</p>
             <p style="color: brown;">TIPOS DE DADOS POR REFERENCIA = arrays, Objetos, funções </p>
-        </div>
-    </div> <br>
+       
+    </div>
     <!--Objeto Math-->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
+    <div class="container">
         <h1 style="text-align: center;">Math</h1>
-        <p style="margin-left: 25px;">É um objeto relacionado a matematica, ele aceita vairas funções aq especificarei
+        <p>É um objeto relacionado a matematica, ele aceita vairas funções aq especificarei
             somente as mais populares <br>
             <br>
             let num1 = 9.5465416 <br>
@@ -88,7 +84,7 @@
             <strong style="color: red;">Arredondado automaticamente para o numero mais proximo</strong> <br>
             let arredondando = Math.round(num1); <br>
         </p>
-        <p style="margin-left: 25px;"> <strong style="color: aqua; font-size: larger;">Para pegar o maior numero em
+        <p> <strong style="color: aqua; font-size: larger;">Para pegar o maior numero em
                 varios
                 numeros:</strong> <br>
             console.log(Math.max(1,5,466,525,24,88,4)); <span style="color: yellow;">aq sera exibido 525</span> <br>
@@ -112,7 +108,7 @@
                         Exercicio</a></strong></p>
         </p>
     </div>
-    <script src="aulas.js"></script>
+    <script src="#"></script>
 </body>
 
 </html>
