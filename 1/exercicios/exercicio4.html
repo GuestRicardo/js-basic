@@ -6,58 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio das ultimas 35 aulas</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <section>
-        <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
-            <div style="margin: 25px;">
-                <h1>Teste Curto Circuito</h1>
-                <p>Em js tudo pode ser verificado "Avaliado". </p>
-                <p>em js o valor false literalmente é false, sendo avaliado de cara como false é o unico literal, tambem
-                    existe outros valores q sao retornado como false, so q tem as condições <br>
-                    <br>Esses sao considerados os valores FALSYS. <br>
-                    <span style="color: yellow; font-size: larger;"> 0, string vazia ' ', null, undefined, NaN </span>
-                    <br>
-                    <span style="color: rgb(66, 66, 184); font-size: larger;"> Qualquer coisa fora dessa regra é
-                        avaliada como True </span> <br>
-                </p>
-                <p>Exemplo:
-                    <br> console.log('jose' && 'Maria'); <span style="color: red;">true pois os 2 sao strings cheias,
-                        sendo q sera retornadpo maria por ser o ultimo resultado</span>
-                    <br> console.log('jose' && ' ' && 'Maria'); <span style="color: red;">false pois o and, sempre
-                        quando encontra um valor false ele encerra a busca, sendo retornado o ' '</span>
-                </p>
-                <div style="border:solid 5px; border-color: red; padding: 10px;">
-                    <h2>&& "and"</h2>
-                    <p>Exemplo de curto Circuito: <br>
-                        <br> function falaoi (){
-                        <br> return 'OI';
-                        } <br>
-                        const vaiexecutar = false;
-                        <br>console.log(vaiexecutar && falaoi()); <br>
-                        <span style="color: brown">o resultado sera false, pois o and sempre busca o valor false, e sera
-                            exibido</span>
-                    </p> <br>
-                    <h2>or "||"</h2>
-                    <p>
-                        Agora sera apresentado com exemplo do or, ja q o mais usado, pois ele retorna qualquer resultado
-                        verdadeiro, q estiver fora das exeções do and. observação, ele precisa somente de uma expressao
-                        verdadeira, para q retorne true ou o valor da variavel <br>
-                        exemplo: <br> <br>
-                        const corusuario = null; <br>
-                        const corpadrao = corusuario || 'preto'; <br>
-                        <br>
-                        <span style="color: brown">o resultado sera true, pois o segundo valor pois e uma string, e
-                            retornara preto, pois a regra do or, se tiver uma variavel true, ja sera mostrada como
-                            resultado</span>
-
-                    </p>
-                </div>
-            </div>
+    <section class="container">
+        <h1>Teste Curto Circuito</h1>
+        <p>Em js tudo pode ser verificado "Avaliado". </p>
+        <p>em js o valor false literalmente é false, sendo avaliado de cara como false é o unico literal, tambem
+            existe outros valores q sao retornado como false, so q tem as condições <br>
+            <br>Esses sao considerados os valores FALSYS. <br>
+            <span style="color: yellow; font-size: larger;"> 0, string vazia ' ', null, undefined, NaN </span>
+            <br>
+            <span style="color: rgb(66, 66, 184); font-size: larger;"> Qualquer coisa fora dessa regra é
+                avaliada como True </span> <br>
+        </p>
+        <p>Exemplo:
+            <br> console.log('jose' && 'Maria'); <span style="color: red;">true pois os 2 sao strings cheias,
+                sendo q sera retornadpo maria por ser o ultimo resultado</span>
+            <br> console.log('jose' && ' ' && 'Maria'); <span style="color: red;">false pois o and, sempre
+                quando encontra um valor false ele encerra a busca, sendo retornado o ' '</span>
+        </p>
+        <div style="border:solid 5px; border-color: red; padding: 10px;">
+            <h2>&& "and"</h2>
+            <p>Exemplo de curto Circuito: <br>
+                <br> function falaoi (){
+                <br> return 'OI';
+                } <br>
+                const vaiexecutar = false;
+                <br>console.log(vaiexecutar && falaoi()); <br>
+                <span style="color: brown">o resultado sera false, pois o and sempre busca o valor false, e sera
+                    exibido</span>
+            </p> <br>
+            <h2>or "||"</h2>
+            <p>
+                Agora sera apresentado com exemplo do or, ja q o mais usado, pois ele retorna qualquer resultado
+                verdadeiro, q estiver fora das exeções do and. observação, ele precisa somente de uma expressao
+                verdadeira, para q retorne true ou o valor da variavel <br>
+                exemplo: <br> <br>
+                const corusuario = null; <br>
+                const corpadrao = corusuario || 'preto'; <br>
+                <br>
+                <span style="color: brown">o resultado sera true, pois o segundo valor pois e uma string, e
+                    retornara preto, pois a regra do or, se tiver uma variavel true, ja sera mostrada como
+                    resultado</span>
+            </p>
         </div>
     </section>
-    <script src="/js-basic/1/js/exe3.js"></script>
+    <script src="#"></script>
 </body>
 
 </html>

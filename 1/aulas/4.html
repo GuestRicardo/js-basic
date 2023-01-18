@@ -5,80 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <!---->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: large; ">
+    <div class="container">
         <h1 style="text-align: center;">Funções</h1>
-        <div style="margin: 25px;">
-            <p> Funções serve para executar ações, é um bloco de codigo para executar um codigo q envia um valor e
-                depois
-                quando precisar pega um valor de volta, tambem existem outras q nao retornam valores. </p>
-            <p>
-                <span style="margin-left: 70px; color: yellow;"> function nomedaFuncao (<span
-                        style="color: aqua;">recebe alguma regra, parametros ou atributo </span> )
-                    { </span> <br>
-                <span style="margin-left: 80px; color: yellow">corpo(<span style="color: aqua;"> escopo ou corpo
-                    </span>) </span> <br>
-                <span style="margin-left: 70px; color: yellow" color: yellow>}</span><br>
-                <span style="margin-left: 70px; color: yellow">nomedaFuncao( <span style="color: red;">para enviar
-                        parametros</span> )</span>
-                <span style="color: aqua;"> aq esta
-                    sendo chamada(executada)</span>
-            </p>
-            <p style="color: brown;">
-                <span style="color: aquamarine;"> Exemplo:</span> <br>
-                function saudacao(nome){ <br>
-                console.log(`Bom dia ${nome}!`);<br>
-                } <br>
-                saudacao('Ricardo') <br>
-                <br>
-                <span style="color: bisque;"> nesse exemplo nao esta sendo retornado nada, para q ela tenha algum
-                    retorno ela precisa ser
-                    armazenada
-                    em alguma variavel. </span><br>
-                <span style="color: aquamarine;"> Exemplo:</span><br> <br>
-                function saudacao(nome){ <br>
-                return `Bom dia ${nome}!`;<br>
-                } <br>
-                const qualquervariavel = saudacao('Ricardo') <br>
-                console.log(qualquervariavel)<br> <br>
-                <span style="color: bisque;"> A variavel esta recebendo o q a função enviou</span><br>
-            </p>
-        </div>
-    </div>
-    <br>
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: large; ">
-        <h1 style="text-align: center;">Arrow function</h1>
-        <div style="margin: 25px;">
-            <p>É uma forma abreviada de apresentar uma função, deixando ela em uma so linha</p>
-            exemplo:
-            <p style="color: yellowgreen;">
-                const raiz = n => n ** 0.5; <br>
-                console.log (raiz(9));<br>
-            </p>
-        </div>
-    </div>
-    <br>
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: large; ">
-        <h1 style="text-align: center;">function auto invocada</h1>
-        <div style="margin: 25px;">
-            <p>É uma fução q se executa automaticamente, para isso a função precisa ser criada dentro de parenteses, e
-                em seguida executada, como segue o exemplo abaixo</p>
-            <p>
-                <span style="margin-left: 70px; color: yellow;"> (function nomedaFuncao (<span style="color: aqua;">
-                    </span> )
-                    { </span> <br>
-                <span style="margin-left: 80px; color: yellow"><span style="color: aqua;">
-                        tudo q for executado sera add aq dentro
-                    </span></span> <br>
-                <span style="margin-left: 70px; color: yellow" color: yellow>})();</span><br>
 
-            </p>
-        </div>
+        <p> Funções serve para executar ações, é um bloco de codigo para executar um codigo q envia um valor e
+            depois
+            quando precisar pega um valor de volta, tambem existem outras q nao retornam valores. </p>
+        <p>
+            <span style="margin-left: 70px; color: yellow;"> function nomedaFuncao (<span style="color: aqua;">recebe
+                    alguma regra, parametros ou atributo </span> )
+                { </span> <br>
+            <span style="margin-left: 80px; color: yellow">corpo(<span style="color: aqua;"> escopo ou corpo
+                </span>) </span> <br>
+            <span style="margin-left: 70px; color: yellow" color: yellow>}</span><br>
+            <span style="margin-left: 70px; color: yellow">nomedaFuncao( <span style="color: red;">para enviar
+                    parametros</span> )</span>
+            <span style="color: aqua;"> aq esta
+                sendo chamada(executada)</span>
+        </p>
+        <p style="color: brown;">
+            <span style="color: aquamarine;"> Exemplo:</span> <br>
+            function saudacao(nome){ <br>
+            console.log(`Bom dia ${nome}!`);<br>
+            } <br>
+            saudacao('Ricardo') <br>
+            <br>
+            <span style="color: bisque;"> nesse exemplo nao esta sendo retornado nada, para q ela tenha algum
+                retorno ela precisa ser
+                armazenada
+                em alguma variavel. </span><br>
+            <span style="color: aquamarine;"> Exemplo:</span><br> <br>
+            function saudacao(nome){ <br>
+            return `Bom dia ${nome}!`;<br>
+            } <br>
+            const qualquervariavel = saudacao('Ricardo') <br>
+            console.log(qualquervariavel)<br> <br>
+            <span style="color: bisque;"> A variavel esta recebendo o q a função enviou</span><br>
+        </p>
+
+    </div>
+    <div class="container">
+        <h1 style="text-align: center;">Arrow function</h1>
+
+        <p>É uma forma abreviada de apresentar uma função, deixando ela em uma so linha</p>
+        exemplo:
+        <p style="color: yellowgreen;">
+            const raiz = n => n ** 0.5; <br>
+            console.log (raiz(9));<br>
+        </p>
+
+    </div>
+
+    <div class="container">
+        <h1 style="text-align: center;">function auto invocada</h1>
+
+        <p>É uma fução q se executa automaticamente, para isso a função precisa ser criada dentro de parenteses, e
+            em seguida executada, como segue o exemplo abaixo</p>
+        <p>
+            <span style="margin-left: 70px; color: yellow;"> (function nomedaFuncao (<span style="color: aqua;">
+                </span> )
+                { </span> <br>
+            <span style="margin-left: 80px; color: yellow"><span style="color: aqua;">
+                    tudo q for executado sera add aq dentro
+                </span></span> <br>
+            <span style="margin-left: 70px; color: yellow" color: yellow>})();</span><br>
+
+        </p>
+
     </div>
     <script src="aulas.js"></script>
 </body>
