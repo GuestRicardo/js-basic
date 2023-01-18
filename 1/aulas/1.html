@@ -42,102 +42,95 @@
 
     </div>
     <!-- const -->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium; ">
-        <div style="margin-left: 25px;">
-            <h2 style="text-align: center;">CONST</h2>
-            <p>`e um tipo de variavel q nao pode modificar o valor de uma constante, exemplo declarar e depois
-                inicializar,
-                diferente da let q aceita declarar e depois inicializala em locais diferentes.
-                <h2 style="color: blueviolet;">declarando e inicializando</h2>
-                const nome = 'Maria Jose dos Santos'<span style="color: yellow;"> //a constante aceita somente desta
-                    forma,
-                    ela sempre é preciso fazer dessa forma</span>
-                <br> <br>
-                <span style="text-align: center; color: brown;"> <strong> nunca redeclarar uma constante com o mesmo
-                        nome ou
-                        retribuir a variavel.
-                        de outra. </strong></span>
-                <strong>Observação:</strong> <br>
-                <span style="text-align: center; color: brown;"> <strong> interessante usar oi const para operações
-                        aritimeticas.
-                        de outra. </strong></span>
-            </p>
-
-            <div>
-                <h1>Diferenças</h1>
-                se tu criar uma variavel com nome,
-            </div>
-
-
-            <div style="color: rgb(253, 253, 163);">
-                <h1>Exercicio</h1>
-                <h3>Calculando o IMC</h3>
-                <p>
-                    const peso = 82; <br>
-                    const altura = 1.77; <br>
-                    imc = peso / (altura * altura);
-                    console.log(imc);
-                </p>
-
-            </div>
-            <h2>Const com valores mutáveis</h2>
-            const descreve uma variável que não pode ser reatribuída (com o operador de atribuição =).
-            <br> Depois de criá-la, não podemos fazer algo assim: <br>
-            <br>
-            const nome = 'luiz'; <br>
-            nome = 'joão'; // Erro: Assignment to constant variable. <br>
-            Porém, existe uma diferença entre variável e valor. <br> <br>
-
-            Variáveis são como um apelido para um valor, uma espécie de alias para mencionar algum valor salvo na
-            memória. <br>
-
-            Já valores são os dados que realmente ficam salvos na memória e sustentam determinado tipo. Alguns tipos de
-            <br>
-            valores são imutáveis, como number, string, boolean, undefined, null, symbol e bigint (os primitivos todos
-
-            são imutáveis). Outros tipos são mutáveis, como arrays e objetos (objetos em geral são mutáveis, com exceção
-
-            de null). <br> <br>
-
-            Valores mutáveis geralmente são estruturas de dados mais complexas que sustentam outros valores ou
-            comportamentos internamente. Como é o caso do array, que pode ser composto por vários outros tipos de dados.
-            <br>
-            <br>
-            Quando usamos const com tipos primitivos, esse valor nunca mais poderá ser alterado. Nesse caso, além de
-
-            const não permitir reatribuição, o valor também é imutável (consequentemente, nunca podemos alterar essa
-            constante). <br>
-            <br>
-            Já quando usamos const com valores mutáveis (como arrays e objetos), a variável continua sendo constante,
-
-            porém os valores dentro do objeto poderão ser alterados. Isso acontece porque quando alteramos um valor
-            interno de um objeto, não ocorre a reatribuição da variável com sinal de atribuição = (a variável continua
-
-            apontando para o mesmo local na memória), apenas a alteração de um valor interno do mesmo objeto. <br> <br>
-
-            Por este motivo, pode-se usar const com objetos mutáveis e ainda assim alterar seus valores internos. <br> A
-            única coisa que não vamos conseguir fazer é reatribuir o valor da variável. <br> <br>
-
-            Exemplos: <br>
-
-            Isso pode <br>
-
-            const array = [1, 2, 3, 4, 5]; <br>
-            array.pop(); <br>
-            array[0] = 1024; <br>
-            console.log(array); // [ 1024, 2, 3, 4 ] <br>
+    <div class="container">
+        <h2 style="text-align: center;">CONST</h2>
+        <p>`e um tipo de variavel q nao pode modificar o valor de uma constante, exemplo declarar e depois
+            inicializar,
+            diferente da let q aceita declarar e depois inicializala em locais diferentes.
+            <h2 style="color: blueviolet;">declarando e inicializando</h2>
+            const nome = 'Maria Jose dos Santos'<span style="color: yellow;"> //a constante aceita somente desta
+                forma,
+                ela sempre é preciso fazer dessa forma</span>
             <br> <br>
-            Isso NÃO pode <br>
-
-            const array = [1, 2, 3, 4, 5]; <br>
-            array = 'Legal'; // Assignment to constant variable. <br> <br>
-
+            <span style="text-align: center; color: brown;"> <strong> nunca redeclarar uma constante com o mesmo
+                    nome ou
+                    retribuir a variavel.
+                    de outra. </strong></span>
+            <strong>Observação:</strong> <br>
+            <span style="text-align: center; color: brown;"> <strong> interessante usar oi const para operações
+                    aritimeticas.
+                    de outra. </strong></span>
+        </p>
+        <div>
+            <h1>Diferenças</h1>
+            se tu criar uma variavel com nome,
         </div>
-    </div>
-    <br>
-    <!-- strings -->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: medium;">
+        <div style="color: rgb(253, 253, 163);">
+            <h1>Exercicio</h1>
+            <h3>Calculando o IMC</h3>
+            <p>
+                const peso = 82; <br>
+                const altura = 1.77; <br>
+                imc = peso / (altura * altura);
+                console.log(imc);
+            </p>
+        </div>
+        <h2>Const com valores mutáveis</h2>
+        const descreve uma variável que não pode ser reatribuída (com o operador de atribuição =).
+        <br> Depois de criá-la, não podemos fazer algo assim: <br>
+        <br>
+        const nome = 'luiz'; <br>
+        nome = 'joão'; // Erro: Assignment to constant variable. <br>
+        Porém, existe uma diferença entre variável e valor. <br> <br>
 
+        Variáveis são como um apelido para um valor, uma espécie de alias para mencionar algum valor salvo na
+        memória. <br>
+
+        Já valores são os dados que realmente ficam salvos na memória e sustentam determinado tipo. Alguns tipos de
+        <br>
+        valores são imutáveis, como number, string, boolean, undefined, null, symbol e bigint (os primitivos todos
+
+        são imutáveis). Outros tipos são mutáveis, como arrays e objetos (objetos em geral são mutáveis, com exceção
+
+        de null). <br> <br>
+
+        Valores mutáveis geralmente são estruturas de dados mais complexas que sustentam outros valores ou
+        comportamentos internamente. Como é o caso do array, que pode ser composto por vários outros tipos de dados.
+        <br>
+        <br>
+        Quando usamos const com tipos primitivos, esse valor nunca mais poderá ser alterado. Nesse caso, além de
+
+        const não permitir reatribuição, o valor também é imutável (consequentemente, nunca podemos alterar essa
+        constante). <br>
+        <br>
+        Já quando usamos const com valores mutáveis (como arrays e objetos), a variável continua sendo constante,
+
+        porém os valores dentro do objeto poderão ser alterados. Isso acontece porque quando alteramos um valor
+        interno de um objeto, não ocorre a reatribuição da variável com sinal de atribuição = (a variável continua
+
+        apontando para o mesmo local na memória), apenas a alteração de um valor interno do mesmo objeto. <br> <br>
+
+        Por este motivo, pode-se usar const com objetos mutáveis e ainda assim alterar seus valores internos. <br> A
+        única coisa que não vamos conseguir fazer é reatribuir o valor da variável. <br> <br>
+
+        Exemplos: <br>
+
+        Isso pode <br>
+
+        const array = [1, 2, 3, 4, 5]; <br>
+        array.pop(); <br>
+        array[0] = 1024; <br>
+        console.log(array); // [ 1024, 2, 3, 4 ] <br>
+        <br> <br>
+        Isso NÃO pode <br>
+
+        const array = [1, 2, 3, 4, 5]; <br>
+        array = 'Legal'; // Assignment to constant variable. <br> <br>
+
+    </div>
+
+    <!-- strings -->
+    <div class="container">
         <h1 style="text-align: center">STRINGS</h1>
         <p style="color: white ; font-size: larger; margin-left: 25px; ">
             Varias formas de usar uma string
@@ -230,55 +223,50 @@
     </div>
     </p>
     <!-- numbers -->
-    <div style="border:solid 5px; border-color: blueviolet; background-color: rgb(63, 63, 71); font-size: larger;">
-        <div style="margin-left: 25px;">
-            <h1 style="text-align: center;">Numbers</h1>
-            <p> <strong style="color: yellowgreen;">1</strong>- Arredondando valores, nesse caso pode se usar o <span
-                    style="color: brown;">toFixed(quantas casas decimais deseja exibir)</span> <br>
-                exemplo: <br>
-                console.log(n1.toFixed(2)); = sera exibido 2 casas decimais pos virgula <br>
-            </p>
-            <p> <strong style="color: yellowgreen;">2</strong> -para saber se o numero retornado é um numero inteiro,
-                exemplo se estiver recebendo um valor, de uma base de dados, e nao sabe qual o tipo do numero, usa-se
-                <span style="color: brown;">Number.isInteger(variavel)</span> e será retornado um valor verdadeiro ou
-                falso
-                <br>
-                exemplo: <br>
-                console.log(Number.isInteger(num1)) = Aq sera retornado true, pois o numero é um numero inteiro. <br>
-                <br> Quando der o erro <span style="color: yellow;">NaN</span>, caso de erro strig no lugar de number é
-                so
-                usar o <span style="color: brown;">Number.isNaN(variavel)</span><br>
-                exemplo: <br>
-                <span style="color:aqua;">
-                    let num1 = 2 + "45"; <br>
-                    console.log(Number.isNaN(num1)); = <span style="color: yellowgreen;"> aq te retornará <strong
-                            style="color: red;"> true </strong> pois neste exemplo é caso de
-                        erro (valor invalido) </span>
-                </span>
-            </p>
-            <p> <strong style="color: yellowgreen;">3</strong> -Arredondando numeros flutuantes de forma mais precisa,
-                pois o js tem algumas precisões <br>
-                exemplo: <br>
-                <span style="color: yellowgreen;">
-                    let num1 = 0,5; <br>
-                    let num2 = 0,5; <br>
-                    let total = ((num1 *100) + (num2 *100)); <br>
-                    console.log(Number.isInteger(total)); = <span style="color: brown;"> aq sera retornado um numero
-                        inteiro, se caso o numero nao
-                        passassse por esse processo, ele nao seria um numero inteiro </span><br>
-                </span>
-            </p>
-            <p style="text-align: center;"> <strong style="font-size: larger;"><a
-                        href="/js-basic/1/exercicios/exercicio2.html">
-                        Exercicio</a></strong> <br>
-                <span style="font-size: smaller; text-align: center; color: yellow;">esse é o mesmo exercicio da função
-                    match da atividade do
-                    2.html</span>
-            </p>
-
-        </div>
-
-
+    <div class="container">
+        <h1 style="text-align: center;">Numbers</h1>
+        <p> <strong style="color: yellowgreen;">1</strong>- Arredondando valores, nesse caso pode se usar o <span
+                style="color: brown;">toFixed(quantas casas decimais deseja exibir)</span> <br>
+            exemplo: <br>
+            console.log(n1.toFixed(2)); = sera exibido 2 casas decimais pos virgula <br>
+        </p>
+        <p> <strong style="color: yellowgreen;">2</strong> -para saber se o numero retornado é um numero inteiro,
+            exemplo se estiver recebendo um valor, de uma base de dados, e nao sabe qual o tipo do numero, usa-se
+            <span style="color: brown;">Number.isInteger(variavel)</span> e será retornado um valor verdadeiro ou
+            falso
+            <br>
+            exemplo: <br>
+            console.log(Number.isInteger(num1)) = Aq sera retornado true, pois o numero é um numero inteiro. <br>
+            <br> Quando der o erro <span style="color: yellow;">NaN</span>, caso de erro strig no lugar de number é
+            so
+            usar o <span style="color: brown;">Number.isNaN(variavel)</span><br>
+            exemplo: <br>
+            <span style="color:aqua;">
+                let num1 = 2 + "45"; <br>
+                console.log(Number.isNaN(num1)); = <span style="color: yellowgreen;"> aq te retornará <strong
+                        style="color: red;"> true </strong> pois neste exemplo é caso de
+                    erro (valor invalido) </span>
+            </span>
+        </p>
+        <p> <strong style="color: yellowgreen;">3</strong> -Arredondando numeros flutuantes de forma mais precisa,
+            pois o js tem algumas precisões <br>
+            exemplo: <br>
+            <span style="color: yellowgreen;">
+                let num1 = 0,5; <br>
+                let num2 = 0,5; <br>
+                let total = ((num1 *100) + (num2 *100)); <br>
+                console.log(Number.isInteger(total)); = <span style="color: brown;"> aq sera retornado um numero
+                    inteiro, se caso o numero nao
+                    passassse por esse processo, ele nao seria um numero inteiro </span><br>
+            </span>
+        </p>
+        <p style="text-align: center;"> <strong style="font-size: larger;"><a
+                    href="/js-basic/1/exercicios/exercicio2.html">
+                    Exercicio</a></strong> <br>
+            <span style="font-size: smaller; text-align: center; color: yellow;">esse é o mesmo exercicio da função
+                match da atividade do
+                2.html</span>
+        </p>
     </div>
 
     <script src="aulas.js"></script>
