@@ -4,28 +4,46 @@ const form = document.querySelector("#form");
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     //capturando o q esta dentro dos inputs
-    const inputPeso = e.target.querySelector('#peso');
-    const inputAltura = e.target.querySelector('#altura');
+    const inputPeso = event.target.querySelector('#peso');
+    const inputAltura = event.target.querySelector('#altura');
 
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value);
     //------fim dos inputs------------
 
     //para caso passar um valor q nao seja numero
-    if (!peso){
-       // alert('CARACTERE INACEITAVEL, favor usar numeros');
-        setResultad('Peso invalido', false);
+    if (!peso) {
+        // alert('CARACTERE INACEITAVEL, favor usar numeros');
+        setResultado('Peso invalido', false);
         return;
     }
 
-    if (!altura){
-       // alert('CARACTERE INACEITAVEL, favor usar numeros');
-        setResultad('Altura invalida', false);
+    if (!altura) {
+        //alert('CARACTERE INACEITAVEL, favor usar numeros');
+        setResultado('Altura invalida', false);
         return;
     }
 
+    const imc = getImc(peso, altura);//trazendo o calculo do imc para dentro do form
 
+
+    console.log(imc);
 });
+
+//para pegar o nivel do imc
+function getNivelImc(imc){
+
+}
+//-----------fim-----------------
+
+
+
+//função para fazer o calculo do imc
+function getImc(peso, altura) {
+    const imc = peso / altura ** 2; //calculo
+    return imc.toFixed(2);//fixando 2 casas pos o numero
+}
+//------------fim da função-------------
 
 //criador de paragrafos
 function criaP() {
