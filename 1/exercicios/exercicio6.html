@@ -19,12 +19,13 @@
             <h2>Resultado</h2>
         </div>
         <div>
-            <form action="">
+            <form action="" id="form">
                 <h1>Calcule seu IMC</h1>
-                Peso:<input type="text" name="" value="">
-                Altura:<input type="text" name="" value="">
-                <button>Calcular</button>
+                <label for="peso">Peso: </label><input type="text" id="peso" name="peso" value="">
+                <label for="altura">Altura: </label> <input type="text" id="altura" name="" value="">
+                <button type="submit">Calcular</button>
             </form>
+            <div id="resultado"></div>
         </div>
     </section>
     <script src="../assets/js/exe5.js"></script>
