@@ -31,8 +31,22 @@ form.addEventListener('submit', function (event) {
 });
 
 //para pegar o nivel do imc
-function getNivelImc(imc){
+function getNivelImc(imc) {
+    const nivel = ['Abaixo do Peso', 'Peso Normal', 'Acima do Peso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
 
+    if (imc >= 39, 9) {//observação, neste caso nao precisaria de else if, pois a função ja para no retorn, o correto é so usar if em todas
+        return [5];
+    } else if (imc >= 34.9) {
+        return [4];
+    } else if (imc >= 29.9) {
+        return [3];
+    } else if (imc >= 24.9) {
+        return [2];
+    } else if (imc >= 18, 5) {
+        return [1];
+    } else if (imc < 18, 5) {
+        return [0];
+    }
 }
 //-----------fim-----------------
 
