@@ -27,19 +27,29 @@ form.addEventListener('submit', function (event) {
     const imc = getImc(peso, altura);//trazendo o calculo do imc para dentro do form
     const nivelImc = getNivelImc(imc);
 
-    console.log(imc, nivelImc);
+    //mensagem
+    const mensagem = `<span style="text-align: center;"> Seu IMC é  ${imc} ${nivelImc}</span>`;
+    //fim da mensagem
+    setResultado(mensagem, true);
 });
 
 //para pegar o nivel do imc
 function getNivelImc(imc) {
-    const nivel = ['Abaixo do Peso', 'Peso Normal', 'Acima do Peso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+    const nivel = [
+        '<span style="background-color: yellow; padding: 5px 10px;">Abaixo do Peso</span>',
+        '<span style="background-color: green; padding: 5px 10px;">Peso Normal</p>',
+        '<span style="background-color: orange; padding: 5px 10px;">Sobrepeso</p>',
+        '<span style="background-color: pink;">Obes.grau 1</p>',
+        '<span style="background-color: pink;">Obes.grau 2</p>',
+        '<span style="background-color: red;">Obes.grau 3</p>'
+    ];
 
-    if (imc >= 39, 9) return [5];    
-    if (imc >= 34.9) return [4];
-    if (imc >= 29.9) return [3];
-    if (imc >= 24.9) return [2];
-    if (imc >= 18, 5) return [1];
-    if (imc < 18, 5) return [0];
+    if (imc >= 39.9) return nivel[5];
+    if (imc >= 34.9) return nivel[4];
+    if (imc >= 29.9) return nivel[3];
+    if (imc >= 24.9) return nivel[2];
+    if (imc >= 18.5) return nivel[1];
+    if (imc < 18.5) return nivel[0];
 }
 //-----------fim-----------------
 
@@ -62,6 +72,15 @@ function setResultado(mensagem, isValid) {
     resultado.innerHTML = ''; //limpando o resultado
 
     const p = criaP();
+
+    //para mudar o fundo da cor do resultado
+    if (isValid) {
+        p.classList.add('resultado-ok');
+    } else {
+        p.classList.add('resultado-bad');
+    }
+    //fim da mudança de cor
+
     p.innerHTML = mensagem;
     resultado.appendChild(p);
 }
