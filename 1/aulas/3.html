@@ -139,7 +139,7 @@
             letra maiuscula a diferenciando <br>
             exemplo: <br>
             <span class="exemplos">
-            const data = new Date() </span><br>
+                const data = new Date() </span><br>
             <span class="anotacoes">Neste esxemplo esta sendo criado um
                 novo objeto e esta sendo
                 locado na variavel data, q por sua vez quandp for chamada será exibida todos os dados de hras no momento
@@ -157,20 +157,25 @@
             <span class="exemplos">
                 const data = new Date(0); <span class="anotacoes"> //aq sera exibido 01/01/1970 q é a epoca unix o
                     marco 0, se queira data inferior é so usar valor negativo e se quiser positivo é so usar numeros
-                    positivos</span>                    
+                    positivos</span>
             </span> <br>
             E para usar as datas é preciso usar em milisegundos e o calculo para usar em hroas é: <br>
             <h4>Hora</h4>
-            <p class="anotacoes">const 1 hora = 60 segundos  *  60segundos * 1 * 1000 milisegundos </p>
+            <p class="anotacoes">const 1 hora = 60 segundos * 60segundos * 1 * 1000 milisegundos </p>
             <h4>Dia</h4>
-            <p class="anotacoes">const 1 dia = 60 segundos  *  60segundos * 24 * 1000 milisegundos </p>
+            <p class="anotacoes">const 1 dia = 60 segundos * 60segundos * 24 * 1000 milisegundos </p>
             <h3>Para exibir data especifica</h3>
             <p class="anotacoes">const data = new Date(ano, mes, hora, minutos, segundos, milisegundos);</p>
             <p class="exemplos">const data = new Date(2019, 3, 20, 15, 19); <br>
                 console.log(data.toString()); <br>
-               sera exibido:<span class="anotacoes">  2019, 3 abril, 20:15,19</span>
+                será exibido: <span class="anotacoes"> 2019, 3 abril, 20:15,19</span>
             </p>
-
+            <p>
+                usando <span style="color: red;"> Strings: </span>
+                <p class="exemplos">const data = new Date('2019-04-20 20:20:32'); <br>
+                será exibido: <span class="anotacoes"> 2019, 20 abril, 20:20,32</span>
+            </p>
+            </p>
 
         </p>
         <div style="text-align: center;">
