@@ -75,3 +75,12 @@ form button:hover {
   width: 50%;
   font-size: small;
 }
+.exemplos, .anotacoes{
+  border: 1px solid;
+  color: brown;
+  font-size: medium;
+}
+
+.anotacoes{
+  color: yellow;
+}
