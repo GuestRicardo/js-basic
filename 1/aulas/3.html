@@ -13,122 +13,133 @@
     <!--Objetoo-->
     <div class="container">
         <h1 style="text-align: center;">Objetos</h1>
-        
-            <p>
-                Um objeto é um elemento computacional que representa, no domínio da solução, alguma entidade (abstrata
-                ou
-                concreta) do domínio de interesse do problema sob análise. Objetos similares são agrupados em classes.
-                No
-                paradigma de orientação a objetos, tudo pode ser potencialmente representado como um objeto. <br> <br>
-                <div style="color: yellow;">
-                    <h2>Objeto Literal</h2>
-                    <p>segue abaixo 2 objetos simples</p>
-                    <span style="margin: 75px;">const pessoa = {</span> <br>
-                    <span style="margin: 85px;">nome:'Maria',</span> <br>
-                    <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
-                    <span style="margin: 85px;">idade = 45</span> <br>
-                    <span style="margin: 75px;">};</span> <br> <br>
 
-                    <span style="margin: 75px;">console.log(pessoa.nome)</span> <br>
-                </div>
-                <div style="color: yellowgreen;">
-                    <h2>Objeto com uma função</h2>
-                    <p></p>
-                    <span style="margin: 75px;">const pessoa = {</span> <br>
-                    <span style="margin: 85px;">nome:'Maria',</span> <br>
-                    <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
-                    <span style="margin: 85px;">idade = 45</span> <br> <br>
-                    <span style="margin: 90px;">function falar(){</span> <br>
-                    <span style="margin: 95px;">console.log(`Boa tarde ${this.nome} ${this.sobrenome}`);</span> <br>
-                    <span style="margin: 90px;">}</span> <br>
-                    <span style="margin: 75px;">};</span> <br> <br>
+        <p>
+            Um objeto é um elemento computacional que representa, no domínio da solução, alguma entidade (abstrata
+            ou
+            concreta) do domínio de interesse do problema sob análise. Objetos similares são agrupados em classes.
+            No
+            paradigma de orientação a objetos, tudo pode ser potencialmente representado como um objeto. <br> <br>
+            <div style="color: yellow;">
+                <h2>Objeto Literal</h2>
+                <p>segue abaixo 2 objetos simples</p>
+                <span style="margin: 75px;">const pessoa = {</span> <br>
+                <span style="margin: 85px;">nome:'Maria',</span> <br>
+                <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
+                <span style="margin: 85px;">idade = 45</span> <br>
+                <span style="margin: 75px;">};</span> <br> <br>
 
-                    <span style="margin: 75px;">pessoa.fala();</span> <br>
-                </div>
-                <div style="color: red;">
-                    <h2>Criando uma copia do Objeto de forma simples</h2>
-                    <p style="margin-left: 50px; color: brown;">
-                        const teste = { <br>
-                        teste1:'ok' <br>
-                        teste2:'ok' <br>
-                        teste3:'ok' <br>
-                        }; <br>
-                        const testeB = { ...teste}; <span style="color: yellowgreen;"> //copia criada</span> <br>
-                    </p>
-                </div>
-            </p>      
+                <span style="margin: 75px;">console.log(pessoa.nome)</span> <br>
+            </div>
+            <div style="color: yellowgreen;">
+                <h2>Objeto com uma função</h2>
+                <p></p>
+                <span style="margin: 75px;">const pessoa = {</span> <br>
+                <span style="margin: 85px;">nome:'Maria',</span> <br>
+                <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
+                <span style="margin: 85px;">idade = 45</span> <br> <br>
+                <span style="margin: 90px;">function falar(){</span> <br>
+                <span style="margin: 95px;">console.log(`Boa tarde ${this.nome} ${this.sobrenome}`);</span> <br>
+                <span style="margin: 90px;">}</span> <br>
+                <span style="margin: 75px;">};</span> <br> <br>
+
+                <span style="margin: 75px;">pessoa.fala();</span> <br>
+            </div>
+            <div style="color: red;">
+                <h2>Criando uma copia do Objeto de forma simples</h2>
+                <p style="margin-left: 50px; color: brown;">
+                    const teste = { <br>
+                    teste1:'ok' <br>
+                    teste2:'ok' <br>
+                    teste3:'ok' <br>
+                    }; <br>
+                    const testeB = { ...teste}; <span style="color: yellowgreen;"> //copia criada</span> <br>
+                </p>
+            </div>
+        </p>
     </div>
-    <br>
+
     <!--Arrays-->
     <div class="container">
-        <h1 style="text-align: center;">Arrays</h1>       
-            <p>
-                Arrays é uma Lista ou uma coleção de dados, é melhor forma de manipular dados, sendo q pode se usar os
-                idices pra facilitar. <br>
-                exemplo: <br>
-                <span style="color: brown;"> const alunos = ['joao','maria', 'eduarda', 'juana', edilson]</span> <br>
-                <span style="color: red;">1-</span> E para acessar um indice. <br>
-                exemplo: <br>
-                <span style="color: brown;"> console.log =(alunos[4])</span> <br> <br>
-                <span style="color: red;">2-</span> Se caso queira editar um indice, substituir. <br>
-                exemplo: <br>
-                <span style="color: brown;"> alunos[4]= Leoncio</span> <br> <br>
-                <span style="color: red;">3-</span> ADICIONANDO indice. neste caso é so add em um indice inexistente
-                <br>
-                exemplo: <br>
-                <span style="color: brown;"> alunos[5]= Juarez</span> <br> <br>
-                outra forma, a forma ideal. <br>
-                <span style="color: brown;"> alunos[alunos.length] = 'maria isabel'</span> <br>
-                <span style="color: brown;"> alunos[alunos.length] = 'joana'</span> <br>
-                <span style="color: brown;"> alunos[alunos.length] = 'Roberta'</span> <br> <br>
+        <h1 style="text-align: center;">Arrays</h1>
+        <p>
+            Arrays é uma Lista ou uma coleção de dados, é melhor forma de manipular dados, sendo q pode se usar os
+            idices pra facilitar. <br>
+            exemplo: <br>
+            <span style="color: brown;"> const alunos = ['joao','maria', 'eduarda', 'juana', edilson]</span> <br>
+            <span style="color: red;">1-</span> E para acessar um indice. <br>
+            exemplo: <br>
+            <span style="color: brown;"> console.log =(alunos[4])</span> <br> <br>
+            <span style="color: red;">2-</span> Se caso queira editar um indice, substituir. <br>
+            exemplo: <br>
+            <span style="color: brown;"> alunos[4]= Leoncio</span> <br> <br>
+            <span style="color: red;">3-</span> ADICIONANDO indice. neste caso é so add em um indice inexistente
+            <br>
+            exemplo: <br>
+            <span style="color: brown;"> alunos[5]= Juarez</span> <br> <br>
+            outra forma, a forma ideal. <br>
+            <span style="color: brown;"> alunos[alunos.length] = 'maria isabel'</span> <br>
+            <span style="color: brown;"> alunos[alunos.length] = 'joana'</span> <br>
+            <span style="color: brown;"> alunos[alunos.length] = 'Roberta'</span> <br> <br>
 
-                A forma adequada, a q todos usam é usando <span style="color: yellow;">push</span> sendo q esse exemplo
-                adiciona o elemento no fim<br>
-                exemplo: <br>
-                <span style="color: brown;"> alunos.push('Otavio');</span> <br> <br>
+            A forma adequada, a q todos usam é usando <span style="color: yellow;">push</span> sendo q esse exemplo
+            adiciona o elemento no fim<br>
+            exemplo: <br>
+            <span style="color: brown;"> alunos.push('Otavio');</span> <br> <br>
 
-                Para adicionar um item no inicio é so usar <span style="color: yellow;">unshift</span><br>
-                exemplo: <br>
-                <span style="color: brown;"> alunos.unshift('Clesio');</span> <br> <br>
+            Para adicionar um item no inicio é so usar <span style="color: yellow;">unshift</span><br>
+            exemplo: <br>
+            <span style="color: brown;"> alunos.unshift('Clesio');</span> <br> <br>
 
-                <span style="color: red;">4- </span>Para saber o tamanho do array <br>
-                exemplo: <br>
-                <span style="color: brown;"> console.log(alunos.length)</span> <br> <br>
-                <span style="color: red;">5- </span>Para remover um indice do array <br>
-                exemplo de remoção pelo fim, aq automaticamente o ultimo elemento do indice sera removido: <br>
-                <span style="color: brown;"> alunos.pop()</span> <br> <br>
-                alem de remover, da para salvar o elemento removido em uma varialvel <br>
-                <span style="color: brown;">const removida = alunos.pop()</span> <br> <br>
-                exemplo de remoção pelo inicio, aq automaticamente o primeiro elemento do indice sera removido: <br>
-                <span style="color: brown;"> alunos.shift()</span> <br> <br>
-                se caso queira remover o indice e deixalo vazio, <br>
-                <span style="color: brown;"> delete.alunos[3]</span> <br>
-                neste exemplo, juana ira desaparecer, e nao sera substituida pelo indice seguinte <br> <br>
-                <span style="color: red;">6-</span> Pegando varios elementos de uma vez, fatiando o elemento, é similar
-                ao exemplo das strings <br>
-                exemplo: <br>
-                <span style="color: brown;">console.log(alunos.slice(1,4)) </span> <br>
-                sera exibido entre virgula os elementos dos indices.
-                <br> <br>
-                <span style="color: red;">7-</span> Para descobrir se o elemento usado é um array.
-                <br>
-                exemplo: <br>
-                <span style="color: brown;"> console.log(alunos instanceof Array);</span> <br>
-                neste caso ira retornar:
-                <br> object
-                <br> true
-                pq alunos é um array
-                <br> <br>
-                <span style="color: red;">8-</span> Para criar uma copia de um array de forma pratica.
-                <br>
-                exemplo: <br>
-                <span style="color: brown;"> let a =[1, 2, 3]</span> <br>
-                <span style="color: brown;"> let b =[...a]</span> <br>
-                <br><br>
+            <span style="color: red;">4- </span>Para saber o tamanho do array <br>
+            exemplo: <br>
+            <span style="color: brown;"> console.log(alunos.length)</span> <br> <br>
+            <span style="color: red;">5- </span>Para remover um indice do array <br>
+            exemplo de remoção pelo fim, aq automaticamente o ultimo elemento do indice sera removido: <br>
+            <span style="color: brown;"> alunos.pop()</span> <br> <br>
+            alem de remover, da para salvar o elemento removido em uma varialvel <br>
+            <span style="color: brown;">const removida = alunos.pop()</span> <br> <br>
+            exemplo de remoção pelo inicio, aq automaticamente o primeiro elemento do indice sera removido: <br>
+            <span style="color: brown;"> alunos.shift()</span> <br> <br>
+            se caso queira remover o indice e deixalo vazio, <br>
+            <span style="color: brown;"> delete.alunos[3]</span> <br>
+            neste exemplo, juana ira desaparecer, e nao sera substituida pelo indice seguinte <br> <br>
+            <span style="color: red;">6-</span> Pegando varios elementos de uma vez, fatiando o elemento, é similar
+            ao exemplo das strings <br>
+            exemplo: <br>
+            <span style="color: brown;">console.log(alunos.slice(1,4)) </span> <br>
+            sera exibido entre virgula os elementos dos indices.
+            <br> <br>
+            <span style="color: red;">7-</span> Para descobrir se o elemento usado é um array.
+            <br>
+            exemplo: <br>
+            <span style="color: brown;"> console.log(alunos instanceof Array);</span> <br>
+            neste caso ira retornar:
+            <br> object
+            <br> true
+            pq alunos é um array
+            <br> <br>
+            <span style="color: red;">8-</span> Para criar uma copia de um array de forma pratica.
+            <br>
+            exemplo: <br>
+            <span style="color: brown;"> let a =[1, 2, 3]</span> <br>
+            <span style="color: brown;"> let b =[...a]</span> <br>
+            <br><br>
 
-            </p>
-        
+        </p>
+
     </div>
+
+    <!--Object Date-->
+    <div class="container">
+        <h1>Objeto Date</h1>
+        <p>
+            date é uma função construtora, e para usar o objeto date é sempre obrigado a usar a palavra <span
+                style="color: brown;">new</span> pq o Date é uma função construtora
+
+        </p>
+    </div>
+
     <script src="#"></script>
 </body>
 
