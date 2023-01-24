@@ -197,14 +197,22 @@
         <h4 style="color: chartreuse;">Formatando uma data usando uma função</h4>
         <div class="exemplos">
             const data = new Date(); <br>
+
+            <p class="anotacoes">
+                //função para adicionar o zero a esquerda de todos os numeros <br>
+                <span style="margin-left: 25px;"> function zeroAesquerda(num){ </span>
+                <br><span style="margin-left: 40px;"> return num >= 10 ? num : `0${num}`; </span> <br>
+                <span style="margin-left: 25px;"></span>}<br>
+            </p>
+
             function formatandoData(data){ <br>
-                <p style="margin-left: 55px;">const dia = new Date("Dia", data.getDate()); </p>
-                <p style="margin-left: 55px;">const mes = new Date("Mes", data.getMonth() + 1); </p>
-                <p style="margin-left: 55px;">const ano = new Date("Ano", data.getFullYear()); </p>
-                <p style="margin-left: 55px;">const hora = new Date("Hora", data.getHours()); </p>
-                <p style="margin-left: 55px;">const minutos = new Date("Minutos", data.getMinutes()); </p>
-                <p style="margin-left: 55px;">const segundos = new Date("segundos", data.getSeconds()); </p>
-                <br> return `${dia} / ${mes} / ${ano} ${hora} : ${minutos} : ${segundos}`
+            <p style="margin-left: 55px;">const dia = <span class="anotacoes">zeroAesquerda(</span>data.getDate()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const mes = <span class="anotacoes">zeroAesquerda(</span> data.getMonth() + 1)<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const ano = <span class="anotacoes">zeroAesquerda(</span>data.getFullYear()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const hora = <span class="anotacoes">zeroAesquerda(</span>data.getHours()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const minutos = <span class="anotacoes">zeroAesquerda(</span>data.getMinutes()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const segundos = <span class="anotacoes">zeroAesquerda(</span>data.getSeconds()<span class="anotacoes">)</span>; </p>
+            <br> return `${dia} / ${mes} / ${ano} ${hora} : ${minutos} : ${segundos}`
             } <br>
             const dataBrasil = formatandoData(data); <br>
             console.log(dataBrasil); <br>
