@@ -198,13 +198,13 @@
         <div class="exemplos">
             const data = new Date(); <br>
             function formatandoData(data){ <br>
-                <p style="margin-left: 55px;">const data = new Date("Dia", data.getDate()); </p>
-                <p style="margin-left: 55px;">const data = new Date("Mes", data.getMonth() + 1); </p>
-                <p style="margin-left: 55px;">const data = new Date("Ano", data.getFullYear()); </p>
-                <p style="margin-left: 55px;">const data = new Date("Hora", data.getHours()); </p>
-                <p style="margin-left: 55px;">const data = new Date("Minutos", data.getMinutes()); </p>
-                <p style="margin-left: 55px;">const data = new Date("segundos", data.getSeconds()); </p>
-                <br> return `${} ${} ${} ${} ${} ${}`
+                <p style="margin-left: 55px;">const dia = new Date("Dia", data.getDate()); </p>
+                <p style="margin-left: 55px;">const mes = new Date("Mes", data.getMonth() + 1); </p>
+                <p style="margin-left: 55px;">const ano = new Date("Ano", data.getFullYear()); </p>
+                <p style="margin-left: 55px;">const hora = new Date("Hora", data.getHours()); </p>
+                <p style="margin-left: 55px;">const minutos = new Date("Minutos", data.getMinutes()); </p>
+                <p style="margin-left: 55px;">const segundos = new Date("segundos", data.getSeconds()); </p>
+                <br> return `${dia} / ${mes} / ${ano} ${hora} : ${minutos} , ${segundos}`
             } <br>
             const dataBrasil = formatandoData(data); <br>
             console.log(dataBrasil); <br>
