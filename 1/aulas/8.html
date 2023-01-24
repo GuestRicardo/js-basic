@@ -22,7 +22,7 @@
             const data = new Date("1987-03-23 00:51:05"); <br>
             let diaSemana = data.getDay(); <br>
             let diaSemanaTexto; <br> <br>
-            switch () { <br>
+            switch (diaSemana) { <br>
             case0: <br>
             diaSemana = 'Domingo'; <br>
             break; <br>
@@ -53,9 +53,51 @@
             <hr>
             default: <br>
             diaSemanaTexto = 'informação invalida'; <br>
-            break; 
+            break;
             <br> } <br>
             console.log(diaSemana, diaSemanaTexto);
+        </div> <br>
+        <h4>Mesmo exemplo acima usando uma função</h4>
+        <div class="exemplos" style="padding-left: 10px;">
+            function getDiaSemanaTexto(diaSemana){ <br>
+            let diaSemanaTexto; <br>
+            switch (diaSemana) { <br>
+            <div style="margin-left: 25px;">
+                case0: <br>
+                diaSemana = 'Domingo'; <br>
+                return diaSemanaTexto; <br>
+                <hr>
+                case1: <br>
+                diaSemana = 'Segunda-Feira'; <br>
+                return diaSemanaTexto;; <br>
+                <hr>
+                case2: <br>
+                diaSemana = 'Terça-Feira'; <br>
+                return diaSemanaTexto;; <br>
+                <hr>
+                case3: <br>
+                diaSemana = 'Quarta-Feira'; <br>
+                return diaSemanaTexto; <br>
+                <hr>
+                case4: <br>
+                diaSemana = 'Quinta-Feira'; <br>
+                return diaSemanaTexto; <br>
+                <hr>
+                case5: <br>
+                diaSemana = 'Sexta-Feira'; <br>
+                return diaSemanaTexto; <br>
+                <hr>
+                case6: <br>
+                diaSemana = 'Sabado'; <br>
+                return diaSemanaTexto; <br>
+                <hr>
+                default: <br>
+                diaSemanaTexto = 'informação invalida'; <br>
+                return diaSemanaTexto;
+                <br> }
+            </div>
+
+            }
         </div>
     </section>
     <script src="../assets/js/exe5.js"></script>
