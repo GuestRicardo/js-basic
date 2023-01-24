@@ -17,7 +17,8 @@
         </p>
         <h4>exemplo:</h4>
         <p>neste exemplo sera feita uma verificação do da data verificada.</p>
-        <p class="exemplos" style="padding-left: 10px;">
+        <!--exemplo de switch case-->
+        <div class="exemplos" style="padding-left: 10px;">
             const data = new Date("1987-03-23 00:51:05"); <br>
             let diaSemana = data.getDay(); <br>
             let diaSemanaTexto; <br> <br>
@@ -25,26 +26,37 @@
             case0: <br>
             diaSemana = 'Domingo'; <br>
             break; <br>
+            <hr>
             case1: <br>
             diaSemana = 'Segunda-Feira'; <br>
             break; <br>
+            <hr>
             case2: <br>
             diaSemana = 'Terça-Feira'; <br>
             break; <br>
+            <hr>
             case3: <br>
             diaSemana = 'Quarta-Feira'; <br>
             break; <br>
+            <hr>
             case4: <br>
             diaSemana = 'Quinta-Feira'; <br>
             break; <br>
+            <hr>
             case5: <br>
             diaSemana = 'Sexta-Feira'; <br>
             break; <br>
+            <hr>
             case6: <br>
             diaSemana = 'Sabado'; <br>
             break; <br>
-            <br> }
-        </p>
+            <hr>
+            default: <br>
+            diaSemanaTexto = 'informação invalida'; <br>
+            break; 
+            <br> } <br>
+            console.log(diaSemana, diaSemanaTexto);
+        </div>
     </section>
     <script src="../assets/js/exe5.js"></script>
 </body>
