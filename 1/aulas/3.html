@@ -152,6 +152,13 @@
                 const data = new Date(); <br>
                 console.log(data.toString());
             </span> <br> <br>
+            <h4>Para pegar a data no momento</h4>
+            <p class="exemplos">
+                console.log(Date.now); <span class="anotacoes">aqui pegará todos os dados de uma vez só, exibira todas
+                    as informações <br> (tambem sera exibido a todos os milesimos de segundos percorridos ate hje desde
+                    o dia
+                    zero)</span>
+            </p>
             E se quiser pegar a primeira data exibida pelo Objeto: <br>
             exemplo: <br>
             <span class="exemplos">
@@ -173,11 +180,36 @@
             <p>
                 usando <span style="color: red;"> Strings: </span>
                 <p class="exemplos">const data = new Date('2019-04-20 20:20:32'); <br>
-                será exibido: <span class="anotacoes"> 2019, 20 abril, 20:20,32</span>
+                    será exibido: <span class="anotacoes"> 2019, 20 abril, 20:20,32</span>
+                </p>
             </p>
-            </p>
-
+            <h4>Para obter propriedades</h4>
+            <p class="exemplos">const data = new Date("Dia", data.getDate()); </p>
+            <p class="exemplos">const data = new Date("Mes", data.getMonth() + 1); </p>
+            <p class="exemplos">const data = new Date("Ano", data.getFullYear()); </p>
+            <p class="exemplos">const data = new Date("Hora", data.getHours()); </p>
+            <p class="exemplos">const data = new Date("Minutos", data.getMinutes()); </p>
+            <p class="exemplos">const data = new Date("segundos", data.getSeconds()); </p>
+            <p class="exemplos">const data = new Date("Milisegundos", data.getMillisecounds()); </p>
+            <p class="exemplos">const data = new Date("Dia da semana", data.getDay()); <span class="anotacoes"> 0 é
+                    domingo e 6 é sabado</span> </p>
         </p>
+        <h4 style="color: chartreuse;">Formatando uma data usando uma função</h4>
+        <div class="exemplos">
+            const data = new Date(); <br>
+            function formatandoData(data){ <br>
+                <p style="margin-left: 55px;">const data = new Date("Dia", data.getDate()); </p>
+                <p style="margin-left: 55px;">const data = new Date("Mes", data.getMonth() + 1); </p>
+                <p style="margin-left: 55px;">const data = new Date("Ano", data.getFullYear()); </p>
+                <p style="margin-left: 55px;">const data = new Date("Hora", data.getHours()); </p>
+                <p style="margin-left: 55px;">const data = new Date("Minutos", data.getMinutes()); </p>
+                <p style="margin-left: 55px;">const data = new Date("segundos", data.getSeconds()); </p>
+                <br> return `${} ${} ${} ${} ${} ${}`
+            } <br>
+            const dataBrasil = formatandoData(data); <br>
+            console.log(dataBrasil); <br>
+        </div>
+
         <div style="text-align: center;">
             <a style="color: green; font-size: smaller; text-align: center;"
                 href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date">DOCUMENTAÇÃO</a>
