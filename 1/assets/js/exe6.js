@@ -114,5 +114,4 @@ const cump = complimentar(horas);
 const resultado = document.querySelector("#resultado");
 const cump1 = document.querySelector('#cump');
 cump1.innerHTML = `${cump}`;
-resultado.innerHTML = `${diadasemanaTexto1}, ${data1} de ${mesTexto1} de ${ano} e são ${horas}:${minutos}.`;
-console.log(`${diadasemanaTexto1}, ${data1} de ${mesTexto1} de ${ano} são ${horas}:${minutos}.`);
+resultado.innerHTML = `Hoje é ${diadasemanaTexto1}, dia ${data1} de ${mesTexto1} de ${ano} e são ${horas}:${minutos}.`;
