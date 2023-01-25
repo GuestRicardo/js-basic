@@ -69,10 +69,12 @@
             <span style="color: brown;"> const alunos = ['joao','maria', 'eduarda', 'juana', edilson]</span> <br>
             <span style="color: red;">1-</span> E para acessar um indice. <br>
             exemplo: <br>
-            <span style="color: brown;"> console.log =(alunos[4])</span> <br> <br>
+            <span style="color: brown;"> console.log =(alunos[4])</span>
+            <hr>
             <span style="color: red;">2-</span> Se caso queira editar um indice, substituir. <br>
             exemplo: <br>
-            <span style="color: brown;"> alunos[4]= Leoncio</span> <br> <br>
+            <span style="color: brown;"> alunos[4]= Leoncio</span>
+            <hr>
             <span style="color: red;">3-</span> ADICIONANDO indice. neste caso é so add em um indice inexistente
             <br>
             exemplo: <br>
@@ -89,11 +91,13 @@
 
             Para adicionar um item no inicio é so usar <span style="color: yellow;">unshift</span><br>
             exemplo: <br>
-            <span style="color: brown;"> alunos.unshift('Clesio');</span> <br> <br>
+            <span style="color: brown;"> alunos.unshift('Clesio');</span>
+            <hr>
 
             <span style="color: red;">4- </span>Para saber o tamanho do array <br>
             exemplo: <br>
-            <span style="color: brown;"> console.log(alunos.length)</span> <br> <br>
+            <span style="color: brown;"> console.log(alunos.length)</span>
+            <hr>
             <span style="color: red;">5- </span>Para remover um indice do array <br>
             exemplo de remoção pelo fim, aq automaticamente o ultimo elemento do indice sera removido: <br>
             <span style="color: brown;"> alunos.pop()</span> <br> <br>
@@ -103,13 +107,14 @@
             <span style="color: brown;"> alunos.shift()</span> <br> <br>
             se caso queira remover o indice e deixalo vazio, <br>
             <span style="color: brown;"> delete.alunos[3]</span> <br>
-            neste exemplo, juana ira desaparecer, e nao sera substituida pelo indice seguinte <br> <br>
+            neste exemplo, juana ira desaparecer, e nao sera substituida pelo indice seguinte
+            <hr><br> <br>
             <span style="color: red;">6-</span> Pegando varios elementos de uma vez, fatiando o elemento, é similar
             ao exemplo das strings <br>
             exemplo: <br>
             <span style="color: brown;">console.log(alunos.slice(1,4)) </span> <br>
             sera exibido entre virgula os elementos dos indices.
-            <br> <br>
+            <hr> <br> <br>
             <span style="color: red;">7-</span> Para descobrir se o elemento usado é um array.
             <br>
             exemplo: <br>
@@ -118,14 +123,34 @@
             <br> object
             <br> true
             pq alunos é um array
-            <br> <br>
+            <hr><br> <br>
             <span style="color: red;">8-</span> Para criar uma copia de um array de forma pratica.
             <br>
             exemplo: <br>
             <span style="color: brown;"> let a =[1, 2, 3]</span> <br>
             <span style="color: brown;"> let b =[...a]</span> <br>
-            <br><br>
-
+            <hr>
+            <h4>Atribuição via destruturação</h4>
+            <p>
+                É quando é pego uma variavel existente e é retribuido um novo valor sobre os valores antigos
+                <div class="anotacoes">
+                    let a= 'A'; <br>
+                    let b= 'B'; <br>
+                    let c= 'C'; <br>
+                    const numeros = [1,2,3]; <br>
+                    [a,b,c] = numeros; <br>
+                    console.log(a,b,c);
+                    <br><span style="font-size: smaller; color: blue;">Observação: foi usado arrays para fazer a
+                        modificação das variaveis</span> <br>
+                    outro exemplo:
+                    <div class="anotacoes">
+                        const numeros = [155,225,355,448,5,6,778,844,9]; <br>
+                        const [primeironumeor, segundonumero, ...resto] = numeros; <br>
+                        <span style="font-size: smaller; color: blue;">Observação: aq esta sendo pego os 2 primeiros
+                            indices, o 0, 1 e sera exibido 155 e 225, e na variavelresto sera recebido todos os outros
+                            arrays q sobraram</span> <br>
+                    </div>
+            </p>
         </p>
 
     </div>
@@ -206,12 +231,18 @@
             </p>
 
             function formatandoData(data){ <br>
-            <p style="margin-left: 55px;">const dia = <span class="anotacoes">zeroAesquerda(</span>data.getDate()<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const mes = <span class="anotacoes">zeroAesquerda(</span> data.getMonth() + 1)<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const ano = <span class="anotacoes">zeroAesquerda(</span>data.getFullYear()<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const hora = <span class="anotacoes">zeroAesquerda(</span>data.getHours()<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const minutos = <span class="anotacoes">zeroAesquerda(</span>data.getMinutes()<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const segundos = <span class="anotacoes">zeroAesquerda(</span>data.getSeconds()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const dia = <span class="anotacoes">zeroAesquerda(</span>data.getDate()<span
+                    class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const mes = <span class="anotacoes">zeroAesquerda(</span> data.getMonth() +
+                1)<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const ano = <span
+                    class="anotacoes">zeroAesquerda(</span>data.getFullYear()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const hora = <span class="anotacoes">zeroAesquerda(</span>data.getHours()<span
+                    class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const minutos = <span
+                    class="anotacoes">zeroAesquerda(</span>data.getMinutes()<span class="anotacoes">)</span>; </p>
+            <p style="margin-left: 55px;">const segundos = <span
+                    class="anotacoes">zeroAesquerda(</span>data.getSeconds()<span class="anotacoes">)</span>; </p>
             <br> return `${dia} / ${mes} / ${ano} ${hora} : ${minutos} : ${segundos}`
             } <br>
             const dataBrasil = formatandoData(data); <br>
