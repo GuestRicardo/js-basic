@@ -279,10 +279,20 @@
                 if(verdadeiro){ <br>
                 let nome ='Francisco'; <br>
                 } <br>
-                <span style="font-size: smaller; color: blue;">Observação aq esta sendo criada outra variavel com o mesmo nome, nao é a mesma variavel fora do escopo</span>
+                <span style="font-size: smaller; color: blue;">Observação aq esta sendo criada outra variavel com o
+                    mesmo nome, nao é a mesma variavel fora do escopo</span>
             </div>
         </p>
-        <p class="exemplos">3-const só tem escopo de função</p>
+        <p class="exemplos">3-const só tem escopo de função
+            <div class="anotacoes">
+                const sobrenome = 'maria'; function falaOi(){ <br>
+                const nome = 'Luiz'; <br>
+                console.log(nome, sobrenome) <br>
+                } <br>
+                <span style="font-size: smaller; color: blue;">Observação se a variavel estiver fora da função ela
+                    aceita, mas se a variavel for criada dentro da função ja nao ha acesso para o escopo externo.</span>
+            </div>
+        </p>
     </div>
 
     <script src="aulas.js"></script>
