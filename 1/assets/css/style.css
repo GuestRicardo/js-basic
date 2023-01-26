@@ -79,10 +79,11 @@ form button:hover {
   border: 1px solid;
   color: brown;
   font-size: medium;
-  padding-left: 5px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .anotacoes{
   color: yellow;
-  padding-left: 15px;
+  padding-left: 6px;
 }
