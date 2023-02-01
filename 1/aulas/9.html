@@ -13,17 +13,32 @@
     <section class="container">
         <h1>FOR</h1>
         <p class="exemplos">
-            <span style="color: green; font-size: larger;">Sintaxe</span>  <br>
-            for (variavel de controle(de onde vai começar a contar); condiçao q vai parar o laço(quando ele vai parar); e o contador){ <br>
-                resultado pos contagem <br>
+            <span style="color: green; font-size: larger;">Sintaxe</span> <br>
+            for (variavel de controle(de onde vai começar a contar); condiçao q vai parar o laço(quando ele vai parar);
+            e o contador){ <br>
+            resultado pos contagem <br>
             }
-        </p>    
+        </p>
         <p class="exemplos">
-            <span style="color: green; font-size: larger;">Exemplo:</span>  <br>
+            <span style="color: green; font-size: larger;">Exemplo:</span> <br>
             for (let i =0; i <= 5; i++){ <br>
                 console.log(`contando ate 5= ${i}`); <br>
-            }
-        </p>    
+                }
+        </p>
+        <p class="exemplos">
+            <span style="color: green; font-size: larger;">Checando os numeros pares:</span> <br>
+            for (let i =0; i <= 50; i++){ <br>
+                const par = i % 2 === 0 ? 'par' : 'impar' <br>
+                console.log(i, par); <br>
+                }
+        </p>
+        <p class="exemplos">
+            <span style="color: green; font-size: larger;">Percorrendo um array usando FOR:</span> <br>
+            const frutas = ['maçã','banana','manga',]
+            for (let i =0; i < frutas.length; i++){ <br>
+                console.log(´Indice ${i}´, frutas[i]); <br>
+                }
+        </p>
 
     </section>
     <script src="../assets/js/exe5.js"></script>
