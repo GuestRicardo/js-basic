@@ -69,7 +69,25 @@
                     numero: 320; <br>
                     } <br>
                     } <br>
+                    <div style="font-size: smaller;">
+                        const nome = pessoa.nome <span class="anotacoes" style="font-size: smaller;">//jogando nome em
+                            uma variavel, essa é uma
+                            atribuição normal</span> <br> <br>
+                        const { nome } = pessoa <span class="anotacoes" style="font-size: smaller;">//jogando nome em
+                            uma variavel, essa é a
+                            atibuição via desestruturação</span> <br>
+                        const { nome, sobrenome, idade } = pessoa <span class="anotacoes"
+                            style="font-size: smaller;">//fazendo com mais de uma variavel ao mesmo tempo, essa e a
+                            vantagem</span> <br>
+                        const { nome= 'Tiago', sobrenome= 'Jureide', idade= '15' } = pessoa <span class="anotacoes"
+                            style="font-size: smaller;">//fazendo atribuições direto </span> <br>
+                        const { nome: nome2= 'Tiago'} = pessoa <span class="anotacoes"
+                            style="font-size: smaller;">//criando uma varialvel atraves da chave do objeto </span> <br>
+                        const { endereco: {rua, numero} = pessoa <span class="anotacoes"
+                            style="font-size: smaller;">//aq esta desmenbrando o a rua e o numero, póis se usar exibir
+                            endereço ser exibido um objeto inteiro </span> <br>
 
+                    </div>
                 </div>
             </p>
         </p>
