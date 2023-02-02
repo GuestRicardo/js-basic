@@ -47,24 +47,45 @@
     <!--for in-->
     <section class="container">
         <h1>FOR in</h1>
-        <p>O laço for...in somente iterage sobre propriedades enumeradas <span class="anotacoes">(lê os indices ou chaves dos objetos)</span> . Objetos criados a partir de construtores
+        <p>O laço for...in somente iterage sobre propriedades enumeradas <span class="anotacoes">(lê os indices ou
+                chaves dos objetos)</span> . Objetos criados a partir de construtores
             built-in (arrays e object)</p>
         <p class="exemplos">
             const frutas = ['banana', 'maca', 'uva']; <br>
-            for(let i in frutas){ <span class="anotacoes">//o for in lê os indicadores do array(sera exibbido os indices das frutas)</span><br> 
-             console.log(frutas[i]) <span class="anotacoes">// aq sera exibido os indices e o q contem nos indices(as frutas) </span> <br>
-            } <br>            
+            for(let i in frutas){ <span class="anotacoes">//o for in lê os indicadores do array(sera exibbido os indices
+                das frutas)</span><br>
+            console.log(frutas[i]) <span class="anotacoes">// aq sera exibido os indices e o q contem nos indices(as
+                frutas) </span> <br>
+            } <br>
         </p>
         https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in
     </section>
-        <!--for of-->
-        <section class="container">
-            <h1>FOR of</h1>
-            <p>
+    <!--for of-->
+    <section class="container">
+        <h1>FOR of</h1>
+        <p>
+            Este for é para objetos interaveis, sao elementos q contem indices, como arrays, strings, maps ...
+        </p>
+        <p>
+            <strong>String</strong> <br>
+            <p class="exemplos"> const nome = 'Luiz Henrique'; <br>
+                for(let i of nome){ <br>
+                console.log(i); <span class="anotacoes">// neste exeplo sera retornado o valor ao inves do indice</span> <br>
+                }
 
             </p>
-            https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
-        </section>
+            <p>
+                <strong>Arrays</strong> <br>
+                <p class="exemplos"> const nome = ['Luiz Henrique', 'Jose', 'Lenon']; <br>
+                    for(let i of nome){ <br>
+                    console.log(nome[i]); <span class="anotacoes">// neste exeplo sera retornado o valor ao inves do indice</span> <br>
+                    }
+    
+                </p>
+
+        </p>
+        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+    </section>
 </body>
 
 </html>
