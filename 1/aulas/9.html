@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!--for-->
     <section class="container">
         <h1>FOR</h1>
         <p class="exemplos">
@@ -40,10 +41,21 @@
                 }
         </p>
         <p style="color: brown; text-align: center; font-size: larger ;"> <a style="text-decoration: none;"
-            href="/js-basic/1/exercicios/exercicio8.html">Exercicio</a></p>
+                href="/js-basic/1/exercicios/exercicio8.html">Exercicio</a></p>
 
     </section>
-
+    <!--for in-->
+    <section class="container">
+        <h1>FOR in</h1>
+        <p>O laço for...in somente iterage sobre propriedades enumeradas. Objetos criados a partir de construtores
+            built-in (arrays e object)</p>
+        <p class="exemplos">
+            const frutas = ['banana', 'maca', 'uva']; <br>
+            for(let i in frutas){ <span class="anotacoes">//o for in lê os indicadores do array(sera exibbido os indices das frutas)</span><br> 
+             console.log(frutas[i]) <span class="anotacoes">// aq sera exibido os indices e o q contem nos indices(as frutas) </span> <br>
+            }
+        </p>
+    </section>
 </body>
 
 </html>
