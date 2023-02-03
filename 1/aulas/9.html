@@ -58,7 +58,9 @@
                 frutas) </span> <br>
             } <br>
         </p>
-        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in
+        <div style="text-align: center;">
+            <a style="text-decoration: none;" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">Documentação</a>
+        </div>
     </section>
     <!--for of-->
     <section class="container">
@@ -68,25 +70,29 @@
         </p>
         <p>
             <strong>String</strong> <br>
-            <p class="exemplos"> const nome = 'Luiz Henrique'; <br>
-                for(let i of nome){ <br>
-                console.log(i); <span class="anotacoes">// neste exeplo sera retornado o valor ao inves do indice</span>
-                <br>
-                }
+        <p class="exemplos"> const nome = 'Luiz Henrique'; <br>
+            for(let i of nome){ <br>
+            console.log(i); <span class="anotacoes">// neste exeplo sera retornado o valor ao inves do indice</span>
+            <br>
+            }
 
-            </p>
-            <p>
-                <strong>Arrays</strong> <br>
-                <p class="exemplos"> const nome = ['Luiz Henrique', 'Jose', 'Lenon']; <br>
-                    for(let i of nome){ <br>
-                    console.log(nome[i]); <span class="anotacoes">// neste exeplo sera retornado o valor ao inves do
-                        indice</span> <br>
-                    }
+        </p>
+        <p>
+            <strong>Arrays</strong> <br>
+        <p class="exemplos"> const nome = ['Luiz Henrique', 'Jose', 'Lenon']; <br>
+            for(let i of nome){ <br>
+            console.log(nome[i]); <span class="anotacoes">// neste exeplo sera retornado o valor ao inves do
+                indice</span> <br>
+            }
 
-                </p>
+        </p>
 
-            </p>
-            https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+        </p>
+        <div style="text-align: center;">
+            <a style="text-decoration: none;"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of">Documentação</a>
+        </div>
+
     </section>
     <!--foreach-->
     <section class="container">
@@ -101,10 +107,49 @@
         <p class="exemplos">
             const nomes = ['jose', 'maria', 'ismael']; <br>
             nomes.forEach(function(elemento-do-array)){ <br>
-              console.log(elemento-do-array); <span class="anotacoes">sera exibido, todos os elementos, sem os indices</span> <br> 
+            console.log(elemento-do-array); <span class="anotacoes">sera exibido, todos os elementos, sem os
+                indices</span> <br>
             } <br>
         </p>
-        https://developer-mozilla-org.translate.goog/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+        <div style="text-align: center;"><a style="text-decoration: none;"
+                href="https://developer-mozilla-org.translate.goog/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc">Documentação</a>
+        </div>
+
+    </section>
+    <!--while e do while-->
+    <section class="container">
+        <h1>While e Do while</h1>
+        <p>essa estrutora é muito parecida com as anteriores, os laços <span class="anotacoes">for</span> é usado quando
+            se sabe o tamanho dos elementos, sabendo o quanto de vez sera feito a passada nos elementos.
+        </p>
+        <p> ja o <span class="anotacoes">while</span> e <span class="anotacoes">do while</span> é numa situação que nao
+            se sabe o tamanho do elemento, para essa situação que se recomenda o uso dos 2
+        </p>
+        <h4>Sintaxe</h4>
+        <div class="exemplos">
+            let variavel de controle = 0; <br>
+            while(condição){ <br>
+            o que deseja mostrar apos a verificação <br>
+            variavel de controle sendo incrementando <span class="anotacoes">se caso esquecer tera uma contagem
+                infinita</span> <br>
+            } <br>
+
+        </div>
+        <h4>Exemplo</h4>
+        <div class="exemplos">
+            let controlador = 0; <br>
+            while(i <= 5){ <br>
+                console.log(i) <br>
+                i++<br>
+                } <br>
+
+        </div>
+        <div style="text-align: center;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while">Documentação
+                while</a> <br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while">Documentação
+                do while</a>
+        </div>
     </section>
 
 </body>
