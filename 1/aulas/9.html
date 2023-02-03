@@ -59,7 +59,8 @@
             } <br>
         </p>
         <div style="text-align: center;">
-            <a style="text-decoration: none;" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">Documentação</a>
+            <a style="text-decoration: none;"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">Documentação</a>
         </div>
     </section>
     <!--for of-->
@@ -119,7 +120,9 @@
     <!--while e do while-->
     <section class="container">
         <h1>While e Do while</h1>
-        <p>essa estrutora é muito parecida com as anteriores, os laços <span class="anotacoes">for</span> é usado quando
+        <h3 style="text-decoration: line-through;">While</h3>
+        <p><span class="anotacoes">WHILE (checa a condição e depois executa o codigo)</span> essa estrutura é muito
+            parecida com as anteriores, os laços <span class="anotacoes">for</span> é usado quando
             se sabe o tamanho dos elementos, sabendo o quanto de vez sera feito a passada nos elementos.
         </p>
         <p> ja o <span class="anotacoes">while</span> e <span class="anotacoes">do while</span> é numa situação que nao
@@ -141,8 +144,42 @@
             while(i <= 5){ <br>
                 console.log(i) <br>
                 i++<br>
-                } <br>
+                }
+        </div>
+        <h4>função para gerar numeros aleatorios</h4>
+        <div class="exemplos">
+            function random(min, max){ <br>
+            const numero = Match.random() * (max - min) + min <br>
+            return Match.floor(numero) <br>
+            } <br>
+            const min = 1; <br>
+            const max = 50; <br>
+            let aleatorio = random(min, max); <br>
+            <span class="anotacoes">vai continuar execultando ate encontar o numero 10</span> <br>
+            while(aleatorio !== 10){ <br>
+            aleatorio = random(min, max);
+            console.log(aleatorio) <br>
+            }
+        </div>
+        <h3 style="text-decoration: line-through;">do While</h3>
+        <p>
+            <span class="anotacoes">do WHILE (checa o codigo e depois executa a condição )</span> se caso a condição for
+            false ela ja sai da verificação, ela aceitara entrar no laço somente quando o resultado for <span
+                class="anotacoes">true</span>
+        </p>
+        <div class="exemplos">
+            function random(min, max){ <br>
+            const numero = Match.random() * (max - min) + min <br>
+            return Match.floor(numero) <br>
+            } <br>
+            const min = 1; <br>
+            const max = 50; <br>
+            let aleatorio = 10; <br>
+            <hr>
 
+            do{ <br>
+            console.log(aleatorio)<br>
+            } while(aleatorio !==10)  <br>
         </div>
         <div style="text-align: center;">
             <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while">Documentação
