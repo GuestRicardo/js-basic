@@ -10,3 +10,4 @@ for (let p of paragrafos){
    p.style.color= '#FFFFFF';
 }
 
+
