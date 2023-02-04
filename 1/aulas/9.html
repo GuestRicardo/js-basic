@@ -197,10 +197,34 @@
             determinar, ele funciona em qualquer uma estrututura de repetição
         </p>
         <h3>Exemplo: </h3>
+        <!--continue-->
         <div class="exemplos">
-            <span class="anotacoes">
+            <div class="anotacoes">
                 o continue, vai pular a ecessão que especificar no codigo.
-            </span> <br>
+            </div>
+            const numeros = [2,35,23,3588,5,27]; <br>
+            for(let numero of numeros){ <br>
+            <hr>
+            if(numero ===2 || numero===5){ <br>
+            continue; <span style="color:blue">//aq esta sendo pulado o numero 2 e o 5</span> <br>
+            } <br>
+            console.log(numero); <br>
+            } <br>
+        </div>
+        <!--break-->
+        <div class="exemplos">
+            <div class="anotacoes">
+                O break ele vai parar o codigo, vai sair do laço, poupando mais buscas.
+            </div>
+            const numeros = [2,35,23,3588,5,27]; <br>
+            for(let numero of numeros){ <br>
+            <hr>
+            if(numero ===23){ <br>
+            console.log(numero); <span style="color:blue">//observação a exibição precisa ser antes da açao no caso do
+                break</span> <br>
+            break; <span style="color:blue">//aq contara desde o primeiro item ate o 23</span> <br>
+            } <br>
+            } <br>
         </div>
     </section>
 </body>
