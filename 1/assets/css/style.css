@@ -87,3 +87,6 @@ form button:hover {
   color: rgb(43, 114, 78);
   padding-left: 6px;
 }
+input{
+  caret-color: aqua;
+}
