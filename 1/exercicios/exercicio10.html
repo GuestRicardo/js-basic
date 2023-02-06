@@ -12,14 +12,44 @@
 <body>
     <section class="container">
         <h1>Escreva uma função que recebe 2 numeros e retorne o maior deles.</h1>
-        
+
         <form action="" id="form">
             <label for="">Escreva um numero</label><input type="text" name="" id="n1">
             <label for="">Escreva outro numero</label><input type="text" name="" id="n2">
             <button type="submit"> Testar </button>
-        </form>       
+        </form>
+        <br>
         <div id="resultado"></div>
-
+        <div class="exemplos">
+            Criando esse exercicio usando function. <br>
+            <div class="anotacoes">
+                function maior(n1, n2){ <br>
+                if (n1 > n2){ <br>
+                return `O ${n1} é maior que o ${n2}` <br>
+                } <br>
+                return `O ${n2} é maior que o ${n1}` <br>
+                } <br>
+                console.log(maior(25,5));
+            </div>
+        </div>
+        <div class="exemplos">
+            Criando esse exercicio usando condição ternaria. <br>
+            <div class="anotacoes">
+                function maior(n1, n2){ <br>
+                return n1 > n2 ? `O ${n1} é maior que o ${n2}` n1 : n2 `O ${n2} é maior que o ${n1}`; <br>
+                } <br>
+                console.log(maior(25,5));
+            </div>
+        </div>
+        <div class="exemplos">
+            Criando esse exercicio usando arow function. <br>
+            <div class="anotacoes">
+                maior2 = (n1, n2) => { <br>
+                return n1 > n2 ? `O ${n1} é maior que o ${n2}` n1 : n2 `O ${n2} é maior que o ${n1}`; <br>
+                } <br>
+                console.log(maior(25,5));
+            </div>
+        </div>
     </section>
     <script src="../assets/js/exe9.js"></script>
 </body>
