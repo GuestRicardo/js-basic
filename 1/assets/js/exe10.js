@@ -3,7 +3,7 @@ const form = document.querySelector("#form");
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    total = () => {
+   
         const inputN1 = event.target.querySelector('#n1');
         const inputN2 = event.target.querySelector('#n2');
         const resultado = document.querySelector('#resultado');
@@ -12,15 +12,14 @@ form.addEventListener('submit', function (event) {
         const n2 = Number(inputN2.value);
 
         if (n1 === n2) {
-            return resultado.innerHTML = `<span style="text-align: center;"> ${n1} e ${n2} são identicas</span>`;
+            return resultado.innerHTML = `<span style="text-align: center;"> Tamanho da imagem Normal</span>`;
         } else if (n1 > n2) {
-            return resultado.innerHTML = `<span style="text-align: center;"> ${n1} é maior que ${n2}</span>`;
+            return resultado.innerHTML = `<span style="text-align: center;"> Imagem widscreen</span>`;
         } else if (n2 > n1) {
-            return resultado.innerHTML = `<span style="text-align: center;"> ${n2} é maior que ${n1}</span>`;
+            return resultado.innerHTML = `<span style="text-align: center;">Tamanho da imagem Normal</span>`;
         } else {
             return 'ERROR';
         }
-    };
 
 });
 
