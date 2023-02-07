@@ -11,14 +11,22 @@
 
 <body>
     <section class="container">
-        <h1>Escreva 2 medidas para saber se a imagem esta no modo paisagem ou modo retrato</h1>
-
+        <h1>Escreva uma função que recebe um numero e:</h1>
+        <div class="anotacoes">
+            numeno é divisivel por 3 = FIZZ <br>
+            numeno é divisivel por 5 = BUZZ<br>
+            numeno é divisivel por 3 e 5 = FIZZBUZZ<br>
+            numeno NÂO é divisivel po 3 e 5= retorne o proprio numero<br>
+            checar se o numero e realmente um numero<br>
+            use uma função com numeors de 0 a 100<br>
+        </div>
+        <br>
         <form action="" id="form">
-            <label for="">Escreva a largura</label><input type="text" name="" id="largura">
-            <label for="">Escreva a altura</label><input type="text" name="" id="altura">
+            <label for="">Escreva o Número</label><input type="text" name="" id="numero">
+
             <button type="submit"> Testar </button>
         </form>
- 
+
         <div id="resultado"></div> <br>
     </section>
     <section class="container">
@@ -26,7 +34,7 @@
             resolvendo exercicio somente com true e false. <br>
             <div class="anotacoes">
                 function ePaisegem(largura, altura){ <br>
-                    return largura > altura ? true: false; <br>
+                return largura > altura ? true: false; <br>
                 } <br>
                 console.log(ePaisagem(1920,1080));
             </div>
@@ -34,7 +42,7 @@
         <div class="exemplos">
             convertendo para Arrow function
             <div class="anotacoes" style="font-size: small;">
-                ePaisagem = (largura, altura) => largura > altura ?  true : false; <br>
+                ePaisagem = (largura, altura) => largura > altura ? true : false; <br>
                 consosle.log(ePaisagem(1920,1080));
             </div>
         </div>
