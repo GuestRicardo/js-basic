@@ -2,23 +2,23 @@ const form = document.querySelector("#form");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-   
-        const inputN1 = event.target.querySelector('#n1');
-        const inputN2 = event.target.querySelector('#n2');
-        const resultado = document.querySelector('#resultado');
 
-        const n1 = Number(inputN1.value);
-        const n2 = Number(inputN2.value);
+    const inputN1 = event.target.querySelector('#largura');
+    const inputN2 = event.target.querySelector('#altura');
+    const resultado = document.querySelector('#resultado');
 
-        if (n1 === n2) {
-            return resultado.innerHTML = `<span style="text-align: center;">${n1} x ${n2} Tamanho da imagem Normal</span>`;
-        } else if (n1 > n2) {
-            return resultado.innerHTML = `<span style="text-align: center;">${n1} x ${n2} Imagem widscreen</span>`;
-        } else if (n2 > n1) {
-            return resultado.innerHTML = `<span style="text-align: center;">${n1} x ${n2} Tamanho da imagem Normal</span>`;
-        } else {
-            return 'ERROR';
-        }
+    const largura = Number(inputN1.value);
+    const altura = Number(inputN2.value);
+
+    if (largura === altura) {
+        return resultado.innerHTML = `<p>Sua Imagem esta quadrada</p>`;
+    } else if (largura > altura) {
+        return resultado.innerHTML = `<p>Sua Imagem esta em modo paisagem</p>`;
+    } else if (largura < altura) {
+        return resultado.innerHTML = `<p>Sua Imagem esta em modo retrato</p>`;
+    } else{
+        return resultado.innerHTML=`<p>ERRO, apenas use numeros, não pode usar letras</p>`;
+    }
 
 });
 

@@ -14,46 +14,26 @@
         <h1>Escreva 2 medidas para saber se a imagem esta no modo paisagem ou modo retrato</h1>
 
         <form action="" id="form">
-            <label for="">Escreva a primeira medida</label><input type="text" name="" id="n1">
-            <label for="">Escreva a segunda medida</label><input type="text" name="" id="n2">
+            <label for="">Escreva a largura</label><input type="text" name="" id="largura">
+            <label for="">Escreva a altura</label><input type="text" name="" id="altura">
             <button type="submit"> Testar </button>
         </form>
-        <br>
+ 
         <div id="resultado"></div> <br>
     </section>
     <section class="container">
         <div class="exemplos">
-            Criando esse exercicio usando function. <br>
+            resolvendo exercicio somente com true e false. <br>
             <div class="anotacoes">
-                function maior(n1, n2){ <br>
-                if (n1 > n2){ <br>
-                return `O ${n1} é maior que o ${n2}` <br>
+                function ePaisegem(largura, altura){ <br>
+                    return largura > altura ? true: false; <br>
                 } <br>
-                return `O ${n2} é maior que o ${n1}` <br>
-                } <br>
-                console.log(maior(25,5));
+                console.log(ePaisagem(1920,1080));
             </div>
         </div>
-        <div class="exemplos">
-            Criando esse exercicio usando condição ternaria. <br>
-            <div class="anotacoes">
-                function maior(n1, n2){ <br>
-                return n1 > n2 ? `O ${n1} é maior que o ${n2}` n1 : n2 `O ${n2} é maior que o ${n1}`; <br>
-                } <br>
-                console.log(maior(25,5));
-            </div>
-        </div>
-        <div class="exemplos">
-            Criando esse exercicio usando arow function. <br>
-            <div class="anotacoes">
-                maior2 = (n1, n2) => { <br>
-                return n1 > n2 ? `O ${n1} é maior que o ${n2}` n1 : n2 `O ${n2} é maior que o ${n1}`; <br>
-                } <br>
-                console.log(maior(25,5));
-            </div>
-        </div>
+
     </section>
-    <script src="../assets/js/exe10.js,"></script>
+    <script src="../assets/js/exe10.js"></script>
 
 </body>
 
