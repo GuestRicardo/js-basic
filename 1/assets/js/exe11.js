@@ -10,7 +10,14 @@
 // função para retornar hora
 
 function retornHora(data) {
-    if (!(data instanceof Date)) { //a variavel data é uma instancia da função construtora Date, e para execulta-la é preciso usar o (new) exemplo new Date()
-
+    if (data && !(data instanceof Date)) { //a variavel data é uma instancia da função construtora Date, e para execulta-la é preciso usar o (new) exemplo new Date()
+        throw new TypeError('Esperando instancia de Date');// se a data nao for a instancia da Date, ai aq esta sendo lançado o erro
     }
+    if (!data) {
+        data = new Date();
+    }
+    return data.toLocaleTimeString('pt-BR')
 }
+
+const hora = retornaHora();
+console.log(hora);
