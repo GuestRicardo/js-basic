@@ -23,6 +23,13 @@ function retornHora(data) {
         hour12: false //para tirar o PM q aparece na frente da hora
     });
 }
+try{
+    const hora = retornaHora();
+    console.log(hora);
+} catch(erro){
+    //tratar erro
+    console.log(erro);
+} finally{
+    console.log('tenha um bom dia')
+}
 
-const hora = retornaHora();
-console.log(hora);
