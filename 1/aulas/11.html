@@ -37,6 +37,20 @@
 
             A <span style="color: brown;">throw</span> instrução define um erro personalizado. <br>
         </p>
+        <div class="exemplos">  
+            <h3>Exemplo:</h3>
+            function soma(x, y){ <br>
+                if(typeof x !== 'number' || typeof y !== 'number'){ <br>
+                    throw new Error('x e y precisam ser numeros para q aja a soma'); <span class="anotacoes">//(lançando) essa mensagem de erro e personalizada, pode colocar o q vc quiser</span> <br>
+                } <br>
+                return x + y; <br>
+            } <br>
+            try { <br>
+                console.log(soma(1, y)); <br>
+            } catch(error){<br>
+                console.log('erro q sera exibido para o usuario'); <br> <span class="anotacoes">//(capturando o erro)</span>
+            } <br>
+        </div>
         <div style="text-align: center;"><a style="text-decoration: none;"
                 href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch">Documentação</a>
         </div> <br>
