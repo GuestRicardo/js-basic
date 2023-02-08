@@ -16,7 +16,9 @@ function retornHora(data) {
     if (!data) {
         data = new Date();
     }
-    return data.toLocaleTimeString('pt-BR')
+    return data.toLocaleTimeString('pt-BR', {
+        hour12: false //para tirar o PM q aparece na frente da hora
+    });
 }
 
 const hora = retornaHora();
