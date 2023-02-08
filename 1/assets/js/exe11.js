@@ -5,7 +5,7 @@
  *             } catch(erro){
  *                 //È executado quando houver erro
  *             } finally {
- *                 //Sempre será executada 
+ *                 //Sempre será executada, mesmo se executar o erro
  *             } 
  * 
  * 
