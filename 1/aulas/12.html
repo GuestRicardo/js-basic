@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!--setInterval-->
     <section class="container">
         <h1>setInterval</h1>
         <p>Ele vai configuar um intervalo de tempo, para que a função possa executar</p>
@@ -39,9 +40,37 @@
             }, 1000); <br>
         </div>
     </section>
+    <!--setTimeout-->
     <section class="container">
         <h1>setTimeout</h1>
         <p>É a muito parecida com a setInterval a diferença é que ela executa somente uma vez.</p>
+        <h3>Exemplo:</h3>
+        <div class="exemplos">
+            <div class="anotacoes"> Aqui é o mesmo exemplo, so mudou q a função executará somente uma vez em 1 segundo</div>
+            function mostradorHora(){ <br>
+            let data = new Date(); <br>
+            return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
+            } <br>
+            const timer = setTimeout(()=>{ <br>
+            console.log(mostradorHora()); <br>
+            }, 1000); <br>
+        </div>
+    </section>
+    <!--clearInterval-->
+    <section class="container">
+        <h1>setTimeout</h1>
+        <p>É a muito parecida com a setInterval a diferença é que ela executa somente uma vez.</p>
+        <h3>Exemplo:</h3>
+        <div class="exemplos">
+            <div class="anotacoes"> Aqui é o mesmo exemplo, so mudou q a função executará somente uma vez em 1 segundo</div>
+            function mostradorHora(){ <br>
+            let data = new Date(); <br>
+            return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
+            } <br>
+            const timer = setTimeout(()=>{ <br>
+            console.log(mostradorHora()); <br>
+            }, 1000); <br>
+        </div>
     </section>
 </body>
 
