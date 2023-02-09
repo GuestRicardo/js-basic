@@ -58,8 +58,8 @@
     </section>
     <!--clearInterval-->
     <section class="container">
-        <h1>setTimeout</h1>
-        <p>É a muito parecida com a setInterval a diferença é que ela executa somente uma vez.</p>
+        <h1>clearInterval</h1>
+        <p>É onde que vai determinar o tempo de execução do setInterval</p>
         <h3>Exemplo:</h3>
         <div class="exemplos">
             <div class="anotacoes"> Esta é a forma usando as 3 opções</div>
@@ -67,9 +67,20 @@
             let data = new Date(); <br>
             return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
             } <br>
+            <hr>
             const timer = setInterval(()=>{ <br>
             console.log(mostradorHora()); <br>
             }, 1000); <br>
+            <hr>
+            setTimeout(()=>{ <span class="anotacoes"> Esta função esta sendo usada para parar a função time e ela executara em 3 seg</span><br> 
+                clearInterval(time); <br>
+            },3000); <br>
+            <hr>
+            <span class="anotacoes"> Esta função sera executada apos 5 segundos</span><br> 
+            setTimeout(()=>{ <br>
+                console.log('ola mundo'); <br>
+            },5000) <br>
+            <span class="anotacoes"> sera exibido a hra local 3 vezes, u,a por segundo e depois de 5 segundos aparecera "Ola mundo"</span><br> 
         </div>
     </section>
 </body>
