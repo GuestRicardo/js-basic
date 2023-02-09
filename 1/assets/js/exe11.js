@@ -30,6 +30,6 @@ try{
     //tratar erro
     console.log(erro);
 } finally{
-    console.log('tenha um bom dia')
+    console.log('tenha um bom dia');
 }
 

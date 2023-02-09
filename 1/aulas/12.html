@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Exercicio das ultimas 35 aulas</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>setInterval</h1>
+        <p>Ele vai configuar um intervalo de tempo, para que a função possa executar</p>
+        <h3>Exemplo:</h3>
+        <div class="exemplos">
+            function mostradorHora(){ <br>
+            let data = new Date(); <br>
+            return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
+            } <br>
+            function funcaoDoIntervalo(){ <br>
+            console.log(mostradorHora()); <br>
+            } <br>
+            setInterval(funcaoDoIntervalo, 1000); <span class="anotacoes">//aq esta referenciando a função e esta
+                passando a ordem dela a cada 1 segundo ser executada</span> <br>
+        </div>
+    </section>
+    <section class="container">
+        <h1>setTimeout</h1>
+    </section>
+</body>
+
+</html>
