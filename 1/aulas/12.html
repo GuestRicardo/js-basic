@@ -33,7 +33,7 @@
                 função anonima</div>
             function mostradorHora(){ <br>
             let data = new Date(); <br>
-            return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
+            return data.toLocaleTimeString('pt-BR',{ hour12: false; }); <br>
             } <br>
             const timer = setInterval(()=>{ <br>
             console.log(mostradorHora()); <br>
@@ -49,7 +49,7 @@
             <div class="anotacoes"> Aqui é o mesmo exemplo, so mudou q a função executará somente uma vez em 1 segundo</div>
             function mostradorHora(){ <br>
             let data = new Date(); <br>
-            return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
+            return data.toLocaleTimeString('pt-BR',{ hour12: false }); <br>
             } <br>
             const timer = setTimeout(()=>{ <br>
             console.log(mostradorHora()); <br>
@@ -65,7 +65,7 @@
             <div class="anotacoes"> Esta é a forma usando as 3 opções</div>
             function mostradorHora(){ <br>
             let data = new Date(); <br>
-            return data.toLocaleTimeString('pt-BR',{ hour12: nome }); <br>
+            return data.toLocaleTimeString('pt-BR',{ hour12: false }); <br>
             } <br>
             <hr>
             const timer = setInterval(()=>{ <br>
