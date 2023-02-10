@@ -16,8 +16,3 @@ zerar.addEventListener('click', (evento)=>{
    
 });
 
-function relogio (){
-    let data = new Date();
-
-    
-}
