@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Exercicio das ultimas 35 aulas</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Escreva uma função que recebe um numero e:</h1>
+        <div class="anotacoes">
+            numeno é divisivel por 3 = FIZZ <br>
+            numeno é divisivel por 5 = BUZZ<br>
+            numeno é divisivel por 3 e 5 = FIZZBUZZ<br>
+            numeno NÂO é divisivel po 3 e 5= retorne o proprio numero<br>
+            checar se o numero e realmente um numero<br>
+            use uma função com numeors de 0 a 100<br>
+        </div>
+    </section>
+    <section class="container">
+        <div class="exemplos">
+            Resolução<br>
+            <div class="anotacoes">
+                function fizzBuzz(numero){ <br>
+                if(typeOf(numero) !== 'numero') return NaN; <br>
+                if (numero % 3 === 0 && numero % 5 === 0) return 'FizzBuzz'; <br>
+                if (numero % 3 === 0) return 'Fizz'; <br>
+                if (numero % 5 === 0) return 'Buzz'; <br>
+                return numero<br>
+                } <br>
+                console.log(ePaisagem(1920,1080));
+            </div>
+        </div>
+        <div class="exemplos">
+            convertendo para Arrow function
+            <div class="anotacoes" style="font-size: small;">
+                ePaisagem = (largura, altura) => largura > altura ? true : false; <br>
+                consosle.log(ePaisagem(1920,1080));
+            </div>
+        </div>
+
+    </section>
+    <script src="/"></script>
+
+</body>
+
+</html>
