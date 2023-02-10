@@ -90,3 +90,8 @@ form button:hover {
 input{
   caret-color: aqua;
 }
+
+.btnTimer{
+  width: 10px;
+  height: 15px;
+}
