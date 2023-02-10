@@ -95,3 +95,7 @@ input{
   width: 10px;
   height: 15px;
 }
+.timer{
+  font-size: 4em;
+  margin-bottom: 50px;
+}
