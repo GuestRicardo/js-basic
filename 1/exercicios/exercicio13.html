@@ -23,6 +23,33 @@
                 class="zerar" id="zerar">zerar</button> <br>
         </div>
     </section>
+    <section class="container">
+        Essa é a capturação dos clicks na pagina, todos os eventos sendo capturados usando somente uma <span class="anotacoes">addEventListener</span> <br>
+        o grande diferencial que esta sendo usado o <span class="anotacoes">target</span> para pegar os clicks q esta na pagina
+        <div class="exemplos">
+            document.addEventListener('click', function (evento) { <br>
+            const elemento = evento.target; <br>
+            <br>
+            if (elemento.classList.contains('zerar')) {<br>
+            console.log('teste');<br>
+            clearInterval(timer);<br>
+            relogio.innerHTML = '00:00:00';<br>
+            segundos = 0;<br>
+            }<br>
+            <br>
+            if (elemento.classList.contains('iniciar')) {<br>
+            relogio.classList.remove('pausado');<br>
+            clearInterval(timer);<br>
+            iniciaRelogio();<br>
+            }<br>
+            <br>
+            if (elemento.classList.contains('pausar')) {<br>
+            relogio.classList.add('pausado');<br>
+            clearInterval(timer);<br>
+            }<br>
+            });<br>
+        </div>
+    </section>
     <script src="../assets/js/exe12.js"></script>
 
 </body>
