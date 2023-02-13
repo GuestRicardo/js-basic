@@ -24,7 +24,7 @@ function iniciaRelogio() {
 document.addEventListener('click', function (evento) {
    const elemento = evento.target;
 
-   if (elemento.classList.contains('#zerar')) {
+   if (elemento.classList.contains('zerar')) {
       console.log('teste');
       clearInterval(timer);
       relogio.innerHTML = '00:00:00';
