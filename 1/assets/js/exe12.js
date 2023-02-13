@@ -28,6 +28,7 @@ document.addEventListener('click', function (evento) {
       console.log('teste');
       clearInterval(timer);
       relogio.innerHTML = '00:00:00';
+      relogio.classList.remove('pausado');
       segundos = 0;
    }
 
