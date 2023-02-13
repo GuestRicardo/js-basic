@@ -6,7 +6,7 @@ function criaHorasDosSegundos(segundos) {
    });
 }
 
-const timer = document.querySelector('#timer');
+const relogio = document.querySelector('#timer');
 /*                 *botões                      */
 const iniciar = document.querySelector('#iniciar');
 const pausar = document.querySelector('#pausar');
@@ -16,7 +16,7 @@ let segundos = 0;//inicio da contagem
 function iniciaRelogio(){
    const timer = setInterval(function(){
       segundos++;
-      iniciaRelogio.innerHTML = criaHorasDosSegundos(segundos);
+      relogio.innerHTML = criaHorasDosSegundos(segundos);
    }, 1000);
 }
 
