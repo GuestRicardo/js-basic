@@ -4,16 +4,24 @@ function criaHorasDosSegundos(segundos) {
       hour12: false,
       timeZone: 'GMT', //para meia noite ser zero
    });
-};
+}
 
 const timer = document.querySelector('#timer');
 /*                 *botões                      */
 const iniciar = document.querySelector('#iniciar');
 const pausar = document.querySelector('#pausar');
 const zerar = document.querySelector('#zerar');
+let segundos = 0;//inicio da contagem
+
+function iniciaRelogio(){
+   const timer = setInterval(function(){
+      segundos++;
+      iniciaRelogio.innerHTML = criaHorasDosSegundos(segundos);
+   }, 1000);
+}
 
 iniciar.addEventListener('click', (event) => {
-   timer.innerHTML = 'teste';
+   iniciaRelogio();
 });
 pausar.addEventListener('click', (event) => {
 
