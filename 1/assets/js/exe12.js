@@ -22,6 +22,7 @@ function iniciaRelogio() {
 }
 
 iniciar.addEventListener('click', (event) => {
+   clearInterval(timer);
    iniciaRelogio();
 });
 pausar.addEventListener('click', (event) => {
