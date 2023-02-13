@@ -23,9 +23,35 @@
                 class="zerar" id="zerar">zerar</button> <br>
         </div>
     </section>
+
     <section class="container">
-        Essa é a capturação dos clicks na pagina, todos os eventos sendo capturados usando somente uma <span class="anotacoes">addEventListener</span> <br>
-        o grande diferencial que esta sendo usado o <span class="anotacoes">target</span> para pegar os clicks q esta na pagina
+        <h3>Não é recomendado</h3>
+        Neste exemplo esta sendo usado um <span class="anotacoes"> addEventListener</span> para cada elemento, fazendo
+        que assim force mais a maquina q executará o codigo
+        <div class="exemplos">
+            iniciar.addEventListener('click', (event) => { <br>
+            relogio.classList.remove('pausado'); <br>
+            clearInterval(timer);<br>
+            iniciaRelogio();<br>
+            });<br>
+            pausar.addEventListener('click', (event) => { <br>
+            relogio.classList.add('pausado'); <br>
+            clearInterval(timer);<br>
+            });<br>
+            zerar.addEventListener('click', (event) => {<br>
+            clearInterval(timer);<br>
+            relogio.innerHTML = '00:00:00';<br>
+            segundos = 0;<br>
+            });<br>
+        </div>
+    </section>
+
+    <section class="container">
+        <h3>Organizando</h3>
+        Essa é a capturação dos clicks na pagina, todos os eventos sendo capturados usando somente uma <span
+            class="anotacoes">addEventListener</span> <br>
+        o grande diferencial que esta sendo usado o <span class="anotacoes">target</span> para pegar os clicks q esta na
+        pagina
         <div class="exemplos">
             document.addEventListener('click', function (evento) { <br>
             const elemento = evento.target; <br>
