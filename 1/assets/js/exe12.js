@@ -20,23 +20,44 @@ function iniciaRelogio() {
       relogio.innerHTML = criaHorasDosSegundos(segundos);
    }, 1000);
 }
-//** sem a fatoração */
-iniciar.addEventListener('click', (event) => {
-   relogio.classList.remove('pausado');
-   clearInterval(timer);
-   iniciaRelogio();
+/**fatorando os clicks nos botoes */
+document.addEventListener('click', function (evento) {
+   const elemento = evento.target;
+
+   if (elemento.classList.contains('#zerar')) {
+      console.log('teste');
+      clearInterval(timer);
+      relogio.innerHTML = '00:00:00';
+      segundos = 0;
+   }
+
+   if (elemento.classList.contains('iniciar')) {
+      relogio.classList.remove('pausado');
+      clearInterval(timer);
+      iniciaRelogio();
+   }
+
+   if (elemento.classList.contains('pausar')) {
+      relogio.classList.add('pausado');
+      clearInterval(timer);
+   }
 });
-pausar.addEventListener('click', (event) => {
-   relogio.classList.add('pausado');
-   clearInterval(timer);
-});
-zerar.addEventListener('click', (event) => {
-   clearInterval(timer);
-   relogio.innerHTML = '00:00:00';
-   segundos = 0;
-});
+//fim
+//** sem a fatoração
+// iniciar.addEventListener('click', (event) => {
+//    relogio.classList.remove('pausado');
+//    clearInterval(timer);
+//    iniciaRelogio();
+// });
+// pausar.addEventListener('click', (event) => {
+//    relogio.classList.add('pausado');
+//    clearInterval(timer);
+// });
+// zerar.addEventListener('click', (event) => {
+//    clearInterval(timer);
+//    relogio.innerHTML = '00:00:00';
+//    segundos = 0;
+// });
 // fim
 
-/**fatorando os clicks nos botoes */
 
-//fim
