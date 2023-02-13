@@ -28,7 +28,7 @@ pausar.addEventListener('click', (event) => {
    clearInterval(timer);
 });
 zerar.addEventListener('click', (event) => {
-   clearInterval(time);
+   clearInterval(timer);
    relogio.innerHTML = '00:00:00';
 });
 
