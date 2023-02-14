@@ -23,11 +23,19 @@ function tarefas() {
         inputTarefa.focus();//o cursor fica piscando
     }
     
+    function botaoApagar(li){
+        li.innerText += ' ';
+        const botaoapagar = document.createElement('button');
+        botaoapagar.innerText= 'Apagar';
+        li.appendChild(botaoapagar);
+    }
+
     function criaTarefa(textoInput) {
         const li = criaLinha();
         li.innerText = textoInput;
         listaTarefas.appendChild(li);
         limpaImput();
+        botaoApagar(li);
     }
     
         //capturando o click no btn
