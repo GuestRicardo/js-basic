@@ -1,7 +1,7 @@
-function tarefas() {
+function tarefinhas() {
     const inputTarefa = document.querySelector('.input-nova-tarefa');
     const btnTarefas = document.querySelector('.btn-add-tarefas');
-    const listaTarefas = document.querySelector('.tarefas');
+    const tarefas = document.querySelector('.tarefas');
 
     function criaLinha() {
         const li = document.createElement('li');
@@ -35,7 +35,7 @@ function tarefas() {
     function criaTarefa(textoInput) {
         const li = criaLinha();
         li.innerText = textoInput;
-        listaTarefas.appendChild(li);
+        tarefas.appendChild(li);
         limpaImput();
         botaoApagar(li);
         salvarTarefas();
@@ -59,11 +59,12 @@ function tarefas() {
         const liTarefas = tarefas.querySelectorAll('li');
         const listadeTarefas = [];
 
-        for (let tarefa of liTarefas){
+        for (let tarefa of liTarefas) {
             let tarefaTexto = tarefa.innerText;
             tarefaTexto = tarefaTexto.replace('Apagar', '');
             console.log(tarefaTexto);
         }
     }
+
 };
-tarefas();
+tarefinhas();
