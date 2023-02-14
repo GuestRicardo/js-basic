@@ -52,6 +52,7 @@ function tarefinhas() {
 
         if (elemento.classList.contains('apagar')) {
             elemento.parentElement.remove();
+            salvarTarefas();
         }
     });
 
@@ -61,11 +62,26 @@ function tarefinhas() {
 
         for (let tarefa of liTarefas) {
             let tarefaTexto = tarefa.innerText;
-            tarefaTexto = tarefaTexto.replace('Apagar', '');//subistituindo uma palavra
-            console.log(tarefaTexto);
+            tarefaTexto = tarefaTexto.replace('Apagar', '').trim();//subistituindo uma palavra, o trim() é para remover o espaço do fim
+            listadeTarefas.push(tarefaTexto);
         }
+
+        //convertendo uma string em json, e com isso sera possivele panipula-la, as convertendo divolta em string
+        const tarefasJSON = JSON.stringify(listadeTarefas);
+        //local onde esta sendo salvo no navegador
+        localStorage.setItem('tarefas', tarefasJSON); //selecionando local, onde ficara as tarefas
+
     }
 
+    function paraNaosumirQuandoRecarregar() {
+        const tarefas = localStorage.getItem('tarefas');
+        const listadeTarefas =JSON.parse(tarefas); //convertendo divolta a lista para array
+      
+        for (let tarefa of listadeTarefas){
+           criaTarefa(tarefa);
+        }
+    }
+    paraNaosumirQuandoRecarregar()
 };
 
 tarefinhas();
