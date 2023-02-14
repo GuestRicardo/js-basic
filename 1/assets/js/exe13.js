@@ -61,7 +61,7 @@ function tarefinhas() {
 
         for (let tarefa of liTarefas) {
             let tarefaTexto = tarefa.innerText;
-            tarefaTexto = tarefaTexto.replace('Apagar', '');
+            tarefaTexto = tarefaTexto.replace('Apagar', '');//subistituindo uma palavra
             console.log(tarefaTexto);
         }
     }
