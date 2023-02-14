@@ -38,7 +38,7 @@ function tarefas() {
         listaTarefas.appendChild(li);
         limpaImput();
         botaoApagar(li);
-        salvarTarefa();
+        salvarTarefas();
     }
 
     //capturando o click no btn
@@ -55,7 +55,7 @@ function tarefas() {
         }
     });
 
-    function salvarTarefa() {
+    function salvarTarefas() {
         const liTarefas = tarefas.querySelectorAll('li');
         const listadeTarefas = [];
 
