@@ -56,7 +56,14 @@ function tarefas() {
     });
 
     function salvarTarefa() {
-        const liTarefas = tarefas.querySelectorAll(li);
+        const liTarefas = tarefas.querySelectorAll('li');
+        const listadeTarefas = [];
+
+        for (let tarefa of liTarefas){
+            let tarefaTexto = tarefa.innerText;
+            tarefaTexto = tarefaTexto.replace('Apagar', '');
+            console.log(tarefaTexto);
+        }
     }
 };
 tarefas();
