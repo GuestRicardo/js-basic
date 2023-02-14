@@ -56,7 +56,7 @@ function tarefas() {
     });
 
     function salvarTarefa() {
-        
+        const liTarefas = tarefas.querySelectorAll(li);
     }
 };
 tarefas();
