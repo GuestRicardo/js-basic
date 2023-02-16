@@ -150,12 +150,19 @@
     </div>
     <!--Closures-->
     <div class="container">
-        <h1>Closures</h1>
-        <span style="color: red;">
+        <h1>Closures</h1>        
             Uma closure é a combinação de uma função com as referências ao estado que a circunda (o ambiente léxico). Em
             outras palavras, uma closure lhe dá acesso ao escopo de uma função externa a partir de uma função interna.
             <div class="exemplos">
-
+                function retornaFuncao(){ <br>
+                    const nome = 'Maria' <br>
+                    return function(){ <br>
+                        return nome; <br>
+                    } <br>
+                } <br>
+             
+                const funcao = retornaFuncao(); <br>
+                <span style="color: yellowgreen">aq sera retornado Maria</span>
             </div>
     </div>
     <script src="aulas.js"></script>
