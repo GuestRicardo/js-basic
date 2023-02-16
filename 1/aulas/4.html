@@ -117,6 +117,22 @@
             } <br>
             soma(1, 1); <br>
         </div>
+        Neste exemplo esta sendo retornado uma função dentro de outra
+        <div class="exemplos">
+            function criaMultiplicador(multiplicador){ <br>
+                return (n) => { <br>
+                    return n * multiplicador; <br>
+                }; <br>
+            } <br>
+            <br>
+            const duplica = criaMultiplicador(2); <br>
+            const triplica = criaMultiplicador(3); <br>
+            const quaduplica = criaMultiplicador(4); <br>
+            <br>
+            console.log(duplica(2)); <br>
+            console.log(triplica(2)); <br>
+            console.log(quaduplica(2)); <br>
+        </div>
     </div>
     <script src="aulas.js"></script>
 </body>
