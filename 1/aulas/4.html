@@ -89,25 +89,27 @@
             É uma função que auto executa quando uma ação inicializa ou finaliza,
         </p>
         <div class="exemplos">
-            <span class="anotacoes">função para criar numero aleatorio</span> <br>
+            <span class="anotacoes">função para gerar um numero aleatorio entre 1000 e 3000(que neste caso seria 1 a3
+                segundos)</span> <br>
             function rand( min = 1000, max = 3000){ <br>
-                const seg = Math.random() * (max - min) + min;
+            const seg = Math.random() * (max - min) + min;
+            return Math.floor(seg);
             }; <br>
-            <span class="anotacoes"> fim da função para criar numero aleatorio</span> <br>
+            <span class="anotacoes"> fim da função </span> <br>
             <hr>
             function f1 (){ <br>
             seTimeout(function(){ <br>
-                console.log('f1'); <br>
+            console.log('f1'); <br>
             },1000); <br>
             } <br>
             function f2 (){ <br>
             seTimeout(function(){ <br>
-                console.log('f2'); <br>
+            console.log('f2'); <br>
             },500); <br>
             } <br>
             function f3 (){ <br>
             seTimeout(function(){ <br>
-                console.log('f3'); <br>
+            console.log('f3'); <br>
             },800); <br>
             } <br>
 
