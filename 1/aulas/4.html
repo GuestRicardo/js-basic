@@ -115,14 +115,14 @@
             <span style="color: blue;">if(callback) callback();</span><br>
             },rand()); <br>
             } <br>
-
-            f1(function(){ <br>
-            <span style="margin-left: 20px;">f2(function(){</span> <br>
-            <span style="margin-left: 28px;">f3(function(){</span>
-
-            <span>})</span>
-            <span>})</span>
-            })
+            <span style="color: red;">
+                f1(function(){ <br>
+                <span style="margin-left: 20px;">f2(function(){</span> <br>
+                <span style="margin-left: 33px;">f3(function(){</span> <br>
+                <span style="margin-left: 33px;">});</span> <br>
+                <span style="margin-left: 20px;">});</span> <br>
+                });
+            </span>
         </div>
     </div>
 
