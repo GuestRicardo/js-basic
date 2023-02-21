@@ -70,9 +70,11 @@
         <h1 style="text-align: center;">function auto-invocada</h1>
         <h2 style="text-align: center;">Funções imediatas(IIFE))</h2>
 
-        <p>para evitar a poluição do escopo global, si cria uma fução q se executa automaticamente, para isso a função precisa ser criada dentro de parenteses, e
+        <p>para evitar a poluição do escopo global, si cria uma fução q se executa automaticamente, para isso a função
+            precisa ser criada dentro de parenteses, e
             em seguida executada, como segue o exemplo abaixo</p>
         <p>
+            <h3>Sintaxe:</h3>
             <span style="margin-left: 70px; color: rgb(146, 146, 40);"> (function nomedaFuncao (<span
                     style="color: rgb(48, 124, 124);">
                 </span> )
@@ -81,7 +83,28 @@
                     tudo q for executado sera add aq dentro
                 </span></span> <br>
             <span style="margin-left: 70px; color: rgb(150, 150, 69)" color: yellow>})();</span><br>
-        </p>
+        </p> <br>
+        <h3>Exemplo</h3>
+        <div class="exemplos">
+            <div style="color: blue; text-align: center; margin-top: 19px;">inicio</div> <br>
+            (function informacoes(idade, peso, altura){ <br>
+            const Sobrenome= 'Maraisa'; <br>
+            <hr>
+            function criaNomeCompleto(nome){ <br>
+            return nome + '' + sobrenome; <br>
+            }; <br>
+            <hr>
+            function exibeNomeCompleto(){ <br>
+                console.log(criaNomeCompleto('Soraia')); <br>                
+            } <br>
+            <hr>
+            exibeNomeCompleto() <br>
+            <hr>
+            console.log(idade, peso, altura);
+            <br>    
+        })(13, 55, 1.50); <br>
+        <div style="color: blue; text-align: center;">fim</div> <br> 
+        </div>
     </div>
     <!--funções Callback-->
     <div class="container">
@@ -141,7 +164,7 @@
             </div>
         </div>
     </div>
-    
+
     <!--formas de declarar uma função-->
     <div class="container">
         <h2 style="text-align: center;">Varias formas de Declarar uma função em javascript</h2>
