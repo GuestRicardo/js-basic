@@ -194,13 +194,13 @@
             <span class="anotacoes">// getter</span> <br>
             get nomeCompleto(){ <br>
             return nome + ' ' + sobrenome; <br>
-            } <br>
+            }, <br>
             <span class="anotacoes">// setter</span> <br>
             set nomeCompleto(valor){ <br>
                 valor = valor.split(''); <br>
                 this.nome = valor.shift(); <br>
                 this.sobrenome = valor.join(' '); <br>
-            } <br>
+            }, <br>
             } <br>
             } <br>
             let pessoa1 = criaPessoa('Maria','Joaquina'); <br>
