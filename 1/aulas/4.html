@@ -187,24 +187,37 @@
         </div>
         <h3>Exemplo 2:</h3>
         <div class="exemplos">
-            function criaPessoa(nome, sobrenome){ <br>
+            function criaPessoa(nome, sobrenome, altura, peso){ <br>
             return{ <br>
             nome: nome,<br>
-            sobrenome:sobrenome: sobrenome,<br>
+            sobrenome:sobrenome,<br>
             <span class="anotacoes">// getter</span> <br>
             get nomeCompleto(){ <br>
             return nome + ' ' + sobrenome; <br>
             }, <br>
             <span class="anotacoes">// setter</span> <br>
             set nomeCompleto(valor){ <br>
-                valor = valor.split(''); <br>
-                this.nome = valor.shift(); <br>
-                this.sobrenome = valor.join(' '); <br>
+            valor = valor.split(''); <br>
+            this.nome = valor.shift(); <br>
+            this.sobrenome = valor.join(' '); <br>
             }, <br>
+            fala(assunto = 'falando sobre nada'){ <br>
+            return ´${this.nome} esta ${assunto}.´<br>
+            }, <br>
+            <hr>
+            altura: altura; <br>
+            peso: peso; <br>
+            <hr>
+            <span class="anotacoes">// getter</span><br>
+            get imc(){ <br>
+            const indice = this.peso / (this.altura ** 2);<br>
+            return indices.toFixed(2);
             } <br>
+            }; <br>
             } <br>
-            let pessoa1 = criaPessoa('Maria','Joaquina'); <br>
-            let pessoa2 = criaPessoa('Pedro','Pedecana'); <br>
+            <hr>
+            let pessoa1 = criaPessoa('Maria','Joaquina',1.5, 55); <br>
+            let pessoa2 = criaPessoa('Pedro','Pedecana', 1.8, 80); <br>
         </div>
         </p>
     </div>
