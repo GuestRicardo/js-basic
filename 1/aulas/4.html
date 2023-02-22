@@ -191,9 +191,14 @@
             return{ <br>
             nome: nome,<br>
             sobrenome:sobrenome: sobrenome,<br>
+            <span class="anotacoes">// getter</span> <br>
             get nomeCompleto(){ <br>
             return nome + ' ' + sobrenome; <br>
             } <br>
+            <span class="anotacoes">// setter</span> <br>
+            set nomeCompleto(valor){
+
+            }
             } <br>
             } <br>
             let pessoa1 = criaPessoa('Maria','Joaquina'); <br>
