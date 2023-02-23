@@ -104,4 +104,6 @@ color: red;
 };
 
 /**calculadora */
-
+.calculadora{
+  width: 400px;
+}
