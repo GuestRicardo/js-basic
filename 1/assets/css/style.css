@@ -149,4 +149,7 @@ input {
 .btn-del:hover{
   background: rgb(151, 61, 61);
 }
+.fundo-calculadora{
+  background: grey;
+}
 .btn-num {}
