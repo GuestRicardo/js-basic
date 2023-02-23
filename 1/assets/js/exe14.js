@@ -1,7 +1,7 @@
 //sera usando uma factory function, entao ela retornara um objeto
 function criaCalculadora() {
     return {
-        inicia() {
+        inicia() { //esse metodo vai descandear todos os outros abaixo
             alert('teste');
         },
 
