@@ -2,7 +2,7 @@
 function criaCalculadora() {
     return {
         //atributos
-        display:document.querySelector('.display'),
+        display: document.querySelector('.display'),
         
 
 
@@ -10,13 +10,14 @@ function criaCalculadora() {
         //metodos
         inicia() { //esse metodo vai descandear todos os outros abaixo
             //alert('teste');
+            this.clickBotoes();
         },
 
         clickBotoes(){
             document.addEventListener('click', function(evento){
                 const elemento = evento.target;
                 if(elemento.classList.contains('btn-num')){
-                    btnParaDisplay();
+                    this.btnParaDisplay();
                 }
             });
         },
