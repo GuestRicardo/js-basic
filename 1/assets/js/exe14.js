@@ -12,6 +12,15 @@ function criaCalculadora() {
         inicia() { //esse metodo vai descandear todos os outros abaixo
             //alert('teste');
             this.clickBotoes();
+            this.pressionaEnter();
+        },
+
+        pressionaEnter(){
+           this.display.addEventListener('keyup', evento =>{
+                if(evento.keyCode === 13){
+                    this.realizaConta();
+                }
+           }); 
         },
 
         realizaConta() {
