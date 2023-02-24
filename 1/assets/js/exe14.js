@@ -5,20 +5,25 @@ function criaCalculadora() {
         display: document.querySelector('.display'),
         btnClear: document.querySelector('.btn-clear'),
         btnDel: document.querySelector('.btn-del'),
+        btnIgual: document.querySelector('.btn-eq'),
 
 
         //metodos
         inicia() { //esse metodo vai descandear todos os outros abaixo
             //alert('teste');
-            this.clickBotoes();        
+            this.clickBotoes();
         },
 
-        clearDsiplay(){
-            this.display.value= '';
+        clearDsiplay() {
+            this.display.value = '';
         },
 
-        btnDel(){
+        btnDel() {
             this.display.value = this.display.value.slice(0, -1);
+        },
+
+        realizaConta() {
+
         },
 
         clickBotoes() {
@@ -28,11 +33,14 @@ function criaCalculadora() {
                 if (elemento.classList.contains('btn-num')) {
                     this.btnParaDisplay(elemento.innerText);
                 }
-                if(elemento.classList.contains('btn-clear')){
+                if (elemento.classList.contains('btn-clear')) {
                     this.clearDsiplay();
                 }
-                if(elemento.classList.contains('btn-del')){
+                if (elemento.classList.contains('btn-del')) {
                     this.btnDel();
+                }
+                if (elemento.classList.contains('btn-eq')) {
+                    this.realizaConta();
                 }
             });
         },
