@@ -111,7 +111,9 @@ input {
 
 /**calculadora */
 .calculadora {
-  width: 400px;
+  margin: auto;
+  width: 460px;
+
 }
 
 .display {
@@ -128,28 +130,35 @@ input {
   background: #75b8d3;
   cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
   background: #4e8196;
 }
-.btn-eq{
+
+.btn-eq {
   background: rgb(79, 112, 209);
 }
-.btn-eq:hover{
-  background: rgb(47, 74, 156); 
+
+.btn-eq:hover {
+  background: rgb(47, 74, 156);
 }
-.btn-clear{
+
+.btn-clear {
   background: rgb(85, 201, 85);
 }
-.btn-clear:hover{
-  background: rgb(55, 133, 55); 
+
+.btn-clear:hover {
+  background: rgb(55, 133, 55);
 }
-.btn-del{
+
+.btn-del {
   background: rgb(201, 85, 85);
 }
-.btn-del:hover{
+
+.btn-del:hover {
   background: rgb(151, 61, 61);
 }
-.fundo-calculadora{
-  background: grey;
-}
+
+.fundo-calculadora {}
+
 .btn-num {}
