@@ -9,7 +9,13 @@ function criaCalculadora() {
 
         //metodos
         inicia() { //esse metodo vai descandear todos os outros abaixo
-            alert('teste');
+            //alert('teste');
+        },
+
+        clickBotoes(){
+            document.addEventListener('click', function(evento){
+
+            })
         },
 
     };
