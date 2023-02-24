@@ -3,7 +3,7 @@ function criaCalculadora() {
     return {
         //atributos
         display: document.querySelector('.display'),
-        
+
 
 
 
@@ -13,15 +13,18 @@ function criaCalculadora() {
             this.clickBotoes();
         },
 
-        clickBotoes(){
-            document.addEventListener('click', function(evento){
+        clickBotoes() {
+            document.addEventListener('click', evento => { //a arrow function aq e a mais indicada, pois isola o this, somente para ela
                 const elemento = evento.target;
-                if(elemento.classList.contains('btn-num')){
-                    this.btnParaDisplay();
+
+                if (elemento.classList.contains('btn-num')) {
+                    this.btnParaDisplay(elemento.innerText);
                 }
             });
         },
-
+        btnParaDisplay(valor) {
+            this.display.value += valor;
+        },
     };
 }
 
