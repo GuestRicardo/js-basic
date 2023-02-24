@@ -18,12 +18,12 @@ function criaCalculadora() {
             let calculo = this.display.value;
 
             try {
-                calculo = eval(conta);
+                calculo = eval(calculo);
                 if (!calculo) {
                     alert('Conta Invalida');
                     return;
                 }
-                this.display.value = String(conta);
+                this.display.value = String(calculo);
             } catch (e) {
                 alert('Conta Invalida');
                 return;
