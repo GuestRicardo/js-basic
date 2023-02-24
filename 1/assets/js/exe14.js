@@ -3,8 +3,8 @@ function criaCalculadora() {
     return {
         //atributos
         display: document.querySelector('.display'),
-
-
+        btnClear: document.querySelector('.btn-clear'),
+        btnDel: document.querySelector('.btn-del'),
 
 
         //metodos
