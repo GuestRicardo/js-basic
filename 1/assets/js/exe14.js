@@ -24,6 +24,9 @@ function criaCalculadora() {
                 if (elemento.classList.contains('btn-num')) {
                     this.btnParaDisplay(elemento.innerText);
                 }
+                if(elemento.classList.contains('btn-clear')){
+                    this.clearDsiplay();
+                }
             });
         },
         btnParaDisplay(valor) {
