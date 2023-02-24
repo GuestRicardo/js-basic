@@ -10,7 +10,11 @@ function criaCalculadora() {
         //metodos
         inicia() { //esse metodo vai descandear todos os outros abaixo
             //alert('teste');
-            this.clickBotoes();
+            this.clickBotoes();        
+        },
+
+        clearDsiplay(){
+            this.display.value= '';
         },
 
         clickBotoes() {
