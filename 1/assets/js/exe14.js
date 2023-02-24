@@ -14,8 +14,11 @@ function criaCalculadora() {
 
         clickBotoes(){
             document.addEventListener('click', function(evento){
-
-            })
+                const elemento = evento.target;
+                if(elemento.classList.contains('btn-num')){
+                    btnParaDisplay();
+                }
+            });
         },
 
     };
