@@ -17,6 +17,10 @@ function criaCalculadora() {
             this.display.value= '';
         },
 
+        btnDel(){
+            this.display.value = this.display.value.slice(0, -1);
+        },
+
         clickBotoes() {
             document.addEventListener('click', evento => { //a arrow function aq e a mais indicada, pois isola o this, somente para ela
                 const elemento = evento.target;
@@ -26,6 +30,9 @@ function criaCalculadora() {
                 }
                 if(elemento.classList.contains('btn-clear')){
                     this.clearDsiplay();
+                }
+                if(elemento.classList.contains('btn-del')){
+                    this.btnDel();
                 }
             });
         },
