@@ -268,8 +268,11 @@
         <div class="exemplos">
             //contando numeros <br>
             function recursiva(max){ <br>
-                <br>
+             if(max >= 10) return;   <br>
+             max ++; <br>
+             recursiva(max); <span class="anotacoes">// aq esta sendo chamada a função, dentro do escopo</span> <br>
             } <br>
+            recursiva(1);
         </div>
     </div>
     <!--formas de declarar uma função-->
