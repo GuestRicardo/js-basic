@@ -168,7 +168,8 @@
     <div class="container">
         <h1>Funções Fabrica (Factory Function)</h1>
         <p>
-            Função de fabrica ela retorna um objeto, tanto ela ou a construtora, elas tem como objetivo principal ser um molde
+            Função de fabrica ela retorna um objeto, tanto ela ou a construtora, elas tem como objetivo principal ser um
+            molde
             <div style="text-align: center;"><a style="text-decoration: none; color: brown;"
                     href="https://www-javascripttutorial-net.translate.goog/javascript-factory-functions/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc">Documentação</a>
             </div>
@@ -231,16 +232,23 @@
                 style="color: red;"> a função construtora ela faz as coisas automaticamente, a unica coisa q precisa é
                 criar ela.</span>
             <p>Na função construtora é sempre preciso a inicializala com letra maiuscula e precisa se usar a palavra
-                <span style="color: chartreuse; text-decoration: line-through;">NEW</span></p>
-                <h3>exemplo:</h3>
-            <div class="exemplos"> 
-                <div class="anotacoes">a função construtora, tem o corpo ja definido como um objeto</div> 
+                <span style="color: chartreuse; text-decoration: line-through;">NEW</span> esta palavra cria um objeto
+                vazio, faz o this apontar para o objeto criado e retorna esse objeto criado automaticamente</p>
+            <h3>exemplo:</h3>
+            <div class="exemplos">
+                <div class="anotacoes">a função construtora, tem o corpo ja definido como um objeto</div>
                 function Pessoa(nome, sobrenome){ <br>
-                 this.nome = nome;   <br>
-                 this.sobrenome = sobrenome;   <br>
+                this.nome = nome; <br>
+                this.sobrenome = sobrenome; <br>
+                <hr>
+                this.metodo = ()=> { <br>
+                console.log('desta forma q se declara uma função(metodo) dentro das construtoras')<br>
+                } <br>
+                <hr>
                 } <br>
                 const p1 = <span style="color: rgb(113, 189, 0);">new</span> Pessoa('Jose', 'Maria'); <br>
-                const p2 = <span style="color: rgb(113, 189, 0);">new</span> Pessoa('Jose', 'Raimundo');
+                const p2 = <span style="color: rgb(113, 189, 0);">new</span> Pessoa('Jose', 'Raimundo'); <br> <br>
+                console.log(p2.nome);
             </div>
         </p>
     </div>
