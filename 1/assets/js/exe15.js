@@ -8,13 +8,13 @@ function Calculadora() {
 
 
     //metodos
-    this.inicia() { //esse metodo vai descandear todos os outros abaixo
+    this.inicia = function(){ //esse metodo vai descandear todos os outros abaixo
         //alert('teste');
         this.clickBotoes();
         this.pressionaEnter();
     };
 
-    this.pressionaEnter(){
+    this.pressionaEnter= function(){
         this.display.addEventListener('keyup', evento => {
             if (evento.keyCode === 13) {
                 this.realizaConta();
@@ -22,7 +22,7 @@ function Calculadora() {
         });
     };
 
-    this.realizaConta() {
+    this.realizaConta= function() {
         let calculo = this.display.value;
 
         try {
@@ -36,18 +36,17 @@ function Calculadora() {
             alert('Conta Invalida');
             return;
         }
-
     };
 
-    this.clearDsiplay() {
+    this.clearDsiplay= function() {
         this.display.value = '';
     };
 
-    this.btnDelete() {
+    this.btnDelete= function() {
         this.display.value = this.display.value.slice(0, -1);
     };
 
-    this.clickBotoes() {
+    this.clickBotoes= function() {
         document.addEventListener('click', evento => { //a arrow function aq e a mais indicada, pois isola o this, somente para ela
             const elemento = evento.target;
 
@@ -66,7 +65,7 @@ function Calculadora() {
         });
     };
 
-    this.btnParaDisplay(valor) {
+    this.btnParaDisplay= function(valor) {
         this.display.value += valor;
     };
 
