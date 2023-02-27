@@ -300,10 +300,23 @@
             console.log(g1.next().value); <br>
             <div style="text-align: center;"><strong style="color: rgb(22, 9, 141);">ou</strong></div>
             <div class="anotacoes">
-            for(let valor of g1){ <br>
+                for(let valor of g1){ <br>
                 console.log(valor); <br>
-            } <br>
-        </div>
+                } <br>
+            </div>
+            <div style="text-align: center;"><strong style="color: rgb(22, 9, 141);">exemplo com função</strong></div>
+            <div class="exemplos">
+                function* gerador(){ <br>
+                  yield ()=> console.log('tarefa1') <br>
+                  yield ()=> console.log('tarefa2') <br>
+                } <br>
+                const gerador = gerador(); <br>
+                const funcao1 = gerador.next().value; <br>
+                const funcao2 = gerador.next().value; <br>
+                <span class="anotacoes">//chamando as Funçoes</span><br>
+                funcao1(); <br>
+                funcao2(); <br>
+            </div>
         </div>
     </div>
     <!--formas de declarar uma função-->
