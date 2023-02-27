@@ -1,14 +1,14 @@
 //sera usando uma factory function, entao ela retornara um objeto
 function Calculadora() {
     //atributos
-    display: document.querySelector('.display');
+    this.display = document.querySelector('.display');
     //btnClear: document.querySelector('.btn-clear'),
     //btnDel: document.querySelector('.btn-del'),
     //btnIgual: document.querySelector('.btn-eq'),
 
 
     //metodos
-    this.inicia = function () { //esse metodo vai descandear todos os outros abaixo
+    this.inicia= ()=> { //esse metodo vai descandear todos os outros abaixo
         //alert('teste');
         this.clickBotoes();
         this.pressionaEnter();
@@ -70,5 +70,5 @@ function Calculadora() {
     };
 
 };
-const calculadora = new Calculadora();
+const calculadora = new Calculadora(); //usa o malde, para criar um novo objeto
 calculadora.inicia();
