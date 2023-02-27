@@ -74,15 +74,15 @@
             precisa ser criada dentro de parenteses, e
             em seguida executada, como segue o exemplo abaixo</p>
         <p>
-        <h3>Sintaxe:</h3>
-        <span style="margin-left: 70px; color: rgb(146, 146, 40);"> (function nomedaFuncao (<span
-                style="color: rgb(48, 124, 124);">
-            </span> )
-            { </span> <br>
-        <span style="margin-left: 80px; color: rgb(139, 139, 66)"><span style="color: rgb(39, 122, 122);">
-                tudo q for executado sera add aq dentro
-            </span></span> <br>
-        <span style="margin-left: 70px; color: rgb(150, 150, 69)" color: yellow>})();</span><br>
+            <h3>Sintaxe:</h3>
+            <span style="margin-left: 70px; color: rgb(146, 146, 40);"> (function nomedaFuncao (<span
+                    style="color: rgb(48, 124, 124);">
+                </span> )
+                { </span> <br>
+            <span style="margin-left: 80px; color: rgb(139, 139, 66)"><span style="color: rgb(39, 122, 122);">
+                    tudo q for executado sera add aq dentro
+                </span></span> <br>
+            <span style="margin-left: 70px; color: rgb(150, 150, 69)" color: yellow>})();</span><br>
         </p> <br>
         <h3>Exemplo</h3>
         <div class="exemplos">
@@ -169,56 +169,73 @@
         <h1>Funções Fabrica (Factory Function)</h1>
         <p>
             Função de fabrica ela retorna um objeto
-        <div style="text-align: center;"><a style="text-decoration: none; color: brown;"
-                href="https://www-javascripttutorial-net.translate.goog/javascript-factory-functions/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc">Documentação</a>
-        </div>
-        <div class="exemplos">
-            function criaPessoa(nome, sobrenome){ <br>
-            return{ <br>
-            nome: nome,<br>
-            sobrenome:sobrenome: sobrenome,<br>
-            getNomeCompleto(){ <br>
-            return nome + ' ' + sobrenome; <br>
-            } <br>
-            } <br>
-            } <br>
-            let pessoa1 = criaPessoa('Maria','Joaquina'); <br>
-            let pessoa2 = criaPessoa('Pedro','Pedecana'); <br>
-        </div>
-        <h3>Exemplo 2:</h3>
-        <div class="exemplos">
-            function criaPessoa(nome, sobrenome, altura, peso){ <br>
-            return{ <br>
-            nome: nome,<br>
-            sobrenome:sobrenome,<br>
-            <span class="anotacoes">// getter</span> <br>
-            get nomeCompleto(){ <br>
-            return nome + ' ' + sobrenome; <br>
-            }, <br>
-            <span class="anotacoes">// setter</span> <br>
-            set nomeCompleto(valor){ <br>
-            valor = valor.split(''); <br>
-            this.nome = valor.shift(); <br>
-            this.sobrenome = valor.join(' '); <br>
-            }, <br>
-            fala(assunto = 'falando sobre nada'){ <br>
-            return ´${this.nome} esta ${assunto}.´<br>
-            }, <br>
-            <hr>
-            altura: altura; <br>
-            peso: peso; <br>
-            <hr>
-            <span class="anotacoes">// getter</span><br>
-            get imc(){ <br>
-            const indice = this.peso / (this.altura ** 2);<br>
-            return indices.toFixed(2);
-            } <br>
-            }; <br>
-            } <br>
-            <hr>
-            let pessoa1 = criaPessoa('Maria','Joaquina',1.5, 55); <br>
-            let pessoa2 = criaPessoa('Pedro','Pedecana', 1.8, 80); <br>
-        </div>
+            <div style="text-align: center;"><a style="text-decoration: none; color: brown;"
+                    href="https://www-javascripttutorial-net.translate.goog/javascript-factory-functions/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc">Documentação</a>
+            </div>
+            <div class="exemplos">
+                function criaPessoa(nome, sobrenome){ <br>
+                return{ <br>
+                nome: nome,<br>
+                sobrenome:sobrenome: sobrenome,<br>
+                getNomeCompleto(){ <br>
+                return nome + ' ' + sobrenome; <br>
+                } <br>
+                } <br>
+                } <br>
+                let pessoa1 = criaPessoa('Maria','Joaquina'); <br>
+                let pessoa2 = criaPessoa('Pedro','Pedecana'); <br>
+            </div>
+            <h3>Exemplo 2:</h3>
+            <div class="exemplos">
+                function criaPessoa(nome, sobrenome, altura, peso){ <br>
+                return{ <br>
+                nome: nome,<br>
+                sobrenome:sobrenome,<br>
+                <span class="anotacoes">// getter</span> <br>
+                get nomeCompleto(){ <br>
+                return nome + ' ' + sobrenome; <br>
+                }, <br>
+                <span class="anotacoes">// setter</span> <br>
+                set nomeCompleto(valor){ <br>
+                valor = valor.split(''); <br>
+                this.nome = valor.shift(); <br>
+                this.sobrenome = valor.join(' '); <br>
+                }, <br>
+                fala(assunto = 'falando sobre nada'){ <br>
+                return ´${this.nome} esta ${assunto}.´<br>
+                }, <br>
+                <hr>
+                altura: altura; <br>
+                peso: peso; <br>
+                <hr>
+                <span class="anotacoes">// getter</span><br>
+                get imc(){ <br>
+                const indice = this.peso / (this.altura ** 2);<br>
+                return indices.toFixed(2);
+                } <br>
+                }; <br>
+                } <br>
+                <hr>
+                let pessoa1 = criaPessoa('Maria','Joaquina',1.5, 55); <br>
+                let pessoa2 = criaPessoa('Pedro','Pedecana', 1.8, 80); <br>
+            </div>
+        </p>
+    </div>
+    <!--funções construtoras-->
+    <div class="container">
+        <h1>Funções Construtoras</h1>
+        <p>
+            Tanto as <span style="color: blue;">Funçoes fabricas</span> ou <span style="color: red;">Funções
+                construtoras</span> criam objetos a diferena entre as 2 é q a <span style="color: blue;">função
+                fabrica vc a cria ela ja mandando ela retornar um objeto voluntariamente</span>, <span
+                style="color: red;"> a função construtora ela faz as coisas automaticamente, a unica coisa q precisa é
+                criar ela.</span>
+            <p>Na função construtora é sempre preciso a inicializala com letra maiuscula e precisa se usar a palavra
+                <span style="color: chartreuse; text-decoration: line-through;">NEW</span></p>
+                <h3>exemplo:</h3>
+            <div class="exemplos">
+
+            </div>
         </p>
     </div>
     <!--formas de declarar uma função-->
