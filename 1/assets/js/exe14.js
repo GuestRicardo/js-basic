@@ -74,6 +74,5 @@ function criaCalculadora() {
         },
     };
 }
-
 const calculadora = criaCalculadora();
 calculadora.inicia();
