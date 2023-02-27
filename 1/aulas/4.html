@@ -280,10 +280,21 @@
         <h1>Funções geradoras</h1>
         <p>Essas funções tem o trabalho de pausar o codigo em determinado momento, exemplo caso precise que ela te
             entregue 3 valores em momentos diferentes</p>
+        <div class="anotacoes">
+            //yield = é quase um return, a diferença é que quando se chama o next ele ja retorna o primeiro valor e
+            assim por diante
+        </div>
         <div class="exemplos">
             function* geradora1(){ <br>
-            <br>
+            //codigo qualquer <br>
+            yield 'valor 1';<br>
+            //codigo qualquer <br>
+            yield 'valor 2';<br>
+            //codigo qualquer <br>
+            yield 'valor 3';<br>
             }; <br>
+            const g1 = geradora1(); <br>
+            console.log(g1.next()); <br>
         </div>
     </div>
     <!--formas de declarar uma função-->
