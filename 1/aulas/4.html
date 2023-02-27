@@ -241,7 +241,7 @@
                 //atributos privados ou metodos privados <br>
                 const ID =1516; <br>
                 this.metodoInterno = ()=>{ <br>
-                    <br>
+                <br>
                 } <br>
                 <hr>
                 //atributos ou metodos publicos <br>
@@ -257,6 +257,13 @@
                 const p2 = <span style="color: rgb(113, 189, 0);">new</span> Pessoa('Jose', 'Raimundo'); <br> <br>
                 console.log(p2.nome);
             </div>
+        </p>
+    </div>
+    <!--funções recursivas-->
+    <div class="container">
+        <h1>Funções recursivas</h1>
+        <p>
+            
         </p>
     </div>
     <!--formas de declarar uma função-->
@@ -276,9 +283,11 @@
             } <br>
             teste(parametro enviado); <br>
         </div>
-        Neste primeiro exemplo esta sendo enviado um parametro para a função, se caso envie algo para a função que nao
+        Neste primeiro exemplo esta sendo enviado um parametro para a função, se caso envie algo para a função que
+        nao
         tenha um parametro definido, automaticamente será enviado auto maticamente para <span
-            style="color: rgb(8, 103, 158); text-transform: lowercase;">arguments</span> que é uma variavel interna do
+            style="color: rgb(8, 103, 158); text-transform: lowercase;">arguments</span> que é uma variavel interna
+        do
         js que que sustenta todos os argumentos enviados, exemplo:
         <div style="color: rgb(35, 126, 179);" class="exemplos">
             function teste(<span style="color: rgb(158, 8, 138);"> arguments</span> ){ <span
@@ -286,7 +295,8 @@
                 se que esta vazio</span> <br>
             console.log();<br>
             } <br>
-            teste(parametro enviado); <span style="color: rgb(158, 8, 138);">// sera exibido o q foi enviado aq neste
+            teste(parametro enviado); <span style="color: rgb(158, 8, 138);">// sera exibido o q foi enviado aq
+                neste
                 local</span> <br>
         </div>
     </div>
@@ -320,7 +330,8 @@
     <!--Escopo lexico-->
     <div class="container">
         <h1>Escopo Léxico</h1>
-        é quando a função reconhece e aceita tudo que esta dentro dela e fora dela, os vizinhos, sendo assim tudo que
+        é quando a função reconhece e aceita tudo que esta dentro dela e fora dela, os vizinhos, sendo assim tudo
+        que
         esta proximo a função, se caso nao encontre o que esta proximo ele buscará no <span style="color: red;">escopo
             global</span> mais sedmpre lembrando, sempre sera buscado o que esta mais proximo.
         <div class="exemplos">
@@ -338,7 +349,8 @@
         <div class="exemplos">
             function retornaFuncao(){ <br>
             const nome = 'Maria' <br>
-            <span style="color: rgb(204, 184, 68);">//clousures é a habilidade dessa função(no caso dessa abaixo q esta
+            <span style="color: rgb(204, 184, 68);">//clousures é a habilidade dessa função(no caso dessa abaixo q
+                esta
                 anonima) conseguir acessar dados das função pai que no caso é a variavel nome</span> <br>
             return function(){ <br>
             return nome; <br>
