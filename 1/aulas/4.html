@@ -233,8 +233,14 @@
             <p>Na função construtora é sempre preciso a inicializala com letra maiuscula e precisa se usar a palavra
                 <span style="color: chartreuse; text-decoration: line-through;">NEW</span></p>
                 <h3>exemplo:</h3>
-            <div class="exemplos">
-
+            <div class="exemplos"> 
+                <div class="anotacoes">a função construtora, tem o corpo ja definido como um objeto</div> 
+                function Pessoa(nome, sobrenome){ <br>
+                 this.nome = nome;   <br>
+                 this.sobrenome = sobrenome;   <br>
+                } <br>
+                const p1 = <span style="color: rgb(113, 189, 0);">new</span> Pessoa('Jose', 'Maria'); <br>
+                const p2 = <span style="color: rgb(113, 189, 0);">new</span> Pessoa('Jose', 'Raimundo');
             </div>
         </p>
     </div>
