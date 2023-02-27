@@ -294,7 +294,10 @@
             yield 'valor 3';<br>
             }; <br>
             const g1 = geradora1(); <br>
-            console.log(g1.next()); <br>
+            <span class="anotacoes">entregando os 3 valores</span> <br>
+            console.log(g1.next().value); <br>
+            console.log(g1.next().value); <br>
+            console.log(g1.next().value); <br>
         </div>
     </div>
     <!--formas de declarar uma função-->
