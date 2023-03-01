@@ -1,12 +1,9 @@
 //Dobre os numeros
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
-const numerosDobro = numeros.map( valor=> {return `valores em dobrfo${valor * 2}`}); 
+const numerosDobro = numeros.map( valor=> {return `valores em dobro ${valor * 2}`}); 
 console.log(numerosDobro);
 
-//usando função callback 
-function callbackFilter(valor/**ela po receber o valor, o indice ou receber o array completo*/) {  
-    return valor > 10 ;
-}
+
 
 const numerosFiltrados = numeros.filter(callbackFilter);//filter geralmente requer um valor booleano
 console.log(numerosFiltrados);
