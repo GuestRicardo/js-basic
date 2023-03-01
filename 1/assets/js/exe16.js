@@ -6,7 +6,7 @@ function callbackFilter(/**automaticamente a função ja reconhece o valor, o in
 
 }
 
-const numerosFiltrados = numeros.filter();
+const numerosFiltrados = numeros.filter();//filter geralmente requer um valor booleano
 
 
 
