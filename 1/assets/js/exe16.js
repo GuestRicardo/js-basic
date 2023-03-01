@@ -1,5 +1,11 @@
 //retorne numeros maiores que 10
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
+
+//usando função callback 
+function callbackFilter(){
+
+}
+
 const numerosFiltrados = numeros.filter();
 
 
