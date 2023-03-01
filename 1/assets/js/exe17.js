@@ -1,6 +1,6 @@
 //Dobre os numeros
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
-const numerosDobro = numeros.map( valor=> {return `valores em dobro ${valor * 2}`}); 
+const numerosDobro = numeros.map(valor => { return `valores em dobro ${valor * 2}` });
 console.log(numerosDobro);
 
 
@@ -18,12 +18,15 @@ const pessoas = [
     { nome: 'Biu', idade: 24 },
 ];
 //Retorne apenas uma string com nome da pessoa
-const pessoasNomeGrande = pessoas.filter(valor=> valor.nome.length >= 5);
+const somenteNome = pessoas.map(valor => valor.nome);
 //Remova apenas a chave nome do objeto
-const pessoasVelhas = pessoas.filter(valor=> valor.idade >50);
+const sementeIdade = pessoas.filter(valor => ({ idade: valor.idade }));
 //Adicione uma chave id em cada objeto
-const nomesA = pessoas.filter(valor=> valor.nome.toLocaleLowerCase().endsWith('a'));
+const addumIndice = pessoas.filter((valor, indice) => {
+    valor.id = indice;
+    return valor;
+});
 
-console.log(pessoasNomeGrande);
-console.log(pessoasVelhas);
-console.log(nomesA);
+console.log(somenteNome);
+console.log(somenteIdade);
+console.log(addumIndice);
