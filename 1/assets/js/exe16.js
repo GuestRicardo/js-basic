@@ -17,6 +17,7 @@ const numerosFiltrados = numeros.filter(callbackFilter);//filter geralmente requ
 console.log(numerosFiltrados);
 
 /** Todo exemplo acima usando função anonima, sendo a mais comum usado em codigos
+ * 
  *  const numerosFiltrados = numeros.filter((valor)=> return valor > 10;);
  */
 
