@@ -2,7 +2,7 @@
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
 
 //usando função callback 
-function callbackFilter(){
+function callbackFilter(/**automaticamente a função ja reconhece o valor, o indice ou receber o array completo*/) {
 
 }
 
