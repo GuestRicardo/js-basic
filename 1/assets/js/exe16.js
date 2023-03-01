@@ -3,11 +3,14 @@ const numeros = [12, 3, 55, 384, 484, 5, 9874];
 
 //usando função callback 
 function callbackFilter(valor/**ela po receber o valor, o indice ou receber o array completo*/) {
+    //para evitar esse if por ter apenas um retorno booleano pode tambem usar, sendo a forma correta.
+    return valor > 10;
+    /*
     if (valor > 10) {
         return true;
     } else {
         return false;
-    }
+    } */
 }
 
 const numerosFiltrados = numeros.filter(callbackFilter);//filter geralmente requer um valor booleano
