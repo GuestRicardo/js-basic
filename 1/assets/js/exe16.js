@@ -16,6 +16,10 @@ function callbackFilter(valor/**ela po receber o valor, o indice ou receber o ar
 const numerosFiltrados = numeros.filter(callbackFilter);//filter geralmente requer um valor booleano
 console.log(numerosFiltrados);
 
+/** Todo exemplo acima usando função anonima, sendo a mais comum usado em codigos
+ *  const numerosFiltrados = numeros.filter((valor)=> return valor > 10;);
+ */
+
 /** ------------------------------------------------------------------------------------------------------ */
 
 //Retorne as pessoas que tem o nome com mais de 5 letras ou mais
