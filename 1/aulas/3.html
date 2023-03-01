@@ -19,76 +19,76 @@
             concreta) do domínio de interesse do problema sob análise. Objetos similares são agrupados em classes.
             No
             paradigma de orientação a objetos, tudo pode ser potencialmente representado como um objeto. <br> <br>
-            <div style="color: rgb(165, 165, 22);">
-                <h2>Objeto Literal</h2>
-                <p>segue abaixo 2 objetos simples</p>
-                <span style="margin: 75px;">const pessoa = {</span> <br>
-                <span style="margin: 85px;">nome:'Maria',</span> <br>
-                <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
-                <span style="margin: 85px;">idade = 45</span> <br>
-                <span style="margin: 75px;">};</span> <br> <br>
+        <div style="color: rgb(165, 165, 22);">
+            <h2>Objeto Literal</h2>
+            <p>segue abaixo 2 objetos simples</p>
+            <span style="margin: 75px;">const pessoa = {</span> <br>
+            <span style="margin: 85px;">nome:'Maria',</span> <br>
+            <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
+            <span style="margin: 85px;">idade = 45</span> <br>
+            <span style="margin: 75px;">};</span> <br> <br>
 
-                <span style="margin: 75px;">console.log(pessoa.nome)</span> <br>
-            </div>
-            <div style="color: yellowgreen;">
-                <h2>Objeto com uma função</h2>
-                <p></p>
-                <span style="margin: 75px;">const pessoa = {</span> <br>
-                <span style="margin: 85px;">nome:'Maria',</span> <br>
-                <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
-                <span style="margin: 85px;">idade = 45</span> <br> <br>
-                <span style="margin: 90px;">function falar(){</span> <br>
-                <span style="margin: 95px;">console.log(`Boa tarde ${this.nome} ${this.sobrenome}`);</span> <br>
-                <span style="margin: 90px;">}</span> <br>
-                <span style="margin: 75px;">};</span> <br> <br>
+            <span style="margin: 75px;">console.log(pessoa.nome)</span> <br>
+        </div>
+        <div style="color: yellowgreen;">
+            <h2>Objeto com uma função</h2>
+            <p></p>
+            <span style="margin: 75px;">const pessoa = {</span> <br>
+            <span style="margin: 85px;">nome:'Maria',</span> <br>
+            <span style="margin: 85px;">sobrenomenome = 'Joaquina',</span> <br>
+            <span style="margin: 85px;">idade = 45</span> <br> <br>
+            <span style="margin: 90px;">function falar(){</span> <br>
+            <span style="margin: 95px;">console.log(`Boa tarde ${this.nome} ${this.sobrenome}`);</span> <br>
+            <span style="margin: 90px;">}</span> <br>
+            <span style="margin: 75px;">};</span> <br> <br>
 
-                <span style="margin: 75px;">pessoa.fala();</span> <br>
-            </div>
-            <div style="color: red;">
-                <h2>Criando uma copia do Objeto de forma simples</h2>
-                <p style="margin-left: 50px; color: brown;">
-                    const teste = { <br>
-                    teste1:'ok' <br>
-                    teste2:'ok' <br>
-                    teste3:'ok' <br>
-                    }; <br>
-                    const testeB = { ...teste}; <span style="color: yellowgreen;"> //copia criada</span> <br>
-                </p>
-            </div>
-            <h2>Atribuição via Destruturação</h2>
-            <p>
-                É mesma situação do array so muda a questadas chaves, q em objeto é colchetes <br>
-                <div class="exemplos">
-                    const pessoa = { <br>
-                    nome:'Maria'; <br>
-                    sobrenome: 'Jose'; <br>
-                    idade: 55; <br>
-                    endereço:{ <br>
-                    rua: "Av Brasil"; <br>
-                    numero: 320; <br>
-                    } <br>
-                    } <br>
-                    <div style="font-size: smaller;">
-                        const nome = pessoa.nome <span class="anotacoes" style="font-size: smaller;">//jogando nome em
-                            uma variavel, essa é uma
-                            atribuição normal</span> <br> <br>
-                        const { nome } = pessoa <span class="anotacoes" style="font-size: smaller;">//jogando nome em
-                            uma variavel, essa é a
-                            atibuição via desestruturação</span> <br>
-                        const { nome, sobrenome, idade } = pessoa <span class="anotacoes"
-                            style="font-size: smaller;">//fazendo com mais de uma variavel ao mesmo tempo, essa e a
-                            vantagem</span> <br>
-                        const { nome= 'Tiago', sobrenome= 'Jureide', idade= '15' } = pessoa <span class="anotacoes"
-                            style="font-size: smaller;">//fazendo atribuições direto </span> <br>
-                        const { nome: nome2= 'Tiago'} = pessoa <span class="anotacoes"
-                            style="font-size: smaller;">//criando uma varialvel atraves da chave do objeto </span> <br>
-                        const { endereco: {rua, numero} = pessoa <span class="anotacoes"
-                            style="font-size: smaller;">//aq esta desmenbrando o a rua e o numero, póis se usar exibir
-                            endereço ser exibido um objeto inteiro </span> <br>
-
-                    </div>
-                </div>
+            <span style="margin: 75px;">pessoa.fala();</span> <br>
+        </div>
+        <div style="color: red;">
+            <h2>Criando uma copia do Objeto de forma simples</h2>
+            <p style="margin-left: 50px; color: brown;">
+                const teste = { <br>
+                teste1:'ok' <br>
+                teste2:'ok' <br>
+                teste3:'ok' <br>
+                }; <br>
+                const testeB = { ...teste}; <span style="color: yellowgreen;"> //copia criada</span> <br>
             </p>
+        </div>
+        <h2>Atribuição via Destruturação</h2>
+        <p>
+            É mesma situação do array so muda a questadas chaves, q em objeto é colchetes <br>
+        <div class="exemplos">
+            const pessoa = { <br>
+            nome:'Maria'; <br>
+            sobrenome: 'Jose'; <br>
+            idade: 55; <br>
+            endereço:{ <br>
+            rua: "Av Brasil"; <br>
+            numero: 320; <br>
+            } <br>
+            } <br>
+            <div style="font-size: smaller;">
+                const nome = pessoa.nome <span class="anotacoes" style="font-size: smaller;">//jogando nome em
+                    uma variavel, essa é uma
+                    atribuição normal</span> <br> <br>
+                const { nome } = pessoa <span class="anotacoes" style="font-size: smaller;">//jogando nome em
+                    uma variavel, essa é a
+                    atibuição via desestruturação</span> <br>
+                const { nome, sobrenome, idade } = pessoa <span class="anotacoes" style="font-size: smaller;">//fazendo
+                    com mais de uma variavel ao mesmo tempo, essa e a
+                    vantagem</span> <br>
+                const { nome= 'Tiago', sobrenome= 'Jureide', idade= '15' } = pessoa <span class="anotacoes"
+                    style="font-size: smaller;">//fazendo atribuições direto </span> <br>
+                const { nome: nome2= 'Tiago'} = pessoa <span class="anotacoes" style="font-size: smaller;">//criando uma
+                    varialvel atraves da chave do objeto </span> <br>
+                const { endereco: {rua, numero} = pessoa <span class="anotacoes" style="font-size: smaller;">//aq esta
+                    desmenbrando o a rua e o numero, póis se usar exibir
+                    endereço ser exibido um objeto inteiro </span> <br>
+
+            </div>
+        </div>
+        </p>
         </p>
     </div>
 
@@ -165,147 +165,156 @@
             <span style="color: brown;"> let b =[...a]</span> <br>
             <hr>
             <span style="color: red;">9-</span> Atribuição via destruturação <br>
-            <p>
-                É quando é pego uma variavel existente e é retribuido um novo valor sobre os valores antigos
-                <div class="anotacoes">
-                    let a= 'A'; <br>
-                    let b= 'B'; <br>
-                    let c= 'C'; <br>
-                    const numeros = [1,2,3]; <br>
-                    [a,b,c] = numeros; <br>
-                    console.log(a,b,c);
-                    <br><span style="font-size: smaller; color: blue;">Observação: foi usado arrays para fazer a
-                        modificação das variaveis</span> <br>
-                    outro exemplo:
-                    <div class="anotacoes">
-                        const numeros = [155,225,355,448,5,6,778,844,9]; <br>
-                        const [primeironumeor, segundonumero, ...resto] = numeros; <br>
-                        <span style="font-size: smaller; color: blue;">Observação: aq esta sendo pego os 2 primeiros
-                            indices, o 0, 1 e sera exibido 155 e 225, e na variavelresto sera recebido todos os outros
-                            arrays q sobraram</span> <br>
-                    </div>
-                    <div class="anotacoes">
-                        exemplo com arrya dentro de outro array <br>
-                        const numeros = [ [21,32,85,5],[254,5,968,5],[78,6,2,54] ]; <br>
-                        const [lista1, lista2, lista3] = numeros <br>
-                        console.lo(lista2[2]); <br>
-                        <span style="font-size: smaller; color: blue;">Observação: aq esta sendo pego os o array do
-                            indice 2 do segundo array, e sera exibido o 968</span> <br>
-                    </div>
+        <p>
+            É quando é pego uma variavel existente e é retribuido um novo valor sobre os valores antigos
+        <div class="anotacoes">
+            let a= 'A'; <br>
+            let b= 'B'; <br>
+            let c= 'C'; <br>
+            const numeros = [1,2,3]; <br>
+            [a,b,c] = numeros; <br>
+            console.log(a,b,c);
+            <br><span style="font-size: smaller; color: blue;">Observação: foi usado arrays para fazer a
+                modificação das variaveis</span> <br>
+            outro exemplo:
+            <div class="anotacoes">
+                const numeros = [155,225,355,448,5,6,778,844,9]; <br>
+                const [primeironumeor, segundonumero, ...resto] = numeros; <br>
+                <span style="font-size: smaller; color: blue;">Observação: aq esta sendo pego os 2 primeiros
+                    indices, o 0, 1 e sera exibido 155 e 225, e na variavelresto sera recebido todos os outros
+                    arrays q sobraram</span> <br>
+            </div>
+            <div class="anotacoes">
+                exemplo com arrya dentro de outro array <br>
+                const numeros = [ [21,32,85,5],[254,5,968,5],[78,6,2,54] ]; <br>
+                const [lista1, lista2, lista3] = numeros <br>
+                console.lo(lista2[2]); <br>
+                <span style="font-size: smaller; color: blue;">Observação: aq esta sendo pego os o array do
+                    indice 2 do segundo array, e sera exibido o 968</span> <br>
+            </div>
             </p>
-        </p>
-    </div> <br>
-    <span style="color: red;">10-</span> Construtor <br>
-    <p>Usando construtor para criar um array, essa forma de usar o construtor, tambem funciona com todos outros tipos de
-        dados</p>
-    <div class="exemplos">
-        const nomes = new Array ('jose', 'maria', 'luiza');
-    </div>
-    <hr> <br>
-    <span style="color: red;">11-</span> split <br>
-    <p>
-        split é mais voltado para strings, sendo q aceita a manipulação em strings e vetores. ele serve para substituir
-        algo dentro do elemento;
-    </p>
-    <div class="exemplos">
-        //substituir espaços por virgula <br>
-        const nome = 'Maria jose pereira da silva'; <br>
-        const virgula= nome.split(' , '); <br>
-        console.log(virgula); <br>
-    </div>
-    <hr>
-    <span style="color: red;">12-</span> join <br>
-    <p>join é para fazer a uniao dos elementos em um array, transformando ele em uma string, sendo que e preciso passar
-        o atributo q deseja fazer a união.</p>
-    <div class="exemplos">
-        exemplo: <br>
-        //fazendo a uniao via espaço <br>
-        const nome = ['Maria', 'Aparecida', 'Soares']; <br>
-        const espaco = nome.join(' '); <br>
-    </div>
-    <hr>
-    <span style="color: red;">13-</span> splice <br>
-
-    É uma função que faz o q o pop, unshift, push e outras coisas mais em arrays <br>
-    exemplo: <br>
-    <div class="anotacoes" style="color: blueviolet;">
-        nomes.splice (indice, delete, adicionar);
-    </div>
-    Exemplo:
-    <div class="exemplos">
-        const nomes = ['Luiz','Maria','Joaquim','Estavao','Monica','Esmeralda']; <br>
-        <div class="anotacoes" style="color: blueviolet;">Simulando o <strong>POP</strong> que faz a eliminação do
-            ultimo elemento do array <br>
-            <strong>
-                const arrayRemovido = nomes.splice(5, 1); <br>
-            </strong>//o ultimo nome e a quantidade removido 1
+            </p>
+        </div> <br>
+        <span style="color: red;">10-</span> Construtor <br>
+        <p>Usando construtor para criar um array, essa forma de usar o construtor, tambem funciona com todos outros
+            tipos de
+            dados</p>
+        <div class="exemplos">
+            const nomes = new Array ('jose', 'maria', 'luiza');
         </div>
-        <div class="anotacoes" style="color: rgb(27, 148, 142);">Simulando o <strong>SHIFT</strong> que faz a
-            eliminação do primeiro elemento do array <br>
-            <strong>
-                nomes.splice(0, 1); <br>
-            </strong>
-        </div>
-        <div class="anotacoes" style="color: rgb(148, 27, 122);">Simulando o <strong>PUSH</strong> que faz a
-            adição de um elemento no final do array <br>
-            <strong>
-                nomes.splice(nomes.length, 0, 'Frederico'); <br>
-            </strong>
-        </div>
-        <div class="anotacoes" style="color: rgb(27, 65, 148);">Simulando o <strong>UNSHIFT</strong> que faz a
-            adição de um elemento no começo do array <br>
-            <strong>
-                nomes.splice(0, 0, 'Filomena'); <br>
-            </strong>
-        </div>
-    </div><br>
-    <hr>
-
-    <span style="color: red;">14-</span> Concatenando Arrays <br>
-    <p>Para conatenar arrays é so usar a função concat() que ele vai juntar os arrays</p>
-    Exemplo:
-    <div class="exemplos">
-        const lista1 = [1,2,3]; <br>
-        const lista2 = [4,5,6]; <br>
-        const juncao = lista1.<span style="color: red;">concat</span>(lista2); <br>
-    </div>
-    <p>A outra forma é usando o splead operator, que sao os 3 pontinhos(...)</p>
-    Exemplo:
-    <div class="exemplos">
-        const lista1 = [1,2,3]; <br>
-        const lista2 = [4,5,6]; <br>
-        const juncao = [<span style="color: red;">...</span>lista1, <span style="color: red;">...</span>lista2 ]; <br>
-        <div class="anotacoes">//esse exemplo tambem pode se usar com OBJETOS</div>
-    </div>
-    <hr> <br>
-    <span style="color: red;">15-</span> Filtrando Arrays (FILTER, MAP, REDUCE) <br>
-    <h1>Filter</h1>
-    <p>E uma das funções mais importantes e mais usadas...
-        Filter vai retornar sempre um array com a mesma quantiodade de elementos, ou menos.
-        ele sempre retorna um novo array sem mexer no original.(ou menos se caso deperminar na exibição)</p>
-    <div style="text-align: center;"><a style="text-decoration: none; color: blue;" href="../assets/js/exe16.js">Exemplo</a></div> 
-    <h1>Map</h1>
-    <p>
-        
-    </p>
-    <hr>
-    <!--Object Date-->
-    <div class="container">
-        <h1>Objeto Date</h1>
+        <hr> <br>
+        <span style="color: red;">11-</span> split <br>
         <p>
-            Date é uma função construtora, e para usar o objeto date é sempre obrigado a usar a palavra <span
-                style="color: brown;">new</span> pq o Date é uma função construtora, e sempre ela começara um a primeira
-            letra maiuscula a diferenciando <br>
+            split é mais voltado para strings, sendo q aceita a manipulação em strings e vetores. ele serve para
+            substituir
+            algo dentro do elemento;
+        </p>
+        <div class="exemplos">
+            //substituir espaços por virgula <br>
+            const nome = 'Maria jose pereira da silva'; <br>
+            const virgula= nome.split(' , '); <br>
+            console.log(virgula); <br>
+        </div>
+        <hr>
+        <span style="color: red;">12-</span> join <br>
+        <p>join é para fazer a uniao dos elementos em um array, transformando ele em uma string, sendo que e preciso
+            passar
+            o atributo q deseja fazer a união.</p>
+        <div class="exemplos">
             exemplo: <br>
-            <span class="exemplos">
-                const data = new Date() </span><br>
-            <span class="anotacoes">Neste esxemplo esta sendo criado um
-                novo objeto e esta sendo
-                locado na variavel data, q por sua vez quandp for chamada será exibida todos os dados de hras no momento
-                q for usa-la.</span>
-        </p>
+            //fazendo a uniao via espaço <br>
+            const nome = ['Maria', 'Aparecida', 'Soares']; <br>
+            const espaco = nome.join(' '); <br>
+        </div>
+        <hr>
+        <span style="color: red;">13-</span> splice <br>
+
+        É uma função que faz o q o pop, unshift, push e outras coisas mais em arrays <br>
+        exemplo: <br>
+        <div class="anotacoes" style="color: blueviolet;">
+            nomes.splice (indice, delete, adicionar);
+        </div>
+        Exemplo:
+        <div class="exemplos">
+            const nomes = ['Luiz','Maria','Joaquim','Estavao','Monica','Esmeralda']; <br>
+            <div class="anotacoes" style="color: blueviolet;">Simulando o <strong>POP</strong> que faz a eliminação do
+                ultimo elemento do array <br>
+                <strong>
+                    const arrayRemovido = nomes.splice(5, 1); <br>
+                </strong>//o ultimo nome e a quantidade removido 1
+            </div>
+            <div class="anotacoes" style="color: rgb(27, 148, 142);">Simulando o <strong>SHIFT</strong> que faz a
+                eliminação do primeiro elemento do array <br>
+                <strong>
+                    nomes.splice(0, 1); <br>
+                </strong>
+            </div>
+            <div class="anotacoes" style="color: rgb(148, 27, 122);">Simulando o <strong>PUSH</strong> que faz a
+                adição de um elemento no final do array <br>
+                <strong>
+                    nomes.splice(nomes.length, 0, 'Frederico'); <br>
+                </strong>
+            </div>
+            <div class="anotacoes" style="color: rgb(27, 65, 148);">Simulando o <strong>UNSHIFT</strong> que faz a
+                adição de um elemento no começo do array <br>
+                <strong>
+                    nomes.splice(0, 0, 'Filomena'); <br>
+                </strong>
+            </div>
+        </div><br>
+        <hr>
+
+        <span style="color: red;">14-</span> Concatenando Arrays <br>
+        <p>Para conatenar arrays é so usar a função concat() que ele vai juntar os arrays</p>
+        Exemplo:
+        <div class="exemplos">
+            const lista1 = [1,2,3]; <br>
+            const lista2 = [4,5,6]; <br>
+            const juncao = lista1.<span style="color: red;">concat</span>(lista2); <br>
+        </div>
+        <p>A outra forma é usando o splead operator, que sao os 3 pontinhos(...)</p>
+        Exemplo:
+        <div class="exemplos">
+            const lista1 = [1,2,3]; <br>
+            const lista2 = [4,5,6]; <br>
+            const juncao = [<span style="color: red;">...</span>lista1, <span style="color: red;">...</span>lista2 ];
+            <br>
+            <div class="anotacoes">//esse exemplo tambem pode se usar com OBJETOS</div>
+        </div>
+        <hr> <br>
+        <span style="color: red;">15-</span> Filtrando Arrays (FILTER, MAP, REDUCE) <br>
+        <h1>Filter</h1>
+        <p>E uma das funções mais importantes e mais usadas...
+            Filter vai retornar sempre um array com a mesma quantiodade de elementos, ou menos.
+            ele sempre retorna um novo array sem mexer no original.(ou menos se caso deperminar na exibição)</p>
+        <div style="text-align: center;"><a style="text-decoration: none; color: blue;"
+                href="../assets/js/exe16.js">Exemplo</a></div>
+        <h1>Map</h1>
         <p>
-            Agora será mostrado os principais usabilidade da Date
+            Tem a mesma função do filter(que retorna o array sem modificações, as unicas mudanças é na exibição), já o
+            map vai alterar os valores do array, ele vai receber o valor dos arrays originais, mais so que tera as
+            alterações feitas pelo usuario
+        </p>
+        <hr>
+        <!--Object Date-->
+        <div class="container">
+            <h1>Objeto Date</h1>
+            <p>
+                Date é uma função construtora, e para usar o objeto date é sempre obrigado a usar a palavra <span
+                    style="color: brown;">new</span> pq o Date é uma função construtora, e sempre ela começara um a
+                primeira
+                letra maiuscula a diferenciando <br>
+                exemplo: <br>
+                <span class="exemplos">
+                    const data = new Date() </span><br>
+                <span class="anotacoes">Neste esxemplo esta sendo criado um
+                    novo objeto e esta sendo
+                    locado na variavel data, q por sua vez quandp for chamada será exibida todos os dados de hras no
+                    momento
+                    q for usa-la.</span>
+            </p>
+            <p>
+                Agora será mostrado os principais usabilidade da Date
             <h3>Exibindo em formato gringo:</h3>
             <span class="exemplos">
                 const data = new Date(); <br>
@@ -338,9 +347,9 @@
             </p>
             <p>
                 usando <span style="color: red;"> Strings: </span>
-                <p class="exemplos">const data = new Date('2019-04-20 20:20:32'); <br>
-                    será exibido: <span class="anotacoes"> 2019, 20 abril, 20:20,32</span>
-                </p>
+            <p class="exemplos">const data = new Date('2019-04-20 20:20:32'); <br>
+                será exibido: <span class="anotacoes"> 2019, 20 abril, 20:20,32</span>
+            </p>
             </p>
             <h4>Para obter propriedades</h4>
             <p class="exemplos">const data = new Date("Dia", data.getDate()); </p>
@@ -352,44 +361,45 @@
             <p class="exemplos">const data = new Date("Milisegundos", data.getMillisecounds()); </p>
             <p class="exemplos">const data = new Date("Dia da semana", data.getDay()); <span class="anotacoes"> 0 é
                     domingo e 6 é sabado</span> </p>
-        </p>
-        <h4 style="color: chartreuse;">Formatando uma data usando uma função</h4>
-        <div class="exemplos">
-            const data = new Date(); <br>
-
-            <p class="anotacoes">
-                //função para adicionar o zero a esquerda de todos os numeros <br>
-                <span style="margin-left: 25px;"> function zeroAesquerda(num){ </span>
-                <br><span style="margin-left: 40px;"> return num >= 10 ? num : `0${num}`; </span> <br>
-                <span style="margin-left: 25px;"></span>}<br>
             </p>
+            <h4 style="color: chartreuse;">Formatando uma data usando uma função</h4>
+            <div class="exemplos">
+                const data = new Date(); <br>
 
-            function formatandoData(data){ <br>
-            <p style="margin-left: 55px;">const dia = <span class="anotacoes">zeroAesquerda(</span>data.getDate()<span
-                    class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const mes = <span class="anotacoes">zeroAesquerda(</span> data.getMonth() +
-                1)<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const ano = <span
-                    class="anotacoes">zeroAesquerda(</span>data.getFullYear()<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const hora = <span class="anotacoes">zeroAesquerda(</span>data.getHours()<span
-                    class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const minutos = <span
-                    class="anotacoes">zeroAesquerda(</span>data.getMinutes()<span class="anotacoes">)</span>; </p>
-            <p style="margin-left: 55px;">const segundos = <span
-                    class="anotacoes">zeroAesquerda(</span>data.getSeconds()<span class="anotacoes">)</span>; </p>
-            <br> return `${dia} / ${mes} / ${ano} ${hora} : ${minutos} : ${segundos}`
-            } <br>
-            const dataBrasil = formatandoData(data); <br>
-            console.log(dataBrasil); <br>
+                <p class="anotacoes">
+                    //função para adicionar o zero a esquerda de todos os numeros <br>
+                    <span style="margin-left: 25px;"> function zeroAesquerda(num){ </span>
+                    <br><span style="margin-left: 40px;"> return num >= 10 ? num : `0${num}`; </span> <br>
+                    <span style="margin-left: 25px;"></span>}<br>
+                </p>
+
+                function formatandoData(data){ <br>
+                <p style="margin-left: 55px;">const dia = <span
+                        class="anotacoes">zeroAesquerda(</span>data.getDate()<span class="anotacoes">)</span>; </p>
+                <p style="margin-left: 55px;">const mes = <span class="anotacoes">zeroAesquerda(</span> data.getMonth()
+                    +
+                    1)<span class="anotacoes">)</span>; </p>
+                <p style="margin-left: 55px;">const ano = <span
+                        class="anotacoes">zeroAesquerda(</span>data.getFullYear()<span class="anotacoes">)</span>; </p>
+                <p style="margin-left: 55px;">const hora = <span
+                        class="anotacoes">zeroAesquerda(</span>data.getHours()<span class="anotacoes">)</span>; </p>
+                <p style="margin-left: 55px;">const minutos = <span
+                        class="anotacoes">zeroAesquerda(</span>data.getMinutes()<span class="anotacoes">)</span>; </p>
+                <p style="margin-left: 55px;">const segundos = <span
+                        class="anotacoes">zeroAesquerda(</span>data.getSeconds()<span class="anotacoes">)</span>; </p>
+                <br> return `${dia} / ${mes} / ${ano} ${hora} : ${minutos} : ${segundos}`
+                } <br>
+                const dataBrasil = formatandoData(data); <br>
+                console.log(dataBrasil); <br>
+            </div>
+
+            <div style="text-align: center;">
+                <a style="color: green; font-size: smaller; text-align: center;"
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date">DOCUMENTAÇÃO</a>
+            </div>
         </div>
 
-        <div style="text-align: center;">
-            <a style="color: green; font-size: smaller; text-align: center;"
-                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date">DOCUMENTAÇÃO</a>
-        </div>
-    </div>
-
-    <script src="#"></script>
+        <script src="#"></script>
 </body>
 
 </html>
