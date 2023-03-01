@@ -1,5 +1,9 @@
 //retorne numeros maiores que 10
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
+const numerosFiltrados = numeros.filter();
+
+
+
 
 //Retorne as pessoas que tem o nome com mais de 5 letras ou mais
 //Retorne as pessoas com mais de 50 anos
