@@ -23,7 +23,7 @@ const somenteNome = pessoas.map(valor => valor.nome);
 const sementeIdade = pessoas.filter(valor => ({ idade: valor.idade }));
 //Adicione uma chave id em cada objeto
 const addumIndice = pessoas.filter((valor, indice) => {
-    valor.id = indice;
+    valor.id = (indice +1) * 100; //para nao ter o id 0
     return valor;
 });
 
