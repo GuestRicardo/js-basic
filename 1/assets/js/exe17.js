@@ -4,18 +4,7 @@ const numerosDobro = numeros.map( valor=> {return `valores em dobro ${valor * 2}
 console.log(numerosDobro);
 
 
-
-const numerosFiltrados = numeros.filter(callbackFilter);//filter geralmente requer um valor booleano
-console.log(numerosFiltrados);
-
-/** Todo exemplo acima usando função anonima, sendo a mais comum usado em codigos
- * 
- *  const numerosFiltrados = numeros.filter((valor)=> return valor > 10;);
- */
-
-/** ------------------------------------------------------------------------------------------------------ */
-
-
+//lista de pessoas
 const pessoas = [
     { nome: 'Maria', idade: 61 },
     { nome: 'Moises', idade: 21 },
@@ -28,11 +17,11 @@ const pessoas = [
     { nome: 'Bidu', idade: 14 },
     { nome: 'Biu', idade: 24 },
 ];
-//Retorne as pessoas que tem o nome com mais de 5 letras ou mais
+//Retorne apenas uma string com nome da pessoa
 const pessoasNomeGrande = pessoas.filter(valor=> valor.nome.length >= 5);
-//Retorne as pessoas com mais de 50 anos
+//Remova apenas a chave nome do objeto
 const pessoasVelhas = pessoas.filter(valor=> valor.idade >50);
-//Retorne as pessoas cujo os nomes terminam com a letra A
+//Adicione uma chave id em cada objeto
 const nomesA = pessoas.filter(valor=> valor.nome.toLocaleLowerCase().endsWith('a'));
 
 console.log(pessoasNomeGrande);
