@@ -5,6 +5,8 @@ const numerosDobro = numeros.reduce((valor, acumulador, indice, array) => {
     return acumulador;
 }, 0);
 console.log(numerosDobro);
+//retorne os arrays com valores pares
+
 
 /** *
 //lista de pessoas
