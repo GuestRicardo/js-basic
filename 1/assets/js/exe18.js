@@ -1,6 +1,6 @@
-//Dobre os numeros
+//some todos os numeros
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
-const numerosDobro = numeros.map(valor => { return `valores em dobro ${valor * 2}` });
+const numerosDobro = numeros.map((valor, acumulador, indice, array ) => { return `a soma total do array ${valor * 2}` });
 console.log(numerosDobro);
 
 
