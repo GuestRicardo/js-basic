@@ -1,12 +1,22 @@
 //some todos os numeros
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
 const numerosDobro = numeros.reduce((valor, acumulador, indice, array) => {
-    acumulador  += valor;
+    acumulador += valor;
     return acumulador;
 }, 0);
-console.log(numerosDobro);
-//retorne os arrays com valores pares
 
+//retorne os arrays com valores pares
+const numeroPar = numeros.reduce(function (valor, acumulador){
+    if (valor % 2 === 0) {
+        acumulador.push(valor);
+    };
+    return acumulador;
+}, []);
+
+//numeros (dobro)
+console.log(numerosDobro);
+//numeros pares
+console.log(numeroPar);
 
 /** *
 //lista de pessoas
