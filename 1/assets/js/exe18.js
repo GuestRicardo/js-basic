@@ -1,23 +1,25 @@
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
 
 //some todos os numeros
-const numerosDobro = numeros.reduce((valor, acumulador, indice, array) => {
+const somaNumeros = numeros.reduce((valor, acumulador, indice, array) => {
     acumulador += valor;
     return acumulador;
 }, 0);
 //numeros (dobro)
-console.log(numerosDobro);
+console.log('');
+console.log(`Retornando a soma de todos os numeros é ${somaNumeros}`);
+console.log('');
 /****************************************************************************** */
 //retorne os arrays com valores pares
-const numeros2 = [12, 3, 55, 384, 484, 5, 9874];
-const numerosPar = numeros2.reduce(function (valor, acumulador, indice, array) {
+const numerosPar = numeros.reduce(function (acumulador, valor, indice, array) {
     if (valor % 2 === 0) {
         acumulador.push(valor);
     };
     return acumulador;
 }, []);
 //numeros pares
-console.log(numerosPar);
+console.log(`Retornando valores Pares ${numerosPar}`);
+console.log('');
 
 /** *
 //lista de pessoas
