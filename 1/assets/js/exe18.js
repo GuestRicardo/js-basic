@@ -4,17 +4,16 @@ const numerosDobro = numeros.reduce((valor, acumulador, indice, array) => {
     acumulador += valor;
     return acumulador;
 }, 0);
-
-//retorne os arrays com valores pares
-const numeroPar = numeros.reduce(function (valor, acumulador){
-    if (valor % 2 === 0) {
-        acumulador.push(valor);
-    };
-    return acumulador;
-}, []);
-
 //numeros (dobro)
 console.log(numerosDobro);
+
+//retorne os arrays com valores pares
+const numeroPar = numeros.reduce(function (valor2, acumulador2){
+    if (valor2 % 2 === 0) {
+        acumulador2.push(valor2);
+    };
+    return acumulador2;
+}, []);
 //numeros pares
 console.log(numeroPar);
 
