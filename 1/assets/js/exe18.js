@@ -9,7 +9,8 @@ const numerosDobro = numeros.reduce((valor, acumulador, indice, array) => {
 console.log(numerosDobro);
 /****************************************************************************** */
 //retorne os arrays com valores pares
-const numerosPar = numeros.reduce(function (valor, acumulador, indice, array) {
+const numeros2 = [12, 3, 55, 384, 484, 5, 9874];
+const numerosPar = numeros2.reduce(function (valor, acumulador, indice, array) {
     if (valor % 2 === 0) {
         acumulador.push(valor);
     };
