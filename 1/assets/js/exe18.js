@@ -1,9 +1,12 @@
 //some todos os numeros
 const numeros = [12, 3, 55, 384, 484, 5, 9874];
-const numerosDobro = numeros.map((valor, acumulador, indice, array ) => { return `a soma total do array ${valor * 2}` });
+const numerosDobro = numeros.reduce((valor, acumulador, indice, array) => {
+    acumulador  += valor;
+    return acumulador;
+}, 0);
 console.log(numerosDobro);
 
-
+/** *
 //lista de pessoas
 const pessoas = [
     { nome: 'Maria', idade: 61 },
@@ -24,9 +27,9 @@ const sementeIdade = pessoas.filter(valor => ({ idade: valor.idade }));
 //Adicione uma chave id em cada objeto
 const addumIndice = pessoas.filter((valor, indice) => {
     //valor.id = (indice +1) * 100; //para nao ter o id 0
-    
+
     //para nao mexer no objeto original, é preciso criar uma copia
-    const copiaObj ={...valor};
+    const copiaObj = { ...valor };
     copiaObj.id = indice;
     return copiaObj;
 });
@@ -34,3 +37,4 @@ const addumIndice = pessoas.filter((valor, indice) => {
 console.log(somenteNome);
 console.log(somenteIdade);
 console.log(addumIndice);
+*/
