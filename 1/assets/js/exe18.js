@@ -40,5 +40,5 @@ const pessoaMaisVelha = pessoas.reduce((acumulador, valor)=>{
     if (acumulador.idade > valor.idade) return acumulador; //neste exemplo quando retorna o acumulador esta sendo retornado o objeto inteiro
     return valor;    
 });
-console.log(`A pessoa mais velha da lista é ${pessoaMaisVelha}`);
+console.log('A pessoa mais velha da lista é:');
 console.log(pessoaMaisVelha);
