@@ -20,6 +20,13 @@ console.log(pessoas[chaveDB]); //o resultado desta forma é o mesmo, dos exemplo
 const pessoa2 = new Object();
 pessoa2.nome = 'Jose';
 pessoa2.sobrenome = 'Matias';
+//===================================================================================================================================================
+//deletando itens
+delete pessoa2.sobrenome;//neste exemplo foi apagado a chave nome
+//===================================================================================================================================================
+//objetos com metodos
+//metodos sao funções q estao dentro do objeto q executa açãoes
+//a desvantagem, é que muito mais dificil ter acesso as chaves do metodo dentro do objeto
 
 
 
