@@ -13,4 +13,4 @@ console.log(pessoas['sobrenome']);
 //um exemplo bom para usar o colchetes é qaundo vai ter uma chave que nao sabe qual sera, no caso de uma conexao ao banco de dados
 //exemplo
 const chaveDB = 'nome';
-console.log(pessoas[chaveDB]);
+console.log(pessoas[chaveDB]); //o resultado desta forma é o mesmo, dos exemplos anteriores
