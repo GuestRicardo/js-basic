@@ -27,7 +27,7 @@ delete pessoa2.sobrenome;//neste exemplo foi apagado a chave nome
 //objetos com metodos
 //metodos sao funções q estao dentro do objeto q executa açãoes
 //a desvantagem, é que muito mais dificil ter acesso as chaves do metodo dentro do objeto
-
+pessoa2.falarNome = ()=>{ return };
 
 
 
