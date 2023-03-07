@@ -9,3 +9,8 @@ const pessoas = { //corpo do objeto
 console.log(pessoas.nome);
 //mas tambem da pra acessar por colchetes(ela é mais interessante usar no caso de valores dinamicos )
 console.log(pessoas['sobrenome']);
+
+//um exemplo bom para usar o colchetes é qaundo vai ter uma chave que nao sabe qual sera, no caso de uma conexao ao banco de dados
+//exemplo
+const chaveDB = 'nome';
+console.log(pessoas[chaveDB]);
