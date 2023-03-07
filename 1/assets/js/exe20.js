@@ -15,7 +15,7 @@ console.log(pessoas['sobrenome']);
 const chaveDB = 'nome';
 console.log(pessoas[chaveDB]); //o resultado desta forma é o mesmo, dos exemplos anteriores
 
-
+//================================================================================================================================================
 //usando construtor
 const pessoa2 = new Object();
 pessoa2.nome = 'Jose';
