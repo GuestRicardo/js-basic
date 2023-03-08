@@ -36,7 +36,7 @@ pessoa2.getDataNascimento = function(){
     const datAtual = new Date();
     return datAtual.getFullYear() - this.idade;
 };
-console.log(pessoa2.getDataNascimento());
+console.log(pessoa2.getDataNascimento()); //para saber a data de nascimento
 
 
 
