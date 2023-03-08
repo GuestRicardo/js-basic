@@ -36,7 +36,14 @@ pessoa2.getDataNascimento = function(){
     const datAtual = new Date();
     return datAtual.getFullYear() - this.idade;
 };
-console.log(pessoa2.getDataNascimento()); //para saber a data de nascimento
+console.log(`O ano que ${pessoa2.nome} nasceu é ${pessoa2.getDataNascimento()}`); //para saber a data de nascimento
+
+console.log('##########################################################################################################')
+//para saber todas as chaves do objeto
+console.log('Lista de chaves do objeto');
+for (let chave in pessoa2){
+    console.log(chave);
+};
 
 
 
