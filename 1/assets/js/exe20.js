@@ -23,16 +23,18 @@ pessoa2.sobrenome = 'Matias';
 pessoa2.idade = 36;
 //===================================================================================================================================================
 //deletando itens
-delete pessoa2.sobrenome;//neste exemplo foi apagado a chave nome
+delete pessoa2.sobrenome; //neste exemplo foi apagado a chave nome
 //===================================================================================================================================================
 //objetos com metodos
 //metodos sao funções q estao dentro do objeto q executa açãoes
 //a desvantagem, é que muito mais dificil ter acesso as chaves do metodo dentro do objeto
-pessoa2.falarNome =function (){ return (`${this.nome} esta função esta retornando seu nome`); };// o this se refere a chave
+pessoa2.falarNome = function () {
+    return (`${this.nome} esta função esta retornando seu nome`);
+}; // o this se refere a chave
 console.log(pessoa2.falarNome());
 
 //segundo exemplo:
-pessoa2.getDataNascimento = function(){
+pessoa2.getDataNascimento = function () {
     const datAtual = new Date();
     return datAtual.getFullYear() - this.idade;
 };
@@ -41,11 +43,11 @@ console.log(`O ano que ${pessoa2.nome} nasceu é ${pessoa2.getDataNascimento()}`
 console.log('##########################################################################################################');
 //para saber todas as chaves do objeto
 console.log('Lista de chaves do objeto');
-for (let chave in pessoa2){
+for (let chave in pessoa2) {
     console.log(chave);
 };
 
 console.log('##########################################################################################################');
-
-
-
+//E para criar moldes de objetos, existe 2 funções e classe para resouver esse problema, pois o codigo ficará muito mais rapido e performatico
+//para isso usa-se a função fabrica, função construtora e classes essas duas sao padrões de projetos.
+//
