@@ -50,4 +50,14 @@ for (let chave in pessoa2) {
 console.log('##########################################################################################################');
 //E para criar moldes de objetos, existe 2 funções e classe para resouver esse problema, pois o codigo ficará muito mais rapido e performatico
 //para isso usa-se a função fabrica, função construtora e classes essas duas sao padrões de projetos.
-//
+//factor function(fabrica)
+function criaPessoa(cpf, nome, sobrenome) {
+    return {
+        cpf,
+        nome,
+        sobrenome,
+        get dadosCompleto(){
+            return `${this.cpf}, ${this.nome}, ${this.sobrenome}`
+        }
+    }
+}
