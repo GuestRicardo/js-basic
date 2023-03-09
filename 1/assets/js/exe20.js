@@ -72,4 +72,6 @@ function Nova(nome, sobrenome){
 }
 //palavra new vai criar um objeto vazio, e vai atrelar a palavra this dentro da função, ao objeto
 const p2 = new Nova('Maria', 'Gerardina');//aq esta sendo retornado um objeto literal, a diferença q mostra o construtor
-console.log(p2)
+const p3 = new Nova('Monica', 'Gerarda');
+console.log(p2);
+console.log(p3);
