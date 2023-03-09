@@ -50,6 +50,7 @@ for (let chave in pessoa2) {
 console.log('##########################################################################################################');
 //E para criar moldes de objetos, existe 2 funções e classe para resouver esse problema, pois o codigo ficará muito mais rapido e performatico
 //para isso usa-se a função fabrica, função construtora e classes essas duas sao padrões de projetos.
+
 //factor function(fabrica)
 function criaPessoa(cpf, nome, sobrenome) {
     return {
@@ -63,3 +64,11 @@ function criaPessoa(cpf, nome, sobrenome) {
 }
 const p1 = criaPessoa('54185465', 'Luiz', 'Alberto');
 console.log(p1.dadosCompleto);
+
+//constructor function(construtora)
+function Nova(nome, sobrenome){
+    this.nome = nome;
+    this.sobrenome = sobrenome;    
+}
+const p2 = new Nova('Maria', 'Gerardina');//aq esta sendo retornado um objeto literal, a diferença q mostra o construtor
+console.log(p2)
