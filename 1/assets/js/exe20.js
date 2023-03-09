@@ -61,3 +61,5 @@ function criaPessoa(cpf, nome, sobrenome) {
         }
     }
 }
+const p1 = criaPessoa('54185465', 'Luiz', 'Alberto');
+console.log(p1.dadosCompleto);
