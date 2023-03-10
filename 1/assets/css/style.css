@@ -10,6 +10,10 @@
   outline: 0;
 }
 
+p{
+  word-wrap: break-word;
+}
+
 body {
   margin: 0;
   padding: 0;
