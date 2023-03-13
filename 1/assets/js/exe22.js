@@ -20,3 +20,6 @@ function Produto(nome, preco, estoque) {
     });
 
 };
+
+const produto1 = new Produto('Blusa', 21,3);
+console.log(Object.keys(produto1));
