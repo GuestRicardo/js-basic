@@ -11,7 +11,6 @@ function Produto(nome, preco, estoque) {
             writable: false,
             configurable: true,
         },
-
         preco: {
             enumerable: true,
             value: preco,
