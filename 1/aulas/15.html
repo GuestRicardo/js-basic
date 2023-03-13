@@ -27,8 +27,27 @@
             propriedades. <br> <br>
             <strong>Get:</strong> Vai servir somente para exibir, oq esta buscando, o valor da propriedade. <br> <br>
             <strong>Seter:</strong> Vai configurar o valor, ele serve para editar o valor.<strong
-                style="color: red;">Observação:</strong> Ele nao vai retornar nada, ele so modifica o valor (aq é onde sera validado o valor)
+                style="color: red;">Observação:</strong> Ele nao vai retornar nada, ele so modifica o valor (aq é onde
+            sera validado o valor)
         </p>
+        <div class="exemplos">
+            <h4>Factory function</h4>
+            function criaProduto(){ <br>
+            return{ <br>
+                get nome(){ <br>
+                    return nome; <br>
+                } <br>
+                set nome(valor){ <br>
+                 valor = valor.replace('apagando o ultimo', 'item');  <br>
+                 nome = valor; <br>
+                } <br>
+            }; <br>
+            } <br>
+            const p2 = criaProduto('camiseta'); <br>
+            p2.nome = 'nomeAdd'; <br>
+            console.log(p2.nome); <br>
+        </div>
+
         <div>
             <a href="../assets/js/exe23.js" style="color: blue; text-decoration: none;">Exemplo</a>
         </div>
