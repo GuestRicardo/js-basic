@@ -6,16 +6,20 @@ function Produto(nome, preco, estoque) {
 
     Object.defineProperty (this, 'estoque', {
         nome: {
-            enumerable: true,
-            configurable: true,
+            enumerable: true, //mostrar chave
+            configurable: true, //reconfigurar
+            //o gett so exibe o valor
+            get: function(){
+                return estoque;
+            }
         },
 
     });
 
 };
 
-const produto1 = new Produto('Blusa', 21,3);
-console.log(produto1);
+const produto1 = new Produto('Blusa', 21, 3);
+console.log(produto1.estoque);
 
 for(let chave in produto1){
     console.log(chave);
