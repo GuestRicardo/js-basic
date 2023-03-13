@@ -16,7 +16,7 @@ function Produto(nome, preco, estoque) {
             },
             set: function(valor){
                 if(typeof valor !== 'number'){
-                    console.log('estoque so aceita numeos')
+                    throw new TypeError('estoque aceita somente numeros inteiros');
                 }
                 estoquePrivado = valor;
             }
