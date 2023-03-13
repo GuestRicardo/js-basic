@@ -3,7 +3,7 @@
 function Produto(nome, preco, estoque) {
     this.nome = nome; //o this torna a variavbel publica
     this.preco = preco;
-    this.estoque = estoque;
+    
 
     Object.defineProperty(this, 'estoque', { //o this esta indicando o objeto q esta sendo criado, por isso q ele sera selecionado
         enumerable: true, //mostra o numero da chave, mas se tiver como false é o contrario
