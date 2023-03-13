@@ -22,7 +22,7 @@ function Produto(nome, preco, estoque) {
 };
 
 const produto1 = new Produto('Blusa', 21,3);
-console.log(Object.keys(produto1));
+console.log(produto1);
 
 for(let chave in produto1){
     console.log(chave);
