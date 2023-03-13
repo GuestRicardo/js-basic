@@ -28,9 +28,4 @@ function Produto(nome, preco, estoque) {
 const produto1 = new Produto('Blusa', 21, 3);
 //adicionando estoque
 produto1 = 522;
-
 console.log(produto1.estoque);
-
-for(let chave in produto1){
-    console.log(chave);
-}
