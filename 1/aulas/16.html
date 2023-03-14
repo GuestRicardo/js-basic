@@ -16,7 +16,9 @@
         <div class="anotacoes">
             <h2>Copiando Objetos</h2>
             <strong>Forma Tradicional</strong> <br>
-            const produtos = {nome: 'camisinha', preco: 6.0}; <br>
+            <strong style="color: red;">
+                const produtos = {nome: 'camisinha', preco: 6.0}; <br>            
+            </strong>
             const copia = produtos; <br>
             <hr>
             <strong>Spread</strong> <br>
@@ -52,7 +54,14 @@
                 //nada podera será alterado.
             </p>
             <hr>
-            <h2></h2>
+            <h2>Object.getOwnPropertyDescriptor(obej, chave)</h2>
+            <p>
+                Este metodo serve para mostrar as propriedades do objeto, ele exibirá, todos os indices do objeto
+            </p>
+            <strong>exemplo:</strong> <br>
+            <div class="exemplos">
+                console.log(Object.getOwnPropertyDescriptor(produto, 'nome'));
+            </div>
         </div>
     </section>
 </body>
