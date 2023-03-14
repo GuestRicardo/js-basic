@@ -60,7 +60,14 @@
             </p>
             <strong>exemplo:</strong> <br>
             <div class="exemplos">
-                console.log(Object.getOwnPropertyDescriptor(produto, 'nome'));
+                console.log(Object.getOwnPropertyDescriptor(produto, 'nome')); <br>
+                <div style="color: blue;">Resultado: <br>
+                { <br>
+                    value: produto, <strong style="color: darkslateblue;">//nome do objeto</strong> <br> <br>
+                    writable: true, <strong style="color: darkslateblue;">// como esta true, ele aceita alterar o valor(nome do objeto)</strong><br> <br>
+                    enumerable: true; <strong style="color: darkslateblue;">//como esta true, ele aceitará ser exibido quando for solicitado por outras funções</strong><br> <br>
+                    configurable: true; <strong style="color: darkslateblue;">//como esta true, aceita fazer qualquer edição, como deletar, ou add propriedades</strong><br> <br>
+                }</div>
             </div>
         </div>
     </section>
