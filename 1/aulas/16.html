@@ -22,18 +22,31 @@
             <strong>Spread</strong> <br>
             copia = {...produto}; <br>
             <hr>
-            <strong>object.assign(target:(que seria um objeto vazio), Objetoque sera copiado)</strong> É um método estático que copia todas as propriedades próprias enumeráveis ​​
+            <strong>object.assign(target:(que seria um objeto vazio), Objetoque sera copiado)</strong> É um método
+            estático que copia todas as propriedades próprias enumeráveis ​​
             de um ou mais objetos de origem para um objeto de destino . Ele retorna o objeto de destino modificado. <br>
-            
+
             <h4>Exemplo:</h4>
             <div class="exemplos">
-                const caneca = Object.assign({}, produtos); 
+                const caneca = Object.assign({}, produtos);
                 <div class="anotacoes">Ele copiara tudo do objeto(produto) para o target, q no caso sera vazio</div>
                 <div class="exemplos">
-                    const caneca = Object.assign({}, produtos, {material: 'porcelana'}); 
+                    const caneca = Object.assign({}, produtos, {material: 'porcelana'});
                     <div class="anotacoes">aq esta um exemplo se caso queira copiar e add outros objetos</div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="anotacoes">
+            <h1>Metodos uteis</h1>
+            <h2>Mostrando o que tem nas keys do objeto</h2>
+            <p>
+                console.log(Object.keys(produtos)) <br>
+                // [nome, preco]
+            </p>
+            <hr>
+            <h2>Para bloquear o objeto(nao deixar q ele seja alterado)</h2>
         </div>
     </section>
 </body>
