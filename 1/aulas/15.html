@@ -86,11 +86,13 @@
             const objA ={ <br>
             chaveA: 'A'<br>
             }; <br>
-        </div>
-        <div class="anotacoes">
+            
             const objB ={ <br>
             chaveA: 'B'<br>
             }; <br>
+            Object.setPrototypeOf(objB, objA); <br>
+            console.log(objB.chaveA); <br>
+            <span style="color: crimson;">//aq esta sendo mudado a ordem do prototype, sendo q ficará= objB=>objA=> prototype(__proto__)</span>
         </div>
         <div style="color: blueviolet; text-align: center; margin-top: 30px; margin-bottom: 30px;">
             <a style="text-decoration: none;" href="../assets/js/exercicioPrototype.js">Exercicio prototype</a>
