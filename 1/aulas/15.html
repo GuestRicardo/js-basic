@@ -13,14 +13,21 @@
     <section class="container">
         <h1>Prototype</h1>
         <p>
+            JavaScript é baseado em prototipos(prototype) para passar propriedades e metodos de um objeto para outro.
+        </p>
+        <p>
+            <strong>
+                Definição de Prototype(prototipo)
+            </strong>
 
         </p>
-        Esta forma é sem o uso do prototype, sendo que dessa forma é menos performatico (sendo um desperdicio de recurso do pc do cliente), para isso existe o prototype(via prototipos)
+        Esta forma é sem o uso do prototype, sendo que dessa forma é menos performatico (sendo um desperdicio de recurso
+        do pc do cliente), para isso existe o prototype(via prototipos)
         <div class="exemplos">
             <strong style="color: blue;">
                 //construtora(molde) = classe
             </strong> <br>
-            
+
             function Pessoa(nome, sobrenome){ <br>
             this.nome= nome ;<br>
             this.sobrenome = sobrenome; <br>
@@ -30,7 +37,8 @@
                 //instancia
             </strong> <br>
             const pessoa1 = new Pessoa('Maria', 'Aparecida'); <br>
-            <span style="color: darkgreen;">//essa instancia é um objeto q esta usando a função constutora como malde</span> <br>
+            <span style="color: darkgreen;">//essa instancia é um objeto q esta usando a função constutora como
+                malde</span> <br>
             console.log(pessoa1);
         </div>
     </section>
@@ -58,13 +66,13 @@
             <h4>Factory function</h4>
             function criaProduto(){ <br>
             return{ <br>
-                get nome(){ <br>
-                    return nome; <br>
-                } <br>
-                set nome(valor){ <br>
-                 valor = valor.replace('apagando o ultimo', 'item');  <br>
-                 nome = valor; <br>
-                } <br>
+            get nome(){ <br>
+            return nome; <br>
+            } <br>
+            set nome(valor){ <br>
+            valor = valor.replace('apagando o ultimo', 'item'); <br>
+            nome = valor; <br>
+            } <br>
             }; <br>
             } <br>
             const p2 = criaProduto('camiseta'); <br>
@@ -73,7 +81,8 @@
         </div>
 
         <div>
-            <a href="../assets/js/exe23.js" style="color: blue; text-decoration: none;"> neste Exemplo esta sendo usado função construtora</a>
+            <a href="../assets/js/exe23.js" style="color: blue; text-decoration: none;"> neste Exemplo esta sendo usado
+                função construtora</a>
         </div>
         <div>
 
