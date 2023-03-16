@@ -4,7 +4,7 @@
 // camisa = cor, caneca= material
 
 //função principal
-function Produto() {
+function Produto(nome, preco, sexo) {
     this.nome = nome,
         this.preco = preco,
         this.sexo = sexo
@@ -24,7 +24,7 @@ Produto.prototype.desconto = function (percentual) {
 function Canecas(nome, cor, preco, material, estoque) {
     Produto.call(this, nome, preco);
     this.material = material,
-    this.estoque = extoque,
+    this.estoque = estoque,
     this.cor = cor,
         Object.defineProperty(this, 'estoque', {
             enumerable: true,
@@ -48,13 +48,13 @@ Canecas.prototype.constructor = Canecas;
 
 /**===============================criando produto camiseta=========================================== */
 function Camisetas(nome, cor, preco, sexo, tamanho, estoque) {
-    Produto.call(this, nome, preco);
+    Produto.call(this, nome, preco, preco, tamanho, estoque);
     this.tamanho = tamanho,
     this.estoque = estoque,
     this.cor = cor,
     this.sexo= sexo,
 
-    Object.defineProperty(this, 'estoque' {
+    Object.defineProperty(this, 'estoque', {
         enumerable: true,
         configurable: false,
 
