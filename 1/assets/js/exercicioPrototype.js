@@ -48,10 +48,9 @@ Canecas.prototype.constructor = Canecas;
 /**===============================fim da caneca=========================================== */
 
 /**===============================criando produto camiseta=========================================== */
-function Camisetas(nome,preco, cor, preco, sexo, tamanho, estoque) {
+function Camisetas(nome, preco, cor, sexo, tamanho, estoque) {
     Produto.call(this, nome, preco); //herança do produto
-    this.tamanho = tamanho,
-    this.estoque = estoque,
+    this.tamanho = tamanho,    
     this.cor = cor,
     this.sexo= sexo,
     this.preco = preco
@@ -60,14 +59,14 @@ function Camisetas(nome,preco, cor, preco, sexo, tamanho, estoque) {
         enumerable: true,
         configurable: false,
 
-        get: function () {
+        get: function (valor) {
             if (typeof valor !== 'number') {
                 return 'digite valor numerico'
             }
             estoque = valor;
         },
         set: function (valor) {
-            estoque = valor;
+           return estoque = valor;
         }
     });
 };
@@ -75,7 +74,7 @@ Camisetas.prototype = Object.create(Produto.prototype);
 Camisetas.prototype.constructor = Camisetas;
 /**===============================fim da camiseta=========================================== */
 
-const camisetaGuns = new Camisetas('Longa', 'preta', 25, 'M', 'feminina', 8);
+const camisetaGuns = new Camisetas('Longa', 50, 'preta', 'feminino', 'P', 8);
 camisetaGuns.aumento(100);
 console.log(camisetaGuns);
 
