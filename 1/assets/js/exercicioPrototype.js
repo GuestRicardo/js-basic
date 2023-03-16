@@ -4,7 +4,7 @@
 // camisa = cor, caneca= material
 
 //função principal
-function Produto(nome, preco, sexo) {
+function Produto(nome, preco) {
     this.nome = nome,
     this.preco = preco    
 };
@@ -25,6 +25,7 @@ function Canecas(nome, cor, preco, material, estoque) {
     Produto.call(this, nome, preco); //herança do produto
     this.material = material,
     this.estoque = estoque,
+    this.preco = preco,
     this.cor = cor,
         Object.defineProperty(this, 'estoque', {
             enumerable: true,
@@ -75,6 +76,8 @@ Camisetas.prototype.constructor = Camisetas;
 /**===============================fim da camiseta=========================================== */
 
 const camisetaGuns = new Camisetas('Longa', 'preta', 25, 'M', 'feminina', 8);
-const canecaLord = new Canecas('LOTR', 'preta', 30, 'porcelana', 16);
 camisetaGuns.aumento(100);
 console.log(camisetaGuns);
+
+
+const canecaLord = new Canecas('LOTR', 'preta', 30, 'porcelana', 16);
