@@ -19,6 +19,7 @@ Produto.prototype.aumento = function (percentual) {
 Produto.prototype.desconto = function (percentual) {
     this.preco = this.preco - (this.preco * (percentual / 100));
 };
+
 /**==========================criando produto caneca============================================= */
 //caneca
 function Canecas(nome, cor, preco, material, estoque) {
