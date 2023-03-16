@@ -6,8 +6,7 @@
 //função principal
 function Produto(nome, preco, sexo) {
     this.nome = nome,
-    this.preco = preco,
-    
+    this.preco = preco    
 };
 
 //para aumentar o preco
@@ -49,11 +48,12 @@ Canecas.prototype.constructor = Canecas;
 
 /**===============================criando produto camiseta=========================================== */
 function Camisetas(nome,preco, cor, preco, sexo, tamanho, estoque) {
-    Produto.call(this, nome, preco,); //herança do produto
+    Produto.call(this, nome, preco); //herança do produto
     this.tamanho = tamanho,
     this.estoque = estoque,
     this.cor = cor,
     this.sexo= sexo,
+    this.preco = preco
 
     Object.defineProperty(this, 'estoque', {
         enumerable: true,
