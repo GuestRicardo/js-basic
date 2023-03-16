@@ -75,5 +75,5 @@ Camisetas.prototype.constructor = Camisetas;
 
 const camisetaGuns = new Camisetas('Longa', 'preta', 25, 'M', 'feminina', 8);
 const canecaLord = new Canecas('LOTR', 'preta', 30, 'porcelana', 16);
-camisetaGuns.aumento(10);
+camisetaGuns.aumento(100);
 console.log(camisetaGuns);
