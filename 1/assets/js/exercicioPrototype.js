@@ -6,8 +6,8 @@
 //função principal
 function Produto(nome, preco, sexo) {
     this.nome = nome,
-        this.preco = preco,
-        this.sexo = sexo
+    this.preco = preco,
+    
 };
 
 //para aumentar o preco
@@ -23,7 +23,7 @@ Produto.prototype.desconto = function (percentual) {
 /**==========================criando produto caneca============================================= */
 //caneca
 function Canecas(nome, cor, preco, material, estoque) {
-    Produto.call(this, nome, preco);
+    Produto.call(this, nome, preco); //herança do produto
     this.material = material,
     this.estoque = estoque,
     this.cor = cor,
@@ -48,8 +48,8 @@ Canecas.prototype.constructor = Canecas;
 /**===============================fim da caneca=========================================== */
 
 /**===============================criando produto camiseta=========================================== */
-function Camisetas(nome, cor, preco, sexo, tamanho, estoque) {
-    Produto.call(this, nome, preco, preco, tamanho, estoque);
+function Camisetas(nome,preco, cor, preco, sexo, tamanho, estoque) {
+    Produto.call(this, nome, preco,); //herança do produto
     this.tamanho = tamanho,
     this.estoque = estoque,
     this.cor = cor,
