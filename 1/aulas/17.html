@@ -23,6 +23,40 @@
                 <a style="text-decoration: none; font-size: larger; color: darkblue;"
                     href="../assets/js/exercicioPrototype.js"> <strong>Exercicio</strong></a>
             </div>
+            <p>
+                O termo <strong style="color: black;">"Herança"</strong> é muito usado para descrever que as
+                características de um objeto são passadas para
+                outro objeto. Assim como uma filha ou filho pode herdar características da sua mãe ou pai
+                (geneticamente). Por isso estamos usando esse termo para descrever o comportamento desejado. Além disso,
+                a maioria das literaturas, incluindo as documentações <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript">(como
+                    MDN)</a> citam a palavra herança. </p>
+            <p>
+                Vamos continuar usando o termo "Herança" até o final do curso, porém, Javascript não é uma linguagem que
+                apresenta essa característica em específico, portanto não existe "herança" aqui. O que ocorre, na
+                verdade, é "delegação". Esse seria o termo mais correto para descrever "Herança" em JS.
+
+                Quando fazemos algo como: <br>
+                <img src="../assets/img/1.png" alt="">
+            </p>
+            <p>Mais especificamente no trecho:</p>
+            <img src="../assets/img/2.jpeg" alt="">
+            <p>
+
+                Estamos, claramente, falando que o <strong>Camiseta.prototype</strong> é um novo objeto vazio que tem
+                como protótipo
+                <strong>Produto.prototype</strong> . Dessa forma, estamos adicionando
+                <strong>Camiseta.prototype</strong> na cadeia de protótipos de
+                <strong>Produto</strong> . Por consequência, tudo o que não existir em <strong>Camiseta</strong> nem em
+                <strong>Camiseta.prototype</strong> será delegado
+                para <strong>Produto.prototype</strong> (e assim por diante até chegar no topo da cadeia de protótipos).
+                Por isso vejo o
+                termo delegação como mais adequado para este comportamento.</p>
+            <p>
+                Novamente, vamos continuar usando o termo <strong style="color: black;">"Herança"</strong> , mas achei
+                que seria interessante que você soubesse
+                disso neste momento.
+            </p>
         </div>
     </section>
 </body>
