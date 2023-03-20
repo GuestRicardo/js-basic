@@ -6,10 +6,15 @@ function ValidaCpf(cpfEnviado) {
         }
     });
 }
+
+//METODOS
+
 //para validar o cpf
 ValidaCpf.prototype.valida = function () {
     if (typeof this.cpfLimpo === 'undefined') return false; //caracteres invalidos
     if (this.cpfLimpo.length !== 11) return false; //se nao mandar os 11 digitos
+    if (this.cpfLimpo.isSequencia()) return false; //para nao aceitar numeros na mesma sequencia
+
 
     const cpfParcial = this.cpfLimpo.slice(0, -2); //variavel para receber o parametro da função criaDigito
     const digito1 = this.criaDigito(cpfParcial);
@@ -32,6 +37,10 @@ ValidaCpf.prototype.criaDigito = function (cpfParcial) {
 
     const digito = 11 - (total % 11);
     return digito > 9 ? '0' : String(digito);
+
+};
+
+ValidaCpf.prototype.isSequencia = function(){
 
 };
 
