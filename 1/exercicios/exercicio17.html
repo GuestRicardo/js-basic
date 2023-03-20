@@ -12,39 +12,48 @@
 <body>
     <!---->
     <section class="container">
-     <h1>Gerador de Cpf</h1>
-     <p>Para criar a logica de um geradotr de cpf é preciso seguir algumas regras</p>
-     <p>
-        <h3>Entendendo a logica</h3>
-        Cpf: 705.484.450-52 <br>
-        <span style="font-size: small;">primeiro passo é multiplicar todos os valores do CPF em uma forma rgressiva</span> <br>
-        <strong>exemplo:</strong> <br>
-        <span style="color: red;">7</span> * 10 = 70 <br> 
-        <span style="color: red;">0</span> * 9 = 0 <br>
-        <span style="color: red;">5</span> * 8 = 40 <br>
-        . <br>
-        <span style="color: red;">4</span> * 7 = 28 <br>
-        <span style="color: red;">8</span> * 6 = 48 <br>
-        <span style="color: red;">4</span> * 5 = 20 <br>
-        . <br>
-        <span style="color: red;">4</span> * 4 = 16 <br>
-        <span style="color: red;">5</span> * 3 = 15 <br>
-        <span style="color: red;">0</span> * 2 = 0 <br>
-        - <br>
-        <span style="color: red;">5</span> Este NãO <br>
-        <span style="color: red;">2</span> Este Não <br>
-     </p>
-     <p>Agora será somado o resultado de cada multiplicação. <br>
+        <h1>Gerador de Cpf</h1>
+        <p>Para criar a logica de um geradotr de cpf é preciso seguir algumas regras</p>
+        <p>
+            <h3>Entendendo a logica</h3>
+            Cpf: 705.484.450-52 <br>
+            <span style="font-size: small;">primeiro passo é multiplicar todos os valores do CPF em uma forma
+                rgressiva</span> <br>
+            <strong>exemplo:</strong> <br>
+            <span style="color: red;">7</span> * 10 = 70 <br>
+            <span style="color: red;">0</span> * 9 = 0 <br>
+            <span style="color: red;">5</span> * 8 = 40 <br>
+            . <br>
+            <span style="color: red;">4</span> * 7 = 28 <br>
+            <span style="color: red;">8</span> * 6 = 48 <br>
+            <span style="color: red;">4</span> * 5 = 20 <br>
+            . <br>
+            <span style="color: red;">4</span> * 4 = 16 <br>
+            <span style="color: red;">5</span> * 3 = 15 <br>
+            <span style="color: red;">0</span> * 2 = 0 <br>
+            - <br>
+            <span style="color: red;">5</span> Este NãO <br>
+            <span style="color: red;">2</span> Este Não <br>
+        </p>
+        <p>Agora será somado o resultado de cada multiplicação. <br>
+            <strong>
+                70 + 0 + 40 + 28 + 48 + 20 + 16 + 15 + 0 = <span style="color: brown;">237</span>
+            </strong> <br>
+            <span style="font-size: small;">apos a soma será aplicada a formula</span> <br>
+            os 11 digitos menos o resto da divisao entre o total e 11 e o resultado será o primeiro digito. <br>
+            <strong>11 - (237 % 11) = <span style="color: brown;">5</span></strong> <br>
+            <span style="font-size: small;">Observação: se o numero que da conta ser maior q 9 automaticamente ele se
+                converte em 0</span> <br>
+            Agora será repetido tudo aumentando o multiplicador, envés de começar em 10, sera aumentado para 11 e assim
+            por diante, no proximo sera 12.... <br>
+            E assim sera feito esse procedimento ate fechar as 11 casas
+        </p>
+
+        <p>Para confirmar a validação do CPF gerado é so comparar com o q esta sendo usado de exemplo:</p>
         <strong>
-            70 + 0 + 40 + 28 + 48 + 20 + 16 + 15 + 0 = <span style="color: brown;">237</span>
+            705.484.450-52 === 705.484.450-52
         </strong> <br>
-        <span style="font-size: small;">apos a soma será aplicada a formula</span> <br>
-        os 11 digitos menos o resto da divisao  entre o total e 11 e o resultado será o primeiro digito. <br>
-        <strong>11 - (237 % 11) = <span style="color: brown;">5</span></strong>  <br>
-        <span style="font-size: small;">Observação: se o numero que da conta ser maior q 9 automaticamente ele se converte em 0</span> <br>
-        Agora será repetido tudo aumentando o multiplicador, envés de começar em 10, sera aumentado para 11 e assim por diante, no proximo sera 12.... <br>
-        E assim sera feito esse procedimento ate fechar as 11 casas
-    </p>
+        <span style="font-size: small;">se os 2 estiverem identicos é pq é <span style="color: green;">verdadeiro</span> o cpf</span>
 
     </section>
     <script src="../assets/js/exe24.js"></script>
