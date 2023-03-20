@@ -19,8 +19,16 @@ ValidaCpf.prototype.valida = function () {
 ValidaCpf.prototype.criaDigito = function (cpfParcial) {
     //convertendo a string em um array
     const cpfArray = Array.from(cpfParcial);
-    console.log(cpfArray);
+    let regressivo = cpfArray.length + 1;
+    const total = cpfArray.reduce((acumulador, valor) => {
+        acumulador += (regressivo * Number(valor));
+        regressivo--;
+        return acumulador;
+    }, 0);
+
+    const digito = 11 - (total % 11);
+    console.log(digito)
 };
 
-const cpf = new ValidaCpf('705.485.450-52');
+const cpf = new ValidaCpf('705.484.450-52');
 console.log(cpf.valida());
