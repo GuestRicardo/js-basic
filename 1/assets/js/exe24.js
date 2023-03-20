@@ -13,7 +13,11 @@ ValidaCpf.prototype.valida = function () {
 
     const cpfParcial = this.cpfLimpo.slice(0, -2); //variavel para receber o parametro da função criaDigito
     const digito1 = this.criaDigito(cpfParcial);
-    return true;
+    const digito2 = this.criaDigito(cpfParcial + digito1);
+
+    //comparando o cpf
+    const novoCpf = cpfParcial + digito1 + digito2;
+    return novoCpf === this.cpfLimpo;
 };
 
 ValidaCpf.prototype.criaDigito = function (cpfParcial) {
@@ -27,7 +31,8 @@ ValidaCpf.prototype.criaDigito = function (cpfParcial) {
     }, 0);
 
     const digito = 11 - (total % 11);
-    console.log(digito)
+    return digito > 9 ? '0' : String(digito);
+
 };
 
 const cpf = new ValidaCpf('705.484.450-52');
