@@ -8,8 +8,11 @@ function ValidaCpf(cpfEnviado) {
 }
 //para validar o cpf
 ValidaCpf.prototype.valida = function () {
-    if (typeof cpfLimpo === 'undefined') {
-        return false;
-    }
+    if (typeof this.cpfLimpo === 'undefined') return false; //caracteres invalidos
+    if (typeof this.cpfLimpo.length !== 11) return false; //se nao mandar os 11 digitos
+    
     return true;
 };
+
+const cpf = new ValidaCpf('705.485.450-52');
+console.log(cpf.valida());
