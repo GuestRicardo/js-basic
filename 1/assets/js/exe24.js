@@ -40,8 +40,9 @@ ValidaCpf.prototype.criaDigito = function (cpfParcial) {
 
 };
 
-ValidaCpf.prototype.isSequencia = function(){
-
+ValidaCpf.prototype.isSequencia = function () {
+    const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length);
+    return sequencia === this.cpfLimpo;
 };
 
 const cpf = new ValidaCpf('705.484.450-52');
