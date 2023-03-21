@@ -22,37 +22,37 @@
         <h4>Exemplo: </h4>
         <div class="exemplos">
             function Conta(agencia, conta, saldo){ <br>
-                <div style="margin-left: 25px;">
-                    this.agencia = agencia<br>
-                    this.conta = conta<br>
-                    this.saldo = saldo<br>
-                </div>                
+            <div style="margin-left: 25px;">
+                this.agencia = agencia<br>
+                this.conta = conta<br>
+                this.saldo = saldo<br>
+            </div>
             } <br>
             Conta.prototype.sacar = function(valor){ <br>
-                <div style="margin-left: 25px;">
+            <div style="margin-left: 25px;">
                 if(this.saldo < valor){ <br>
                     this.verSDaldo(); <br>
                     return; <br>
-                }    <br>
-             this.saldo -= valor;   </div>
+                    } <br>
+                    this.saldo -= valor; </div>
             } <br>
             Conta.prototype.depositar = function(valor){ <br>
-              this.saldo += valor;  <br>
-              this.verSaldo();
+            this.saldo += valor; <br>
+            this.verSaldo();
             } <br>
             Conta.prototype.verSaldo = function(){ <br>
-              console.log(`AG/C: ${this.agencia}/ ${this.conta}` +
-              `Saldo: R$${this.saldo.toFixed(2)}`);  <br>
+            console.log(`AG/C: ${this.agencia}/ ${this.conta}` +
+            `Saldo: R$${this.saldo.toFixed(2)}`); <br>
             } <br>
             <span style="background-color: yellow;">
-            //cirando a conta <br>
-            const conta1 = new Conta(11, 22, 50); <br>
-            conta1.depositar(10); <br>
-            conta1.sacar(30); <br>
-            console.log()
+                //cirando a conta <br>
+                const conta1 = new Conta(11, 22, 50); <br>
+                conta1.depositar(10); <br>
+                conta1.sacar(30); <br>
+                console.log()
             </span>
         </div>
-
+        <a style="text-decoration: none; color: rgb(0, 73, 0);" href="../assets/js/exe25.js"> => Este exemplo acima no arquivo js para debugar no vscode</a>
     </section>
 </body>
 
