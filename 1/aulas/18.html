@@ -13,7 +13,26 @@
     <!---->
     <section class="container">
         <h1>Polimorfsmo</h1>
-   
+        <p>
+            É a maneira de fazer com que os metodos se comportem de maneiras diferentes em subclasses(classes filhas).
+            <br>
+            um banco com 2 tipos de contas, que seria dividida em classe pai(superclass), as filhas seria c.
+            corrente(subclasse) ou c.poupança(subclasse)
+        </p>
+        <h4>Exemplo: </h4>
+        <div class="exemplos">
+            function Conta(agencia, conta, saldo){ <br>
+                <div style="margin-left: 25px;">
+                    this.agencia = agencia<br>
+                    this.conta = conta<br>
+                    this.saldo = saldo<br>
+                </div>                
+            } <br>
+            Conta.prototype.sacar = function(valor){}
+            Conta.prototype.depositar = function(valor){}
+            Conta.prototype.verSaldo = function(){}
+        </div>
+
     </section>
 </body>
 
