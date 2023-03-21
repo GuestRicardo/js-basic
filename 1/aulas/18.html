@@ -30,8 +30,8 @@
             } <br>
             Conta.prototype.sacar = function(valor){ <br>
             <div style="margin-left: 25px;">
-                if(this.saldo < valor){ <br>
-                    console.log('Saldo insuficiente'); <br>
+                if(this.saldo > valor){ <br>
+                    console.log(`Saldo insuficiente ${this.saldo}`); <br>
                     this.verSDaldo(); <br>
                     return; <br>
                     } <br>
