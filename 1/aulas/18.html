@@ -29,15 +29,20 @@
                 </div>                
             } <br>
             Conta.prototype.sacar = function(valor){ <br>
-                if(this.saldo >= valor){ <br>
-
+                <div style="margin-left: 25px;">
+                if(this.saldo < valor){ <br>
+                    this.verSDaldo(); <br>
+                    return; <br>
                 }    <br>
+             this.saldo -= valor;   </div>
             } <br>
             Conta.prototype.depositar = function(valor){ <br>
-                <br>
+              this.saldo += valor;  <br>
+              this.verSaldo();
             } <br>
             Conta.prototype.verSaldo = function(){ <br>
-                <br>
+              console.log(`AG/C: ${this.agencia}/ ${this.conta}` +
+              `Saldo: R$${this.saldo.toFixed(2)}`);  <br>
             } <br>
         </div>
 
