@@ -14,7 +14,9 @@ Conta.prototype.verSaldo = function () {
     Saldo: ${this.saldo.toFixed(2)}`);
 };
 
-
+function ContaCorrente(agencia, conta, saldo, limite){
+    Conta.call(this)
+}
 
 
 Conta.prototype.sacar = function (valor) {
