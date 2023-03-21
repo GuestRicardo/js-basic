@@ -28,6 +28,8 @@ function ContaCorrente(agencia, conta, saldo, limite){
     this.limite = limite;
 }
 
+ContaCorrente.prototype.create(Conta.prototype);
+ContaCorrente.prototype.constructor= ContaCorrente;
 
 ContaCorrente.prototype.sacar = function (valor) {
     if (this.saldo > valor) {
