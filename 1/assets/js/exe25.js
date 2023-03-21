@@ -4,7 +4,7 @@ function Conta(agencia, saldo, conta) {
     this.saldo = saldo;
 };
 
-sacar.prototype.sacar = function (valor) {
+Conta.prototype.sacar = function (valor) {
     if (this.saldo > valor) {
         console.log(`Saldo insuficiente ${this.saldo}`);
         
@@ -28,11 +28,11 @@ function ContaCorrente(agencia, conta, saldo, limite){
     this.limite = limite;
 }
 
-ContaCorrente.prototype.create(Conta.prototype);
-ContaCorrente.prototype.constructor= ContaCorrente;
+ContaCorrente = Object.create(Conta.prototype);
+ContaCorrente.prototype.constructor = ContaCorrente;
 
-ContaCorrente.prototype.sacar = function (valor) {
-    if (this.saldo > valor) {
+ContaCorrente.prototype.sacar = function (valor) { //esse sacar aceita saldo negativo
+    if (valor > (this.saldo + this.limite)) {
         console.log(`Saldo insuficiente ${this.saldo}`);
         
         return;
@@ -40,3 +40,6 @@ ContaCorrente.prototype.sacar = function (valor) {
     this.saldo -= valor;
     this.verSaldo();
 };
+
+const contaC = new ContaCorrente(115, 5859, 1500, 800);
+contaC.depositar(10);
