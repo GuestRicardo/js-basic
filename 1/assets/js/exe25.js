@@ -21,6 +21,7 @@ Conta.prototype.verSaldo = function () {
     console.log(`Ag/C: ${this.agencia}/ ${this.conta}` + 
     `Saldo: ${this.saldo.toFixed(2)}`);
 };
+
 //conta corrente
 function ContaCorrente(agencia, conta, saldo, limite){
     Conta.call(this, agencia, conta, saldo);
