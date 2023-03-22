@@ -33,8 +33,7 @@ ContaCorrente.prototype.constructor = ContaCorrente;
 
 ContaCorrente.prototype.sacar = function (valor) { //esse sacar aceita saldo negativo
     if (valor > (this.saldo + this.limite)) {
-        console.log(`Saldo insuficiente ${this.saldo}`);
-        
+        console.log(`Saldo insuficiente ${this.saldo}`);        
         return;
     }
     this.saldo -= valor;
