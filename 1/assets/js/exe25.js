@@ -21,12 +21,11 @@ Conta.prototype.verSaldo = function () {
     console.log(`Ag/C: ${this.agencia}/ ${this.conta}` + `
     Saldo: ${this.saldo.toFixed(2)}`);
 };
-
+//conta corrente
 function ContaCorrente(agencia, conta, saldo, limite){
     Conta.call(this, agencia, conta, saldo);
     this.limite = limite;
 }
-
 ContaCorrente = Object.create(Conta.prototype);
 ContaCorrente.prototype.constructor = ContaCorrente;
 
@@ -38,6 +37,13 @@ ContaCorrente.prototype.sacar = function (valor) { //esse sacar aceita saldo neg
     this.saldo -= valor;
     this.verSaldo();
 };
+//conta poupança
+function ContaPoupanca(agencia, conta, saldo, limite){
+    Conta.call(this, agencia, conta, saldo);
+    this.limite = limite;
+}
+ContaPoupanca = Object.create(Conta.prototype);
+ContaPoupanca.prototype.constructor = ContaPoupanca;
 
 const contaC = new ContaCorrente(115, 5859, 1500, 800);
 contaC.depositar(10);
