@@ -38,9 +38,9 @@ ContaCorrente.prototype.sacar = function (valor) { //esse sacar aceita saldo neg
     this.verSaldo();
 };
 //conta poupança
-function ContaPoupanca(agencia, conta, saldo, limite){
+function ContaPoupanca(agencia, conta, saldo){
     Conta.call(this, agencia, conta, saldo);
-    this.limite = limite;
+    
 }
 ContaPoupanca = Object.create(Conta.prototype);
 ContaPoupanca.prototype.constructor = ContaPoupanca;
