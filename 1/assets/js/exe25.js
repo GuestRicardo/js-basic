@@ -17,6 +17,7 @@ Conta.prototype.depositar = function (valor) {
     this.saldo += valor;
     this.verSaldo();
 };
+
 Conta.prototype.verSaldo = function () {
     console.log(
     `Ag/C: ${this.agencia}/ ${this.conta}` + 
