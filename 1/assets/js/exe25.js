@@ -1,3 +1,4 @@
+//superclass
 function Conta(agencia, saldo, conta) {
     this.agencia = agencia;
     this.conta = conta;
@@ -5,8 +6,8 @@ function Conta(agencia, saldo, conta) {
 };
 
 Conta.prototype.sacar = function (valor) {
-    if (this.saldo > valor) {
-        console.log(`Saldo insuficiente ${this.saldo}`);        
+    if (valor > this.saldo) {
+        console.log(`Saldo insuficiente ${this.saldo}`);       
         return;
     }
     this.saldo -= valor;
@@ -20,8 +21,8 @@ Conta.prototype.depositar = function (valor) {
 
 Conta.prototype.verSaldo = function () {
     console.log(
-    `Ag/C: ${this.agencia}/ ${this.conta}` + 
-    `Saldo: ${this.saldo.toFixed(2)}`
+    `Ag/C: ${this.agencia}/${this.conta} ` + 
+    ` Saldo: R$${this.saldo.toFixed(2)}`
    );
 };
 
@@ -30,12 +31,12 @@ function ContaCorrente(agencia, conta, saldo, limite){
     Conta.call(this, agencia, conta, saldo);
     this.limite = limite;
 }
-ContaCorrente = Object.create(Conta.prototype);
+ContaCorrente.prototype = Object.create(Conta.prototype);
 ContaCorrente.prototype.constructor = ContaCorrente;
 
 ContaCorrente.prototype.sacar = function (valor) { //esse sacar aceita saldo negativo
     if (valor > (this.saldo + this.limite)) {
-        console.log(`Saldo insuficiente ${this.saldo}`);        
+        console.log(`Saldo insuficiente: ${this.saldo}`);        
         return;
     }
     this.saldo -= valor;
@@ -46,11 +47,17 @@ function ContaPoupanca(agencia, conta, saldo){
     Conta.call(this, agencia, conta, saldo);    
 }
 
-ContaPoupanca = Object.create(Conta.prototype);
+ContaPoupanca.prototype = Object.create(Conta.prototype);
 ContaPoupanca.prototype.constructor = ContaPoupanca;
 
-
-
-
+//criando conta
 const contaC = new ContaCorrente(115, 5859, 1500, 800);
+//fazendo deposito
 contaC.depositar(10);
+contaC.sacar(50);
+ console.log();
+
+ //criando conta poupança
+ const contP = new ContaPoupanca(1588, 60, 15645);
+ contP.depositar(100);
+ contP.sacar(50);
