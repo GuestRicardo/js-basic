@@ -13,7 +13,7 @@ function criaPessoa(nome, sobrenome) {
             console.log(`${this.nome} esta bebendo`);
         },
     };
-    
+
     return Object.create(pessoaPrototype, {
         nome: { value: nome},
         sobrenome: { value: sobrenome}
@@ -22,4 +22,4 @@ function criaPessoa(nome, sobrenome) {
 
 const p1 = criaPessoa('Maria', 'Jose');
 
-console.log(p1)
+console.log(p1);
