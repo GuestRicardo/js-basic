@@ -53,3 +53,6 @@ for(const [identificador, {id, nome}] of novasPessoas){
 for (const pessoas of novasPessoas.values()){
     console.log(pessoas);
 }
+
+//eliminando chave, deletou tudo q esta na chave 2
+novasPessoas.delete(2);
