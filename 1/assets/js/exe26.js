@@ -1,18 +1,23 @@
-function criaPessoa(nome, sobrenome) {
-    const pessoaPrototype = {
-        //metodos
-        falar() {
-            console.log(`${this.nome} esta falando`);
-        },
+const falar ={
+    falar() {
+        console.log(`${this.nome} esta falando`);
+    }
+};
 
-        comer() {
-            console.log(`${this.nome} esta comendo`);
-        },
+const comer ={
+    comer() {
+        console.log(`${this.nome} esta comendo`);
+    },
+};
 
-        beber() {
-            console.log(`${this.nome} esta bebendo`);
-        },
-    };
+const beber ={
+    beber() {
+        console.log(`${this.nome} esta bebendo`);
+    },
+};
+const pessoaPrototype = {}
+
+function criaPessoa(nome, sobrenome) { 
 
     return Object.create(pessoaPrototype, {
         nome: { value: nome},
