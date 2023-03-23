@@ -26,10 +26,15 @@ for (const pessoa of pessoas) {
     const { id } = pessoa;
     novasPessoas[id] = {...pessoa};
 }
-//usando MAP
+//usando MAP, deixou de ser um objeto
+//a vantagem q a ordem de inserção continuara se matendo
+
 const pessoasMap = new Map();
 
 for (const pessoa of pessoas) {
     const { id } = pessoa;
     pessoasMap.set(id, {...pessoas});
 }
+
+console.log(novasPessoas);
+console.log(pessoasMap.get(2));
