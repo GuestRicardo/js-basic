@@ -1,7 +1,18 @@
 function criaPessoa(){
     return {
         nome,
-        sobrenome
+        sobrenome,
+
+        //metodos
+        falar(){
+            console.log(`${this.nome} esta falando`);
+        },
+        comer(){
+            console.log(`${this.nome} esta comendo`);
+        },
+        beber(){
+            console.log(`${this.nome} esta bebendo`);
+        }
     };
 }
 
