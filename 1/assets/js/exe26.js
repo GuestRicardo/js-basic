@@ -15,7 +15,7 @@ const beber ={
         console.log(`${this.nome} esta bebendo`);
     },
 };
-const pessoaPrototype = {}
+const pessoaPrototype = { ... falar}
 
 function criaPessoa(nome, sobrenome) { 
 
@@ -26,5 +26,4 @@ function criaPessoa(nome, sobrenome) {
 }
 
 const p1 = criaPessoa('Maria', 'Jose');
-
 console.log(p1);
