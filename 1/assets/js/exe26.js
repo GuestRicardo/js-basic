@@ -15,7 +15,11 @@ const beber ={
         console.log(`${this.nome} esta bebendo`);
     },
 };
-const pessoaPrototype = { ... falar}
+
+//usando spread
+const pessoaPrototype = { ... falar, ...comer, ...beber}
+//assign
+const pessoaPrototype2 = Object.assign({}, falar, comer, beber);
 
 function criaPessoa(nome, sobrenome) { 
 
