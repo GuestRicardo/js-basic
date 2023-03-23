@@ -38,3 +38,13 @@ for (const pessoa of pessoas) {
 
 console.log(novasPessoas);
 console.log(pessoasMap.get(2));
+
+//interando com programa e retornando array
+for(pessoa of pessoas){
+    console.log(pessoa);
+}
+
+//interando com destructor
+for(const [identificador, {id, nome}] of novasPessoas){
+    console.log(identificador, id, nome);
+}
