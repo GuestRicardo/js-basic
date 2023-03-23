@@ -48,3 +48,8 @@ for(pessoa of pessoas){
 for(const [identificador, {id, nome}] of novasPessoas){
     console.log(identificador, id, nome);
 }
+
+//pegando como arrays completos
+for (const pessoas of novasPessoas.values()){
+    console.log(pessoas);
+}
