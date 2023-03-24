@@ -18,7 +18,7 @@
             coisa. <br>
             Na classe ela carrega um metodo especial chamado <strong style="color: blue;">Constructor</strong>
         </p>
-        <span style="color: red;">Classe</span>         
+        <span style="color: red;">Classe</span>
         <div class="exemplos">
             class Pessoa { <br>
             <div style="margin-left: 25px;">
@@ -58,10 +58,16 @@
         <br>
         <span style="color: red;">Função Construtora</span>
         <div class="exemplos">
+            function Pessoa (nome, sobrenome ){
             <div style="margin-left: 25px;">
+                this.nome = nome, <br>
+                this.sobrenome = sobrenome; <br>
                 <div style="margin-left: 35px;">
-                </div>             
+                </div>
             </div>
+            }; <br>
+            const p1 = new Pessoa('Jose','Maria'); <br>
+            console.log(p1)
         </div>
 
     </section>
