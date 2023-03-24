@@ -29,26 +29,28 @@
                     }
                 </div>
                 <strong style="color: blue;">//Metodos</strong>
-                <div style="margin-left: 25px;">
-                    falar(){
-                    <div style="margin-left: 35px;">
-                        console.log(`${} esta falando.`);
+                <div style="background-color: yellow;">
+                    <div style="margin-left: 25px;">
+                        falar(){
+                        <div style="margin-left: 35px;">
+                            console.log(`${this.nome} esta falando.`);
+                        </div>
+                        }
                     </div>
-                    }
-                </div>
-                <div style="margin-left: 25px;">
-                    comer(){
-                    <div style="margin-left: 35px;">
-                        console.log(`${} esta comendo.`);
+                    <div style="margin-left: 25px;">
+                        comer(){
+                        <div style="margin-left: 35px;">
+                            console.log(`${this.nome} esta comendo.`);
+                        </div>
+                        }
                     </div>
-                    }
-                </div>
-                <div style="margin-left: 25px;">
-                    beber(){
-                    <div style="margin-left: 35px;">
-                        console.log(`${} esta bebendo.`);
+                    <div style="margin-left: 25px;">
+                        beber(){
+                        <div style="margin-left: 35px;">
+                            console.log(`${this.nome} esta bebendo.`);
+                        </div>
+                        }
                     </div>
-                    }
                 </div>
             </div>
             }; <br>
@@ -66,8 +68,25 @@
                 </div>
             </div>
             }; <br>
+            <strong style="color: blue;">//Metodos, já usando o prototype</strong>
+            <div style="background-color: yellow;">
+                Pessoa.prototype.falar = function(){ <br>
+                console.log(`${this.nome} esta falando.`);<br>
+                };
+            </div>
+            <div style="background-color: yellow;">
+                Pessoa.prototype.comer = function(){ <br>
+                console.log(`${this.nome} esta comendo.`);<br>
+                };
+            </div>
+            <div style="background-color: yellow;">
+                Pessoa.prototype.beber = function(){ <br>
+                console.log(`${this.nome} esta bebendo.`);<br>
+                };
+            </div>
             const p1 = new Pessoa('Jose','Maria'); <br>
             console.log(p1)
+
         </div>
 
     </section>
