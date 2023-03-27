@@ -6,6 +6,10 @@ class Carro {
         this.nome = nome;
         this. [_velocidade] = 0;
     }
+    //para acessar a velocidade por fora do objeto, teria q se ultilizar o get
+    get velocidade() {
+        return this[_velocidade];
+    }
 
     acelerar() {
         if (this[_velocidade] >= 100) return;
@@ -24,5 +28,4 @@ const carro1 = new Carro('Fusca');
 for (let i = 0; i <= 200; i++) {
     carro1.acelerar();
 };
-//para acessar a velocidade por fora do objeto, teria q se ultilizar o get
 console.log(carro1);
