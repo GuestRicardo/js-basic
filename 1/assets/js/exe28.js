@@ -10,6 +10,10 @@ class Carro {
     get velocidade() {
         return this[_velocidade];
     }
+    //aq vc consegueria fazer alterações nos padoroes da velocidade do carro
+    set velocidade() {
+        return this[_velocidade];
+    }
 
     acelerar() {
         if (this[_velocidade] >= 100) return;
