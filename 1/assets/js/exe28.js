@@ -34,4 +34,5 @@ const carro1 = new Carro('Fusca');
 for (let i = 0; i <= 200; i++) {
     carro1.acelerar();
 };
+carro1.velocidade = 50;
 console.log(carro1);
