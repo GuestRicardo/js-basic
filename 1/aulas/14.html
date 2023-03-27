@@ -44,12 +44,19 @@
               this.nome= nome;  <br>
               this.sobrenome= sobrenome;  <br>
              }   <br>
+             <span style="color: blue;">//essa função funciona como um atributo nao uma função</span>  <br>
              get nomeCompleto (){ <br>
                 return this.nome + '' + this.sobrenome; <br>
              } <br>
+             set nomeCompleto(valor){ <br>
+                valor = valor.split(''); <br>
+                this.nome = valor.shift(); <br>
+                this.sobrenome = valor.join(''); <br>
+             } <br>
             } <br>
-            const p1 = new Pessoa('Maria', 'Jose'); <br>
-            console.log(p1.nomeCompleto); <br>
+            const p1 = new Pessoa('Maria', 'Jose');  <br>
+            p1.nomeCompleto = 'Maria Jose Pinto'; //seter <br> 
+            console.log(p1.nomeCompleto); //getter <br>
         </div>
 
         <div style="text-align: center;">
