@@ -22,20 +22,36 @@
             o setter para setar(colocar) para configurar o valor, ele modifica o valor e valida <br>
             exemplo de get e set
         </p>
+        <strong>Fuctions</strong>
         <div class="exemplos">
             function criaProduto(nome){ <br>
-                return { <br>
-                  get nome(){ <br>
-                       return nome; <br>
-                  } <br>
-                  set nome(valor){ <br>
-                       nome = valor; <br>
-                   } <br>
+            return { <br>
+            get nome(){ <br>
+            return nome; <br>
+            } <br>
+            set nome(valor){ <br>
+            nome = valor; <br>
+            } <br>
             }; <br>
-          }; <br>
-          const p1 = criaProduto('cardaço de sapato'); <br>
-          console.log(p1.nome); <br>
+            }; <br>
+            const p1 = criaProduto('cardaço de sapato'); <br>
+            console.log(p1.nome); <br>
         </div>
+        <strong>Class</strong>
+        <div class="exemplos">
+            class Pessoa { <br>
+             constructor(nome, sobrenome){ <br>
+              this.nome= nome;  <br>
+              this.sobrenome= sobrenome;  <br>
+             }   <br>
+             get nomeCompleto (){ <br>
+                return this.nome + '' + this.sobrenome; <br>
+             } <br>
+            } <br>
+            const p1 = new Pessoa('Maria', 'Jose'); <br>
+            console.log(p1.nomeCompleto); <br>
+        </div>
+
         <div style="text-align: center;">
             <a style="text-decoration: none; color: blue;" href="../assets/js/exe28.js">Exemplo em classes</a>
         </div>
