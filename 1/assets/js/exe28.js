@@ -1,3 +1,5 @@
+
+//e uma propriedade privada
 //criando uma chave privada dentro do objeto, para evitar de qualquer um tenha acesso a velocidade, no caso mexer no objeto
 //mesmo atribuindo uma velocidade 1000km nao sera mexido na velocidade interna q esta salva no objeto da classe
 const _velocidade = Symbol('velocidade') //valor entre aspas é so a descrição
@@ -8,12 +10,14 @@ class Carro {
     }
     //aq vc consegueria fazer alterações nos padroes da velocidade do carro(na verdade é uma modificação externa momentanea, pois o objeto ja tem seu valor padrao)
     set velocidade(valor) {
+        console.log('SETTER');
         if(typeof valor !== 'number') return;
         if(valor >= 100 || valor <= 0) return;
         this[_velocidade] = valor;
     }
     //para acessar a velocidade por fora do objeto, teria q se ultilizar o get
     get velocidade() {
+        console.log('GETTER')
         return this[_velocidade];
     }
 
