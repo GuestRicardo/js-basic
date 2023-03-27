@@ -4,14 +4,16 @@ const _velocidade = Symbol('velocidade') //valor entre aspas é so a descrição
 class Carro {
     constructor(nome) {
         this.nome = nome;
-        this. [_velocidade] = 0;
+        this[_velocidade] = 0;
+    }
+    //aq vc consegueria fazer alterações nos padroes da velocidade do carro(na verdade é uma modificação externa momentanea, pois o objeto ja tem seu valor padrao)
+    set velocidade(valor) {
+        if(typeof valor !== 'number') return;
+        if(valor >= 100 || valor <= 0) return;
+        this[_velocidade] = valor;
     }
     //para acessar a velocidade por fora do objeto, teria q se ultilizar o get
     get velocidade() {
-        return this[_velocidade];
-    }
-    //aq vc consegueria fazer alterações nos padoroes da velocidade do carro
-    set velocidade() {
         return this[_velocidade];
     }
 
