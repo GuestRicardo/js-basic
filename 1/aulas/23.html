@@ -18,7 +18,8 @@
             método.
         </p>
         <div style="text-align: center;">
-        <a style="text-decoration: none; color: blue;" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions">Documentação</a>
+            <a style="text-decoration: none; color: blue;"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions">Documentação</a>
         </div>
         <h2>Métodos de instancia</h2>
         <p></p>
@@ -26,11 +27,34 @@
 
         </div>
         <h1>Métodos estaticos</h1>
-        <p></p>
+        <p>
+            São metodos que vc consgui acessar na classe sem instanciar a classe, ultilizar a palavra
+            <strong>new</strong>, simplismente são como funções normais detro das classe
+        </p>
         <div class="exemplos">
-
+            class ControleRemoto{
+            <div style="margin-left: 25px;">
+                constructor(tv){
+                    <div style="margin-left: 35px;">
+                        this.tv = tv; <br>
+                        this.volume = 0;
+                    </div>
+                } <br>
+                <span style="color: blue;">//metodos</span> <br>
+                aumentarVolume(){
+                    <div style="margin-left: 35px;">
+                    this.volume += 2; <br>                    
+                    </div>
+                } <br>
+                diminuirVolume(){
+                    <div style="margin-left: 35px;">
+                    this.volume -= 2; <br>                    
+                    </div>
+                }
+            </div>
+            }
         </div>
-        </section>
+    </section>
     <script src="../assets/js/exe27.js"></script>
 </body>
 
