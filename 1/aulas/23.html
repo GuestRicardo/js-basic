@@ -22,57 +22,67 @@
                 href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions">Documentação</a>
         </div>
         <h2>Métodos de instancia</h2>
+        <span style="color: blueviolet;">OBSERVAÇÂO: referente a instancia</span>
         <p>
             São os mais tradicionais, eles são instanciados pelo <strong>.</strong> <br>
             exemplo: controle.aumentarVolume(); <br>
-            tambem se usa a palavra <strong>new</strong> para se referir a classe provedora
+            tambem se usa a palavra <strong>new</strong> para chamar o construtor da classe, e quando se instancia a
+            classe esta sendo criado um novo objeto.
         </p>
 
         <h1>Métodos estaticos</h1>
+        <span style="color: blueviolet;">OBSERVAÇÂO: referente a classe</span>
         <p>
             São metodos que vc consgui acessar na classe sem instanciar a classe, ultilizar a palavra
-            <strong>new</strong>, simplismente são como funções normais detro das classe, eles estao 
+            <strong>new</strong>, simplismente são como funções normais detro das classe, eles estao
             referentes somente a classe, q ele se encontra e não a instancia da classe. <br>
-            Em classe usa se a palavra <strong>static</strong> para se referenciar q o metodo é estatico dentro da classe
+            Em classe usa se a palavra <strong>static</strong> para se referenciar q o metodo é estatico dentro da
+            classe.
         </p>
         <div class="exemplos">
             class ControleRemoto{
             <div style="margin-left: 25px;">
                 constructor(tv){
-                    <div style="margin-left: 35px;">
-                        this.tv = tv; <br>
-                        this.volume = 0;
-                    </div>
+                <div style="margin-left: 35px;">
+                    this.tv = tv; <br>
+                    this.volume = 0;
+                </div>
                 } <br>
                 <span style="color: blue;">//metodos de instancia</span> <br>
                 aumentarVolume(){
-                    <div style="margin-left: 35px;">
-                    this.volume += 2; <br>                    
-                    </div>
+                <div style="margin-left: 35px;">
+                    this.volume += 2; <br>
+                </div>
                 } <br>
                 diminuirVolume(){
-                    <div style="margin-left: 35px;">
-                    this.volume -= 2; <br>                    
-                    </div>
+                <div style="margin-left: 35px;">
+                    this.volume -= 2; <br>
+                </div>
                 } <br>
                 <span style="color: rgb(99, 175, 0);">//metodos de estatico</span> <br>
                 static trocarPilha(){
-                    <div style="margin-left: 35px;">
+                <div style="margin-left: 35px;">
                     console.log('Ok, pilha trocada')
-                    </div>   
+                </div>
                 }
 
             </div>
-        } <br>
-        const controle = new ControleRemoto('LG'); <br>
-        <div style="color: blue;">
-            <span style="color: black;">
-                //****todos estao sendo instanciados***//
-            </span> 
-            controle.aumentarVolume(); <br>
-            controle.diminuirVolume(); <br>
-            <hr>
-        </div>
+            } <br>
+            const controle = new ControleRemoto('LG'); <br>
+            <div style="color: blue;">
+                <span style="color: black;">
+                    //****todos estao sendo instanciados***//
+                </span>
+                controle.aumentarVolume(); <br>
+                controle.diminuirVolume(); <br>
+                <hr>
+                <span style="color: black;">
+                    //****nao precisa da palavra new***//
+                </span> <br>
+                <span style="color:rgb(99, 175, 0);">
+                    ControleRemoto.trocaPilha();
+                </span>
+            </div>
 
         </div>
     </section>
