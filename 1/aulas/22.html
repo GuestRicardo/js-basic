@@ -24,20 +24,35 @@
                 </div>
                 }
             </div>
+            <span style="color: blue;">
+                //metodos <br>
+            </span>
+            
             ligar(){ <br>
             <div style="margin-left: 25px;">
                 if(this.ligado){ <br>
-                    console.log('Dispositivo já ligado'); <br>
+                    console.log( this.nome + 'já ligado'); <br>
                   return;  <br>
                 }
             </div>
+            <span style="color: blue;">
+                //estado <br>
+            </span>
+            this.ligado = true; <br>
             } <br>
             desligar(){ <br>
-            <div style="margin-left: 25px;">
-
-            </div>
+                <div style="margin-left: 25px;">
+                    if(!this.ligado){ <br>
+                        console.log( this.nome + 'já desligado'); <br>
+                      return;  <br>
+                    }
+                </div>  
+                <span style="color: blue;">
+                    //estado <br>
+                </span>
+                this.ligado = false; <br>              
             } <br>
-            } <br>
+           
         </div>
     </section>
     <script src="../assets/js/exe27.js"></script>
