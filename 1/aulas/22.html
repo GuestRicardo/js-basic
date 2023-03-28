@@ -15,45 +15,48 @@
         <h1>Heranças com Classes</h1>
         <p> É uma forma elegante e simples,</p>
         <div class="exemplos">
-            class DispositivoEletronico(){ <br>
-            <div style="margin-left: 25px;">
-                constructor(nome){
-                <div style="margin-left: 35px;">
-                    this.nome = nome; <br>
-                    this.ligado = false; <br>
-                </div>
-                }
-            </div>
-            <span style="color: blue;">
-                //metodos <br>
-            </span>
-            
-            ligar(){ <br>
-            <div style="margin-left: 25px;">
-                if(this.ligado){ <br>
-                    console.log( this.nome + 'já ligado'); <br>
-                  return;  <br>
-                }
-            </div>
-            <span style="color: blue;">
-                //estado <br>
-            </span>
-            this.ligado = true; <br>
-            } <br>
-            desligar(){ <br>
+            class DispositivoEletronico{ <br>
+            <div style="margin-left:15px;">
                 <div style="margin-left: 25px;">
-                    if(!this.ligado){ <br>
-                        console.log( this.nome + 'já desligado'); <br>
-                      return;  <br>
+                    constructor(nome){
+                    <div style="margin-left: 35px;">
+                        this.nome = nome; <br>
+                        this.ligado = false; <br>
+                    </div>
                     }
-                </div>  
+                </div>
+                <span style="color: blue;">
+                    //metodos <br>
+                </span>
+
+                ligar(){ <br>
+                <div style="margin-left: 25px;">
+                    if(this.ligado){ <br>
+                    console.log( this.nome + 'já ligado'); <br>
+                    return; <br>
+                    }
+                </div>
                 <span style="color: blue;">
                     //estado <br>
                 </span>
-                this.ligado = false; <br>              
-            } <br>
-           
+                this.ligado = true; <br>
+                } <br>
+                desligar(){ <br>
+                <div style="margin-left: 25px;">
+                    if(!this.ligado){ <br>
+                    console.log( this.nome + 'já desligado'); <br>
+                    return; <br>
+                    }
+                </div>
+                <span style="color: blue;">
+                    //estado <br>
+                </span>
+                this.ligado = false; <br>
+            </div>
+        } <br>
+        const dispositivo1 = new DispositivoEletronico();
         </div>
+
     </section>
     <script src="../assets/js/exe27.js"></script>
 </body>
