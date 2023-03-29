@@ -13,6 +13,9 @@ class ValidaCpf {
     }
 
     valida() {
+        if(!this.cpfLimpo) return false;
+        if(this.cpfLimpo !== 'string') return false;
+        if(this.cpfLimpo.length !== 11) return false;
         return 'checando...';
     }
 }
