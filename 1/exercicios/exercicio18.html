@@ -14,30 +14,32 @@
     <section class="container">
         <div style="font-size: medium;">
             <h1>Formulário de cadastro</h1>
-            <li>Nenhum campo pçode estar vazio</li>
-            <li>Usuário só poderá conter letras e/ou números</li>
-            <li>Usuário, usuário deverá ter entre 3 e 12 caracteres</li>
-            <li>Senha precisa ter entre 6 a 12 caracteres</li>
-        </div> <br>
-        <form action="">
+            <ul>
+                <li>Nenhum campo pçode estar vazio</li>
+                <li>Usuário só poderá conter letras e/ou números</li>
+                <li>Usuário deverá ter entre 3 e 12 caracteres</li>
+                <li>Senha precisa ter entre 6 a 12 caracteres</li>
+            </ul>
+        </div>
+        <form action="/" method="POST" id="formulario">
             <label>Nome:</label>
-            <input type="text" class="text">
+            <input type="text" id="nome">
             <label>Sobrenome:</label>
-            <input type="text" class="text">
+            <input type="text" id="sobrenome">
             <label>CPF:</label>
-            <input type="text" class="text">
+            <input type="text" id="cpf">
             <label>Usuário:</label>
-            <input type="text" class="text">
+            <input type="text" id="usuario">
             <label>Senha:</label>
-            <input type="password" class="text">
+            <input type="password" id="senha">
             <label>Repetir Senha:</label>
-            <input type="password" class="text">
+            <input type="password" id="repetir-senha">
 
             <button type="submit">Enviar</button>
         </form>
     </section>
 
-    <script src="../assets/js/exe24.js"></script>
+    <script src="../assets/js/exe30.js"></script>
 </body>
 
 </html>
