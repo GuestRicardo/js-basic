@@ -12,14 +12,21 @@ class ValidaCpf {
         });
     }
 
+    checagem(){
+    //return this.cpfLimpo.charAt(0).repeat(this.cpfLimpo.length); //vai repetir o caractere pelo tamando da string no caso é 11
+      return this.cpfLimpo.charAt(0).repeat(11) === this.cpfLimpo; //essa é a mesma coisa da de cima mais simplificada
+    }
+
     valida() {
-        
+
         if(!this.cpfLimpo) return false;
         if(this.cpfLimpo !== 'string') return false;
         if(this.cpfLimpo.length !== 11) return false;
+        if(this.checagem()) return false;
+        
         return 'checando...';
     }
 }
 
-const validaCpf = new ValidaCpf('705.484.450-52');
+const validaCpf = new ValidaCpf('070.987.720-03');
 console.log(validaCpf.valida());
