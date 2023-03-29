@@ -8,6 +8,9 @@ class ValidaFormulario {
         this.senha = document.querySelector('#senha');
 
         this.eventos();
+        this.formulario.addEventListener('submit', envio =>{
+            this.
+        })
     }
     eventos() {
 
