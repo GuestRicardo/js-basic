@@ -23,7 +23,7 @@ class ValidaFormulario {
     todosCamposValidos() {
         let valido = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
 
-        for(let campo of this.formulario.querySelectorAll())
+        for(let campo of this.formulario.querySelectorAll('.validar'))
     }
 }
 
