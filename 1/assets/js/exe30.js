@@ -24,8 +24,16 @@ class ValidaFormulario {
         let valido = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
 
         for(let campo of this.formulario.querySelectorAll('.validar')){
-            console.log(campo);
+            if(!campo.value){
+                this.criaErro(campo, 'Campo esta vazio')
+            }
         }
+    }
+
+    criaErro(campo, mensagem){
+        const div = document.createElement('div');
+        div.innerHTML = mensagem;
+        div.classList.add('MensagemErro');
     }
 }
 
