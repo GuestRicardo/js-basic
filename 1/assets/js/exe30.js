@@ -23,6 +23,11 @@ class ValidaFormulario {
     todosCamposValidos() {
         let valido = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
 
+        //este for faz com q evite q a mensagem de erro fica sendo duplicada ssem fim
+        for (let errorText of this.formulario.querySelectorAll('.mensagemErro')) {
+            errorText.remove();
+        }
+        //este for esta pegando o texto do label e esta o add dentro da mensagem de erro
         for (let campo of this.formulario.querySelectorAll('.validar')) {
             const label = campo.previousElementSibling.innerHTML;
             if (!campo.value) {
