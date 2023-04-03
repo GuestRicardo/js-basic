@@ -34,6 +34,7 @@ class ValidaFormulario {
         const div = document.createElement('div');
         div.innerHTML = mensagem;
         div.classList.add('MensagemErro');
+        campo.insertAdjacentElement(); //para definir onde vai inserir este elemento
     }
 }
 
