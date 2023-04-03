@@ -24,19 +24,21 @@ class ValidaFormulario {
         let valido = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
 
         for (let campo of this.formulario.querySelectorAll('.validar')) {
+            const label = campo.previousElementSibling.innerHTML;
             if (!campo.value) {
-                this.criaErro(campo, 'Campo tal esta vazio');
+                this.criaErro(campo, `Campo ${label} não pode esta em branco`);
                 valido = false;
             }
         }
     }
 
     criaErro(campo, mensagem) {
-        
+
         const div = document.createElement('div');
         div.innerHTML = mensagem;
         div.classList.add('MensagemErro');
         campo.insertAdjacentElement('afterend', div); //para definir onde vai inserir este elemento(e sera add depois do campo acabar)
+
     }
 }
 
