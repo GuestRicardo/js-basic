@@ -1,12 +1,6 @@
 class ValidaFormulario {
     constructor() {
-        this.formulario = document.querySelector('#formulario');
-        this.nome = document.querySelector('#nome');
-        this.sbrenome = document.querySelector('#sobrenome');
-        this.cpf = document.querySelector('#cpf');
-        this.usuario = document.querySelector('#usuario');
-        this.senha = document.querySelector('#senha');
-
+        this.formulario = document.querySelector('.formulario');
         this.eventos();
     }
 
@@ -41,7 +35,7 @@ class ValidaFormulario {
                 if (!this.validaCpf(campo)) valid = false;
             }
         }
-    };
+    }
 
     validaCpf(campo) {
         const cpf = new ValidaCpf(campo.value);
