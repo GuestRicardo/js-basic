@@ -36,7 +36,7 @@ class ValidaFormulario {
 
         const div = document.createElement('div');
         div.innerHTML = mensagem;
-        div.classList.add('MensagemErro');
+        div.classList.add('mensagemErro');
         campo.insertAdjacentElement('afterend', div); //para definir onde vai inserir este elemento(e sera add depois do campo acabar)
 
     }
