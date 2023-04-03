@@ -50,10 +50,10 @@ class ValidaCpf {
     }
 }
 
-const validaCpf = new ValidaCpf('070.987.720-03');
+// const validaCpf = new ValidaCpf('070.987.720-03');
 
-if (validaCpf.valida()) {
-    console.log('CPF valido')
-} else {
-    console.log('CPF invalido')
-}
+// if (validaCpf.valida()) {
+//     console.log('CPF valido')
+// } else {
+//     console.log('CPF invalido')
+// }

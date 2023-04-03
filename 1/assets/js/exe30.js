@@ -18,10 +18,11 @@ class ValidaFormulario {
     //para evitar de enviar algo errado, ou campo vazio
     handleSubmit(evento) {
         evento.preventDefault();
-        const camposvalidos = this.todosCamposValidos();
+        const camposValidos = this.todosCamposValidos();
     }
+
     todosCamposValidos() {
-        let valido = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
+        let valid = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
 
         //este for faz com q evite q a mensagem de erro fica sendo duplicada ssem fim
         for (let errorText of this.formulario.querySelectorAll('.mensagemErro')) {
@@ -32,23 +33,23 @@ class ValidaFormulario {
             const label = campo.previousElementSibling.innerHTML;
             if (!campo.value) {
                 this.criaErro(campo, `Campo ${label} não pode esta em branco`);
-                valido = false;
+                valid = false;
             }
             //este if é para verificar campo cpf
             if (campo.classList.contains('cpf')) {
-                if (!this.validaCpf(campo)) valido = false;
+                if (!this.validaCpf(campo)) valid = false;
             }
         }
-        validaCpf(campo) {
-            const cpf = new ValidaCpf(cpf.value);
+    };
 
-            if (!cpf.valido()) {
-                this.criaErro(campo, 'CPF invalido.');
-                return false;
-            }
-            return true;
+    validaCpf(campo) {
+        const cpf = new ValidaCpf(campo.value);
+
+        if (!cpf.valida()) {
+            this.criaErro(campo, 'CPF invalido.');
+            return false;
         }
-
+        return true;
     }
 
     criaErro(campo, mensagem) {
