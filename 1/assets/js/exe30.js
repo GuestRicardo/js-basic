@@ -34,7 +34,21 @@ class ValidaFormulario {
                 this.criaErro(campo, `Campo ${label} não pode esta em branco`);
                 valido = false;
             }
+            //este if é para verificar campo cpf
+            if (campo.classList.contains('cpf')) {
+                if (!this.validaCpf(campo)) valido = false;
+            }
         }
+        validaCpf(campo) {
+            const cpf = new ValidaCpf(cpf.value);
+
+            if (!cpf.valido()) {
+                this.criaErro(campo, 'CPF invalido.');
+                return false;
+            }
+            return true;
+        }
+
     }
 
     criaErro(campo, mensagem) {
