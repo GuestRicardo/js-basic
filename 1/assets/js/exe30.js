@@ -30,7 +30,8 @@ class ValidaFormulario {
         }
         //este for esta pegando o texto do label e esta o add dentro da mensagem de erro
         for (let campo of this.formulario.querySelectorAll('.validar')) {
-            const label = campo.previousElementSibling.innerHTML;
+            const label = campo.previousElementSibling.innerText;
+
             if (!campo.value) {
                 this.criaErro(campo, `Campo ${label} não pode esta em branco`);
                 valid = false;
