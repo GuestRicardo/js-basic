@@ -32,6 +32,7 @@ class ValidaFormulario {
     }
 
     criaErro(campo, mensagem) {
+        
         const div = document.createElement('div');
         div.innerHTML = mensagem;
         div.classList.add('MensagemErro');
