@@ -12,10 +12,10 @@ class ValidaFormulario {
     //para evitar de enviar algo errado, ou campo vazio
     handleSubmit(evento) {
         evento.preventDefault();
-        const camposValidos = this.todosCamposValidos();
+        const camposValidos = this.campoSaoValidos();
     }
 
-    todosCamposValidos() {
+    campoSaoValidos() {
         let valid = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
 
         //este for faz com q evite q a mensagem de erro fica sendo duplicada ssem fim
@@ -35,6 +35,8 @@ class ValidaFormulario {
                 if (!this.validaCpf(campo)) valid = false;
             }
         }
+
+        return valid;
     }
 
     validaCpf(campo) {
