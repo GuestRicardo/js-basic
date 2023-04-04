@@ -1,63 +1,108 @@
 class ValidaFormulario {
-    constructor() {
-        this.formulario = document.querySelector('.formulario');
-        this.eventos();
+  constructor() {
+    this.formulario = document.querySelector('.formulario');
+    this.eventos();
+  }
+
+  eventos() {
+    this.formulario.addEventListener('submit', e => {
+      this.handleSubmit(e);
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const camposValidos = this.camposSaoValidos();
+    const senhasValidas = this.senhasSaoValidas();
+
+    if(camposValidos && senhasValidas) {
+      alert('Formulário enviado.');
+      this.formulario.submit();
+    }
+  }
+
+  senhasSaoValidas() {
+    let valid = true;
+
+    const senha = this.formulario.querySelector('.senha');
+    const repetirSenha = this.formulario.querySelector('.repetir-senha');
+
+    if(senha.value !== repetirSenha.value) {
+      valid = false;
+      this.criaErro(senha, 'Campos senha e repetir senha precisar ser iguais.');
+      this.criaErro(repetirSenha, 'Campos senha e repetir senha precisar ser iguais.');
     }
 
-    eventos() {
-        this.formulario.addEventListener('submit', evento => {
-            this.handleSubmit(evento); // muito usado em react
-        });
-    }
-    //para evitar de enviar algo errado, ou campo vazio
-    handleSubmit(evento) {
-        evento.preventDefault();
-        const camposValidos = this.campoSaoValidos();
+    if(senha.value.length < 6 || senha.value.length > 12) {
+      valid = false;
+      this.criaErro(senha, 'Senha precisa estar entre 6 e 12 caracteres.');
     }
 
-    campoSaoValidos() {
-        let valid = true; //aq esta baseando q tu esta valido , e se caso ocorra um erro sera tratado em outro lugar
+    return valid;
+  }
 
-        //este for faz com q evite q a mensagem de erro fica sendo duplicada ssem fim
-        for (let errorText of this.formulario.querySelectorAll('.mensagemErro')) {
-            errorText.remove();
-        }
-        //este for esta pegando o texto do label e esta o add dentro da mensagem de erro
-        for (let campo of this.formulario.querySelectorAll('.validar')) {
-            const label = campo.previousElementSibling.innerText;
+  camposSaoValidos() {
+    let valid = true;
 
-            if (!campo.value) {
-                this.criaErro(campo, `Campo ${label} não pode esta em branco`);
-                valid = false;
-            }
-            //este if é para verificar campo cpf
-            if (campo.classList.contains('cpf')) {
-                if (!this.validaCpf(campo)) valid = false;
-            }
-        }
-
-        return valid;
+    for(let errorText of this.formulario.querySelectorAll('.mensagemErro')) {
+      errorText.remove();
     }
 
-    validaCpf(campo) {
-        const cpf = new ValidaCpf(campo.value);
+    for(let campo of this.formulario.querySelectorAll('.validar')) {
+      const label = campo.previousElementSibling.innerText;
 
-        if (!cpf.valida()) {
-            this.criaErro(campo, 'CPF invalido.');
-            return false;
-        }
-        return true;
+      if(!campo.value) {
+        this.criaErro(campo, `Campo "${label}" não pode estar em branco.`);
+        valid = false;
+      }
+
+      if(campo.classList.contains('cpf')) {
+        if(!this.validaCPF(campo)) valid = false;
+      }
+
+      if(campo.classList.contains('usuario')) {
+        if(!this.validaUsuario(campo)) valid = false;
+      }
+
     }
 
-    criaErro(campo, mensagem) {
+    return valid;
+  }
 
-        const div = document.createElement('div');
-        div.innerHTML = mensagem;
-        div.classList.add('mensagemErro');
-        campo.insertAdjacentElement('afterend', div); //para definir onde vai inserir este elemento(e sera add depois do campo acabar)
+  validaUsuario(campo) {
+    const usuario = campo.value;
+    let valid = true;
 
+    if(usuario.length < 3 || usuario.length > 12) {
+      this.criaErro(campo, 'Usuário precisa ter entre 3 e 12 caracteres.');
+      valid = false;
     }
+
+    if(!usuario.match(/^[a-zA-Z0-9]+$/g)) {
+      this.criaErro(campo, 'Nome de usuário precisar conter apenas letras e/ou números.');
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  validaCPF(campo) {
+    const cpf = new ValidaCPF(campo.value);
+
+    if(!cpf.valida()) {
+      this.criaErro(campo, 'CPF inválido.');
+      return false;
+    }
+
+    return true;
+  }
+
+  criaErro(campo, msg) {
+    const div = document.createElement('div');
+    div.innerHTML = msg;
+    div.classList.add('mensagemErro');
+    campo.insertAdjacentElement('afterend', div);
+  }
 }
-
 
 const valida = new ValidaFormulario();
