@@ -58,18 +58,19 @@
             </div>
             } <br>
             <div class="anotacoes">
-                esperaAi('frase1', aleatorio(1, 3)).then(resposta => { <br>
+                esperaAi('Conexao com o BD', aleatorio(1, 3)).then(resposta => { <br>
                   console.log(resposta);  <br>
-                  return esperaAi('frase2', aleatorio(1, 3)); <br>
+                  return esperaAi('Buscando dados da BASE', aleatorio(1, 3)); <br>
                 }).then(resposta => { <br>
                    console.log(resposta); <br>
-                   return esperaAi('frase3', aleatorio(1, 3));<br>
+                   return esperaAi('Tratando os dados da BASE', aleatorio(1, 3));<br>
                 }).then(resposta =>{ <br>
-                   console.log('Eu serei a ultima a ser exibida') <br>
+                   console.log('Exibe dados na tela') <br>
                 }) <br>
                 .catch()       
             </div>
-            
+            console.log('isso aq sera exibido antes de qualquer promisse'); <br>
+            <strong>Promise sera executada em paralelo aos outros codigos</strong>
            
         </div>
         <div style="text-align: center;">
