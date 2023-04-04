@@ -36,18 +36,23 @@
         <div class="exemplos">
             <span class="anotacoes">//função para gerar numeros aleatorios</span> <br> <br>
             function aleatorio(min, max){ <br>
-                <div style="margin-left: 15px;">
-                    return Math.floor(Math.radom() * (max - min) + min); <br>
-                </div>
+            <div style="margin-left: 15px;">
+                <span class="anotacoes">//convertendo para segundos</span><br>
+                min *= 1000; <br>
+                max *= 1000; <br>
+                return Math.floor(Math.radom() * (max - min) + min); <br>
+            </div>
             } <br> <br>
             function esperaAi(mensagem, tempo){ <br>
-                <div style="margin-left: 35px;">
-                    setTimeOut(()=>{  <br>
-                    console.log(mensagem); <br>
+            <div style="margin-left: 35px;">
+                setTimeOut(()=>{ <br>
+                console.log(mensagem); <br>
                 }, tempo);
-                </div>
+            </div>
             } <br>
-
+            esperaAi('frase1', aleatorio(1, 3)); <br>
+            esperaAi('frase2', aleatorio(1, 3)); <br>
+            esperaAi('frase3', aleatorio(1, 3)); <br>
         </div>
         <div style="text-align: center;">
             <a style="text-decoration: none; color: brown;"
