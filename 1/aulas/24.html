@@ -52,14 +52,23 @@
                     </div>
                     setTimeOut(()=>{ <br>
                         console.log(mensagem); <br>
-                        <strong>resouve();</strong> <br>
+                        <strong>resouve(resposta);</strong> <br>
                         }, tempo); <br>
                 }); <br>
             </div>
             } <br>
-            esperaAi('frase1', aleatorio(1, 3)); <br>
-            esperaAi('frase2', aleatorio(1, 3)); <br>
-            esperaAi('frase3', aleatorio(1, 3)); <br>
+            esperaAi('frase1', aleatorio(1, 3)).then(resposta => { <br>
+              console.log(resposta);  <br>
+              return esperaAi('frase2', aleatorio(1, 3)); <br>
+            }).then(resposta => { <br>
+               console.log(resposta); <br>
+               return esperaAi('frase3', aleatorio(1, 3));<br>
+            }).then(resposta =>{
+               console.log(resposta) <br>
+            }) <br>
+            .catch()          
+            
+           
         </div>
         <div style="text-align: center;">
             <a style="text-decoration: none; color: brown;"
