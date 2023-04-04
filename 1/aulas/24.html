@@ -45,7 +45,13 @@
             } <br> <br>
             function esperaAi(mensagem, tempo){ <br>
             <div style="margin-left: 35px;">
-                
+                return new Promise((resolve, reject)=>{
+                    <div class="anotacoes">
+                        <strong>resolve</strong>: para resouver o codigo <br>
+                        <strong>reject</strong>: para rejeitar o codigo
+                    </div>
+
+                })
 
                 setTimeOut(()=>{ <br>
                 console.log(mensagem); <br>
