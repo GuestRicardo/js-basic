@@ -11,8 +11,7 @@ function esperaAi(mensagem, tempo){
       reject('NÂO aceita valores numericos')
     }
     setTimeout(()=>{
-        console.log(mensagem);
-        resolve(resposta);
+        resolve(mensagem);
     }, tempo);
   });
 }
@@ -21,13 +20,13 @@ esperaAi('Conexão com BD...', aleatorios(1,3))
 .then(resposta =>{
   console.log(resposta);
   return esperaAi('Buscando dados da BASE...', aleatorios(1,3));
-})
-.then(resposta=>{
+}).then(resposta=>{
   console.log(resposta);
   return esperaAi('Tratando os dados do BD...', aleatorios(1,3));
-})
-.then(()=>{
-  console.log('Exibindo Dados na tela');
+}).then(resposta=>{
+  console.log(resposta);  
+}).then(() => {
+  console.log('Exibindo Dados na tela')
 })
 .catch(erro =>{
   console.log('Porque foi rejeitado uma promise', erro);
