@@ -11,22 +11,10 @@ function esperaAi(mensagem, tempo){
       reject('NÂO aceita valores numericos')
     }
     setTimeout(()=>{
-        resolve(mensagem.toUpperCase() + '-passou pela promise');
+        resolve(mensagem);
     }, tempo);
   });
 }
-
-const promecas = [
-  'primeiro valor',
-  esperaAi('promeça 1', 2000),
-  esperaAi('promeça 2', 3000),
-  esperaAi('promeça 3', 4000),
-  esperaAi('promeça 4', 5000),
-  'outro valor'
-];
-
-Promise.all(promecas)
-
 
 esperaAi('Conexão com BD...', aleatorios(1,3))
 .then(resposta =>{
