@@ -60,7 +60,7 @@
                 }); <br>
             </div>
             } <br>
-            <div class="anotacoes">
+            <hr>
                 esperaAi('Conexao com o BD', aleatorio(1, 3)).then(resposta => { <br>
                   console.log(resposta);  <br>
                   return esperaAi('Buscando dados da BASE', aleatorio(1, 3)); <br>
@@ -73,7 +73,7 @@
                 .catch(erro =>{ <br>
                   console.log('porque foi rejeitado uma promise',erro);  <br>
                 }) <br>      
-            </div>
+             <hr>
             console.log('isso aq sera exibido antes de qualquer promisse'); <br>
             <hr>
             <strong>Promise sera executada em paralelo aos outros codigos(por isso que elas sao conhecidas como codgos <span style="color: red;">assicronos</span>)</strong>
