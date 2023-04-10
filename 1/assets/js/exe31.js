@@ -26,6 +26,12 @@ const promecas = [
 ];
 
 Promise.all(promecas)
+.then(valor =>{
+  console.log(valor);
+})
+.catch(erro =>{
+  console.log(erro);
+});
 
 
 esperaAi('Conexão com BD...', aleatorios(1,3))
