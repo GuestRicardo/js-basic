@@ -4,3 +4,7 @@ function aleatorios(min, max) {
   max *= 1000;
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+function esperaAi(mensagem, tempo){
+  return new Promise((resolve, reject))
+}
