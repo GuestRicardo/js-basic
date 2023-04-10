@@ -34,20 +34,20 @@ Promise.all(promecas)
 });
 
 
-esperaAi('Conexão com BD...', aleatorios(1,3))
-.then(resposta =>{
-  console.log(resposta);
-  return esperaAi('Buscando dados da BASE...', aleatorios(1,3));
-}).then(resposta=>{
-  console.log(resposta);
-  return esperaAi('Tratando os dados do BD...', aleatorios(1,3));
-}).then(resposta=>{
-  console.log(resposta);  
-}).then(() => {
-  console.log('Exibindo Dados na tela')
-})
-.catch(erro =>{
-  console.log('Porque foi rejeitado uma promise', erro);
-});
+// esperaAi('Conexão com BD...', aleatorios(1,3))
+// .then(resposta =>{
+//   console.log(resposta);
+//   return esperaAi('Buscando dados da BASE...', aleatorios(1,3));
+// }).then(resposta=>{
+//   console.log(resposta);
+//   return esperaAi('Tratando os dados do BD...', aleatorios(1,3));
+// }).then(resposta=>{
+//   console.log(resposta);  
+// }).then(() => {
+//   console.log('Exibindo Dados na tela')
+// })
+// .catch(erro =>{
+//   console.log('Porque foi rejeitado uma promise', erro);
+// });
 
-console.log('Esta mensagem sera executada simultaneamente com as promises')
+// console.log('Esta mensagem sera executada simultaneamente com as promises')
