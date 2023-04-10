@@ -6,5 +6,20 @@ function aleatorios(min, max) {
 }
 
 function esperaAi(mensagem, tempo){
-  return new Promise((resolve, reject))
+  return new Promise((resolve, reject)=>{
+    if(typeof mensagem !== 'string'){
+      reject('NÂO aceita valores numericos')
+    }
+    setTimeout(()=>{
+        console.log(mensagem);
+        resolve(resposta);
+    }, tempo);
+  });
 }
+
+esperaAi('Conexão com BD...', aleatorios(1,3)).then(resposta =>{
+  console.log(resposta);
+})
+.then(resposta=>{
+  console.log('')
+})
