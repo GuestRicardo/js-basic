@@ -30,7 +30,7 @@ esperaAi('Conexão com BD...', aleatorios(1,3))
   console.log('Exibindo Dados na tela');
 })
 .catch(erro =>{
-  console.log('Porque foi rejeitado uma promise');
+  console.log('Porque foi rejeitado uma promise', erro);
 });
 
-console.log()
+console.log('Esta mensagem sera executada simultaneamente com as promises')
