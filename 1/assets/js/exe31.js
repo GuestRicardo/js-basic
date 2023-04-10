@@ -18,10 +18,10 @@ function esperaAi(mensagem, tempo){
 
 const promecas = [
   'primeiro valor',
-  esperaAi('promeça 1', 2000),
-  esperaAi('promeça 2', 3000),
-  esperaAi('promeça 3', 4000),
-  esperaAi('promeça 4', 5000),
+  esperaAi('promeça 1', 1,2),
+  esperaAi('promeça 2', 2,3),
+  esperaAi('promeça 3', 3,4),
+  esperaAi('promeça 4', 4,5),
   'outro valor'
 ];
 
@@ -34,20 +34,3 @@ Promise.all(promecas)
 });
 
 
-// esperaAi('Conexão com BD...', aleatorios(1,3))
-// .then(resposta =>{
-//   console.log(resposta);
-//   return esperaAi('Buscando dados da BASE...', aleatorios(1,3));
-// }).then(resposta=>{
-//   console.log(resposta);
-//   return esperaAi('Tratando os dados do BD...', aleatorios(1,3));
-// }).then(resposta=>{
-//   console.log(resposta);  
-// }).then(() => {
-//   console.log('Exibindo Dados na tela')
-// })
-// .catch(erro =>{
-//   console.log('Porque foi rejeitado uma promise', erro);
-// });
-
-// console.log('Esta mensagem sera executada simultaneamente com as promises')
