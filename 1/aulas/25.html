@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Prototype</title>
+    <title>Promises</title>
 </head>
 
 <body>
@@ -18,19 +18,38 @@
             como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.
             podendo ser retornada em um so ARRAY e resouve todas as promessas de uma so vez.</p>
         <div style="text-align: center;">
-            <a style="text-decoration: none;" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">DOCUMENTAÇÂO</a> <br>
+            <a style="text-decoration: none;"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">DOCUMENTAÇÂO</a>
+            <br>
             <a style="text-decoration: none;" href="../assets/js/promise.all.js">Exemplo</a>
         </div>
     </section>
     <section class="container">
         <h1>promises.race</h1>
-        <p><span style="color: blue;">promise.race</span> = ja vem com a ideia de corrida, sendo q a primeira que e resouvida é entregue</p>
+        <p><span style="color: blue;">promise.race</span> = ja vem com a ideia de corrida, sendo q a primeira que e
+            resouvida é entregue</p>
         <div style="text-align: center;">
-            <a style="text-decoration: none;" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">DOCUMENTAÇÂO</a> <br>
+            <a style="text-decoration: none;"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">DOCUMENTAÇÂO</a>
+            <br>
             <a style="text-decoration: none;" href="../assets/js/promises.race.js">Exemplo</a>
         </div>
     </section>
-    <script src="../assets/js/exe27.js"></script>
+    <section class="container">
+        <h1>promises.resolve</h1>
+        <p><span style="color: blue;">promise.resolve</span> = O método Promise.resolve(value) retorna um objeto 
+            Promise que é resolvido com o valor passado. Se o valor for 
+             (ex: tiver um método "then"), a promise retornada irá "seguir" esse 
+            , adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada
+            Promise.resolve; do contrário a promise será realizada com o valor.e</p>
+        <div style="text-align: center;">
+            <a style="text-decoration: none;"
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">DOCUMENTAÇÂO</a>
+            <br>
+            <a style="text-decoration: none;" href="../assets/js/promises.race.js">Exemplo</a>
+        </div>
+    </section>
+
 </body>
 
 </html>
