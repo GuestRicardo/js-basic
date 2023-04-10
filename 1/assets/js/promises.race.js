@@ -11,25 +11,24 @@ function esperaAi(mensagem, tempo){
       reject('NÂO aceita valores numericos')
     }
     setTimeout(()=>{
-        resolve(mensagem);
+        resolve(mensagem.toUpperCase() + '-passou pela promise');
     }, tempo);
   });
 }
 
-esperaAi('Conexão com BD...', aleatorios(1,3))
-.then(resposta =>{
-  console.log(resposta);
-  return esperaAi('Buscando dados da BASE...', aleatorios(1,3));
-}).then(resposta=>{
-  console.log(resposta);
-  return esperaAi('Tratando os dados do BD...', aleatorios(1,3));
-}).then(resposta=>{
-  console.log(resposta);  
-}).then(() => {
-  console.log('Exibindo Dados na tela')
+const promecas = [
+  'primeiro valor',
+  esperaAi('promeça 1', 1,2),
+  esperaAi('promeça 2', 2,3),
+  esperaAi('promeça 3', 3,4),
+  esperaAi('promeça 4', 4,5),
+  'outro valor'
+];
+
+Promise.race(promecas)
+.then(valor =>{
+  console.log(valor);
 })
 .catch(erro =>{
-  console.log('Porque foi rejeitado uma promise', erro);
+  console.log(erro);
 });
-
-console.log('Esta mensagem sera executada simultaneamente com as promises')
