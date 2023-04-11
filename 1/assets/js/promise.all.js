@@ -8,10 +8,12 @@ function aleatorios(min, max) {
 function esperaAi(mensagem, tempo){
   return new Promise((resolve, reject)=>{
     if(typeof mensagem !== 'string'){
-      reject('NÂO aceita valores numericos')
+      reject('NÂO aceita valores numericos');
+      return;
     }
     setTimeout(()=>{
         resolve(mensagem.toUpperCase() + '-passou pela promise');
+        return;
     }, tempo);
   });
 }
