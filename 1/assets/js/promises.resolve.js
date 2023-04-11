@@ -16,6 +16,7 @@ function esperaAi(mensagem, tempo) {
   });
 }
 
+//esta função espera claramente o retorna uma promise
 function baixaPagina() {
   const emCache = false;
 
