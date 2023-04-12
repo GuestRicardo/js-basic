@@ -4,7 +4,7 @@ function aleatorios(min, max) {
   max *= 1000;
   return Math.floor(Math.random() * (max - min) + min);
 }
-
+//esta função é so pra simular
 function esperaAi(mensagem, tempo){
   return new Promise((resolve, reject)=>{
     if(typeof mensagem !== 'string'){
