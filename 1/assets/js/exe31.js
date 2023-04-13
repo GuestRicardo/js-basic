@@ -5,31 +5,17 @@ function aleatorios(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 //esta função é so pra simular
-function esperaAi(mensagem, tempo){
-  return new Promise((resolve, reject)=>{
-    if(typeof mensagem !== 'string'){
-      reject('NÂO aceita valores numericos')
-    }
-    setTimeout(()=>{
-        resolve(mensagem);
+function esperaAi(mensagem, tempo) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (typeof mensagem !== 'string') {
+        reject('NÂO aceita valores numericos');
+        return;
+      }
+
+      resolve(mensagem.toUpperCase() + '- Passou na Promise');
+      return;
     }, tempo);
   });
 }
 
-esperaAi('Conexão com BD...', aleatorios(1,3))
-.then(resposta =>{
-  console.log(resposta);
-  return esperaAi('Buscando dados da BASE...', aleatorios(1,3));
-}).then(resposta=>{
-  console.log(resposta);
-  return esperaAi('Tratando os dados do BD...', aleatorios(1,3));
-}).then(resposta=>{
-  console.log(resposta);  
-}).then(() => {
-  console.log('Exibindo Dados na tela')
-})
-.catch(erro =>{
-  console.log('Porque foi rejeitado uma promise', erro);
-});
-
-console.log('Esta mensagem sera executada simultaneamente com as promises')
