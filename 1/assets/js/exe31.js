@@ -19,6 +19,13 @@ function esperaAi(mensagem, tempo) {
   });
 }
 
+//aq acontece a promise
 esperaAi('FAse 1', aleatorios(1, 3))
-.then(valor => console.log(valor))
-
+  .then(valor => {
+    console.log(valor); 
+    return esperaAi('fase2', aleatorios()) //retornando a promise
+  })
+  .then(fase => {
+    console.log(fase);
+    return esperaAi('')
+  })
