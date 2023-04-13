@@ -20,4 +20,5 @@ function esperaAi(mensagem, tempo) {
 }
 
 esperaAi('FAse 1', aleatorios(1, 3))
+.then(valor => console.log(valor))
 
