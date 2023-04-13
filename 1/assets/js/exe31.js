@@ -20,12 +20,19 @@ function esperaAi(mensagem, tempo) {
 }
 
 //aq acontece a promise
+//esta é uma cadeia de codigo q funciopnara de forma assicrona
 esperaAi('FAse 1', aleatorios(1, 3))
   .then(valor => {
-    console.log(valor); 
+    console.log(valor);
     return esperaAi('fase2', aleatorios()) //retornando a promise
   })
   .then(fase => {
     console.log(fase);
     return esperaAi('fase 3', aleatorios())
   })
+  .then(fase => {
+    console.logh(fase)
+  })
+  .catch((erro) => {
+      console.log(erro);
+  });
