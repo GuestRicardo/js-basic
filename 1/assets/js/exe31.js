@@ -38,9 +38,21 @@ function esperaAi(mensagem, tempo) {
 //     console.log('teminamos na fase:', fase);
 //   })
 //   .catch(erro => {
-  //       console.log(erro);
-  //   });
-  //este e o codigo funcional, mais usado, mais esta muito grande, por isso se o await e async
+//       console.log(erro);
+//   });
+//este e o codigo funcional, mais usado, mais esta muito grande, por isso se o await e async
 
-  //usando await e async
-
+//usando await e async
+//sera possivel usar as promises dentro da função partecendo a forma asicrona
+async function executa() {
+  const fase1 = await esperaAi(' Fase 1', aleatorios());
+  console.log(fase1);
+  const fase2 = await esperaAi(' Fase 2', aleatorios());
+  console.log(fase2);
+  const fase3 = await esperaAi(' Fase 3', aleatorios());
+  console.log(fase3);
+  const fase4 = await esperaAi(' Fase 4', aleatorios());
+  console.log(fase4);
+  console.log('teminamos na fase: ', fase4);
+}
+executa();
