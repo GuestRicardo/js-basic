@@ -206,7 +206,7 @@ input {
 
 /*###################################################################################*/
 .imagem {
-  width: min-content;
+  
   display: flex;
   justify-content: center;
   align-items: center;
