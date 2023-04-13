@@ -21,18 +21,26 @@ function esperaAi(mensagem, tempo) {
 
 //aq acontece a promise
 //esta é uma cadeia de codigo q funciopnara de forma assicrona
-esperaAi('FAse 1', aleatorios(1, 3))
-  .then(valor => {
-    console.log(valor);
-    return esperaAi('fase2', aleatorios()) //retornando a promise
-  })
-  .then(fase => {
-    console.log(fase);
-    return esperaAi('fase 3', aleatorios())
-  })
-  .then(fase => {
-    console.logh(fase)
-  })
-  .catch((erro) => {
-      console.log(erro);
-  });
+// esperaAi('FAse 1', aleatorios(1, 3))
+//   .then(valor => {
+//     console.log(valor);
+//     return esperaAi('fase2', aleatorios()) //retornando a promise
+//   })
+//   .then(fase => {
+//     console.log(fase);
+//     return esperaAi('fase 3', aleatorios())
+//   })
+//   .then(fase => {
+//     console.log(fase);
+//     return fase;
+//   })
+//   .then(fase => {
+//     console.log('teminamos na fase:', fase);
+//   })
+//   .catch(erro => {
+  //       console.log(erro);
+  //   });
+  //este e o codigo funcional, mais usado, mais esta muito grande, por isso se o await e async
+
+  //usando await e async
+
