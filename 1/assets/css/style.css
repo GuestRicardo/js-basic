@@ -203,3 +203,12 @@ input {
   color: red;
   font-size: 12px;
 }
+
+/*###################################################################################*/
+.imagem {
+  width: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
