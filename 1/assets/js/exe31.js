@@ -27,5 +27,5 @@ esperaAi('FAse 1', aleatorios(1, 3))
   })
   .then(fase => {
     console.log(fase);
-    return esperaAi('')
+    return esperaAi('fase 3', aleatorios())
   })
