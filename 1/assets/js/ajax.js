@@ -7,6 +7,6 @@
 
    //aq é para saber se a requisição foi carregada
    xhr.addEventListener('load', (/**aq ficaria o evento, mas em nosso exemplo não vai precisar */)=>{
-    //quando chegar aq dentro ja tera a resposta
+    //quando chegar aq dentro ja tera a resposta do servidor, se teve sucesso ou nao
    });
  }
