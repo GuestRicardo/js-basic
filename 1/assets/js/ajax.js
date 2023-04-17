@@ -14,4 +14,4 @@
        objeto.console.error(xhr.statusText);
      }
    });
- }
+ };
