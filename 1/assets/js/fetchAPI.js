@@ -25,24 +25,32 @@ document.addEventListener('click', evento => {
   }
 });
 
-function carregaPagina(elemento) {
+async function carregaPagina(elemento) {
   const href = elemento.getAttribute('href');
+  const response = await fetch(href);
 
-  fetch(href)//carregando o link
-  .then(response => { //pegando a resposta
-    response.text() //convertendo a resposta em texto
-    if(response.status !== 200){
-      throw new Error('ERRO 404!')
-    }
-  }).then(html =>{ //retornando o texto em html
-    carregaResultado(html)
-  }) .catch(erro =>{
-    console.warn(erro)
-  })
+  if (response.status !== 200) throw new Error('ERRO 404!');
+  
+  const html = await response.text();
+  carregaResultado(html)
+
+  //   //usando fetch
+
+  //   fetch(href) //carregando o link
+  //     .then(response => { //pegando a resposta
+  //       if (response.status !== 200) {
+  //         throw new Error('ERRO 404!')
+  //       }
+  //       return response.text() //convertendo a resposta em texto
+
+  //     }).then(html => { //retornando o texto em html
+  //       carregaResultado(html)
+  //     }).catch(erro => {
+  //       console.warn(erro)
+  //     })
 }
 
 function carregaResultado(response) {
   const resultado = document.querySelector('.resultado');
   resultado.innerHTML = response;
 }
-
