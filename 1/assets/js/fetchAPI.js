@@ -4,7 +4,7 @@
      xhr.open(objeto.method, objeto.url, true);
      xhr.send();
 
-     xhr.addEventListener('load', ( ) => {
+     xhr.addEventListener('load', () => {
        if (xhr.status >= 200 && xhr.status < 300) {
          resolve(xhr.responseText);
        } else {
@@ -20,12 +20,12 @@
 
    if (tag == 'a') {
      evento.preventDefault();
-     carregaPagina(elemento); 
+     carregaPagina(elemento);
    }
  });
- 
+
  async function carregaPagina(elemento) {
- 
+
    const href = elemento.getAttribute('href');
    const objConfig = {
      method: 'GET',
@@ -47,5 +47,12 @@
 
 
  //carregando o conteudo com javascript
- fetch('exercicio15.html')//ela ja retorna por padrao uma promise
- 
+ fetch('exercicio15.html') //ela ja retorna por padrao uma promise
+   .then(resposta => { //tratando promise 
+     if (resposta.status !== 200) {
+       throw new Error('ERRO 404 no throw');
+     }
+   })
+   .catch((erro) => {
+      console.log(erro);
+   });
