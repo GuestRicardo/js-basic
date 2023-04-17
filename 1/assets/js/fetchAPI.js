@@ -47,17 +47,17 @@
 
 
  //carregando o conteudo com javascript
- fetch('exercicio15.html') //ela ja retorna por padrao uma promise
+ fetch('exercicio17.html') //ela ja retorna por padrao uma promise
    .then(resposta => { //tratando promise 
      if (resposta.status !== 200) {
        throw new Error('ERRO 404 no throw');
-     }
-     return resposta.text();
+      }
+      return resposta.text();
    })
    //pegando o html em si
    .then(html =>{
     console.log(html);
    })
-   .catch((erro) => {
+   .catch(erro => {
       console.log(erro);
    });
