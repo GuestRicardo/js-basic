@@ -49,13 +49,17 @@
 
    /**################################################################################### */
    //usando async e await
-
    const objConfig = {
      method: 'GET',
      url: href
    };
-   const response = await request(objConfig);
-   carregaResultado(response);
+
+   try{
+     const response = await request(objConfig);
+     carregaResultado(response);
+   } catch(erro){
+    console.log('ERRO AO CARREGAR A PAGINA', erro);
+   }
 
    /**################################################################################### */
 
