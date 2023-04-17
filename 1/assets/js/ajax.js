@@ -16,11 +16,20 @@
    });
  };
  //aq esta senddo adicionado um evento no elemento todo.
- document.addEventListener('click', evento =>{
-    const elemento = evento.target;
-    const tag = elemento.tagName.toLowerCase();
+ document.addEventListener('click', evento => {
+   const elemento = evento.target;
+   const tag = elemento.tagName.toLowerCase();
 
-    if(tag == 'a'){
-      carregaPagina(elemento);
-    }
+   if (tag == 'a') {
+     evento.preventDefault();
+     carregaPagina(elemento); //quando clicar no link, nao ira carregar a pagina,aq o evento sera adicionado na tag resultado
+   }
  });
+ //receber o elemento
+ function carregaPagina(elemento) {
+  const href = elemento.getAttribute('href');
+
+  
+  //carregamento via AJAX
+  
+ }
