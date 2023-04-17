@@ -44,3 +44,8 @@
    const resultado = document.querySelector('.resultado');
    resultado.innerHTML = response;
  }
+
+
+ //carregando o conteudo com javascript
+ fetch('exercicio15.html')//ela ja retorna por padrao uma promise
+ 
