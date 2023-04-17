@@ -38,14 +38,27 @@
  async function carregaPagina(elemento) {
    //carregamento via AJAX
    const href = elemento.getAttribute('href');
-   //usando promise
+   //  //usando promise
+   //  const objConfig = {
+   //    method: 'GET',
+   //    url: href
+   //  };
+   //  request(objConfig).then(response => {
+   //    carregaResultado(response);
+   //  }).catch(erro => console.log(erro));
+
+   /**################################################################################### */
+   //usando async e await
+
    const objConfig = {
      method: 'GET',
      url: href
    };
-   request(objConfig).then(response => {
-     carregaResultado(response);
-   }).catch(erro => console.log(erro));
+   const response = await request(objConfig);
+   carregaResultado(response);
+
+   /**################################################################################### */
+
    //request({ // este é o objetoque faz o carregamento, e esta sendo pego o click do elemento
    //usando callbacks
    //  method: 'GET',
