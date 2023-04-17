@@ -38,7 +38,7 @@
        carregaResultado(response);
      },
      error(errorText) {
-       console.assert(errorText);
+       console.log (errorText);
      }
    })
  }
