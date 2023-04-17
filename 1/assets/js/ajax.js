@@ -1,5 +1,5 @@
  const request = (objeto) => {
-   const xhr = new XMLHttpRequest();//usando o construtor
+   const xhr = new XMLHttpRequest(); //usando o construtor
    //este é verbo http, ele tambem e chamdo de metodo(get) ele serve para pegar as coisas na web
    xhr.open(objeto.method, objeto.url, true);
    //se fosse POST estaria no formulario abaixo
@@ -30,14 +30,14 @@
    const href = elemento.getAttribute('href');
 
    //carregamento via AJAX
-   request({
+   request({ // este é o objetoque faz o carregamento, e esta sendo pego o click do elemento
      method: 'GET',
      url: href,
      success(response) {
        carregaResultado(response);
      },
      error(errorText) {
-       console.log (errorText);
+       console.log(errorText);
      }
    });
  }
