@@ -15,3 +15,12 @@
      }
    });
  };
+ //aq esta senddo adicionado um evento no elemento todo.
+ document.addEventListener('click', evento =>{
+    const elemento = evento.target;
+    const tag = elemento.tagName.toLowerCase();
+
+    if(tag == 'a'){
+      carregaPagina(elemento);
+    }
+ });
