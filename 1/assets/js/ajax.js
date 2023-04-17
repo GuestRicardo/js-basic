@@ -27,9 +27,23 @@
  });
  //receber o elemento
  function carregaPagina(elemento) {
-  const href = elemento.getAttribute('href');
+   const href = elemento.getAttribute('href');
 
-  
-  //carregamento via AJAX
-  
+
+   //carregamento via AJAX
+   request({
+     method: 'GET',
+     url: href,
+     success(response) {
+       carregaResultado(response);
+     },
+     error(errorText) {
+       console.assert(errorText);
+     }
+   })
+ }
+
+ function carregaResultado(response) {
+   const resultado = document.querySelector('.resultado');
+   resultado.innerHTML = response;
  }
