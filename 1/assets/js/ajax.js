@@ -1,5 +1,5 @@
  const request = (objeto) => {
-   const xhr = new XMLDocument();
+   const xhr = new XMLHttpRequest();
    //este é verbo http, ele tambem e chamdo de metodo(get) ele serve para pegar as coisas na web
    xhr.open(objeto.method, objeto.url, true);
    //se fosse POST estaria no formulario abaixo
@@ -40,7 +40,7 @@
      error(errorText) {
        console.log (errorText);
      }
-   })
+   });
  }
 
  function carregaResultado(response) {
