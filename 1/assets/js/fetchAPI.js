@@ -52,6 +52,11 @@
      if (resposta.status !== 200) {
        throw new Error('ERRO 404 no throw');
      }
+     return resposta.text();
+   })
+   //pegando o html em si
+   .then(html =>{
+    console.log(html);
    })
    .catch((erro) => {
       console.log(erro);
