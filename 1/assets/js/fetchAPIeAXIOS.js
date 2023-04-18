@@ -1,3 +1,10 @@
-fetch('../json/pessoas.json') //carregando o json
+fetch('pessoas.json') //carregando o json
   .then(resposta => resposta.json()) //capturando os dados
-  .then(json => console.log(json)); //carregando as infos no navegador
+  .then(json => carregaElementosNaPagina(json)); //carregando as infos no navegador
+
+function carregaElementosNaPagina(json) {
+  const tabela = document.createElement('table');
+  for (let pessoa of json) {
+
+  }
+}
