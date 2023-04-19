@@ -1,6 +1,9 @@
-fetch('pessoas.json') //carregando o json(fez a busca do json)
-  .then(resposta => resposta.json()) //capturando os dados(pega as respostas)
-  .then(json => carregaElementosNaPagina(json)); //carregando as infos no navegador(converte)
+// fetch('pessoas.json') //carregando o json(fez a busca do json)
+//   .then(resposta => resposta.json()) //capturando os dados(pega as respostas)
+//   .then(json => carregaElementosNaPagina(json)); //carregando as infos no navegador(converte)
+
+axios('pessoas.json')
+.then(resposta => carregaElementosNaPagina(resposta.data));//precisou carregar somente uma promise
 
 function carregaElementosNaPagina(json) {
   const tabela = document.createElement('table');
