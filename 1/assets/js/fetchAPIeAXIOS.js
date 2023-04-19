@@ -4,16 +4,21 @@ fetch('pessoas.json') //carregando o json
 
 function carregaElementosNaPagina(json) {
   const tabela = document.createElement('table');
+
   for (let pessoa of json) {
     const tr = document.createElement('tr');
 
-    const coluna = document.createElement('td');
+    let coluna = document.createElement('td');
     coluna.innerHTML = pessoa.nome;
-
-    const coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.nome;
+    tr.apply(coluna);
     
-    const coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.nome;
+    coluna = document.createElement('td');
+    coluna.innerHTML = pessoa.sobrenome;
+    tr.apply(coluna);
+    
+    coluna = document.createElement('td');
+    coluna.innerHTML = pessoa.sobrenome;
+    tr.apply(coluna);
+
   }
 }
