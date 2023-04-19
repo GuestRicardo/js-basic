@@ -10,15 +10,19 @@ function carregaElementosNaPagina(json) {
 
     let coluna = document.createElement('td');
     coluna.innerHTML = pessoa.nome;
-    tr.apply(coluna);
+    tr.appendChild(coluna);
     
     coluna = document.createElement('td');
     coluna.innerHTML = pessoa.sobrenome;
-    tr.apply(coluna);
-    
+    tr.appendChild(coluna);
+
     coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.sobrenome;
-    tr.apply(coluna);
+    coluna.innerHTML = pessoa.idade;
+    tr.appendChild(coluna);
+
+    coluna = document.createElement('td');
+    coluna.innerHTML = pessoa.salario;
+    tr.appendChild(coluna);
 
   }
 }
