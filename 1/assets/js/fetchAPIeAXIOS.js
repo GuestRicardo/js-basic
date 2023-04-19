@@ -1,10 +1,10 @@
 fetch('pessoas.json') //carregando o json(fez a busca do json)
-  .then(resposta => resposta.json()) //capturando os dados
-  .then(json => carregaElementosNaPagina(json)); //carregando as infos no navegador
+  .then(resposta => resposta.json()) //capturando os dados(pega as respostas)
+  .then(json => carregaElementosNaPagina(json)); //carregando as infos no navegador(converte)
 
 function carregaElementosNaPagina(json) {
   const tabela = document.createElement('table');
-  console.log(json) //teste pra saber se carregou o json
+  //console.log(json) //teste pra saber se carregou o json
 
   for (let pessoa of json) {
     const tr = document.createElement('tr');
@@ -13,7 +13,7 @@ function carregaElementosNaPagina(json) {
     coluna1.innerHTML = pessoa.nome;
     tr.appendChild(coluna1);
 
-    let coluna3 = document.createElement('td','-');
+    let coluna3 = document.createElement('td');
     coluna3.innerHTML = pessoa.idade;
     tr.appendChild(coluna3);
 
