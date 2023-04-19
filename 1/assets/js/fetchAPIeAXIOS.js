@@ -8,21 +8,25 @@ function carregaElementosNaPagina(json) {
   for (let pessoa of json) {
     const tr = document.createElement('tr');
 
-    let coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.nome;
-    tr.appendChild(coluna);
+    let coluna1 = document.createElement('td');
+    coluna1.innerHTML = pessoa.nome;
+    tr.appendChild(coluna1);
     
-    coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.sobrenome;
-    tr.appendChild(coluna);
+    // let coluna2 = document.createElement('td');
+    // coluna2.innerHTML = pessoa.sobrenome;
+    // tr.appendChild(coluna2);
 
-    coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.idade;
-    tr.appendChild(coluna);
+    // let coluna3 = document.createElement('td');
+    // coluna3.innerHTML = pessoa.idade;
+    // tr.appendChild(coluna3);
 
-    coluna = document.createElement('td');
-    coluna.innerHTML = pessoa.salario;
-    tr.appendChild(coluna);
+    // let coluna4 = document.createElement('td');
+    // coluna4.innerHTML = pessoa.salario;
+    // tr.appendChild(coluna4);
+
+    table.appendChild(tr);
 
   }
+  const resultado = document.querySelector('.resultado');
+  resultado.apply(table);
 }
