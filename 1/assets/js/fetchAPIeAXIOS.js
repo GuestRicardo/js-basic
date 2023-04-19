@@ -4,6 +4,7 @@ fetch('pessoas.json') //carregando o json
 
 function carregaElementosNaPagina(json) {
   const tabela = document.createElement('table');
+  console.log(json) //teste pra saber se carregou o json
 
   for (let pessoa of json) {
     const tr = document.createElement('tr');
@@ -11,7 +12,7 @@ function carregaElementosNaPagina(json) {
     let coluna1 = document.createElement('td');
     coluna1.innerHTML = pessoa.nome;
     tr.appendChild(coluna1);
-    
+
     // let coluna2 = document.createElement('td');
     // coluna2.innerHTML = pessoa.sobrenome;
     // tr.appendChild(coluna2);
