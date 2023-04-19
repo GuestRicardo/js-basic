@@ -1,4 +1,4 @@
-fetch('pessoas.json') //carregando o json
+fetch('pessoas.json') //carregando o json(fez a busca do json)
   .then(resposta => resposta.json()) //capturando os dados
   .then(json => carregaElementosNaPagina(json)); //carregando as infos no navegador
 
