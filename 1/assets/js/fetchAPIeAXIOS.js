@@ -7,7 +7,7 @@ function carregaElementosNaPagina(json) {
   console.log(json) //teste pra saber se carregou o json
 
   for (let pessoa of json) {
-    const tr = document.createElement('tr');
+    let tr = document.createElement('tr');
 
     let coluna1 = document.createElement('td');
     coluna1.innerHTML = pessoa.nome;
