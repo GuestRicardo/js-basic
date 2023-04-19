@@ -24,9 +24,9 @@ function carregaElementosNaPagina(json) {
     // coluna4.innerHTML = pessoa.salario;
     // tr.appendChild(coluna4);
 
-    table.appendChild(tr);
+    tabela.appendChild(tr);
 
   }
-  const resultado = document.querySelector('.resultado');
-  resultado.apply(table);
+  const resultado = document.querySelector('.resultados');
+  resultado.apply(tabela);
 }
