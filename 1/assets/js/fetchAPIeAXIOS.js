@@ -8,14 +8,18 @@ function carregaElementosNaPagina(json) {
 
   for (let pessoa of json) {
     const tr = document.createElement('tr');
+    
 
     let coluna1 = document.createElement('td');
     coluna1.innerHTML = pessoa.nome;
     tr.appendChild(coluna1);
 
+
     let coluna3 = document.createElement('td');
     coluna3.innerHTML = pessoa.idade;
     tr.appendChild(coluna3);
+
+
 
     let coluna4 = document.createElement('td');
     coluna4.innerHTML = pessoa.salario;
