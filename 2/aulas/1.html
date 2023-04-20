@@ -43,6 +43,36 @@
             combinar arquivos de forma segura, sem ficar preocupado com possíveis erros, como o de legibilidade, por
             exemplo.
         </p>
+        <h4>Principais conceitos de Webpack?</h4>
+        <p>
+            Agora que você já sabe um pouco mais sobre a definição básica do Webpack, é hora de compreender alguns
+            conceitos dela. Eles vão trazer mais facilidade na hora de fazer qualquer programação, além de evitar alguns
+            erros no meio do caminho. Confira:
+        </p>
+        <strong>Entry</strong> <br>
+        <p>
+            Esse conceito é usado no início de qualquer projeto. Aqui você poderá fazer a indicação do módulo que será
+            utilizado para construir o gráfico interno de dependência. Após fazer essa definição, a ferramenta poderá
+            encontrar as dependências. Então, qualquer importação pode ser realizada.
+
+            Um detalhe importante é que você pode ainda definir outros pontos de entrada. Basta acessar o arquivo de
+            configuração webpack.config.js.
+        </p>
+        <strong>Output</strong> <br>
+        <p>Neste conceito é possível fazer a definição de itens importantes da localização de um pacote gerado, tais
+            como nome e local. Geralmente, há alguns padrões de diretório, que podem ser ./dist e ./dist/main.js. Vale
+            ressaltar que, para fazer uma configuração, o objeto output precisa ser definido em propriedades designadas
+            path e filename.</p>
+        <strong>Loaders</strong> <br>
+        <p>Esse é um recurso importante para que a ferramenta Webpack faça a leitura dos arquivos, juntamente com a
+            linguagem de programação JavaScript. Justamente por conta disso, é necessário que esses loaders sejam
+            instalados de forma separada. Além disso, os loaders conseguem fazer a conversão de JavaScript de uma versão
+            para outra, garantindo maiior facilidade para o desenvolvedor.</p>
+        <strong>Plugins</strong> <br>
+        <p>Embora não estivessem presentes nas primeiras versões, os plugins modes, como são chamados, são muito úteis,
+            pois o programador consegue configurar módulos através de um development ou production. No primeiro é
+            executado um plugin padrão, conhecido como ModulesPluginActivated. Já em production o programador consegue
+            fazer otimizações internas. </p>
     </div>
 </body>
 
