@@ -212,3 +212,10 @@ input {
   align-items: center;
   text-align: center;
 }
+
+h1::first-letter{
+  color:#00D1FF;
+  font-size: 54px;
+  font-weight: bold;
+  text-transform:uppercase;
+}
