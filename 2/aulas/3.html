@@ -44,12 +44,25 @@
             module.exports ={ <br>
             <span style="background-color: yellow;">//conf.do webpack(na parte dev)</span> <br>
             <span style="margin-left: 25px;"> mode: 'development'</span><br>
+            <span style="background-color: yellow;">//arquivo de entrada</span> <br>
+            <span style="margin-left: 25px;"> entry: './src/index.js'</span><br>
+            <span style="background-color: yellow;">//arquivo de saida(bundle.js)</span> <br>
+            <span style="margin-left: 25px;"> output:{ <br></span>
+            <span style="margin-left: 35px;">path: path.resolve(__dirname, 'public', 'assets', 'js')</span><br>
+            <span style="margin-left: 35px;">}</span> <br>
             } <br>
 
         </div>
         <h4>3 passo:</h4>
         <p>Agora sera preciso criar uma pasta q se chama <span style="background-color: yellow;">src</span> neste local
-            sera salvo todo codigo fonte, é onde será gerado o arquivo do <span style="background-color: yellow;">bundle.js</span> pelo webpack</p>
+            sera salvo todo codigo fonte, é onde será gerado o arquivo do <span
+                style="background-color: yellow;">bundle.js</span> pelo webpack</p>
+        <h4>4 passo:</h4>
+        <p>Agora sera preciso criar uma pasta na pasta raiz, com o nome de <span
+                style="background-color: aqua;">public</span> neste local estara tudo q sera mostrado para o usuario,
+            com front da operação, onde estara o index.html, a pasta assets com tudo q vem dentro dela etc.</p>
+        <p style="background-color: red;">Observação: tudo q for js tera q ser salvo dentro da pasta <span
+                style="background-color: yellow;"> public/assets/js</span> inclusive o arquivo bundle</p>
         <div style="text-align: center;">
             <a href="https://webpack.js.org/concepts/" style="text-decoration: none;">Documentação</a>
         </div>
