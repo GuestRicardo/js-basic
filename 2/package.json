@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel ./exe1.js -o ./bundle.js --preset=@babel/env -w"
+    "babel": "babel ./main.js -o ./bundle.js --preset=@babel/env -w"
+  
   },
   "keywords": [],
   "author": "",
