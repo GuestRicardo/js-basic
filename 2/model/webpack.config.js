@@ -5,6 +5,6 @@ module.exports = {
     entry: './src/index.js',
     output: {
         patch: path.resolve(__dirname, 'public', 'assets', 'js'),
-        filename: '',
+        filename: 'bundle.js',
     }
 };
