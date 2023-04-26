@@ -54,11 +54,14 @@
             <span style="background-color: yellow;">//vinculando o babel</span> <br>
             <span style="margin-left: 25px;"> module: {</span><br>
             <span style="margin-left: 25px;"> rules: [{</span><br>
-            
+
             <span style="margin-left: 35px;"></span>exclude: /node_modules/,<br>
             <span style="margin-left: 35px;"></span>test: /\.js$/,<br>
+            <span style="margin-left: 25px;"></span>use: {<br>
+            <span style="margin-left: 35px;"></span><br>
+            <span style="margin-left: 25px;"></span>},<br>
             <span style="margin-left: 35px;"></span>}]<br>
-            
+
             <span style="margin-left: 25px;"> },</span><br>
             <span style="background-color: yellow;">//fazendo o mapeamento</span> <br>
             <span style="margin-left: 25px;"> devtool: 'source-map'</span><br>
@@ -83,11 +86,19 @@
                 //a regra <span style="color: red;">exclude</span> sao onde o webpack <span
                     style="color: red;">NÂO</span> precisa mapear, neste exemplo e a pasta node_modules <br>
                 //<span style="color: red;">test:</span> para testar qual e a extenções q serao analisados, o <span
-                    style="color: red;">$</span> indica qo arquivo termina com a extensao js
+                    style="color: red;">$</span> indica qo arquivo termina com a extensao js <br>
+                //<span style="color: red;">use</span> é pra definir o q esta sendo usado, q no caso é o babel-loader, e
+                as opçoes
             </div>
             rules:[{ <br>
             exclude: /node_modules/,<br>
-            test: /\.js$/
+            test: /\.js$/,
+            use:{ <br>
+            loader: 'babel-loader',<br>
+            options:{ <br>
+            presets: ['@babel/env']<br>
+            }<br>
+            } <br>
             }]<br>
             }
         </div>
