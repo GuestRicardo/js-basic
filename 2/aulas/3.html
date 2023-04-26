@@ -76,7 +76,16 @@
         <p><strong>vinculando o babel </strong>com a aplicação, </p>
         <div class="anotacoes">
             module:{ <br>
-            rules:[            ]<br>
+            <div class="anotacoes" style="background-color: yellow;">
+                //a regra <span style="color: red;">exclude</span> sao onde o webpack <span
+                    style="color: red;">NÂO</span> precisa mapear, neste exemplo e a pasta node_modules <br>
+                //<span style="color: red;">test:</span> para testar qual e a extenções q serao analisados, o <span
+                    style="color: red;">$</span> indica qo arquivo termina com a extensao js
+            </div>
+            rules:[{ <br>
+            exclude: /node_modules/,<br>
+            test: /\.js$/
+            }]<br>
             }
         </div>
         <div style="text-align: center;">
