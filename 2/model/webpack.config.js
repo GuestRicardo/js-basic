@@ -6,5 +6,12 @@ module.exports = {
     output: {
         patch: path.resolve(__dirname, 'public', 'assets', 'js'),
         filename: 'bundle.js',
-    }
+    },
+    module: {
+        rules:[{
+            exclude: /node_modules/,
+            test: /\.js/
+        }]
+    },
+    devtool: 'source-map'
 };

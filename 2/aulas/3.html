@@ -54,8 +54,11 @@
             <span style="background-color: yellow;">//vinculando o babel</span> <br>
             <span style="margin-left: 25px;"> module: {</span><br>
             <span style="margin-left: 25px;"> rules: [{</span><br>
-            <span style="margin-left: 35px;"></span><br>
-            <span style="margin-left: 25px;"> }]</span><br>
+            
+            <span style="margin-left: 35px;"></span>exclude: /node_modules/,<br>
+            <span style="margin-left: 35px;"></span>test: /\.js$/,<br>
+            <span style="margin-left: 35px;"></span>}]<br>
+            
             <span style="margin-left: 25px;"> },</span><br>
             <span style="background-color: yellow;">//fazendo o mapeamento</span> <br>
             <span style="margin-left: 25px;"> devtool: 'source-map'</span><br>
