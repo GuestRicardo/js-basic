@@ -58,7 +58,10 @@
             <span style="margin-left: 35px;"></span>exclude: /node_modules/,<br>
             <span style="margin-left: 35px;"></span>test: /\.js$/,<br>
             <span style="margin-left: 25px;"></span>use: {<br>
-            <span style="margin-left: 35px;"></span><br>
+            <span style="margin-left: 35px;"></span>loader: 'babel-loader'<br>
+            <span style="margin-left: 35px;"></span>options:{<br>
+            <span style="margin-left: 35px;"></span>presets:['@babel/env']<br>
+            <span style="margin-left: 35px;"></span>}<br>
             <span style="margin-left: 25px;"></span>},<br>
             <span style="margin-left: 35px;"></span>}]<br>
 
