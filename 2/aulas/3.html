@@ -52,7 +52,13 @@
             <span style="margin-left: 35px;">filename: 'bundle.js',</span><br>
             <span style="margin-left: 35px;">},</span> <br>
             <span style="background-color: yellow;">//vinculando o babel</span> <br>
-            <span style="margin-left: 25px;"> module: {}</span><br>
+            <span style="margin-left: 25px;"> module: {</span><br>
+            <span style="margin-left: 25px;"> rules: [{</span><br>
+            <span style="margin-left: 35px;"></span><br>
+            <span style="margin-left: 25px;"> }]</span><br>
+            <span style="margin-left: 25px;"> },</span><br>
+            <span style="background-color: yellow;">//fazendo o mapeamento</span> <br>
+            <span style="margin-left: 25px;"> devtool: 'source-map'</span><br>
             } <br>
 
         </div>
@@ -66,14 +72,16 @@
             com front da operação, onde estara o index.html, a pasta assets com tudo q vem dentro dela etc.</p>
         <p style="background-color: red;">Observação: tudo q for js tera q ser salvo dentro da pasta <span
                 style="background-color: yellow;"> public/assets/js</span> inclusive o arquivo bundle</p>
-                <h4>5 passo:</h4>
-                <p><strong>vinculando o babel </strong>com a aplicação, </p>
-                <div class="anotacoes">
-                    module:{}
-                </div>
-                <div style="text-align: center;">
-                    <a href="https://webpack.js.org/concepts/" style="text-decoration: none;">Documentação</a>
-                </div>
+        <h4>5 passo:</h4>
+        <p><strong>vinculando o babel </strong>com a aplicação, </p>
+        <div class="anotacoes">
+            module:{ <br>
+            rules:[            ]<br>
+            }
+        </div>
+        <div style="text-align: center;">
+            <a href="https://webpack.js.org/concepts/" style="text-decoration: none;">Documentação</a>
+        </div>
     </div>
 
 </body>
