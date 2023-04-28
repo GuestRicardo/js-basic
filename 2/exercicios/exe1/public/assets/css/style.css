@@ -204,17 +204,22 @@ input {
   font-size: 12px;
 }
 
-/*###################################################################################*/
+/*#################################c##################################################*/
 .imagem {  
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
+/*------------------------------------cor da primeira letra no h1--------------------------------------------------*/
 h1::first-letter{
   color:#00D1FF;
   font-size: 54px;
   font-weight: bold;
   text-transform:uppercase;
+}
+/*------------------------------espaço do paragrafo----------------------------------------------------*/
+.esp{
+  margin-left: 18px;
+  color: red;
 }
