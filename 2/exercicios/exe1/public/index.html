@@ -72,18 +72,13 @@
       <strong>3- terceiro passo: </strong> <br>
       <span class="esp">E</span> no arquivo index.js, será onde todas as variaveis e funçoes serão <span
         style="color: green; background-color: yellow;">IMPORTADAS</span>, neste arquivo será onde tudo será exibido
-      para o cliente, <br>
+      para o cliente, e este arquivo fica no seguinte caminho <span style="background-color: yellow;">./src/index.js</span><br>
 
       <div class="exemplos">
-        <strong>Arquivo modulo1.js</strong> <br>
-        const nome = 'maria'; <br>
-        const sobrenome = 'jose' <br>
-        const idade = 89; <br> <br>
-        function soma (x, y){ <br>
-        return x + y; <br>
-        } <br>
-        //aq esta sendo exportado tudo q vc escolher br
-        <span style="background-color: yellow;"> export{nome, sobrenome, idade, soma};</span>
+        <strong>Arquivo index.js</strong> <br> 
+        //aq esta todos os exports do arquivo modulo1.js <br>
+        <span style="background-color: yellow;"> import{nome, sobrenome, idade, soma};</span> <br>
+        console.log(nome, sobrenome, idade, soma(5, 5));
       </div>
     </p>
   </section>
