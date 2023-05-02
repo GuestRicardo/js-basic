@@ -130,19 +130,21 @@
     <p><span class="esp">4-</span>
       Por padrao pode-se exportar por padrao 1 so elemento, usando o <strong>default </strong>com isso o elemento pode
       ser importado como padrao do modulo, e ele sera importado fora de chaves, fugindo do padrao  <br> <br>
-      <span>caso export</span>
+      <span>no arquivo <strong>modulo1.js</strong></span>
       <div class="exemplos">
-        export {
-        <span style="background-color: yellow;">*</span>;
+       
+        exports <span style="background-color: yellow;">default</span> function soma (x,y){ <br>
+          return x + y;<br>
+        } <br>
 
-        } </div>
-      <span>caso import</span>
+        </div>
+      <span>cno arquivo <strong>index.js</strong></span>
       <div class="exemplos">
         import
-        <span style="background-color: yellow;">*</span> as MeuModulo from './modulo1';
-
+        <span style="background-color: yellow;">possoUsarQualquerNome</span> from './modulo1';
       </div>
     </p>
+    <hr>
   </div>
   <script src="./assets/js/bundle.js"></script>
 </body>
