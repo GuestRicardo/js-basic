@@ -151,15 +151,16 @@
       <span>no arquivo <strong>modulo1.js</strong></span>
       <div class="exemplos">
 
-        exports <span style="background-color: yellow;">default</span> function soma (x,y){ <br>
-        return x + y;<br>
-        } <br>
+        export { nome <span style="background-color: yellow;">as default</span>, sobrenome, idade, soma } <br>
 
       </div>
       <span>no arquivo <strong>index.js</strong></span>
       <div class="exemplos">
         import
         <span style="background-color: yellow;">possoUsarQualquerNome</span> from './modulo1';
+      </div>
+      <div class="anotacoes">
+        agora sera exibido as variaveis enves da função
       </div>
     </p>
   </div>
