@@ -8,3 +8,10 @@ function soma(x, y){
 
 export { nome as nome2, sobrenome, idade, soma };
 //aq esta sendo exportado a variavel com outro nome, no caso o nome
+
+export class Pessoa {
+    constructor(nome, sobrenome){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+}
