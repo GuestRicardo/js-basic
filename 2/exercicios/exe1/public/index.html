@@ -88,7 +88,7 @@
     <h1>Exemplos:</h1>
     <p><span class="esp">1-</span>
       Quando tiver uma variavel com o mesmo nome usa-se <strong>as</strong> <br> <br>
-      <span>caso import</span> 
+      <span>caso import</span>
       <div class="exemplos">
         import {
         <span style="background-color: yellow;"> nome2 as nome3,</span>
@@ -98,15 +98,50 @@
         } </div>
     </p>
     <hr>
-        <p><span class="esp">2-</span>
-      Quando quiser exportar diretamente do modulo.  <br> <br>
-      <span>caso export</span> 
+    <p><span class="esp">2-</span>
+      Quando quiser exportar diretamente do modulo. <br> <br>
+      <span>caso export</span>
       <div class="exemplos">
-        
+
         <span style="background-color: yellow;">export</span> const nome = 'Luiz';
- </div>
+      </div>
     </p>
     <hr>
+    <p><span class="esp">3-</span>
+      Para maior praticidade tabem pode se importar <strong>Tudo </strong>de uma vez <br> <br>
+      <span>caso export</span>
+      <div class="exemplos">
+        export {
+        <span style="background-color: yellow;">*</span>;
+
+        } </div>
+      <span>caso import</span>
+      <div class="exemplos">
+        import
+        <span style="background-color: yellow;">*</span> as MeuModulo from './modulo1';
+
+      </div>
+    </p>
+    <div class="anotacoes">
+      Neste caso <strong>NÂO</strong> é preciso usar esses 2 exemplos de uma vez, se usa um ou outro, pois se usar os 2
+      de uma vez fica redundante
+    </div>
+    <hr>
+    <p><span class="esp">4-</span>
+      Para maior praticidade tabem pode se importar <strong>Tudo </strong>de uma vez <br> <br>
+      <span>caso export</span>
+      <div class="exemplos">
+        export {
+        <span style="background-color: yellow;">*</span>;
+
+        } </div>
+      <span>caso import</span>
+      <div class="exemplos">
+        import
+        <span style="background-color: yellow;">*</span> as MeuModulo from './modulo1';
+
+      </div>
+    </p>
   </div>
   <script src="./assets/js/bundle.js"></script>
 </body>
