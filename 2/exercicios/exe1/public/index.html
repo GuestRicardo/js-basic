@@ -129,22 +129,39 @@
     <hr>
     <p><span class="esp">4-</span>
       Por padrao pode-se exportar por padrao 1 so elemento, usando o <strong>default </strong>com isso o elemento pode
-      ser importado como padrao do modulo, e ele sera importado fora de chaves, fugindo do padrao  <br> <br>
+      ser importado como padrao do modulo, e ele sera importado fora de chaves, fugindo do padrao <br> <br>
       <span>no arquivo <strong>modulo1.js</strong></span>
       <div class="exemplos">
-       
+
         exports <span style="background-color: yellow;">default</span> function soma (x,y){ <br>
-          return x + y;<br>
+        return x + y;<br>
         } <br>
 
-        </div>
-      <span>cno arquivo <strong>index.js</strong></span>
+      </div>
+      <span>no arquivo <strong>index.js</strong></span>
       <div class="exemplos">
         import
         <span style="background-color: yellow;">possoUsarQualquerNome</span> from './modulo1';
       </div>
     </p>
     <hr>
+    <p><span class="esp">5-</span>
+      No caso acima é mais ultilizado para funçoes ou classes, ja em casos de <strong>variaveis, se usa expressoes
+      </strong><br> <br>
+      <span>no arquivo <strong>modulo1.js</strong></span>
+      <div class="exemplos">
+
+        exports <span style="background-color: yellow;">default</span> function soma (x,y){ <br>
+        return x + y;<br>
+        } <br>
+
+      </div>
+      <span>no arquivo <strong>index.js</strong></span>
+      <div class="exemplos">
+        import
+        <span style="background-color: yellow;">possoUsarQualquerNome</span> from './modulo1';
+      </div>
+    </p>
   </div>
   <script src="./assets/js/bundle.js"></script>
 </body>
