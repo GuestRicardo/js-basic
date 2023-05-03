@@ -1,5 +1,6 @@
 // 705.484.450-52 070.987.720-03
-class ValidaCPF {
+
+export default class ValidaCPF {
   constructor(cpfEnviado) {
     Object.defineProperty(this, 'cpfLimpo', {
       writable: false,
