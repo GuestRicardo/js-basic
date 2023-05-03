@@ -53,3 +53,6 @@ export default class ValidaCPF {
 // } else {
 //   console.log('CPF inválido');
 // }
+
+
+console.log('chegui aq')
