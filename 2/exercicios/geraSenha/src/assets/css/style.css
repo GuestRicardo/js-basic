@@ -205,32 +205,35 @@ input {
 }
 
 /*#################################c##################################################*/
-.imagem {  
+.imagem {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
 /*------------------------------------cor da primeira letra no h1--------------------------------------------------*/
-h1::first-letter{
-  color:#00D1FF;
+h1::first-letter {
+  color: #00D1FF;
   font-size: 54px;
   font-weight: bold;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
+
 /*------------------------------espaço do paragrafo----------------------------------------------------*/
-.esp{
+.esp {
   margin-left: 18px;
   color: red;
 }
+
 /*------------------------------espaço do paragrafo----------------------------------------------------*/
 
-.ckbox{
-
+.ckbox {
+  margin-top: -10px;
   border: solid;
   border-radius: 1px;
   border-color: #00D1FF;
   text-align: center;
   font-size: 18px;
-  
+
 }
