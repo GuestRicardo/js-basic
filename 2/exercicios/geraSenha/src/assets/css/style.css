@@ -226,10 +226,11 @@ h1::first-letter{
 /*------------------------------espaço do paragrafo----------------------------------------------------*/
 
 .ckbox{
+
   border: solid;
   border-radius: 1px;
   border-color: #00D1FF;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   
 }
