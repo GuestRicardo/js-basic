@@ -9,7 +9,7 @@ const simbolos = ',.;/:?]}[{-_=+)(*&¨%$#@!"\|';
 const geraSimbolos = () => simbolos[rand(0, simbolos.length)];
 
 
-function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
+export default function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
     senhaArray = [];
     //garantindo q seja valor numerico
     qtd = Number(qtd);
@@ -30,4 +30,3 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
     return senhaArray.join('').slice(0, qtd);
 
 }
-geraSenha(5, true, true, true)
