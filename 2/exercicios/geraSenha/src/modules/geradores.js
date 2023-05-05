@@ -27,7 +27,7 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
     volta sera definida pelo for
     
     */
-    console.log(senhaArray.join('').slice(0, qtd));
+    return senhaArray.join('').slice(0, qtd);
 
 }
 geraSenha(5, true, true, true)
