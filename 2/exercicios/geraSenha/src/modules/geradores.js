@@ -1,5 +1,5 @@
 //gerando numeros aleatorios
-const rand = (min, max) => Math.floor(Math.random() * (max -min) + min);
+const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 //gerando letras maiusculas
 const geraMaiuscula = () => String.fromCharCode(rand(65, 91));
 const geraMinuscula = () => String.fromCharCode(rand(97, 123));
@@ -9,6 +9,13 @@ const simbolos = ',.;/:?]}[{-_=+)(*&¨%$#@!"\|';
 const geraSimbolos = () => simbolos[rand(0, simbolos.length)];
 
 
-function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos){
-    
+function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
+    senhaArray = [];
+    //garantindo q seja valor numerico
+    qtd = Number(qtd);
+
+    //quantidade de vez, q a pessoa pedir
+    for (let i = 0; i <= qtd; i++) {
+        maiuscula && senhaArray.push(geraMaiuscula());
+    }
 }
