@@ -21,4 +21,13 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
         numeros && senhaArray.push(geraNumeros());
         simbolos && senhaArray.push(geraSenha());
     }
+    /*
+    Neste for sera gerado 4 caractere com cada volta do array, 
+    pois ele fara a verificação em cada sendo q a quantidade de 
+    volta sera definida pelo for
+    
+    */
+console.log(senhaArray)
+
 }
+geraSenha(15,true)
