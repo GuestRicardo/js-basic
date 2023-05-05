@@ -8,7 +8,7 @@ const simbolos = ',.;/:?]}[{-_=+)(*&¨%$#@!"\|';
 //pegando os simbolos de forma aleatorias
 const geraSimbolos = () => simbolos[rand(0, simbolos.length)];
 
-console.log(geraMaiuscula())
-console.log(geraMinuscula())
-console.log(geraNumeros())
-console.log(geraSimbolos())
+
+function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos){
+    
+}
