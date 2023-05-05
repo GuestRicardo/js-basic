@@ -15,7 +15,7 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
     qtd = Number(qtd);
 
     //quantidade de vez, q a pessoa pedir
-    for (let i = 0; i <= qtd; i++) {
+    for (let i = 0; i < qtd; i++) {
         maiuscula && senhaArray.push(geraMaiuscula());
         minuscula && senhaArray.push(geraMinuscula());
         numeros && senhaArray.push(geraNumeros());
@@ -30,4 +30,4 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
 console.log(senhaArray)
 
 }
-geraSenha(15,true)
+geraSenha(15,false)
