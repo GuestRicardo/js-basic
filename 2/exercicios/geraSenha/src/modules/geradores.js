@@ -30,4 +30,4 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
 console.log(senhaArray)
 
 }
-geraSenha(15,false)
+geraSenha(5, true, true, true)
