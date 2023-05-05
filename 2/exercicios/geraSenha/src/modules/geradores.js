@@ -27,7 +27,7 @@ function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
     volta sera definida pelo for
     
     */
-console.log(senhaArray)
+console.log(senhaArray.join(''))
 
 }
 geraSenha(5, true, true, true)
