@@ -14,12 +14,14 @@ export default function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) 
     //garantindo q seja valor numerico
     qtd = Number(qtd);
 
+    console.log(qtd)
+
     //quantidade de vez, q a pessoa pedir
     for (let i = 0; i < qtd; i++) {
         maiuscula && senhaArray.push(geraMaiuscula());
         minuscula && senhaArray.push(geraMinuscula());
         numeros && senhaArray.push(geraNumeros());
-        simbolos && senhaArray.push(geraSenha());
+        simbolos && senhaArray.push(geraSimbolos());
     }
     /*
     Neste for sera gerado 4 caractere com cada volta do array, 
