@@ -248,3 +248,9 @@ h1::first-letter {
   word-wrap: break-word;
   padding: 10px;
 }
+
+.observacao{
+  text-align: center;
+  font-size: xx-small;
+  color: red;
+}
