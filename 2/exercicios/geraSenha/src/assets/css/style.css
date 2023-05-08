@@ -237,3 +237,14 @@ h1::first-letter {
   font-size: 18px;
 
 }
+
+.senhaGerada {
+  margin-top: -40px;
+  margin-bottom: -40px;
+  color: green;
+  background-color: yellow;
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 10px;
+}
