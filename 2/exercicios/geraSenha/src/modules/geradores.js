@@ -10,11 +10,9 @@ const geraSimbolos = () => simbolos[rand(0, simbolos.length)];
 
 
 export default function geraSenha(qtd, maiuscula, minuscula, numeros, simbolos) {
-    senhaArray = [];
+    const senhaArray = [];
     //garantindo q seja valor numerico
     qtd = Number(qtd);
-
-    console.log(qtd)
 
     //quantidade de vez, q a pessoa pedir
     for (let i = 0; i < qtd; i++) {
