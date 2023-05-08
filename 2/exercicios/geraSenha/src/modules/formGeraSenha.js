@@ -4,7 +4,7 @@ const senhaGerada = document.querySelector('.senhaGerada');
 const  qtdCaracteres = document.querySelector('.qtdCaracteres');
 const  chkMaiusculas = document.querySelector('.chkMaiusculas');
 const  chkMinusculas = document.querySelector('.chkMinusculas');
-const  chkNumeros = document.querySelector('.chkNumeros');
+const  chkNumeros = document.querySelector('.chkMumeros');
 const  chkSimbolos = document.querySelector('.chkSimbolos');
 const  gerarSenha = document.querySelector('#gerarSenha');
 
