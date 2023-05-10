@@ -1,2 +1,2 @@
-const mod1 = requere('./mod1');
+const mod1 = require('./mod1');
 console.log(mod1.fala());

@@ -1,9 +1,8 @@
-const nome ='Luiz';
+const nome = 'Luiz';
 const sobrenome = 'Mercenas';
 
-const fala = ()=>{
-console.log(nome,'', sobrenome);
-};
+const fala = ()=> nome +' '+ sobrenome;
+
 
 module.exports.nome = nome;
 module.exports.sobrenome = sobrenome;
