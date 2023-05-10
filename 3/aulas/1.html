@@ -18,11 +18,12 @@
                     class="lembrete" style="color: aliceblue; padding-left: 8px;">(click aqui para abrir a primeira
                     parte)</span> Parte 1
                 de modules</a> esta parte é para complementar a primeira parte que esta mais completa e explicando para
-            que serve.
+            que serve.(Observação nesta parte 1 é referente ao ES6)
         </p>
     </section>
     <section class="container">
-        <h1>Module e exports</h1>
+        <h1>Exports</h1>
+        <p>Tudo criado aq esta no arquivo <a href="../exercicios/modulos/mod1.js">mod1.js</a></p>
         <p>
             Em js existe uma vairavel do sistema do js, que por si só mostra o q ha no modulo, exemplo:
             <div class="exemplos">
@@ -35,14 +36,41 @@
                 vazio, pois nao esta sendo
                 exportado nada ainda do arquivo usado</span>
             <div class="anotacoes">
-                <strong>module.exports.</strong>nomedoqdesejaexportar = nomedesejado;
+                <strong>module.exports.</strong>nomedoqdesejaexportar = valordachave;
+                <div class="lembrete" style="text-align: center;">Objeto Original</div>
+            </div>
             </div>
             <div style="text-align: center;">ou</div>
             <div class="anotacoes">
-                <strong>exports.</strong>nomedoqdesejaexportar = nomedesejado; <br>
+                <strong>exports.</strong>nomedoqdesejaexportar = valorchave; <br>
                 <div class="lembrete" style="text-align: center;">Este valor é o valor por referencia</div>
             </div>
+            <div style="text-align: center;">ou</div>
+            <div class="anotacoes">
+                <strong>this.</strong>oqdesejaexportar = 'valorchave';
+                <div class="lembrete" style="text-align: center;">o <strong>this</strong> esta apontando para o valor.
+                    (menos usado)
+                </div>
+            </div>
+            </div>
         </p>
+    </section>
+    <section class="container">
+        <h1>Imports</h1>
+        <p>Tudo criado aq esta no arquivo <a href="../exercicios/modulos/mod1.js">app.js</a></p>
+        <p>
+            Aqui sera onde estará todos os exports do mod1.js
+        </p>
+        <div class="anotacoes">
+            const mod1 = requere('./mod1');  
+            <div class="lembrete" style="text-align: center;">aqui esta sendo importado tudo que tem no mod1, variaveis, funções, objetos, etc..
+            </div>
+        </div>
+        <div class="anotacoes">
+            console.log(mod1.fala());
+            <div class="lembrete" style="text-align: center;"> aq esta sendo executada no back do navegador a função q tem no mod1.js
+            </div>
+        </div>
     </section>
 </body>
 
