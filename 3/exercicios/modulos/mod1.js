@@ -3,5 +3,8 @@ const sobrenome = 'Mercenas';
 
 const fala = ()=>{
 console.log(nome,'', sobrenome);
-}
-console.log(module)
+};
+
+module.exports.nome = nome;
+module.exports.sobrenome = sobrenome;
+module.exports.fala = fala;
