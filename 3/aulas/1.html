@@ -62,19 +62,26 @@
             Aqui sera onde estará todos os exports do mod1.js
         </p>
         <div class="anotacoes">
-            const mod1 = require('./mod1');  
-            <div class="lembrete" style="text-align: center;">aqui esta sendo importado tudo que tem no mod1, variaveis, funções, objetos, etc..
+            const mod1 = require('./mod1');
+            <div class="lembrete" style="text-align: center;">aqui esta sendo importado tudo que tem no mod1, variaveis,
+                funções, objetos, etc..
             </div>
             <div class="anotacoes">
                 console.log(mod1.fala());
-                <div class="lembrete" style="text-align: center;"> aq esta sendo executada no back do navegador a função q tem no mod1.js
+                <div class="lembrete" style="text-align: center;"> aq esta sendo executada no back do navegador a função
+                    q tem no mod1.js
                 </div>
             </div>
-            <div class="anotacoes"></div>
+            <div class="anotacoes">
+                const fala = mod1.fala;
+                <div class="lembrete" style="text-align: center;"> este caso é quando quiser usar alguma função ou
+                    elemento q estiver no mod1, pois neste exemplo foi importado o modulo inteiro
+                </div>
+            </div>
         </div>
         <hr>
         <div class="anotacoes">
-            const fala = require('./mod1').fala;  
+            const fala = require('./mod1').fala;
             <div class="lembrete" style="text-align: center;">aqui esta sendo importado so a função fala
             </div>
             <div class="anotacoes">
