@@ -206,6 +206,7 @@ input {
 
 /*#################################c##################################################*/
 .imagem {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,8 +250,15 @@ h1::first-letter {
   padding: 10px;
 }
 
-.observacao{
+.observacao {
   text-align: center;
   font-size: xx-small;
   color: red;
+}
+
+.imgM {
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

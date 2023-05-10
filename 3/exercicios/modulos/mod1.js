@@ -4,3 +4,4 @@ const sobrenome = 'Mercenas';
 const fala = ()=>{
 console.log(nome,'', sobrenome);
 }
+console.log(module)
