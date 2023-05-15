@@ -157,6 +157,31 @@
         <p>
             Este exemplo acima vale parea qualquer situação, podendo ser somente uma variavel, ou sendo uma soma, etc...
         </p>
+        <div class="exemplos">
+            <h1>Este module vai so exportar uma Class</h1>
+            <div class="anotacoes">
+                <strong>EXPORTANDO</strong> <br>
+                module.export = class Cachorro{ <br>
+                constructor(nome, raca, tamanho){<br>
+                this.nome = nome; <br>
+                this.raca = raca; <br>
+                this.tamanho = tamanho; <br>
+                } <br>
+                latir(){ <br>
+                console.log(`${this.nome} esta fazendo au au`);<br>
+                }
+                } <br>
+                <hr>
+                <strong>IMPORTANDO</strong> <br>
+                const Cachorro = require ('./mod1'); <br>
+                const cachorrinho = new Cachorro(biu, pudou, medio);<br>
+                cachorrinho.latir(); <br>
+            </div>
+            <div class="lembrete">
+                *esta situação é bem parecida com a <strong>default</strong> usado no <strong>ES6</strong>, sendo que
+                esta sendo usado somente uma função
+            </div>
+        </div>
     </section>
 </body>
 
