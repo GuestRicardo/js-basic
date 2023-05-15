@@ -263,6 +263,7 @@ h1::first-letter {
   align-items: center;
 }
 .lembrete{
+  margin: 0.67em 0;
   font-size: smaller;
   color: red;
 }
