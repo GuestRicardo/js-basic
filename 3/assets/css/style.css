@@ -273,8 +273,9 @@ h1::first-letter {
 }
 /*##################################-SETA-#########################################*/
 #arrowAnim {
-  width: 100px;
+  width: 100%;
   height: 100px;
+  margin-bottom: -50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +286,7 @@ h1::first-letter {
   height: 5vw;
   border: 2.5vw solid;
   border-color: black transparent transparent black;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
 
@@ -320,3 +321,4 @@ h1::first-letter {
    80% { opacity:1; transform: translateX(-9vw); }	
   100% { opacity:0; transform: translateX(-15vw); }	
 }
+/*##################################-SETA-#########################################*/
