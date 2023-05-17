@@ -219,6 +219,7 @@ h1::first-letter {
   font-size: 54px;
   font-weight: bold;
   text-transform: uppercase;
+  text-shadow: red -2px 0, cyan 2px 0;
 }
 
 /*------------------------------espaço do paragrafo----------------------------------------------------*/
