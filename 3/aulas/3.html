@@ -13,12 +13,47 @@
     <section class="container">
         <h1 class="cyber">File System</h1>
         <p>
-            A ideia é usar uma <strong>API</strong> para que trabalhe de forma natural nos arquivos do sistema.
+            A ideia é usar uma <strong>API</strong> para que trabalhe de forma natural nos arquivos do sistema; e
+            geralmente é usado com <a
+                href="https://acervolima.com/node-js-metodo-fs-readdirsync/"><strong>readdirSync</strong></a> ou <a
+                href="http://https://www.dio.me/articles/guia-para-o-file-system-do-nodejs"><strong>readdir</strong></a>
+            <br>
+            O FS (File System) é um módulo integrado do Node.js que fornece uma API para interagir com o sistema de
+            arquivos do computador em que o Node.js está sendo executado. Ele permite a leitura, gravação, exclusão e
+            manipulação de arquivos e diretórios.
+
+            Com o módulo FS, é possível criar, abrir, ler, gravar e fechar arquivos, além de manipular diretórios, como
+            criar, renomear e excluir. Ele também inclui recursos para manipulação de fluxos de dados, como a criação de
+            fluxos de leitura e gravação.
+
+            O módulo FS é amplamente utilizado em aplicativos Node.js para tarefas que envolvem interação com o sistema
+            de arquivos, como o armazenamento de arquivos de configuração, logs, arquivos de dados e muito mais. Ele é
+            especialmente útil em aplicativos de servidor, como servidores da web e aplicativos de back-end, que
+            precisam interagir com o sistema de arquivos do servidor para armazenar e recuperar dados.
+
+            Uma das tarefas mais comuns que podemos fazer com o módulo FS é ler o conteúdo de um arquivo. Neste caso
+            utilizaremos o método fs.readFile():
+        </p>
+
+        <p>
+            Para trabalhar com esse systema é preciso, criar:
+            <div class="exemplos">
+                <span class="lembrete">//este fs faz o escaneamento das pastas</span> <br>
+                const fs = require('fs'); <br>
+                <span class="lembrete">//este path é para tratar dos caminhos</span> <br>
+                const path = require('path'); <br>
+            </div>
         </p>
         <div style="text-align: center;">
             <a href="https://nodejs.org/dist/latest-v18.x/docs/api/fs.html"
                 style="text-decoration: none;">Documentação</a>
         </div>
+        <h1>Recursão</h1>
+        <p>
+            A recursão é quando um módulo faz uma chamada ou ativa a si mesmo. É bem exemplificada quando um módulo é
+            definido em termos de si mesmo. Uma grande vantagem sua é que um conjunto infinito de sentenças possíveis
+            pode ser definido, analisado ou produzido por um programa finito de computador.
+        </p>
     </section>
 </body>
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>readdir</h1>
+        <p>lista os arquivos e subdiretórios em um diretório.</p>
+        <h1>readdirSync</h1>
+        <p>é usado para ler de forma síncrona o conteúdo de um determinado diretório. O método retorna uma array com
+            todos os nomes de arquivo ou objetos no diretório. O argumento options pode ser usado para alterar o formato
+            no qual os arquivos são retornados do método.</p>
+        <strong>Parâmetros:</strong> este método aceita dois parâmetros mencionados acima e descritos abaixo:
+        <li>
+            path: contém o caminho do diretório de onde o conteúdo deve ser lido. Pode ser uma String, Buffer ou URL.
+        </li>
+        <li>
+            options: É um objeto que pode ser usado para especificar parâmetros opcionais que afetarão o método. Possui
+            dois parâmetros opcionais:
+        </li>
+        <div class="anotacoes">
+            <p>
+                <strong>encoding:</strong> É um valor de string que especifica qual codificação seria usada para os
+                nomes
+                de arquivo dados ao argumento de retorno de chamada. O valor padrão é 'utf8'.
+            </p>
+            <p>
+                <strong>withFileTypes:</strong>  é um valor booleano que especifica se os arquivos seriam retornados como objetos fs.Dirent. O valor padrão é falso'.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
