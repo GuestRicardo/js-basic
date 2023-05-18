@@ -87,12 +87,15 @@
                 const fileFullPath = path.resolve(rootDir, file);
                 <span class="lembrete">pegando as informações dos arquivos e pastas</span> <br>
                 const stats = await fs.stats(fileFullPath); <br> <br>
+                <span class="lembrete">para ignorar a pasta git e node modules</span> <br>
+                if(/\.git/g.test(fileFullPath)) continue; <br> <br>
+                if(/\.node_modules/g.test(fileFullPath)) continue; <br> <br>
                 if(stats.isDirectory()){ <br>
                     readdir(fileFullPath); <br>
                     continue; <br>
-                } <br>
-                <span class="lembrete">para ignorar a pasta git</span> <br>
-                if(/\.git/g.test(fileFullPath)) continue; <br> <br>
+                } <br> <br>
+                <span class="lembrete">Para caso queira somente um tipo de arquivo(esteja buscando)</span> <br>
+                if(!/\.css$/g.test(fileFullPath)) continue; <br> <br>
                 <span class="lembrete">exibirá uma lista com tudo q ha na pasta e mostrara com true as pastas e false os
                     arquivos</span> <br>
                 console.log(file, isDirectory()); <br>
