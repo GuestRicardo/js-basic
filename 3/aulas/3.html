@@ -38,7 +38,7 @@
         <p>
             Para trabalhar com esse systema é preciso, criar:
             <div class="exemplos">
-                <span class="lembrete">//este fs faz o escaneamento das pastas</span> <br>
+                <span class="lembrete">//este fs faz o escaneamento das pastas(e entrega todas as informações)</span> <br>
                 const fs = require('fs'); <br>
                 <span class="lembrete">//este path é para tratar dos caminhos</span> <br>
                 const path = require('path'); <br>
@@ -80,7 +80,7 @@
                  walk(files);
                 } <br>
                 <br>
-                function walk(files){ <br>
+                async function walk(files){ <br>
                     for(let file of files) { <br>
                         console.log(file); <br>
                     } <br>
