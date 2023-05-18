@@ -75,7 +75,7 @@
                 <br>
                 async function reddir(){ <br>
                  rootDir = rootDir || path.resolve(__dirname);   
-                 const files = await fs.readdir();   <br>
+                 const files = await fs.readdir(rootDir);   <br>
                 } <br>
             </div>
 
