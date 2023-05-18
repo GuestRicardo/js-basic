@@ -268,6 +268,7 @@ h1::first-letter {
   margin: 0.67em 0;
   font-size: smaller;
   color: red;
+  background-color: yellow;
 }
 .cyber{
   text-shadow: red -2px 0, cyan 2px 0;
