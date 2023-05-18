@@ -86,7 +86,13 @@
                 <span class="lembrete">compondo o nome dos arquivos e pastas</span> <br>
                 const fileFullPath = path.resolve(rootDir, file);
                 <span class="lembrete">pegando as informações dos arquivos e pastas</span> <br>
-                const stats = await fs.stats(fileFullPath); <br>
+                const stats = await fs.stats(fileFullPath); <br> <br>
+                if(stats.isDirectory()){ <br>
+                    readdir(fileFullPath); <br>
+                    continue; <br>
+                } <br>
+                <span class="lembrete">para ignorar a pasta git</span> <br>
+                if(/\.git/g.test(fileFullPath)) continue; <br> <br>
                 <span class="lembrete">exibirá uma lista com tudo q ha na pasta e mostrara com true as pastas e false os
                     arquivos</span> <br>
                 console.log(file, isDirectory()); <br>
