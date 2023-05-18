@@ -255,6 +255,7 @@ h1::first-letter {
   text-align: center;
   font-size: xx-small;
   color: red;
+  background-color: yellow;
 }
 
 .imgM {
