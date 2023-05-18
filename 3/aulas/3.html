@@ -38,7 +38,8 @@
         <p>
             Para trabalhar com esse systema é preciso, criar:
             <div class="exemplos">
-                <span class="lembrete">//este fs faz o escaneamento das pastas(e entrega todas as informações)</span> <br>
+                <span class="lembrete">//este fs faz o escaneamento das pastas(e entrega todas as informações)</span>
+                <br>
                 const fs = require('fs'); <br>
                 <span class="lembrete">//este path é para tratar dos caminhos</span> <br>
                 const path = require('path'); <br>
@@ -75,19 +76,21 @@
                 <br>
                 <span class="lembrete">esta função vai examinar todos os arquivos</span> <br>
                 async function reddir(){ <br>
-                 rootDir = rootDir || path.resolve(__dirname);   
-                 const files = await fs.readdir(rootDir);   <br>
-                 walk(files, rootDir);
+                rootDir = rootDir || path.resolve(__dirname);
+                const files = await fs.readdir(rootDir); <br>
+                walk(files, rootDir);
                 } <br>
                 <br>
                 async function walk(files, rootDir){ <br>
-                    for(let file of files) { <br>
-                        <span class="lembrete">pegando as informações dos arquivos e pastas</span> <br>
-                        const stats = await fs.stats(); <br>
-                        <span class="lembrete">compondo o nome dos arquivos e pastas</span> <br>
-                        const fileFullPath = path.resolve(rootDir, file)
-                        console.log(file); <br>
-                    } <br>
+                for(let file of files) { <br>
+                <span class="lembrete">compondo o nome dos arquivos e pastas</span> <br>
+                const fileFullPath = path.resolve(rootDir, file);
+                <span class="lembrete">pegando as informações dos arquivos e pastas</span> <br>
+                const stats = await fs.stats(fileFullPath); <br>
+                <span class="lembrete">exibirá uma lista com tudo q ha na pasta e mostrara com true as pastas e false os
+                    arquivos</span> <br>
+                console.log(file, isDirectory()); <br>
+                } <br>
                 } <br>
                 <span class="lembrete">
                     aq esta sendo passado o caminho absoluto de onde começar, e ele caminhará em todos os lugares
