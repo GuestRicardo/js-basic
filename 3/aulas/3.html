@@ -82,6 +82,8 @@
                 <br>
                 async function walk(files){ <br>
                     for(let file of files) { <br>
+                        <span class="lembrete">pegando as informações dos arquivos e pastas</span> <br>
+                        const stats = fs.stats(); <br>
                         console.log(file); <br>
                     } <br>
                 } <br>
