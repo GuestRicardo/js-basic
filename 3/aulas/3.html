@@ -73,6 +73,7 @@
                 const fs = require('fs').promises; <br>
                 const path = require ('path'); <br>
                 <br>
+                <span class="lembrete">esta função vai examinar todos os arquivos</span> <br>
                 async function reddir(){ <br>
                  rootDir = rootDir || path.resolve(__dirname);   
                  const files = await fs.readdir(rootDir);   <br>
@@ -84,7 +85,10 @@
                         console.log(file); <br>
                     } <br>
                 } <br>
-                readdir();
+                <span class="lembrete">
+                    aq esta sendo passado o caminho absoluto de onde começar, e ele caminhará em todos os lugares
+                </span>
+                readdir('\DOCUMENTOS\documentos\javascript\');
             </div>
 
 
