@@ -77,13 +77,15 @@
                 async function reddir(){ <br>
                  rootDir = rootDir || path.resolve(__dirname);   
                  const files = await fs.readdir(rootDir);   <br>
-                 walk(files);
+                 walk(files, rootDir);
                 } <br>
                 <br>
-                async function walk(files){ <br>
+                async function walk(files, rootDir){ <br>
                     for(let file of files) { <br>
                         <span class="lembrete">pegando as informações dos arquivos e pastas</span> <br>
                         const stats = await fs.stats(); <br>
+                        <span class="lembrete">compondo o nome dos arquivos e pastas</span> <br>
+                        const fileFullPath = path.resolve(rootDir, file)
                         console.log(file); <br>
                     } <br>
                 } <br>
