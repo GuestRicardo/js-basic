@@ -76,8 +76,14 @@
                 async function reddir(){ <br>
                  rootDir = rootDir || path.resolve(__dirname);   
                  const files = await fs.readdir(rootDir);   <br>
-                 wal
+                 walk(files);
                 } <br>
+                <br>
+                function walk(files){ <br>
+                    for(let file of files) { <br>
+                        console.log(file);
+                    }
+                }
             </div>
 
 
