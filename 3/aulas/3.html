@@ -72,6 +72,11 @@
                     ira usar uma <span style="color: red;">Funçao recursiva</span> </div>
                 const fs = require('fs').promises; <br>
                 const path = require ('path'); <br>
+                <br>
+                async function reddir(){ <br>
+                 rootDir = rootDir || path.resolve(__dirname);   
+                 const files = await fs.readdir();   <br>
+                } <br>
             </div>
 
 
