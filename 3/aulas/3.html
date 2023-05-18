@@ -59,7 +59,10 @@
             const fs = require('fs').promises; <br>
             const path = require ('path'); <br>
             <br><span class="lembrete">Neste exemplo será usado promises</span> <br>
-            
+            fs.reddir(path.resolve(__dirname)) <br>
+            <span style="margin-left: 15px;">.then(files => console.log(files))</span> <br>
+            <span style="margin-left: 15px;">.catch(e => console.log(erro))</span> <br>
+
             
         </div>
     </section>
