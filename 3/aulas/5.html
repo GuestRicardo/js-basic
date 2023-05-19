@@ -27,7 +27,10 @@
                 variavel <strong>caminhoArquivo</strong>, e dentro do objeto esta usando o (flag: 'w') para apagar tudo
                 q esta dentro do aqrquivo caso tenho algo escrito, ja o utf8 e o padrao pt br </spn> <br>
             fs.writeFile(caminhoArquivo, 'Frase 1', {flag: 'w', encoding: 'utf8'}); <br>
-            <span class="lembrete">o utf8 nao é obrigatorio mandar</span>
+            <span class="lembrete">o utf8 nao é obrigatorio mandar</span><br>
+            <span class="lembrete">Usando a flag w, toda vez q executar a função sera reelido o arquivo e apagado para q
+                seja inserido o mesmo conteudo da função, para que possa ser adicionado novos conteudos ao inves de
+                apagar é so usar a <strong>flag: 'a'</strong> assim todo conteudo criado sera adicionado abaixo</span>
         </div>
     </section>
 </body>
