@@ -23,8 +23,9 @@
             <span class="lembrete">Aq(__dirname) esta sendo pegado o caminho absoluto da pasta o ('..') indica q é uma
                 pasta acima e esta sendo criado o arquivo </span> <br>
             const caminhoArquivo = path.resolve(__dirname, '..', 'test.txt'); <br>
-            <spn class="lembrete">Aq sera escrito a "frase 1" no arquivo criado, o flag: w apagara tudo q estiver no
-                arquivo, para q nao escreva nada por cima e o utf8 e o codigo pt br</spn> <br>
+            <spn class="lembrete">Aq esta sendo mandado o caminho e o conteudo q estara escrito no arquivo criado pela
+                variavel <strong>caminhoArquivo</strong>, e dentro do objeto esta usando o (flag: 'w') para apagar tudo
+                q esta dentro do aqrquivo caso tenho algo escrito, ja o utf8 e o padrao pt br </spn> <br>
             fs.writeFile(caminhoArquivo, 'Frase 1', {flag: 'w', encoding: 'utf8'}); <br>
             <span class="lembrete">o utf8 nao é obrigatorio mandar</span>
         </div>
