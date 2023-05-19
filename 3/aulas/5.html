@@ -20,11 +20,12 @@
             <h3>Arquivo escrever.</h3>
             const fs = require('fs').promises; <br>
             const path = require('path'); <br>
-            <span class="lembrete">Aq esta sendo criado o arquivo </span> <br>
+            <span class="lembrete">Aq(__dirname) esta sendo pegado o caminho absoluto da pasta o ('..') indica q é uma
+                pasta acima e esta sendo criado o arquivo </span> <br>
             const caminhoArquivo = path.resolve(__dirname, '..', 'test.txt'); <br>
             <spn class="lembrete">Aq sera escrito a "frase 1" no arquivo criado, o flag: w apagara tudo q estiver no
                 arquivo, para q nao escreva nada por cima e o utf8 e o codigo pt br</spn> <br>
-            fs.writeFile(caminhoArquivo, 'Frase 1', {flag: 'w', encoding: 'utf-8'}); <br>
+            fs.writeFile(caminhoArquivo, 'Frase 1', {flag: 'w', encoding: 'utf8'}); <br>
             <span class="lembrete">o utf8 nao é obrigatorio mandar</span>
         </div>
     </section>
