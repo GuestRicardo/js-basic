@@ -12,18 +12,20 @@
 <body>
     <section class="container">
         <h1 class="cyber">Escrevendo via FS</h1>
-      <p>
-        Para criar e escrever via FS é so usar o <strong>fs.writeFile</strong> 
-      </p>
-      <h3 class="cyber">Exemplo:</h3>
-      <div class="anotacoes">
-        <h3>Arquivo escrever.</h3>
-        const fs = require('fs').promises;
-        const path = require('path');
-        const caminhoArquivo = path.resolve(__dirname, '..', 'test.txt');
-        
-        fs.writeFile(caminhoArquivo, 'Frase 1', {flag: 'w', encoding: 'utf-8'});
-      </div>
+        <p>
+            Para criar e escrever via FS é so usar o <strong>fs.writeFile</strong>
+        </p>
+        <h3 class="cyber">Exemplo:</h3>
+        <div class="anotacoes">
+            <h3>Arquivo escrever.</h3>
+            const fs = require('fs').promises; <br>
+            const path = require('path'); <br>
+            <span class="lembrete">Aq esta sendo criado o arquivo </span> <br>
+            const caminhoArquivo = path.resolve(__dirname, '..', 'test.txt'); <br>
+            <spn class="lembrete">Aq sera escrito a "frase 1" no arquivo criado, o flag: w apagara tudo q estiver no
+                arquivo, para q nao escreva nada por cima e o utf8 e o codigo pt br</spn> <br>
+            fs.writeFile(caminhoArquivo, 'Frase 1', {flag: 'w', encoding: 'utf-8'}); <br>
+        </div>
     </section>
 </body>
 
