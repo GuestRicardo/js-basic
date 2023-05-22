@@ -63,9 +63,37 @@
         <h3 class="cyber">Exemplo:</h3>
         <div class="anotacoes">
             <h3>Arquivo ler.js</h3>
+            const fs = require('fs').promises; <br>
+            <br>
+            module.exports = (caminho)=> { <br>
+            fs.readFile(caminho, 'utf8'); <br>
+            }; <br>
+            <div class="lembrete">
+                quando o arquivo for lido no lido, ele retroinará novamente como <strong>objeto</strong>, para isso
+                acontecer é preciso criar uma função dentro do arquivo <strong>app</strong>
+            </div>
+
+
+        </div>
+        <div class="anotacoes">
+            <h3>Arquivo app.js</h3>
+            <p>convertendo <strong>json</strong> para <strong>objeto</strong></p>
+            const ler = require('./modules/ler'); <br> <br>
+            async function lerArquivo(caminho) { <br>
+                const dados = await ler(caminho); <br>
+                renderizaDados(dados); <br>
+            }; <br> <br>
             
+            function renderizaDados(dados) { <br>
+                dados = JSON.parse(dados); <br>
+                dados.forEach(valor => console.log(valor)); <br>
+            }; <br>
+            <br>
+            lerArquivo(caminhoArquivo); <br>
+ 
         </div>
     </section>
+    <script src="../exercicios/escrevendo-e-lendo/app.js"></script>
 </body>
 
 </html>
