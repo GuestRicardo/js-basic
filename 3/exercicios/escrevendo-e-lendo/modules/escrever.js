@@ -2,6 +2,15 @@ const fs = require('fs').promises;
 const path = require('path');
 const caminhoArquivo = path.resolve(__dirname, '..', 'test.json');
 
-fs.writeFile(caminhoArquivo, 'Frase 1\n', {flag: 'a', encoding: 'utf8'});
+const pessoa =[
+    {nome: 'joao'},
+    {nome: 'maria'},
+    {nome: 'jose'},
+    {nome: 'eduardo'},
+    {nome: 'joaquim'},
+];
+const json = JSON.stringify(pessoas);
+
+fs.writeFile(caminhoArquivo, 'json', {flag: 'a', encoding: 'utf8'});
 
 
