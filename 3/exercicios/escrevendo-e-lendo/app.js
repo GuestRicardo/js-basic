@@ -10,3 +10,4 @@ const pessoas =[
     {nome: 'joaquim'},
 ];
 const json = JSON.stringify(pessoas, '', 2);
+escrever(caminhoArquivo, json);
