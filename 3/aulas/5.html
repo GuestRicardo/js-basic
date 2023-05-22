@@ -31,8 +31,25 @@
             <span class="lembrete">Usando a flag w, toda vez q executar a função sera reelido o arquivo e apagado para q
                 seja inserido o mesmo conteudo da função, para que possa ser adicionado novos conteudos ao inves de
                 apagar é so usar a <strong>flag: 'a'</strong> assim todo conteudo criado sera adicionado abaixo</span>
-                <div class="exemplos"><strong>flag:'a'</strong> é interessante usar quando fizer login.</div>
-                <div class="exemplos">Exeiste uma função que converte <strong></strong> um objeto para json epara le-lo é possivel recupera-lo em js</div>
+            <div class="exemplos"><strong>flag:'a'</strong> é interessante usar quando fizer login.</div>
+            <div class="exemplos">
+                Exeiste uma função que <strong>converte</strong> um objeto para json epara le-lo é possivel recupera-lo
+                em js <br>
+                <h3 class="cyber">Exemplo:</h3>
+                const caminhoArquivo = path.resolve(__dirname, '..', 'test.json'); <br>
+<br>
+                const pessoa =[ <br>
+                {nome: 'joao'}, <br>
+                {nome: 'maria'}, <br>
+                {nome: 'jose'}, <br>
+                {nome: 'eduardo'}, <br>
+                {nome: 'joaquim'}, <br>
+                ]; <br>
+                 <strong> const json = JSON.stringify(pessoas); </strong> <br>
+
+                fs.writeFile(caminhoArquivo, 'json', {flag: 'a', encoding: 'utf8'}); <br>
+
+            </div>
         </div>
 
     </section>
