@@ -38,7 +38,7 @@
                 <h3 class="cyber">Exemplo:</h3>
                 const caminhoArquivo = path.resolve(__dirname, '..', 'test.json'); <br>
 <br>
-                const pessoa =[ <br>
+                const pessoas =[ <br>
                 {nome: 'joao'}, <br>
                 {nome: 'maria'}, <br>
                 {nome: 'jose'}, <br>
@@ -47,7 +47,7 @@
                 ]; <br>
                  <strong> const json = JSON.stringify(pessoas); </strong> <br>
 
-                fs.writeFile(caminhoArquivo, 'json', {flag: 'a', encoding: 'utf8'}); <br>
+                fs.writeFile(caminhoArquivo, json, {flag: 'a', encoding: 'utf8'}); <br>
 
             </div>
         </div>
