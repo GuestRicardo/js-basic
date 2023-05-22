@@ -1,6 +1,7 @@
 const path = require('path');
 const caminhoArquivo = path.resolve(__dirname,'test.json');
-const escrever = require('./modules/escrever')
+const escrever = require('./modules/escrever');
+const ler = require('./modules/ler');
 
 const pessoas =[
     {nome: 'joao'},
