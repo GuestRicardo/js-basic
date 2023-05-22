@@ -1,2 +1,17 @@
-
-json[{"nome":"joao"},{"nome":"maria"},{"nome":"jose"},{"nome":"eduardo"},{"nome":"joaquim"}]
+[
+  {
+    "nome": "joao"
+  },
+  {
+    "nome": "maria"
+  },
+  {
+    "nome": "jose"
+  },
+  {
+    "nome": "eduardo"
+  },
+  {
+    "nome": "joaquim"
+  }
+]
