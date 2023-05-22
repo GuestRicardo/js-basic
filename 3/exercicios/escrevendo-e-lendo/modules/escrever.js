@@ -9,8 +9,8 @@ const pessoas =[
     {nome: 'eduardo'},
     {nome: 'joaquim'},
 ];
-const json = JSON.stringify(pessoas);
+const json = JSON.stringify(pessoas, '', 2);
 
-fs.writeFile(caminhoArquivo, json, {flag: 'a', encoding: 'utf8'});
+fs.writeFile(caminhoArquivo, json, {flag: 'w', encoding: 'utf8'});
 
 

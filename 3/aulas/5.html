@@ -45,9 +45,14 @@
                 {nome: 'eduardo'}, <br>
                 {nome: 'joaquim'}, <br>
                 ]; <br>
-                 <strong> const json = JSON.stringify(pessoas); </strong> <br>
+                 <strong> const json = JSON.stringify(<span class="lembrete"> pessoas, '', 2</span>); </strong> <br>
+                 <div class="lembrete">
+                   <strong>pessoa</strong> = nome do array <br>
+                    <strong>''</strong> = espaço q sera dado nos conteudos do array <br>
+                    <strong>2</strong> = é a quandtidade de identações 
+                </div>
 
-                fs.writeFile(caminhoArquivo, json, {flag: 'a', encoding: 'utf8'}); <br>
+                fs.writeFile(caminhoArquivo, json, {flag: 'w', encoding: 'utf8'}); <br>
 
             </div>
         </div>
