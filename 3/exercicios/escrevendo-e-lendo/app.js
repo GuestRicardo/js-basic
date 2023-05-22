@@ -1,3 +1,6 @@
+const path = require('path');
+const caminhoArquivo = path.resolve(__dirname,'test.json');
+
 const pessoas =[
     {nome: 'joao'},
     {nome: 'maria'},
