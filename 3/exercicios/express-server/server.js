@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     res.send('Recebi o formulario');
 });
-app.get('/contato', (req, res) => {
-    res.send('Obrigado por entrar em contato com agente');
-});
+
 
 app.listen(3000, () => {
     console.log('Acesse o http://localhost:3000');
