@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+
+/**Parametros de URL */
+//**As informações sera enviada pelo corpo da requisição**/
 app.get('/', (req, res) => {
     res.send(`
         <form action='/' method='nome'>
@@ -18,3 +21,6 @@ app.listen(3000, () => {
     console.log('Acesse o http://localhost:3000');
     console.log('Servidor executando com sucesso...');
 });
+/**Parametros de URL */
+
+/**pegando aos parametros enviados */
