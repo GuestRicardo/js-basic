@@ -32,7 +32,8 @@
             </div>
         </p>
         <p>
-            5-Agora é utiliza-lo, neste exemplo iremos ultiliza-lo para carregar rotas usando o <strong>GET</strong>(é responsavel pela entrega da página) <br>
+            5-Agora é utiliza-lo, neste exemplo iremos ultiliza-lo para carregar rotas usando o <strong>GET</strong>(é
+            responsavel pela entrega da página) <br>
             Ele seria o <strong>/</strong> no endereço web <br>
             Exemplo: <br>
             <div class="exemplos">
@@ -42,15 +43,17 @@
             E ultilizaremos a operação <strong>CRUD</strong> para criamos as rotas
             <img src="../assets/img/4.png" alt="" class="imgM">
             <div class="exemplos">
-                app.get('/<span class="lembrete">ROTA</span>',(requisição<span class="lembrete">o q esta sendo pedido</span>, resposta<span class="lembrete">é o q vou mandar para o servidor</span>){ <br>
-                    resposta.send('testando o server'); <br>
+                app.get('/<span class="lembrete">ROTA</span>',(requisição<span class="lembrete">o q esta sendo
+                    pedido</span>, resposta<span class="lembrete">é o q vou mandar para o servidor</span>){ <br>
+                resposta.send('testando o server'); <br>
                 }) <br>
             </div>
         </p>
         <p>
-            6- Agora é preciso fazer com q o servidor ouça o que esta sendo enviado na porta do meu computador
+            6- Agora é preciso fazer com q o servidor ouça o que esta sendo enviado na porta do meu computador, e para
+            isso é preciso passar a porta q deseja q ele vigie
             <div class="exemplos">
-                
+                app.listen(3000);
             </div>
         </p>
 

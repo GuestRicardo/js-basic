@@ -4,3 +4,5 @@ const app = express();
 app.get('/',(res, req)=>{
     res.send('testando o server');
 });
+
+app.listen(3000);
