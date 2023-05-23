@@ -12,10 +12,20 @@
 <body>
     <section class="container">
         <h1 class="cyber">Paramêtros Express</h1>
+        <p>
+            Para o envio de requisições, da para pegar as informações enviadas usando o <strong>params</strong>(q sao os
+            parametros) exemplo:
+            <div class="exemplos">
+                <h4>usando req.params</h4>
+                app.get('/<span class="lembrete">nomeDaRota</span>:',(req, res)=>{ <br>
+                  console.log(req.params);  <br>
+                  res.send('testando arquivo emviado') <br>
+                }) 
+            </div>
+        </p>
 
-       
     </section>
-    
+
 </body>
 
 </html>
