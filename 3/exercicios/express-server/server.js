@@ -16,11 +16,15 @@ app.post('/', (req, res) => {
     res.send('Recebi o formulario');
 });
 
+/**Parametros de URL */
 
+/**Recebendo aos parametros enviados */
+app.get('/testes/:idUsuarios',(req, res)=>{
+    console.log(req.params);
+    res.send('teste');
+})
+//---------------------------------
 app.listen(3000, () => {
     console.log('Acesse o http://localhost:3000');
     console.log('Servidor executando com sucesso...');
 });
-/**Parametros de URL */
-
-/**pegando aos parametros enviados */
