@@ -47,8 +47,10 @@
         <p>Quando se ve ou se passa as informações via URL é chamado de <strong>query String</strong></p>
         <div class="anotacoes">
             <h4>Enviando e pegando query strings</h4>
+            <span style="color: blue;"><strong>Envio</strong></span><br>
             <span class="lembrete">localhost:3000/testes/?nome=maria&sobrenome=jose</span> <br>
-            se caso queira q exiba no seu backend somente uma das informações(coisas especificas), exemplo:
+            se caso queira q exiba no seu backend somente uma das informações(coisas especificas), exemplo: <br>
+            <span style="color: blue;"><strong>Pegando</strong></span><br>
             <div class="exemplos"> 
                 app.get('/testes/:idUsuarios',(req, res)=>{ <br>
                 res.send(<span class="lembrete">req.query.nome</span>); <br>                                
