@@ -51,15 +51,17 @@
             <span class="lembrete">localhost:3000/testes/?nome=maria&sobrenome=jose</span> <br>
             se caso queira q exiba no seu backend somente uma das informações(coisas especificas), exemplo: <br>
             <span style="color: blue;"><strong>Pegando</strong></span><br>
-            <div class="exemplos"> 
+            <div class="exemplos">
                 app.get('/testes/:idUsuarios',(req, res)=>{ <br>
-                res.send(<span class="lembrete">req.query.nome</span>); <br>                                
+                res.send(<span class="lembrete">req.query.nome</span>); <br>
                 }) <br>
                 <span class="lembrete">
                     no exemplo acima sera retornado um json, com o parametro nome
                 </span>
             </div>
         </div>
+        <h2 class="cyber">Como acessar o POST</h2>
+        
     </section>
 
 </body>
