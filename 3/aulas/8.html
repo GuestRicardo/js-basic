@@ -30,11 +30,15 @@
             parametros) exemplo:
             <div class="exemplos">
                 <h4>usando req.params</h4>
-                app.get('/<span class="lembrete">nomeDaRota</span>:<span class="lembrete">aq sera a chave q o params ira
-                    receber</span>',(req, res)=>{ <br>
-                console.log(req.params); <br>
-                res.send('testando arquivo enviado') <br>
-                })
+                este req.params é a parte que vem na rota da URL, por exemplo, /, perfis, numeros etc... <br><br>
+                <div class="anotacoes">
+                    app.get('/<span class="lembrete">nomeDaRota</span>:<span class="lembrete">aq sera a chave q o params
+                        ira
+                        receber</span>',(req, res)=>{ <br>
+                    console.log(req.params); <br>
+                    res.send('testando arquivo enviado') <br>
+                    })
+                </div>
             </div>
         </p>
         <div class="anotacoes">
@@ -44,7 +48,16 @@
             res.send('teste'); <br>
             }) <br>
         </div>
-        <p>Quando se ve ou se passa as informações via URL é chamado de <strong>query String</strong></p>
+        <p>
+            Quando se ve ou se passa as informações via URL é chamado de <strong>query String</strong>
+            <div class="exemplos">
+                req.query <br>
+                exemplo:<br>
+                <span class="lembrete" style="color: black; background-color: azure;">localhost:3000/testes/</span><span
+                    class="lembrete">?nome=maria&sobrenome=jose</span>
+            </div>
+        </p>
+
         <div class="anotacoes">
             <h4>Enviando e pegando query strings</h4>
             <span style="color: blue;"><strong>Envio</strong></span><br>
@@ -79,9 +92,10 @@
                     apos o tratamento, aq retornará o q foi tratado <br>
                     <div class="anotacoes">
                         app.post('/', (req, res)=>{ <br>
-                            res.send(<span class="lembrete">`O que vc me enviou foi:${req.body.nome}`</span>) <br>
+                        res.send(<span class="lembrete">`O que vc me enviou foi:${req.body.nome}`</span>) <br>
                         }) <br>
-                        <span class="lembrete">ira exbir diretamente na pagina o q enviar via o primeiro formulario</span>
+                        <span class="lembrete">ira exbir diretamente na pagina o q enviar via o primeiro
+                            formulario</span>
                     </div>
                 </div>
             </div>
