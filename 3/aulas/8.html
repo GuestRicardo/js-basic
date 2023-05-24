@@ -13,17 +13,17 @@
     <section class="container">
         <h1 class="cyber">Paramêtros Express</h1>
         <div class="anotacoes">
-            <h4>Parametro em uma URL</h4>         
-                caso queira add o parametro... <br>
-                <hr>
-            <span style="color: red;">/:parametro1?/:parametro2:/</span>    
-          
+            <h4>Parametro em uma URL</h4>
+            caso queira add o parametro... <br>
+            <hr>
+            <span style="color: red;">/:parametro1?/:parametro2:/</span>
+
         </div>
         <div class="anotacoes">
             <h4>Acessendo parametros</h4>
             Para acessar os parametros ira usar o <strong>req</strong> <br>
             <hr>
-            <span style="color: red;">req.params</span> 
+            <span style="color: red;">req.params</span>
         </div>
         <p>
             Para o envio de requisições, da para pegar as informações enviadas usando o <strong>params</strong>(q sao os
@@ -40,14 +40,23 @@
         <div class="anotacoes">
             <h4>Para q o parametro seja opcional é so usar o '?' apos a chave q o params vai receber</h4>
             app.get('/testes/:idUsuarios<span style="color: red;">?</span>', (req, res)=>{ <br>
-                console.log(req.params); <br>
-                res.send('teste'); <br>
+            console.log(req.params); <br>
+            res.send('teste'); <br>
             }) <br>
         </div>
         <p>Quando se ve ou se passa as informações via URL é chamado de <strong>query String</strong></p>
         <div class="anotacoes">
             <h4>Enviando query strings</h4>
-            <span class="lembrete">localhost:3000/testes/?nome=maria&sobrenome=jose</span>
+            <span class="lembrete">localhost:3000/testes/?nome=maria&sobrenome=jose</span> <br>
+            se caso queira q exiba no seu backend somente uma das informações(coisas especificas), exemplo:
+            <div class="exemplos"> 
+                app.get('/testes/:idUsuarios',(req, res)=>{ <br>
+                res.send(<span class="lembrete">req.params.nome</span>); <br>                                
+                }) <br>
+                <span class="lembrete">
+                    no exemplo acima sera retornado um json, com o parametro nome
+                </span>
+            </div>
         </div>
     </section>
 
