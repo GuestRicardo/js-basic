@@ -46,12 +46,12 @@
         </div>
         <p>Quando se ve ou se passa as informações via URL é chamado de <strong>query String</strong></p>
         <div class="anotacoes">
-            <h4>Enviando query strings</h4>
+            <h4>Enviando e pegando query strings</h4>
             <span class="lembrete">localhost:3000/testes/?nome=maria&sobrenome=jose</span> <br>
             se caso queira q exiba no seu backend somente uma das informações(coisas especificas), exemplo:
             <div class="exemplos"> 
                 app.get('/testes/:idUsuarios',(req, res)=>{ <br>
-                res.send(<span class="lembrete">req.params.nome</span>); <br>                                
+                res.send(<span class="lembrete">req.query.nome</span>); <br>                                
                 }) <br>
                 <span class="lembrete">
                     no exemplo acima sera retornado um json, com o parametro nome
