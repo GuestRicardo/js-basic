@@ -37,13 +37,17 @@
                 })
             </div>
         </p>
-        <p>Quando se ver as informações via URL é chamado de <strong>query String</strong></p>
         <div class="anotacoes">
             <h4>Para q o parametro seja opcional é so usar o '?' apos a chave q o params vai receber</h4>
             app.get('/testes/:idUsuarios<span style="color: red;">?</span>', (req, res)=>{ <br>
-            console.log(req.params); <br>
-            res.send('teste'); <br>
+                console.log(req.params); <br>
+                res.send('teste'); <br>
             }) <br>
+        </div>
+        <p>Quando se ve ou se passa as informações via URL é chamado de <strong>query String</strong></p>
+        <div class="anotacoes">
+            <h4>Enviando query strings</h4>
+            <span class="lembrete">localhost:3000/testes/?nome=maria&sobrenome=jose</span>
         </div>
     </section>
 
