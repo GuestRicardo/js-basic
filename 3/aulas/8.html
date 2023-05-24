@@ -17,15 +17,20 @@
             parametros) exemplo:
             <div class="exemplos">
                 <h4>usando req.params</h4>
-                app.get('/<span class="lembrete">nomeDaRota</span>:<span class="lembrete">aq sera a chave q o params ira receber</span>',(req, res)=>{ <br>
-                  console.log(req.params);  <br>
-                  res.send('testando arquivo enviado') <br>
-                }) 
+                app.get('/<span class="lembrete">nomeDaRota</span>:<span class="lembrete">aq sera a chave q o params ira
+                    receber</span>',(req, res)=>{ <br>
+                console.log(req.params); <br>
+                res.send('testando arquivo enviado') <br>
+                })
             </div>
         </p>
         <p>Quando se ver as informações via URL é chamado de <strong>query String</strong></p>
         <div class="anotacoes">
             <h4>Para q o parametro seja opcional é so usar o '?' apos a chave q o params vai receber</h4>
+            app.get('/testes/:idUsuarios<span style="color: red;">?</span>', (req, res)=>{ <br>
+            console.log(req.params); <br>
+            res.send('teste'); <br>
+            }) <br>
         </div>
     </section>
 
