@@ -39,15 +39,39 @@
                 Nome do cliente: <input type='text' name='qualquerCoisa'><br>
                 Outro campo qualquer: <input type='text' name='qualqueroutrocampo'><br>
                 <button>Enviar</button> <br>
-            </form> <hr>
-            Agora será preciso exporta-lo para o arquivo <span>routes.js</span>
+            </form>
+            <hr>
+            Agora será preciso exporta-lo para o arquivo <strong>routes.js</strong>
             <div class="anotacoes">
                 const express = require('express'); <br>
                 const route = express.Router(); <br>
                 const homeController = require('./controllers/homeController'); <br>
-                 <br>
-                route.get('/', homeController.paginaInicial);<br>  
+                <br>
+                route.get('/', homeController.paginaInicial);<br>
             </div>
+            <hr>
+            Agora o proximo passo é exportar o <strong>route</strong> para o app.js para que possa exibir, para isso
+            será preciso sobressair o export, q ja foi usado para exportar para o controllerHome.js, exemplo: <br>
+            <div class="anotacoes">
+                const express = require('express'); <br>
+                const route = express.Router(); <br>
+                const homeController = require('./controllers/homeController'); <br>
+                <br>
+                route.get('/', homeController.paginaInicial); <br>
+                <br>
+                module.exports = route;
+            </div>
+            <span class="lembrete">Agora todas as rotas q forem criadas passaram por esse arquivo, e os controllers na
+                pasta de conttrollers</span>
+        </div>
+        Agora no <strong>server.js</strong> terá q importar o route q foi exportado anteriormente <br>
+        exemplo:
+        <div class="exemplos">
+            const express = require('express'); <br>
+            const app = express(); <br>
+            const routes = require('./routes') <br>
+            <br>
+            app.use(routes); <br>
         </div>
     </section>
 
