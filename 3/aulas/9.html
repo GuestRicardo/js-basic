@@ -39,8 +39,15 @@
                 Nome do cliente: <input type='text' name='qualquerCoisa'><br>
                 Outro campo qualquer: <input type='text' name='qualqueroutrocampo'><br>
                 <button>Enviar</button> <br>
-            </form> <br>
-
+            </form> <hr>
+            Agora será preciso exporta-lo para o arquivo <span>routes.js</span>
+            <div class="anotacoes">
+                const express = require('express'); <br>
+                const route = express.Router(); <br>
+                const homeController = require('./controllers/homeController'); <br>
+                 <br>
+                route.get('/', homeController.paginaInicial);<br>  
+            </div>
         </div>
     </section>
 
