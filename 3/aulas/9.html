@@ -23,6 +23,7 @@
         existe uma propriedade do proprio <strong>express</strong> para resulmir as rotas de forma organizada.
         <div class="anotacoes">
             <h3 class="cyber">Routers</h3>
+            Arquivo routes.js <br>
             <span class="lembrete">Primeiro passo é importar o express e o router para o arquivo</span> <br>
             const express = require('express');<span class="lembrete">carrega o express</span> <br>
             const route = express.Router();<span class="lembrete">var para utilizar o router </span> <br>
@@ -32,9 +33,14 @@
         <strong>Controller</strong> para decidir qual viwer ou como modo irá ultilizar
         <div class="exemplos">
             <h3 class="cyber">Controller</h3>
-            route.get('/',()=>{ <br>
-                <br>
-            })<br>
+            Arquivo homeController.js(Estará dendo da pasta controllers) <br>
+            <img class="imgM" src="../assets/img/6.png" alt="">
+            <form action='/' method='POST'> <br>
+                Nome do cliente: <input type='text' name='qualquerCoisa'><br>
+                Outro campo qualquer: <input type='text' name='qualqueroutrocampo'><br>
+                <button>Enviar</button> <br>
+            </form> <br>
+
         </div>
     </section>
 
