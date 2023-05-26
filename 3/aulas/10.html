@@ -13,7 +13,7 @@
     <section class="container">
         <h1 class="cyber">Views</h1>
         <p>
-            Ela serve para renderizar o html na tela usando o express             
+            Ela serve para renderizar o html na tela usando o express
         </p>
         <div class="anotacoes">
             <h2>Arquivo server.js</h2>
@@ -32,6 +32,15 @@
             Agora é preciso instala-la em nosso projeto, so ir no terminal e escrever:
             <div class="exemplos">
                 npm install ejs
+            </div>
+        </div>
+        <div class="anotacoes">
+            <h2>Arquivo homeController.js</h2>
+            <h3>Para renderizar o index.ejs q esta dentro da pasta views, é preciso exportar o index, exemplo:</h3>
+            <div class="exemplos">
+                div.exports.paginaInicial = (req, res)=> { <br>
+                res.render('index') <br>
+                }                
             </div>
         </div>
     </section>
