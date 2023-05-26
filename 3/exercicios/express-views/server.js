@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 const routes = require('./routes')
+const path = require('path')
 
 app.use(routes);
 app.use(express.urlencoded({extended: true}));
-
+app.set('views', path(__dirname, 'src', 'views'));
+app.set('view engine', '',)
 
 app.listen(3000, () => {
     console.log('Acesse o http://localhost:3000');
