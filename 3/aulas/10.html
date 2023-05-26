@@ -16,12 +16,22 @@
             Ela serve para renderizar o html na tela usando o express             
         </p>
         <div class="anotacoes">
+            <h2>Arquivo server.js</h2>
             <h3>Primeiramente é preciso setar o View no server.js para poder usa-lo</h3>
             <div class="exemplos">
                 <span class="lembrete">1 primeiro é preciso add o path</span> <br>
                 const path = require('path'); <br>
                 <span class="lembrete">2 segundo aq estamos definindo o local absoluto onde esta os views</span> <br>
                 app.set('views', patch(__dirname, 'src', 'views')); <br>
+            </div>
+            Agora é preciso definir a <strong>egine</strong> que vai renderizar o html
+            <div class="exemplos">
+                neste caso iremos usar o <strong>ejs</strong>, aq estamos usando ja a egine. <br>
+                app.set('views egine','ejs');
+            </div>
+            Agora é preciso instala-la em nosso projeto, so ir no terminal e escrever:
+            <div class="exemplos">
+                npm install ejs
             </div>
         </div>
     </section>
