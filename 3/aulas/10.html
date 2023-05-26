@@ -22,7 +22,7 @@
                 <span class="lembrete">1 primeiro é preciso add o path</span> <br>
                 const path = require('path'); <br>
                 <span class="lembrete">2 segundo aq estamos definindo o local absoluto onde esta os views</span> <br>
-                app.set('views', patch(__dirname, 'src', 'views')); <br>
+                app.set('views', patch.resolve(__dirname, 'src', 'views')); <br>
             </div>
             Agora é preciso definir a <strong>egine</strong> que vai renderizar o html
             <div class="exemplos">
