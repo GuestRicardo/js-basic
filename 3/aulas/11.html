@@ -16,8 +16,15 @@
             Conteudo estatico são arquivos q serao carregados no front-end, exemplo, um css, uma imagem etc.
         </p>
         <p>
-            Os conteudos estaicos ficam na pasta <strong>public</strong>, que tem como ideia ser adicionado nesta pasta
+            Os conteudos estaicos ficam na pasta <strong>public</strong>, que tem como ideia ser adicionado nesta pasta,
+            e para o sistema possa reconhecelo, sera preciso add no <strong>server.js</strong> tendo a area para
+            conteudos estaticos
         </p>
+        <div class="anotacoes"> 
+            <h2 class="cyber">Exemplo:</h2>
+            app.use(express.static(path.resouve(__dirname,'public')));
+
+        </div>
 
     </section>
 
