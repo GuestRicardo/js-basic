@@ -12,8 +12,43 @@
 <body>
     <section class="container">
         <h1 class="cyber">Middleware</h1>
-
+        <p>
+            O Express é uma estrutura web de roteamento e middlewares que tem uma funcionalidade mínima por si só: Um
+            aplicativo do Express é essencialmente uma série de chamadas de funções de middleware.
+        </p>
+        <p>
+            Funções de Middleware são funções que tem acesso ao objeto de <strong>solicitação (req)</strong>, o
+            <strong>objeto de resposta (res)</strong>,
+            e a próxima função de middleware no ciclo solicitação-resposta do aplicativo. A próxima função middleware é
+            comumente denotada por uma variável chamada <strong>next</strong>.
+        </p>
+        <p>
+            Funções de middleware podem executar as seguintes tarefas:
+        </p>
+        <li>Executar qualquer código.</li>
+        <li>Fazer mudanças nos objetos de solicitação e resposta.</li>
+        <li>Encerrar o ciclo de solicitação-resposta.</li>
+        <li>Chamar a próxima função de middleware na pilha.</li>
+        <p>
+            Se a atual função de middleware não terminar o ciclo de solicitação-resposta, ela precisa chamar
+            <strong>next()</strong> para
+            passar o controle para a próxima função de middleware. Caso contrário, a solicitação ficará suspensa.
+            Um aplicativo Express pode usar os seguintes tipos de middleware:
+        </p>
+        <p class="cyber">
+            Middleware de nível do aplicativo <br>
+            Middleware de nível de roteador <br>
+            Middleware de manipulação de erros <br>
+            Middleware integrado <br>
+            Middleware de Terceiros <br>
+        </p>
+        <p>
+            É possível carregar middlewares de nível de roteador e de nível do aplicativo com um caminho de montagem
+            opcional. É possível também carregar uma série de funções de middleware juntas, o que cria uma sub-pilha do
+            sistema de middleware em um ponto de montagem.
+        </p>
 
     </section>
 </body>
+
 </html>
