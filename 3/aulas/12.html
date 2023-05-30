@@ -51,6 +51,8 @@
             <a href="https://expressjs.com/pt-br/guide/using-middleware.html" style="text-decoration: none;">segui todo
                 resto do artigo explicando como cada um dos middlewares funcionam.</a>
         </p>
+        <hr>
+        <h3 class="cyber">No arquivo routes.js</h3>
         <div class="anotacoes">
             route.<span class="lembrete"> get('/', homeController.paginaInicial);</span><br>
             <hr>
@@ -59,8 +61,25 @@
         </div>
         <div class="exemplos">
             <h2>Criando Middleware</h2>
+            function meuMiddleware(req, res, next){ <br>
+            console.log('Passei no seu middleware')<br>
+            <strong>next()</strong><br>
+            } <br>
+            <div class="anotacoes">
+                <h2>colocando ele na Rota</h2>
+                route.get('/', meuMiddleware, homeController.paginaInicial); <br>
+            </div>
+            <div class="exemplos">
+                <h3>Add function dentro da rota</h3>
+                route.get('/', meuMiddleware, homeController.paginaInicial, function(req, res, next){ <br>
+                console.log(ainda estou aq); <br>
+                }); <br>
+                <span class="lembrete">lembrando q dentro do <strong>middleware</strong> dapaginaInical sera preciso
+                    chamar o next(), pois ele é o penutimo na fila, sempre o middleware da esquerda sera encarregado de
+                    chamar o next</span>
+            </div>
         </div>
-        
+
     </section>
 </body>
 
