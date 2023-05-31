@@ -11,7 +11,7 @@ mongoose.connect(connectString /*,{ useNewUrlParse: true, useUnifiedTopology: tr
     .then(() => {
         console.log('conectei a base de dados');
         app.emit('pronto');
-    });
+    }).catch(erro=> console.log('ERRO na conexao', erro));
 
 const routes = require('./routes');
 const path = require('path');

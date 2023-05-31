@@ -65,7 +65,7 @@
                     .then(() => {<br>
                         console.log('conectei a base de dados') <br>
                         app.emit('PRONTO!') <br>
-                    }) <br>
+                    }).catch(erro=> console.log('ERRO na conexao', erro)); <br>
                 </div>
                 <strong>Quando tudo estiver ok, será feito a conexão(aq estará escutando)</strong>
                 <div class="anotacoes">
