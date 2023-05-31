@@ -12,7 +12,8 @@
 <body>
     <section class="container">
         <h1 class="cyber">Conectando ao Model</h1>
-        <span class="lembrete">Todas essas dependencias instaladas posteriormente seram dependencias do projeto, e nao dev...</span>
+        <span class="lembrete">Todas essas dependencias instaladas posteriormente seram dependencias do projeto, e nao
+            dev...</span>
         <p>
             1- Primeiro passo, para nao aparecer a senha do db no arquivo será preciso usar um arquivo pessoal que nao
             ira para o servidor online.(Esta é a melhor pratica de programação).
@@ -29,9 +30,21 @@
             <div class="anotacoes">
                 npm install mongoose
             </div>
-        </p> <hr>
+        </p>
+        <hr>
         <p>
-            3- terceiro passo, 
+            3- terceiro passo, será conectar no db no arquivo <strong>server.js</strong>
+            <div class="anotacoes">
+                <strong>add o mongoose</strong><br>
+                const mongoose = require('mongoose');<br>
+                <div class="lembrete">
+                    <strong>chave de conexão</strong><br>
+                    const connectString = 'mongodb+srv://gestricardo:<span
+                        style="background-color: red; color: black;">senha</span>@cluster0.dsh0hpx.<br>mongodb.net/teste?retryWrites=true&w=majority'
+                </div>
+                <strong>conectando ao BASE DE DADOS</strong> <br>
+                mongoose.connect(connectString);
+            </div>
         </p>
     </section>
 </body>
