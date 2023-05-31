@@ -9,7 +9,8 @@ const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mong
 mongoose.connect(connectString /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
     //para saber q o sinal seja emitido apos a conexao do db
     .then(() => {
-        app.emit('conectado com DB com sucesso')
+        console.log('conectei a base de dados')
+        app.emit('PRONTO!')
     })
 
 const routes = require('./routes');

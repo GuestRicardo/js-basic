@@ -63,7 +63,8 @@
                 <strong>nesta linha esta sendo verificado se o sinal esta sendo eviado e recebido</strong> 
                 <div class="anotacoes">
                     .then(() => {<br>
-                    app.emit('conectado com DB com sucesso') <br>
+                        console.log('conectei a base de dados') <br>
+                        app.emit('PRONTO!') <br>
                     }) <br>
                 </div>
                 <strong>Quando tudo estiver ok, será feito a conexão</strong>
