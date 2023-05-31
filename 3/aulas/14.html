@@ -47,7 +47,8 @@
             </div>
             <div class="exemplos">
                 <h3 class="cyber">PARA EVITAR POSSIVEIS ERROS</h3>
-                mongoose.connect(connectString, <span class="lembrete"></span>);
+                mongoose.connect(connectString, <span class="lembrete">{ useNewUrlParse: true <br>
+                useUnifiedTopology: true }</span>);
             </div>            
         </p>
     </section>
