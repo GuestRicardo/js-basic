@@ -9,9 +9,9 @@ const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mong
 mongoose.connect(connectString /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
     //para saber q o sinal seja emitido apos a conexao do db
     .then(() => {
-        console.log('conectei a base de dados')
-        app.emit('PRONTO!')
-    })
+        console.log('conectei a base de dados');
+        app.emit('pronto');
+    });
 
 const routes = require('./routes');
 const path = require('path');
@@ -27,8 +27,8 @@ app.set('view engine', 'ejs');
 app.use(routes);
 
 
-//Quando a conexao estiver pronta será conectado
-app.on(() => {
+//Quando a conexao estiver pronta será conectado(esta escutando)
+app.on('pronto',() => {
     app.listen(3000, () => {
         console.log('Acesse o http://localhost:3000');
         console.log('Servidor executando com sucesso...');

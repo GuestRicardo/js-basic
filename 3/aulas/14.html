@@ -67,15 +67,15 @@
                         app.emit('PRONTO!') <br>
                     }) <br>
                 </div>
-                <strong>Quando tudo estiver ok, será feito a conexão</strong>
+                <strong>Quando tudo estiver ok, será feito a conexão(aq estará escutando)</strong>
                 <div class="anotacoes">
-                    app.on(() => { <br>
+                    app.on('pronto',() => { <br>
                         app.listen(3000, () => { <br>
                             console.log('Acesse o http://localhost:3000'); <br>
                             console.log('Servidor executando com sucesso...'); <br>
                         });<br>
                     });<br>
-                    <span class="lembrete">so ira chegar aq, quando o <strong>.then</strong> estiver tudo certo</span>
+                    <span class="lembrete">so ira chegar aq, quando o <strong>.then</strong> estiver tudo certo, será enviado o <strong>pronto</strong> para começar a ouvir</span>
                 </div>
             </div>
         </p>
