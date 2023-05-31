@@ -46,11 +46,37 @@
                 mongoose.connect(connectString);
             </div>
             <div class="exemplos">
-                <span class="lembrete">Rode primeiro o <strong>node server.js</strong> para testar, mais se caso der erro</span>
+                <span class="lembrete">Rode primeiro o <strong>node server.js</strong> para testar, mais se caso der
+                    erro</span>
                 <h3 class="cyber">PARA EVITAR POSSIVEIS ERROS</h3>
                 mongoose.connect(connectString, <span class="lembrete">{ useNewUrlParse: true <br>
-                useUnifiedTopology: true }</span>);
-            </div>            
+                    useUnifiedTopology: true }</span>);
+            </div>
+        </p>
+        <p>
+            4- quarto passo, agora teremos q saber se a aplicação esta escutando e enviando o sinal para conectar ao db.
+            <div class="exemplos">
+                <strong>esta linha esta conectando</strong>
+                <div class="anotacoes">
+                    mongoose.connect(connectString); 
+                </div>
+                <strong>nesta linha esta sendo verificado se o sinal esta sendo eviado e recebido</strong> 
+                <div class="anotacoes">
+                    .then(() => {<br>
+                    app.emit('conectado com DB com sucesso') <br>
+                    }) <br>
+                </div>
+                <strong>Quando tudo estiver ok, será feito a conexão</strong>
+                <div class="anotacoes">
+                    app.on(() => { <br>
+                        app.listen(3000, () => { <br>
+                            console.log('Acesse o http://localhost:3000'); <br>
+                            console.log('Servidor executando com sucesso...'); <br>
+                        });<br>
+                    });<br>
+                    <span class="lembrete">so ira chegar aq, quando o <strong>.then</strong> estiver tudo certo</span>
+                </div>
+            </div>
         </p>
     </section>
 </body>

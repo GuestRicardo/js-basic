@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 
 //chave de conxao
 const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mongodb.net/?retryWrites=true&w=majority'
-//sinal emitido para poder escutar o db
+//
 //conectando o db
-mongoose.connect(connectString/*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
-//para saber quando a conexao com o db vai ocorrer
-.then(() => {
-    console.log('Agora a conexão Ocorreu com SUCESSO!');
-})
+mongoose.connect(connectString /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
+    //para saber q o sinal seja emitido apos a conexao do db
+    .then(() => {
+        app.emit('conectado com DB com sucesso')
+    })
 
 const routes = require('./routes');
 const path = require('path');
@@ -25,7 +25,11 @@ app.set('view engine', 'ejs');
 
 app.use(routes);
 
-app.listen(3000, () => {
-    console.log('Acesse o http://localhost:3000');
-    console.log('Servidor executando com sucesso...');
+
+//Quando a conexao estiver pronta será conectado
+app.on(() => {
+    app.listen(3000, () => {
+        console.log('Acesse o http://localhost:3000');
+        console.log('Servidor executando com sucesso...');
+    });
 });
