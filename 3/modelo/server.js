@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mongodb.net/teste?retryWrites=true&w=majority'
 //sinal emitido para poder escutar o db
 //conectando o db
-mongoose.connect(connectString);
+mongoose.connect(connectString, { useNewUrlParse: true, useUnifiedTopology: true });
 
 const routes = require('./routes');
 const path = require('path');
