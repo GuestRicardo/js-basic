@@ -3,10 +3,14 @@ const app = express();
 const mongoose = require('mongoose');
 
 //chave de conxao
-const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mongodb.net/teste?retryWrites=true&w=majority'
+const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mongodb.net/?retryWrites=true&w=majority'
 //sinal emitido para poder escutar o db
 //conectando o db
-mongoose.connect(connectString, { useNewUrlParse: true, useUnifiedTopology: true });
+mongoose.connect(connectString/*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
+//para saber quando a conexao com o db vai ocorrer
+.then(() => {
+    console.log('Agora a conexão Ocorreu com SUCESSO!');
+})
 
 const routes = require('./routes');
 const path = require('path');
