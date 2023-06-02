@@ -23,6 +23,14 @@
                 <strong>Na raiz do projeto foi criado um arquivo</strong> <br>
                 .env
             </div>
+            <div class="anotacoes">
+                <strong>No aqruivo .env, será onde ficara a variavel com a chave</strong> <br>
+                CONNECTIONSTRING=mongodb+srv://gestrica...
+            </div>
+            <div class="anotacoes">
+                <strong>E onde vai ficar sera conectado ao db, via variavel da chave</strong> <br>
+               <span class="lembrete">mongoose.connect(process.env.CONNECTIONSTRING);</span> 
+            </div>
         </p>
         <p>
             O DotEnv é um pacote leve do npm que carrega automaticamente as variáveis de ambiente de um arquivo

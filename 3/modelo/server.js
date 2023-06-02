@@ -4,11 +4,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-//chave de conxao
-const connectString = 'mongodb+srv://gestricardo:ricardo22@cluster0.dsh0hpx.mongodb.net/?retryWrites=true&w=majority'
+
 //
 //conectando o db
-mongoose.connect(connectString /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
+mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
     //para saber q o sinal seja emitido apos a conexao do db
     .then(() => {
         console.log('conectei a base de dados');
