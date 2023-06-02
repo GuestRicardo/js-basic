@@ -68,8 +68,21 @@
             assim:<strong> PORT=3000</strong>.
         </p>
         <p>
-            Você pode declarar diversas variáveis no arquivo <strong>.env</strong>. É possível definir variáveis de ambiente relativas ao
-            banco de dados da seguinte forma:
+            Você pode declarar diversas variáveis no arquivo <strong>.env</strong>. É possível definir variáveis de
+            ambiente relativas ao
+            banco de dados da seguinte forma: <br>
+            <div class="exemplos">
+                DB_HOST=localhost <br>
+                DB_USER=admin <br>
+                DB_PASSWORD=password <br>
+            </div>
+            Não é preciso envolver as strings em aspas.<br>
+            O DotEnv já faz isso automaticamente para você.
+        </p>
+        <p>
+            Depois de criar esse arquivo, <strong>lembre-se de não enviá-lo para o GitHub,</strong> já que ele pode conter dados
+            confidenciais, como chaves de autenticação e senhas. Adicione o arquivo ao .gitignore para evitar de
+            enviá-lo a um repositório público por acidente.
         </p>
     </section>
 </body>
