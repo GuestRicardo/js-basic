@@ -80,9 +80,29 @@
             O DotEnv já faz isso automaticamente para você.
         </p>
         <p>
-            Depois de criar esse arquivo, <strong>lembre-se de não enviá-lo para o GitHub,</strong> já que ele pode conter dados
+            Depois de criar esse arquivo, <strong>lembre-se de não enviá-lo para o GitHub,</strong> já que ele pode
+            conter dados
             confidenciais, como chaves de autenticação e senhas. Adicione o arquivo ao .gitignore para evitar de
             enviá-lo a um repositório público por acidente.
+        </p>
+        <h2>Como acessar as variáveis de ambiente</h2>
+        <p>
+            Acessar suas variáveis é muito fácil! Elas estão associadas ao objeto <strong>process.env</strong>, de modo
+            que você pode
+            acessá-las usando o padrão <strong>process.env.CHAVE.</strong>
+        </p>
+        <p>
+            Se precisar em algum momento mudar o valor de qualquer uma de suas variáveis de ambiente, basta alterar os
+            valores no arquivo <strong>.env.</strong>
+        </p>
+        <h2>Conclusão</h2>
+        <p>
+            Variáveis de ambiente facilitarão a manutenção de seu código e o tornarão mais seguro. Elas são fáceis de
+            configurar com o DotEnv e podem ser usadas diretamente no Node.
+        </p>
+        <p>
+            Agora que você sabe o que precisa fazer, pode criar suas próprias variáveis de ambiente para sua aplicação
+            do Node. Aproveite!
         </p>
     </section>
 </body>
