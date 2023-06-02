@@ -46,7 +46,18 @@
         </p>
         <h2>Como usar o DotEnv</h2>
         <p>
-            
+            O DotEnv é um pacote leve do npm que carrega automaticamente as variáveis de ambiente de um arquivo .env no
+            objeto process.env.
+        </p>
+        <p>
+            Para usar o DotEnv, primeiro instale-o usando o comando: <span class="anotacoes">npm i dotenv</span> .
+            Depois, na sua aplicação, solicite e
+            configure o pacote da seguinte maneira: <span class="anotacoes">require('dotenv').config()</span> .
+        </p>
+        <p>
+            Observe que alguns pacotes, como o Create React App, já incluem o DotEnv. Alguns provedores da nuvem podem
+            ter meios completamente diferentes de definir variáveis de ambiente. Certifique-se, então, de verificar a
+            documentação dos pacotes e dos provedores antes de seguir as orientações deste artigo.
         </p>
     </section>
 </body>
