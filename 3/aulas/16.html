@@ -107,7 +107,14 @@
                     const HomeModel = mongoose.model('Home', HomeSchema); <br>
                     module.exports = HomeModel;<br>
                 </div>
+                Mais se caso queira <strong>Filtrar</strong> os dados, buscar algo ou exibir tudo q tem no db
+                <div class="exemplos">
+                    HomeModel.find() <br>
+                    .then(dados => console.log(dados)) <br>
+                    .catch(erro => console.log(erro));
+                </div>
             </div>
+
         </p>
     </section>
 </body>
