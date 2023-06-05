@@ -10,7 +10,6 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
     //para saber q o sinal seja emitido apos a conexao do db
     .then(() => {
-        console.log('conectei a base de dados');
         app.emit('pronto');
     }).catch(erro=> console.log('ERRO na conexao', erro));
 
