@@ -52,13 +52,30 @@
         <p>
             Neste arquivo esta sendo armazenado as chaves de segurança para conexao no DB
             <div class="exemplos">
-    
+
                 CONNECTIONSTRING= <br>
                 mongodb+srv://gestricardo:ricardo22@cl...
             </div>
             E o ele foi importado no <strong>server.js</strong>
             <div class="exemplos">
                 require('dotenv').config();
+            </div>
+        </p>
+        <strong>No arquivo <span class="cyber">homeController.js</span></strong>
+        <p>
+            <div class="anotacoes">
+                Agora no controlador, será preciso importar o homeModel
+                <div class="exemplos">
+                    const HomeModel = require('../models/homeModel');
+                </div>
+                Agora será criando elemento q sera add no DB, ele retornará uma promise, e retornará com elemento
+                completo, com ids e tudo
+                <div class="exemplos">
+                    HomeModel.create({ <br>
+                    titulo: 'Titulo para o primeiro teste', <br>
+                    descricao: 'Descrição para o primeiro teste' <br>
+                    }) <br>
+                </div>
             </div>
         </p>
     </section>
