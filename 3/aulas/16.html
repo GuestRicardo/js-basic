@@ -76,11 +76,28 @@
                     descricao: 'Descrição para o primeiro teste' <br>
                     }) <br>
                 </div>
-            Agora será capturado os elemnetos criados acima 
-            <div class="exemplos">
-                .then(dados => console.log(dados)) <br>
-                .catch(erro => console.log(erro));
-            </div>    
+                Agora será capturado os elemnetos criados acima
+                <div class="exemplos">
+                    .then(dados => console.log(dados)) <br>
+                    .catch(erro => console.log(erro));
+                </div>
+            </div>
+        </p>
+        <strong>No arquivo <span class="cyber">homeModel.js</span></strong>
+        <p>
+            Agora será ciado o <strong>Model</strong>, sendo q neste processo este seria o <strong>segundo</strong> a
+            ser criado, para q hovesse as importações
+            <div class="anotacoes">
+                Primeiramente precisaremos do esquema
+                <div class="exemplos">
+                    const HomeSchema = new mongoose.Schema({ <br>
+                        titulo: { <br>
+                            type: String, <br>
+                            require: true <br>
+                        }, <br>
+                        descricao: String <br>
+                    }); <br>
+                </div>
             </div>
         </p>
     </section>
