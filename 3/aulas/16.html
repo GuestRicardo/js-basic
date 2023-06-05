@@ -47,11 +47,19 @@
                 <strong>.env</strong>, q esta sendo uma forma de resguardar os dados q estao sendo enviado para o git e
                 as informações de chaves
             </div>
-            <strong>No arquivo <span class="cyber">.env</span></strong>
         </p>
-
+        <strong>No arquivo <span class="cyber">.env</span></strong>
         <p>
-
+            Neste arquivo esta sendo armazenado as chaves de segurança para conexao no DB
+            <div class="exemplos">
+    
+                CONNECTIONSTRING= <br>
+                mongodb+srv://gestricardo:ricardo22@cl...
+            </div>
+            E o ele foi importado no <strong>server.js</strong>
+            <div class="exemplos">
+                require('dotenv').config();
+            </div>
         </p>
     </section>
 </body>
