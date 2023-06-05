@@ -25,10 +25,33 @@
             e regras de negócios estabelecidas
             Ele é o detentor dos dados que recebe as informações do Controller, válida se ela está correta ou não e
             envia a resposta mais adequada. 
-        </p>        
+        </p>
         <h3 class="cyber">Exemplo de model</h3>
         <p>
-            
+            <strong>No arquivo <span class="cyber">server.js</span></strong>
+            <div class="anotacoes">
+                Apos a adição do <strong>dotenv</strong> será preciso importar o <strong>mongoose</strong>,
+                <div class="exemplos">
+                    const require('mongoose')
+                </div>
+                <strong>Agora será preciso conectar ao db</strong>
+                <div class="exemplos">
+                    mongoose.connect(<span class="lembrete">process.env.<span
+                            style="color: black;">CONNECTIONSTRING</span></span>) <br><br>
+                    <span class="lembrete"> //para saber q o sinal seja emitido apos a conexao do db</span>
+                    .then(() => { <br>
+                    app.emit('pronto'); <br>
+                    }).catch(erro=> console.log('ERRO na conexao', erro)); <br>
+                </div>
+                A variavel <span class="lembrete">CONNECTIONSTRING</span> foi criada em um arquivo separado, o
+                <strong>.env</strong>, q esta sendo uma forma de resguardar os dados q estao sendo enviado para o git e
+                as informações de chaves
+            </div>
+            <strong>No arquivo <span class="cyber">.env</span></strong>
+        </p>
+
+        <p>
+
         </p>
     </section>
 </body>
