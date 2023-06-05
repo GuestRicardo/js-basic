@@ -1,5 +1,6 @@
 const HomeModel = require('../models/homeModel');
 
+//criando elemento q sera add no DB
 HomeModel.create();
 
 exports.paginaInicial = (req, res) => {
