@@ -91,12 +91,21 @@
                 Primeiramente precisaremos do esquema
                 <div class="exemplos">
                     const HomeSchema = new mongoose.Schema({ <br>
-                        titulo: { <br>
-                            type: String, <br>
-                            require: true <br>
-                        }, <br>
-                        descricao: String <br>
+                    titulo: { <br>
+                    type: String, <br>
+                    require: true <br>
+                    }, <br>
+                    descricao: String <br>
                     }); <br>
+                </div>
+                Mais antes de tudo para q funcione será preciso a importação do <strong>Mongoose</strong>
+                <div class="exemplos">
+                    const mongoose = require('mongoose');
+                </div>
+                Agora sim o <strong>Model</strong>
+                <div class="exemplos">
+                    const HomeModel = mongoose.model('Home', HomeSchema); <br>
+                    module.exports = HomeModel;<br>
                 </div>
             </div>
         </p>
