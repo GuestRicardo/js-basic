@@ -49,8 +49,16 @@
             <span class="lembrete">salvando</span> <br>
             store:; new MongoStore({<br>
               <span class="lembrete" style="background-color: yellowgreen;">mongooseConnection: mongoose.connection</span><br>
-              <span class="lembrete" style="background-color: yellowgreen;">//Este é o cliente q irá salvar</span>
-            })<br>
+              <span class="lembrete" style="background-color: yellowgreen;">//Este é o cliente q irá salvar</span> <br>
+              })<br>
+            <span class="lembrete">Recomendações</span> <br>
+              resave: false; <br>
+              saveUnitialized: false, <br>
+              <span class="lembrete">tempo q a session vai durar(os cookies)</span> <br>
+              cookie:{ <br>
+                maxAge: 1000*60*60*24*7, <br>
+                httpOnly: true; <br>
+              } <br>
         }) <br>
       </div>
     </section>

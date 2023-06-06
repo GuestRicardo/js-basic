@@ -32,11 +32,21 @@ const sessionOptions = session({
     secret: 'qualquer coisa q vc quiser', //a mensagem ou conteudo q deseje q sehja salvo
     store: new MongoStore({
         mongooseConnection: mongoose.connection
-    }), //aq é onde sera salvo(e o q esta entre colchetes é o cliente q fará o serviço de salvar )
+    }), //aq é onde sera salvo(e o q esta noobjeto é o cliente q fará o serviço de salvar )
+    //recomendações
     resave: false,
     saveUninitialized: false,
-
+    //fim das recomendações
+    //tempo q a session vai durar(cõokie)
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7,
+        httpOnly: true
+    }
 });
+
+//agora é preciso q o app use a session
+app.use(sessionOptions);
+app.use(flash);
 //---------------------------------------------------------------------------------
 
 //------------------------Views--------------------------------
