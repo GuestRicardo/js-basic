@@ -1,11 +1,11 @@
 require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const session= require('express-session');
 
 //------------------Session-----------------------------------
-const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 //---------------------------------------------------------
 
@@ -19,9 +19,9 @@ mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnif
 
 const routes = require('./routes');
 const path = require('path');
-const {
-    middlewareGlobal
-} = require('./src/middlewares/middleware');
+// const {
+//     middlewareGlobal
+// } = require('./src/middlewares/middleware');
 
 app.use(express.urlencoded({
     extended: true
@@ -30,9 +30,7 @@ app.use(express.urlencoded({
 //-----------------------configurando session----------------------------------
 const sessionOptions = session({
     secret: 'qualquer coisa q vc quiser', //a mensagem ou conteudo q deseje q sehja salvo
-    store: new MongoStore({
-        mongooseConnection: mongoose.connection
-    }), //aq é onde sera salvo(e o q esta noobjeto é o cliente q fará o serviço de salvar )
+    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),//aq é onde sera salvo(e o q esta noobjeto é o cliente q fará o serviço de salvar )
     //recomendações
     resave: false,
     saveUninitialized: false,

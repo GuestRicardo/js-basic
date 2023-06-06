@@ -35,7 +35,7 @@
             </div>
             Para salvar as sessionsm na memoria
             <div class="exemplos">
-                const MongoStore = require('connect-mongo')(session);
+                const MongoStore = require('connect-mongo');
             </div>
             Mensagem
             <div class="exemplos">
@@ -47,8 +47,8 @@
         const sessions = session({ <br>
             secret:'conteudo da mensagema ser salvo' <br>
             <span class="lembrete">salvando</span> <br>
-            store:; new MongoStore({<br>
-              <span class="lembrete" style="background-color: yellowgreen;">mongooseConnection: mongoose.connection</span><br>
+            store: MongoStore.create({<br>
+              <span class="lembrete" style="background-color: yellowgreen;">store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),</span><br>
               <span class="lembrete" style="background-color: yellowgreen;">//Este é o cliente q irá salvar</span> <br>
               })<br>
             <span class="lembrete">Recomendações</span> <br>
