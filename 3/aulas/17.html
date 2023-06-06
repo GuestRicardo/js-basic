@@ -27,6 +27,20 @@
             npm install express-session connect-mongo connect-flash
         </div>
         No arquivo <strong>server.js</strong>
+        <div class="anotacoes">
+            Adicionando session no projeto 
+            <div class="exemplos">
+                const session = require('express-session');
+            </div>
+            Para salvar as sessions
+            <div class="exemplos">
+                const MongoStore = require('connect-mongo')(session);
+            </div>
+            Mensagem
+            <div class="exemplos">
+                const flash = require('connect-flash');
+            </div>
+        </div>
     </section>
 </body>
 
