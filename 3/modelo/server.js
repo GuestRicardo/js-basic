@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
+const flash = require('connect-flash');
 
 //
 //conectando o db
