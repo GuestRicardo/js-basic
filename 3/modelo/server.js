@@ -28,7 +28,7 @@ app.use(express.urlencoded({
 //-----------------------configurando session----------------------------------
     const sessionOptions = session({
         secret: 'qualquer coisa q vc quiser',//a mensagem ou conteudo q deseje q sehja salvo
-        strore: new MongoStore({ mongooseConection: mongoose.connection })//aq é onde sera salvo
+        store: new MongoStore({ mongooseConnection: mongoose.connection })//aq é onde sera salvo
     }) 
 //---------------------------------------------------------------------------------
 
