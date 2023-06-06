@@ -15,21 +15,28 @@ mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnif
     //para saber q o sinal seja emitido apos a conexao do db
     .then(() => {
         app.emit('pronto');
-    }).catch(erro=> console.log('ERRO na conexao', erro));
+    }).catch(erro => console.log('ERRO na conexao', erro));
 
 const routes = require('./routes');
 const path = require('path');
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const {
+    middlewareGlobal
+} = require('./src/middlewares/middleware');
 
 app.use(express.urlencoded({
     extended: true
 }));
 
 //-----------------------configurando session----------------------------------
-    const sessionOptions = session({
-        secret: 'qualquer coisa q vc quiser',//a mensagem ou conteudo q deseje q sehja salvo
-        store: new MongoStore({ mongooseConnection: mongoose.connection })//aq é onde sera salvo
-    }) 
+const sessionOptions = session({
+    secret: 'qualquer coisa q vc quiser', //a mensagem ou conteudo q deseje q sehja salvo
+    store: new MongoStore({
+        mongooseConnection: mongoose.connection
+    }), //aq é onde sera salvo(e o q esta entre colchetes é o cliente q fará o serviço de salvar )
+    resave: false,
+    saveUninitialized: false,
+
+});
 //---------------------------------------------------------------------------------
 
 //------------------------Views--------------------------------
@@ -41,7 +48,7 @@ app.use(routes);
 
 
 //Quando a conexao estiver pronta será conectado(esta escutando)
-app.on('pronto',() => {
+app.on('pronto', () => {
     app.listen(3000, () => {
         console.log('Acesse o http://localhost:3000');
         console.log('Servidor executando com sucesso...');

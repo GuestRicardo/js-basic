@@ -44,12 +44,14 @@
         </div>
         <h1 class="cyber">Configurando</h1>
       <div class="anotacoes">
-        const sessions = session({
+        const sessions = session({ <br>
             secret:'conteudo da mensagema ser salvo' <br>
-            store:; new MongoStore({
-                mongooseConnection: mongoose.connection
-            })
-        })
+            <span class="lembrete">salvando</span> <br>
+            store:; new MongoStore({<br>
+              <span class="lembrete" style="background-color: yellowgreen;">mongooseConnection: mongoose.connection</span><br>
+              <span class="lembrete" style="background-color: yellowgreen;">//Este é o cliente q irá salvar</span>
+            })<br>
+        }) <br>
       </div>
     </section>
 </body>
