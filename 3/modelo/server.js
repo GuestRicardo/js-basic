@@ -21,6 +21,7 @@ const helmet = require('helmet');
 const csrf = require('csurf');
 
 app.use(helmet());
+
 // const {
 //     middlewareGlobal
 // } = require('./src/middlewares/middleware');
@@ -54,6 +55,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 //-------------------------------------------------------------
+app.use(csrf());
 app.use(routes);
 
 

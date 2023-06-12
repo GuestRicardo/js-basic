@@ -56,10 +56,15 @@
         <div class="exemplos">
           const csrf = require('csurf');
         </div>
+        <strong>Usando o CSRF</strong>
+        <div class="exemplos">
+          app.use(csrf());
+        </div>
       </div>
       <p>
         E no caso do <strong>CSRF</strong> ele é a parate mais aprofundada na segurança, ele trabalharaá com
         <strong>tokens</strong>, sendo q em cada pagina sera preciso adicionar uma o token.
+        E para isso sera preciso de 2 <strong>Midleware</strong> para que seja feito a checagem nas paginas
       </p>
     </p>
   </section>
