@@ -9,6 +9,6 @@ exports.outroMidlleware = (req, res, next)=>{
 
 exports.checkCSRFerror=(erro, req, res, next)=>{
     if(erro && 'EBADCSRFTOKEN' === erro.code){
-        return res.semd('BAD CSRF') 
+        return res.render('404');
     }
 }
