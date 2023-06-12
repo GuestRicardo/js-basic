@@ -8,8 +8,6 @@ const session= require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 //---------------------------------------------------------
-
-//
 //conectando o db
 mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
     //para saber q o sinal seja emitido apos a conexao do db
@@ -19,6 +17,9 @@ mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnif
 
 const routes = require('./routes');
 const path = require('path');
+const helmet = require('helmet');
+
+app.use(helmet());
 // const {
 //     middlewareGlobal
 // } = require('./src/middlewares/middleware');
