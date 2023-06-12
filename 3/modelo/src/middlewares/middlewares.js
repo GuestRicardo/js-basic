@@ -3,7 +3,7 @@ exports.middlewareGlobal = (req, res, next) => {
     next();
 };
 
-exports.outroMidlleware = (req, res, next)=>{
+exports.outroMiddleware = (req, res, next)=>{
     next();
 };
 

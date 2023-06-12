@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const session= require('express-session');
+const { middlewareGlobal, checkCSRFerror } = require('./src/middlewares/middlewares');
 
 //------------------Session-----------------------------------
 const MongoStore = require('connect-mongo');
@@ -56,6 +57,10 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 //-------------------------------------------------------------
 app.use(csrf());
+
+//nossos middlewares
+app.use(middlewareGlobal);
+app.use(checkCSRFerror);
 app.use(routes);
 
 
