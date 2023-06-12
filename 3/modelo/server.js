@@ -2,72 +2,52 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const session= require('express-session');
-const { middlewareGlobal, checkCSRFerror } = require('./src/middlewares/middlewares');
-
-//------------------Session-----------------------------------
+mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    app.emit('pronto');
+  })
+  .catch(e => console.log(e));
+const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
-//---------------------------------------------------------
-//conectando o db
-mongoose.connect(process.env.CONNECTIONSTRING /*,{ useNewUrlParse: true, useUnifiedTopology: true }*/ )
-    //para saber q o sinal seja emitido apos a conexao do db
-    .then(() => {
-        app.emit('pronto');
-    }).catch(erro => console.log('ERRO na conexao', erro));
-
 const routes = require('./routes');
 const path = require('path');
 const helmet = require('helmet');
 const csrf = require('csurf');
+const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
 app.use(helmet());
 
-// const {
-//     middlewareGlobal
-// } = require('./src/middlewares/middleware');
-
-app.use(express.urlencoded({
-    extended: true
-}));
-
-//-----------------------configurando session----------------------------------
-const sessionOptions = session({
-    secret: 'qualquer coisa q vc quiser', //a mensagem ou conteudo q deseje q sehja salvo
-    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),//aq é onde sera salvo(e o q esta noobjeto é o cliente q fará o serviço de salvar )
-    //recomendações
-    resave: false,
-    saveUninitialized: false,
-    //fim das recomendações
-    //tempo q a session vai durar(cõokie)
-    cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7,
-        httpOnly: true
-    }
-});
-
-//agora é preciso q o app use a session
-app.use(sessionOptions);
-app.use(flash);
-//---------------------------------------------------------------------------------
-
-//------------------------Views--------------------------------
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
+
+const sessionOptions = session({
+  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
+  store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7,
+    httpOnly: true
+  }
+});
+app.use(sessionOptions);
+app.use(flash());
+
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
-//-------------------------------------------------------------
-app.use(csrf());
 
-//nossos middlewares
+app.use(csrf());
+// Nossos próprios middlewares
 app.use(middlewareGlobal);
-app.use(checkCSRFerror);
+app.use(checkCsrfError);
+app.use(csrfMiddleware);
 app.use(routes);
 
-
-//Quando a conexao estiver pronta será conectado(esta escutando)
 app.on('pronto', () => {
-    app.listen(3000, () => {
-        console.log('Acesse o http://localhost:3000');
-        console.log('Servidor executando com sucesso...');
-    });
+  app.listen(3000, () => {
+    console.log('Acessar http://localhost:3000');
+    console.log('Servidor executando na porta 3000');
+  });
 });
