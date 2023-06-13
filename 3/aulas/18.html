@@ -67,6 +67,17 @@
         E para isso sera preciso de 2 <strong>Midleware</strong> para que seja feito a checagem nas páginas, e ele
         bloqueará tais ataques futuros
       </p>
+      <div class="anotacoes">
+        <strong>No arquivo middlewares.js</strong>, aq será criado os middlewares de checagem do <strong>CSRF</strong>
+        <div class="exemplos">
+          exports.checkCSRFerror = (erro, req, res, next){ <br>
+          if(erro && 'EBADCSRFTOKEN' == erro.code)<br>
+          return res.rend('404'); <br>
+          } <br>
+          <span class="lembrete">sera preciso criar uma pagina ejs, com nome 404.ejs, na pasta <strong>views</strong>
+            Para q seja carregada quando ouver o erro</span>
+        </div>
+      </div>
     </p>
   </section>
 </body>
