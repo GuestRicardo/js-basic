@@ -72,7 +72,7 @@
         <div class="exemplos">
           exports.checkCSRFerror = (erro, req, res, next){ <br>
           if(erro && 'EBADCSRFTOKEN' == erro.code)<br>
-          return res.rend('404'); <br>
+          return res.render('404'); <br>
           } <br>
           <span class="lembrete">sera preciso criar uma pagina ejs, com nome 404.ejs, na pasta <strong>views</strong>
             Para q seja carregada quando ouver o erro</span>
