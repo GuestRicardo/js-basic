@@ -71,11 +71,18 @@
         <strong>No arquivo middlewares.js</strong>, aq será criado os middlewares de checagem do <strong>CSRF</strong>
         <div class="exemplos">
           exports.checkCSRFerror = (erro, req, res, next){ <br>
-          if(erro && 'EBADCSRFTOKEN' == erro.code)<br>
-          return res.render('404'); <br>
+          <div class="esp">
+            if(erro && 'EBADCSRFTOKEN' == erro.code)<br>
+            return res.render('404'); <br>
+          </div>
           } <br>
           <span class="lembrete">sera preciso criar uma pagina ejs, com nome 404.ejs, na pasta <strong>views</strong>
             Para q seja carregada quando ouver o erro</span>
+        </div>
+        Pós criação do middleware será preciso carrega-lo no server.js
+        <div class="exemplos">
+          const { checkCSRFerror} = require('./src/middlewares/middlewares'); <br>
+          <span class="lembrete">Lembrando q esta sendo importado via destructor</span>
         </div>
       </div>
     </p>
