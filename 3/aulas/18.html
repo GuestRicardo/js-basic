@@ -96,13 +96,22 @@
       Agora sera preciso enviar o token para todas as paginas para q sejam protegidas, para isso sera preciso criar um
       middleware.
       <div class="anotacoes">
-        <strong>No arquivo middlewares.js</strong>, aq será criado os middleware para envio do <strong>CSRF token</strong>
+        <strong>No arquivo middlewares.js</strong>, aq será criado os middleware para envio do <strong>CSRF
+          token</strong>
         <div class="exemplos">
-          exports.csrfMiddlewares = (req, res, next) =>{
-            <div class="esp">
-              
-            </div>
+          exports.csrfMiddlewares = (req, res, next) => {
+          <div class="esp">
+            res.locals.crsfToken = req.crsfToken();
+          </div>
           }
+        </div>
+        Pós criação do middleware será preciso carrega-lo no server.js
+        <div class="exemplos">
+          const { checkCSRFerror, csrfMiddleware } = require('./src/middlewares/middlewares'); <br>        
+        </div>
+        Agora é usa-lo
+        <div class="exemplos">
+          app.use(csrfMiddleware);
         </div>
       </div>
     </p>
