@@ -123,9 +123,9 @@
       Neste exemplo esta sendo usado um formulario, e nele será carregado o middleware, e toda a vez q for carregado
       será exibido o token
       <div class="anotacoes">
-        <strong>No arquivo index.ejs</strong>
+        <strong>No arquivo index.ejs</strong> dentro do form
         <div class="exemplos">
-          
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         </div>
       </div>
     </p>
