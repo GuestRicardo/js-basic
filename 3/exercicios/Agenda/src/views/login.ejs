@@ -17,6 +17,7 @@
 
           <!--Cadastro-->
           <form action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label for="exampleInputEmail1">Digite seu Email.</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -42,6 +43,7 @@
 
           <!--Login-->
           <form action="/login/login" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label for="exampleInputEmail1">Digite seu Email.</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
