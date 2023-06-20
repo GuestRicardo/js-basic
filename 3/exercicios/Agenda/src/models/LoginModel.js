@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 const LoginSchema = new mongoose.Schema({
   email: {
@@ -27,13 +28,15 @@ class Login {
   //validação
   valida() {
     //o email precisa ser valido
-    
+    if (!valida.isEmail(this.body.email)) {
+      this.errors.push('Email invalido');
+    }
     //a senha precisa ter entre 8 a 10 caracteres
     this.cleanUp();
 
 
   }
-//para limpar objeto
+  //para limpar objeto
   cleanUp() {
     //for para garantir q tudo q esta no body seja string
     for (const key in this.body) {
