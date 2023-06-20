@@ -23,6 +23,7 @@ class Login {
 
   register() {
     this.valida();
+    if(this.errors.length > 0) return;
   }
 
   //validação
