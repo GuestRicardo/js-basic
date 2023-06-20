@@ -30,7 +30,11 @@ class Login {
 
   cleanUp(){
     //for para garantir q tudo q esta no body seja string
-    for(){}
+    for(const key in this.body){
+     if (typeof this.body[key] !== 'string'){
+      this.body[key] = '';
+     }
+    }
   }
 }
 
