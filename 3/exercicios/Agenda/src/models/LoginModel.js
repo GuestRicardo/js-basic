@@ -9,7 +9,7 @@ const LoginSchema = new mongoose.Schema({
   senha: {
     type: String,
     required: true
-  },
+  }
 });
 
 const LoginModel = mongoose.model('Login', LoginSchema);
@@ -39,7 +39,7 @@ class Login {
       this.errors.push('A senha precisa ter entre 8 e 25 caracteres');
     }
   }
-  
+
   //para limpar objeto
   cleanUp() {
     //for para garantir q tudo q esta no body seja string
