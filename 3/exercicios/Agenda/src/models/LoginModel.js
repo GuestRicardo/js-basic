@@ -27,12 +27,17 @@ class Login {
 
   //validação
   valida() {
+    //limpando os campos
+    this.cleanUp();
+    
     //o email precisa ser valido
     if (!valida.isEmail(this.body.email)) {
       this.errors.push('Email invalido');
     }
-    //a senha precisa ter entre 8 a 10 caracteres
-    this.cleanUp();
+    //a senha precisa ter entre 8 a 25 caracteres
+    if(this.body.password.length < 8 || this.body.password.length >= 25 ){
+      this.errors.push('A senha precisa ter entre 8 e 25 caracteres');
+    }
 
 
   }
