@@ -32,12 +32,14 @@ class Login {
     this.cleanUp();
     
     //o email precisa ser valido
-    if (!valida.isEmail(this.body.email)) this.errors.push('Email invalido');
+    if (!validator.isEmail(this.body.email)) this.errors.push('Email invalido');
     
-    //a senha precisa ter entre 8 a 25 caracteres
-    if(this.body.password.length < 8 || this.body.password.length >= 25 ) this.errors.push('A senha precisa ter entre 8 e 25 caracteres');    
+    //a senha precisa ter 8 ou mais caracteres
+    if(this.body.password.length < 8 || this.body.password.length > 25 ) {
+      this.errors.push('A senha precisa ter entre 8 e 25 caracteres'); 
+    }
   }
-  
+
   //para limpar objeto
   cleanUp() {
     //for para garantir q tudo q esta no body seja string
