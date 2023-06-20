@@ -38,9 +38,8 @@ class Login {
     if(this.body.password.length < 8 || this.body.password.length >= 25 ){
       this.errors.push('A senha precisa ter entre 8 e 25 caracteres');
     }
-
-
   }
+  
   //para limpar objeto
   cleanUp() {
     //for para garantir q tudo q esta no body seja string
