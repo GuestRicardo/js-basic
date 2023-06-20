@@ -24,11 +24,14 @@ class Login {
     this.valida();
   }
 
+  //validação
   valida() {
-    //validação
     //o email precisa ser valido
+    
     //a senha precisa ter entre 8 a 10 caracteres
     this.cleanUp();
+
+
   }
 //para limpar objeto
   cleanUp() {
