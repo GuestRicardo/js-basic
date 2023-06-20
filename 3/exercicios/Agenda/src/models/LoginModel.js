@@ -30,7 +30,7 @@ class Login {
     //a senha precisa ter entre 8 a 10 caracteres
     this.cleanUp();
   }
-
+//para limpar objeto
   cleanUp() {
     //for para garantir q tudo q esta no body seja string
     for (const key in this.body) {
