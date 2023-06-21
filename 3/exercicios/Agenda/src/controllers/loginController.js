@@ -17,10 +17,10 @@ exports.register = async function (req, res) {
       });
       return;
     }
-    res.send(login.errors);
+    return res.send(login.errors);
   } catch (e) {
     console.log(e);
-    res.render('404');
+    return res.render('404');
   }
 
 }
