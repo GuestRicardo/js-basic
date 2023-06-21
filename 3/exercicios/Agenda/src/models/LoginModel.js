@@ -7,7 +7,7 @@ const LoginSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  senha: {
+  password: {
     type: String,
     required: true
   }
@@ -25,7 +25,7 @@ class Login {
   async register() {
     this.valida();
     if (this.errors.length > 0) return;
-    
+
     try{
       this.user = await LoginModel.create(this.body);
     }
