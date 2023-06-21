@@ -1,10 +1,16 @@
-const mongoose = require ('mongoose');
-const validator = require ('validator');
+const mongoose = require('mongoose');
+const validator = require('validator');
 
 //model
 const LoginSchema = new mongoose.Schema({
-  email: { type: String, required: true},
-  senha: { type: String, required: true}
+  email: {
+    type: String,
+    required: true
+  },
+  senha: {
+    type: String,
+    required: true
+  }
 });
 
 const LoginModel = mongoose.model('Login', LoginSchema);
@@ -16,22 +22,23 @@ class Login {
     this.user = null;
   }
 
-  register() {
+  async register() {
     this.valida();
-    if(this.errors.length > 0) return;
+    if (this.errors.length > 0) return;
+    this.user = await LoginModel.create(this.body);
   }
 
   //validação
   valida() {
     //limpando os campos
     this.cleanUp();
-    
+
     //o email precisa ser valido
     if (!validator.isEmail(this.body.email)) this.errors.push('Email inválido');
-    
+
     //a senha precisa ter 8 ou mais caracteres
-    if(this.body.password.length < 8 || this.body.password.length > 25 ) {
-      this.errors.push('A senha precisa ter entre 8 e 25 caracteres'); 
+    if (this.body.password.length < 8 || this.body.password.length > 25) {
+      this.errors.push('A senha precisa ter entre 8 e 25 caracteres');
     }
   }
 
