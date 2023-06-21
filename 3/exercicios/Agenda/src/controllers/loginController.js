@@ -8,6 +8,15 @@ exports.register = (req, res)=>{
   //instancia da classe
   const login = new Login(req.body);
   login.register();
+
+  if(login.errors.length > 0){
+    req.flash('errors', login.errors);
+    req.session.save(function(){
+      return res.redirect('back');
+    });
+    return;
+  }
+
   res.send(login.errors);
 }
 
