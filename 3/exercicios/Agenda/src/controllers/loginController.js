@@ -5,17 +5,22 @@ exports.index = (req, res) => {
 };
 //aq esta sendo pego o o q esta sendo enviado no form register
 exports.register = async function (req, res) {
-  //instancia da classe
-  const login = new Login(req.body);
-  await login.register();
+  try {
+    //instancia da classe
+    const login = new Login(req.body);
+    await login.register();
 
-  if (login.errors.length > 0) {
-    req.flash('errors', login.errors);
-    req.session.save(function () {
-      return res.redirect('back');
-    });
-    return;
+    if (login.errors.length > 0) {
+      req.flash('errors', login.errors);
+      req.session.save(function () {
+        return res.redirect('back');
+      });
+      return;
+    }
+    res.send(login.errors);
+  } catch (e) {
+    console.log(e);
+    res.render('404');
   }
 
-  res.send(login.errors);
 }
