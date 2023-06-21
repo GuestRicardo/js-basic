@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const validator = require('validator');
+const mongoose = require ('mongoose');
+const validator = require ('validator');
 
 //model
 const LoginSchema = new mongoose.Schema({
@@ -30,7 +30,7 @@ class Login {
     if (!validator.isEmail(this.body.email)) this.errors.push('Email inválido');
     
     //a senha precisa ter 8 ou mais caracteres
-    if(this.body.password.length < 8 || this.body.password.length >= 25 ) {
+    if(this.body.password.length < 8 || this.body.password.length > 25 ) {
       this.errors.push('A senha precisa ter entre 8 e 25 caracteres'); 
     }
   }
