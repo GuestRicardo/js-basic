@@ -4,7 +4,7 @@ exports.index = (req, res) => {
   res.render('login');
 };
 //aq esta sendo pego o o q esta sendo enviado no form register
-exports.register = async (req, res) => {
+exports.register = async function (req, res) {
   //instancia da classe
   const login = new Login(req.body);
   await login.register();
