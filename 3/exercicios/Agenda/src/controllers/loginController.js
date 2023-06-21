@@ -8,6 +8,6 @@ exports.register = (req, res)=>{
   //instancia da classe
   const login = new Login(req.body);
   login.register();
-  res.send(login.user);
+  res.send(login.errors);
 }
 
