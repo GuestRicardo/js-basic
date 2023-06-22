@@ -1,16 +1,10 @@
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 const validator = require('validator');
+const bcryptjs = require('bcryptjs');
 
-//model
 const LoginSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  }
+  email: { type: String, required: true },
+  password: { type: String, required: true }
 });
 
 const LoginModel = mongoose.model('Login', LoginSchema);
@@ -22,46 +16,66 @@ class Login {
     this.user = null;
   }
 
+  async login() {
+    this.valida();
+    if(this.errors.length > 0) return;
+    this.user = await LoginModel.findOne({ email: this.body.email });
+
+    if(!this.user) {
+      this.errors.push('Usuário não existe.');
+      return;
+    }
+
+    if(!bcryptjs.compareSync(this.body.password, this.user.password)) {
+      this.errors.push('Senha inválida');
+      this.user = null;
+      return;
+    }
+  }
+
   async register() {
     this.valida();
-    if (this.errors.length > 0) return;
+    if(this.errors.length > 0) return;
 
-    try{
-      this.user = await LoginModel.create(this.body);
-    }
-    catch(erro){
-      console.log(erro);
-    }
+    await this.userExists();
+
+    if(this.errors.length > 0) return;
+
+    const salt = bcryptjs.genSaltSync();
+    this.body.password = bcryptjs.hashSync(this.body.password, salt);
+
+    this.user = await LoginModel.create(this.body);
   }
 
-  //validação
+  async userExists() {
+    this.user = await LoginModel.findOne({ email: this.body.email });
+    if(this.user) this.errors.push('Usuário já existe.');
+  }
+
   valida() {
-    //limpando os campos
     this.cleanUp();
 
-    //o email precisa ser valido
-    if (!validator.isEmail(this.body.email)) this.errors.push('Email inválido');
+    // Validação
+    // O e-mail precisa ser válido
+    if(!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido');
 
-    //a senha precisa ter 8 ou mais caracteres
-    if (this.body.password.length < 8 || this.body.password.length > 25) {
-      this.errors.push('A senha precisa ter entre 8 e 25 caracteres');
+    // A senha precisa ter entre 3 e 50
+    if(this.body.password.length < 3 || this.body.password.length > 50) {
+      this.errors.push('A senha precisa ter entre 3 e 50 caracteres.');
     }
   }
 
-  //para limpar objeto
   cleanUp() {
-    //for para garantir q tudo q esta no body seja string
-    for (const key in this.body) {
-      if (typeof this.body[key] !== 'string') {
+    for(const key in this.body) {
+      if(typeof this.body[key] !== 'string') {
         this.body[key] = '';
       }
     }
-    //para garantir q tudo va para o bd
+
     this.body = {
       email: this.body.email,
       password: this.body.password
     };
-
   }
 }
 
