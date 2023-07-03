@@ -40,8 +40,7 @@ Contato.prototype.cleanUp = function() {
     if(typeof this.body[key] !== 'string') {
       this.body[key] = '';
     }
-  }
-
+  }A
   this.body = {
     nome: this.body.nome,
     sobrenome: this.body.sobrenome,
