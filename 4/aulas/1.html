@@ -77,11 +77,12 @@
         <p>
             <div class="anotacoes">
                 Agora será instalado o <strong>MARIA DB</strong> <br> <hr>
-                Criando o container do Maria DB
                 <div class="exemplos">
                     <span class="lembrete">
-
-                    </span>
+                        Criando o container do Maria DB
+                    </span> <br>
+                    sudo docker run --restart always -d --name bdmariadb1 -p 3306:3306 \
+                    -e MYSQL_ROOT_PASSWORD=SUA_SENHA_FORTE mariadb
                 </div>
             </div>
         </p>
