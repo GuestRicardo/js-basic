@@ -20,16 +20,28 @@
         <p>
             <div class="anotacoes">
                 Todas essas instalações serão feita dentro do server, q esta sendo usado no google plataform. <br> <br>
-                <strong>Passo 1:</strong> Abra o terminal e pegue o ip do servidor dentro do g.plataform e cole no terminal <br>
+                <strong>Passo 1:</strong> Abra o terminal e pegue o ip do servidor dentro do g.plataform e cole no
+                terminal <br>
                 <strong>Exemplo:</strong> <br>
                 ssh 33.588.365.155 <br>
                 <hr>
-                neste momento ja estará dentro do server
+                neste momento ja estará dentro do server.... <br>
+                <strong>Passo 2:</strong> Agora será preciso verificar no server se tem alguma instalação do docker
+                instalado, e se tiver e so remover
+                <div class="exemplos">
+                    sudo apt-get remove \ <br>
+                    docker \ <br>
+                    docker-engine \ <br>
+                    docker.io \ <br>
+                    containerd runc -y <br>
+                    
+                </div>
+                depois será feita uma checagem se precisa atualizar algo.
+                <div class="exemplos">
+                    sudo apt update
+                </div>
                 
 
-                <div class="exemplos">
-                    sudo snap install insomnia
-                </div>
             </div>
         </p>
 
