@@ -34,14 +34,33 @@
                     docker-engine \ <br>
                     docker.io \ <br>
                     containerd runc -y <br>
-                    
+
                 </div>
                 depois será feita uma checagem se precisa atualizar algo.
                 <div class="exemplos">
                     sudo apt update
                 </div>
-                Agora será instalado o <strong>DOKER-CE</strong>
-
+                Agora será instalado as ferramentas necessarias para usar o <strong>DOCKER-CE</strong>.
+                <div class="exemplos">
+                    sudo apt install \ <br>
+                    apt-transport-https \ <br>
+                    ca-certificates \ <br>
+                    curl \ <br>
+                    gnupg-agent \ <br>
+                    software-properties-common -y <br>
+                </div>
+                Instalando o <strong>Docker-CE</strong>
+                <div class="exemplos">
+                    <span class="lembrete">instalando</span> <br>
+                    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+                    <div class="exemplos">
+                      <span class="lembrete">para adicionar os repositorios </span>  <br>
+                        sudo add-apt-repository \ <br>
+                        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \ <br>
+                        $(lsb_release -cs) \ <br>
+                        stable" -y <br>
+                    </div>
+                </div>
             </div>
         </p>
 
