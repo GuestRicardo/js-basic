@@ -51,7 +51,7 @@
                 </div>
                 Instalando o <strong>Docker-CE</strong>
                 <div class="exemplos">
-                    <span class="lembrete">instalando</span> <br>
+                    <span class="lembrete">preparando repositorios</span> <br>
                     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
                     <div class="exemplos">
                       <span class="lembrete">para adicionar os repositorios </span>  <br>
@@ -60,6 +60,16 @@
                         $(lsb_release -cs) \ <br>
                         stable" -y <br>
                     </div>
+                </div>
+                depois será feita uma checagem se precisa atualizar algo.
+                <div class="exemplos">
+                    sudo apt update
+                </div>
+                <div class="exemplos">
+                    <span class="lembrete">
+                        instalando DOCKER 
+                    </span> <br>
+                    sudo apt install docker-ce docker-ce-cli containerd.io -y
                 </div>
             </div>
         </p>
