@@ -109,10 +109,39 @@
                 </p>
                 <span class="lembrete">
                     sudo mysql
-                </span> 
+                </span>
                 <div>
                     <img src="../assets/img/p8.png" alt="" class="imgM">
                 </div>
+                <p>
+                    Como você pode ver, a consulta a seguir definirá a senha do root como
+                    <strong>"Password123#@!"</strong> e o método de
+                    autenticação como <strong>"mysql_native_password":</strong>
+                </p>
+                <span class="lembrete">ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY
+                    'Password123#@!'</span>
+                <div>
+                    <img src="../assets/img/p9.png" alt="" class="imgM">
+                </div>
+                <p>
+                    Por fim, recarregue as tabelas de concessão no banco de dados MySQL para que as alterações possam
+                    ser aplicadas sem reiniciar o serviço <strong>"mysql"</strong>:
+                </p>
+                <span class="lembrete">FLUSH PRIVILEGES;</span>
+                <div>
+                    <img src="../assets/img/p10.png" alt="" class="imgM">
+                </div>
+                <p>
+                    Tente novamente fazer login no servidor MySQL com a senha que você definiu anteriormente:
+                </p>
+                <div>
+                    <img src="../assets/img/p11.png" alt="" class="imgM">
+                </div>
+                <p>
+                    A saída livre de erros acima significa que <strong>configuramos o servidor MySQL</strong> em nosso
+                    sistema <strong>Ubuntu
+                        22.04</strong> e podemos prosseguir para a instalação do <strong>MySQL Workbench</strong>.
+                </p>
             </div>
     </section>
 
