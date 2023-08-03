@@ -28,7 +28,7 @@
                 servidor MySQL no Ubuntu 22.04; caso contrário, pule para a próxima seção. Como configurar o servidor
                 MySQL
                 <h2>
-                   Para configurar o servidor My SQL no Ubuntu 22.04
+                    Para configurar o servidor My SQL no Ubuntu 22.04
                 </h2> você deve seguir as instruções passo
                 a
                 passo fornecidas abaixo.
@@ -39,13 +39,66 @@
                 <h2>Etapa 1: Atualizar repositórios do sistema</h2>
                 <p>
                     Pressione <strong>"CTRL + ALT + T"</strong> para abrir o terminal do Ubuntu 22.04 e execute o
-                    comando abaixo para atualizar os repositórios do sistema: 
-                    
+                    comando abaixo para atualizar os repositórios do sistema:
+
                     <div>
                         <span style="text-align: center;" class="lembrete">sudo apt update</span>
                         <img src="../assets/img/p1.png" alt="" class="imgM">
                     </div>
                 </p>
+            </div>
+            <div class="anotacoes">
+                <h2>Passo 2: Instale o servidor MySQL no Ubuntu 22.04</h2>
+                <p>
+                    Na próxima etapa, instale o servidor MySQL em seu sistema com a ajuda do seguinte comando:
+                </p>
+                <span class="lembrete">
+                    sudo apt-get instalar mysql-server
+                </span>
+                <div>
+                    <img src="../assets/img/p2.png" alt="" class="imgM">
+                </div> <br>
+                Aguarde alguns minutos, pois a instalação do servidor MySQL levará algum tempo para ser concluída:
+                <br>
+                <div>
+                    <img src="../assets/img/p3.png" alt="" class="imgM">
+                </div>
+            </div>
+
+            <div class="anotacoes">
+                <h2>Etapa 3: Verificar o status do serviço MySQL</h2>
+                <p>
+                    Em seguida, verifique o status do serviço "mysql":
+                </p>
+                <span class="lembrete">systemctl is-active mysql</span>
+                <div><img class="imgM" src="../assets/img/p4.png" alt=""></div>
+            </div>
+            <div class="anotacoes">
+                <h2>Etapa 4: Configurar o servidor MySQL</h2>
+                <p>
+                    Agora, escreva o comando abaixo para executar uma configuração inicial e interativa do servidor
+                    MySQL:
+                </p>
+                <span class="lembrete">sudo mysql_secure_installation</span>
+                <p>
+                    No manual de configuração, você será solicitado primeiro a definir o nível para a política de
+                    validação de senha. Insira um número do menu fornecido de acordo com suas necessidades:
+                </p>
+                <div>
+                    <img src="../assets/img/p5.png" alt="" class="imgM">
+                </div>
+                <p>
+                    Depois de fazer isso, digite a nova senha para "root" e digite "y" para continuar com a senha fornecida:
+                </p>
+                <div>
+                    <img src="../assets/img/p6.png" alt="" class="imgM">
+                </div>
+                <p>
+                    Além disso, defina as outras opções de configuração de acordo:
+                </p>
+                <div>
+                    <img src="../assets/img/p7.png" alt="" class="imgM">
+                </div>
             </div>
     </section>
 
