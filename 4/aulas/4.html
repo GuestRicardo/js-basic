@@ -60,14 +60,17 @@
         <div class="anotacoes">
           depois de com nodemon em execução será seguido os passos abaixo para o teste. <br>
           1 - dentro do arquivo <strong>app.js</strong> será criado o q sera exportado: <br>
-          exports () =>{ <br>
+          export () =>{ <br>
           console.log('teste');<br>
           } <br>
           <hr>
           2 - agora dentro do arquivo <strong>server.js</strong> será importado: <br>
+          import testando from './app'; <br>
+          testando();
         </div>
       </div>
     </p>
+    <span class="lembrete"><strong>Observação:</strong> sem todo esse processo o import e export nao funcionaria no node</span>
   </section>
 </body>
 
