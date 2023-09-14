@@ -2,65 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../3/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../3/assets/css/style.css">
 </head>
 
 <body>
-    <section class="container">
-        <h1>Nodemon e Sucrase</h1>
-        <h2>Nodemon</h2>
-        <p>
-            O nodemon é um utilitário que monitora as mudanças nos arquivos do seu projeto e reinicia automaticamente o
-            servidor Node. js quando necessário. Assim, você não precisa parar e iniciar o servidor manualmente a cada
-            modificação.
-        </p>
-        <h2>Sucrase</h2>
-        <p>
-            Fala Galera beleza?!Como deve saber para se trabalhar com Node precisamos "puxar" módulos e usá-los na nossa
-            aplicação e para isso usamos a função require( ). Mas já pensou se pudesse importar esses módulos do Node e
-            bibliotecas de outros usando o import/export do ECMA? <br> A biblioteca sucrase que faz exatamente isso,
-            <br>ela permite que voçê use o import e export no projeto em desenvolvimento e
-            faz todas as mudanças necessárias quando o seu projeto for para a produção e o melhor de tudo que sua
-            configuração é bem simples. <br>
-        </p>
+  <section class="container">
+    <h1>Nodemon e Sucrase</h1>
+    <h2>Nodemon</h2>
+    <p>
+      O nodemon é um utilitário que monitora as mudanças nos arquivos do seu projeto e reinicia automaticamente o
+      servidor Node. js quando necessário. Assim, você não precisa parar e iniciar o servidor manualmente a cada
+      modificação.
+    </p>
+    <h2>Sucrase</h2>
+    <p>
+      Fala Galera beleza?!Como deve saber para se trabalhar com Node precisamos "puxar" módulos e usá-los na nossa
+      aplicação e para isso usamos a função require( ). Mas já pensou se pudesse importar esses módulos do Node e
+      bibliotecas de outros usando o import/export do ECMA? <br> A biblioteca sucrase que faz exatamente isso,
+      <br>ela permite que voçê use o import e export no projeto em desenvolvimento e
+      faz todas as mudanças necessárias quando o seu projeto for para a produção e o melhor de tudo que sua
+      configuração é bem simples. <br>
+    </p>
+    <div class="anotacoes">
+      <h3>Instalando os 2 de uma vez só:</h3>
+      <div class="exemplos">
+        npm install nodemon sucrase --save-dev
+      </div>
+    </div>
+    <p>
+      Pós a instalação o <strong>nodemon</strong> precisará reconhecer o <strong>sucrase</strong>, abaixo esta
+      sendo feito:
+      <div class="exemplos">
+        1 - Na raiz do do projeto com botao direito do mause será preciso criar um arquivo com nome
+        <strong>nodemon.json</strong>
+      </div>
+      <div class="exemplos">
+        2 - dentro do arquivo ira colocar a seguinte configuração: <br>
+        <img src="../assets/img/nodemon.png" alt="" class="imgM">
+      </div>
+      <div class="exemplos">
+        3 - depois será preciso entrar no <strong>package.json</strong> e adicionar dentro de <strong>scripts</strong>
+        <br>
+        <span class="lembrete">"dev": "nodemon server.js"</span>
+      </div>
+      <div class="exemplos">
+        4 - o proximo passo é adicionar o arquivo <strong>server.js</strong> dentro do projeto."para q o script acima
+        possa executa-lo" <br>
+        <hr>
+        Para questa de testes, irei fgazer import e export no arquivo do <strong>server.js</strong> <br>
+        <hr>
+        Mas antes disso será preciso executar o server, para isso é so digitar no terminal: <br>
+        <span class="lembrete">npm run dev</span> <br>
         <div class="anotacoes">
-            <h3>Instalando os 2 de uma vez só:</h3>
-            <div class="exemplos">
-                npm install nodemon sucrase --save-dev
-            </div>
+          depois de com nodemon em execução será seguido os passos abaixo para o teste. <br>
+          1 - dentro do arquivo <strong>app.js</strong> será criado o q sera exportado: <br>
+          exports () =>{ <br>
+          console.log('teste');<br>
+          } <br>
+          <hr>
+          2 - agora dentro do arquivo <strong>server.js</strong> será importado: <br>
         </div>
-        <p>
-            Pós a instalação o <strong>nodemon</strong> precisará reconhecer o <strong>sucrase</strong>, abaixo esta
-            sendo feito:
-            <div class="exemplos">
-                1 - Na raiz do do projeto com botao direito do mause será preciso criar um arquivo com nome
-                <strong>nodemon.json</strong>
-            </div>
-            <div class="exemplos">
-                2 - dentro do arquivo ira colocar a seguinte configuração: <br>
-                <img src="../assets/img/nodemon.png" alt="" class="imgM">
-            </div>
-            <div class="exemplos">
-                3 - depois será preciso entrar no <strong>package.json</strong> e adicionar dentro de <strong>scripts</strong>  <br>
-                <span class="lembrete">"dev": "nodemon server.js"</span>
-            </div>
-            <div class="exemplos">
-                4 - o proximo passo é adicionar o arquivo <strong>server.js</strong> dentro do projeto."para q o script acima possa executa-lo" <br>
-                <hr>
-                Para questa de testes, irei fgazer import e export no arquivo do <strong>server.js</strong> <br>
-                <hr>
-                Mas antes disso será preciso executar o server, para isso é so digitar no terminal: <br>
-                <span class="lembrete">npm run dev</span> <br>
-                <div class="anotacoes">
-                  depois de com nodemon em execução será seguido os passos abaixo para o teste.
-                </div>
-            </div>
-        </p>
-    </section>
+      </div>
+    </p>
+  </section>
 </body>
 
 </html>
