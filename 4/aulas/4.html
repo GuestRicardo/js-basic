@@ -33,6 +33,30 @@
                 npm install nodemon sucrase --save-dev
             </div>
         </div>
+        <p>
+            Pós a instalação o <strong>nodemon</strong> precisará reconhecer o <strong>sucrase</strong>, abaixo esta
+            sendo feito:
+            <div class="exemplos">
+                1 - Na raiz do do projeto com botao direito do mause será preciso criar um arquivo com nome
+                <strong>nodemon.json</strong>
+            </div>
+            <div class="exemplos">
+                2 - dentro do arquivo ira colocar a seguinte configuração: <br>
+                <img src="../assets/img/nodemon.png" alt="" class="imgM">
+            </div>
+            <div class="exemplos">
+                3 - depois será preciso entrar no <strong>package.json</strong> e adicionar dentro de <strong>scripts</strong>  <br>
+                <span class="lembrete">"dev": "nodemon server.js"</span>
+            </div>
+            <div class="exemplos">
+                4 - o proximo passo é adicionar o arquivo <strong>server.js</strong> dentro do projeto."para q o script acima possa executa-lo" <br>
+                <hr>
+                Para questa de testes, irei fgazer import e export no arquivo do <strong>server.js</strong> <br>
+                <hr>
+                Mas antes disso será preciso executar o server, para isso é so digitar no terminal: <br>
+                <span class="lembrete">npm run dev</span>
+            </div>
+        </p>
     </section>
 </body>
 
