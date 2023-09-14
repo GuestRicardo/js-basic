@@ -1,3 +1,3 @@
-import testando from './app';
+import teste from './app';
 
-testando();
+teste();
