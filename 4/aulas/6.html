@@ -56,8 +56,18 @@
       </div>
       depois desses passos abra o arquivo e digite os passps:
       <div class="exemplos">
-        
+        const { <br>
+          resolve <br>
+        } = require('path'); <br>
+        <br>
+        module.exports = {<br>
+          config: resolve(_dirname, 'src', 'database.js'),<br>
+          'models-path': resolve(_dirname, 'src', 'models'),<br>
+          'migrations-path': resolve(_dirname, 'src', 'database', 'migrations'),<br>
+          'seeders-path-path': resolve(_dirname, 'src', 'database', 'seeds'),<br>
+        };<br>
       </div>
+      pós toda essa configuração será preciso criar o arquivo <strong></strong>
     </p>
   </section>
 </body>
