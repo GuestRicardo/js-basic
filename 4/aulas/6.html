@@ -57,17 +57,42 @@
       depois desses passos abra o arquivo e digite os passps:
       <div class="exemplos">
         const { <br>
-          resolve <br>
+        resolve <br>
         } = require('path'); <br>
         <br>
         module.exports = {<br>
-          config: resolve(_dirname, 'src', 'database.js'),<br>
-          'models-path': resolve(_dirname, 'src', 'models'),<br>
-          'migrations-path': resolve(_dirname, 'src', 'database', 'migrations'),<br>
-          'seeders-path-path': resolve(_dirname, 'src', 'database', 'seeds'),<br>
+        config: resolve(_dirname, 'src', 'database.js'),<br>
+        'models-path': resolve(_dirname, 'src', 'models'),<br>
+        'migrations-path': resolve(_dirname, 'src', 'database', 'migrations'),<br>
+        'seeders-path-path': resolve(_dirname, 'src', 'database', 'seeds'),<br>
         };<br>
       </div>
-      pós toda essa configuração será preciso criar o arquivo <strong></strong>
+      pós toda essa configuração será preciso criar o arquivo <strong>database.js</strong> dentro do caminho
+      <span class="lembrete">src/config/</span> esta configuração é onde estará todas as configurações do DB, para isso
+      irá configura-lo de tal forma, segui o exemplo:
+      <div class="anotacoes">
+        require('dotenv').config(); <br>
+        <br>
+        module.exports = {<br>
+        dialect: 'mariadb',<br>
+        host: process.env.DATABASE_HOST,<br>
+        port: process.env.DATABASE_PORT,<br>
+        username: process.env.DATABASE_USERNAME,<br>
+        password: process.env.DATABASE_PASSWORD,<br>
+        database: process.env.DATABASE,<br>
+        define: {<br>
+        timestamps: true,<br>
+        underscored: true,<br>
+        underscoredAll: true,<br>
+        'createdAt': 'created_at',<br>
+        'updatedAt': 'update_at'<br>
+        },<br>
+        dialectOptions: {<br>
+        timezone: 'America/Sao_Paulo'<br>
+        },<br>
+        timezone: 'America/Sao_Paulo'<br>
+        };<br>
+      </div>
     </p>
   </section>
 </body>
