@@ -3,7 +3,7 @@ import homeRoutes from './src/routes/homeRoutes';
 
 class App {
   constructor() {
-    this.app.express();
+    this.app = express();
     this.middlewares();
     this.routes();
   }

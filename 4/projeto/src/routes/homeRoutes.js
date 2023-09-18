@@ -5,9 +5,10 @@ const router = new Router();
 //import express from 'express';
 //const router = new express.Router();
 /**++++++++++++++++++++++++++++++++++ */
+import homecontroller from '../controllers/HomeController';
 
 //rota criada
-router.get('/',(req, res)=>{res.send('testando rota')});
+router.get('/', homecontroller.index);
 
 //exportando a rota
 export default router;
