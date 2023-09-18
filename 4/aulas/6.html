@@ -17,7 +17,28 @@
       (classes) em TypeScript ou JavaScript que representam as tabelas do seu banco de dados. Assim, você pode manipular
       os dados usando objetos e métodos, sem precisar escrever SQL diretamente.
     </p>
-
+    <h2>Instalando e configurando</h2>
+    <p>
+      Primeiro passo é instalar o <strong>dotenv</strong> e configura-lo
+    </p>
+    <div class="anotacoes">
+      npm install dotenv
+      <div class="exemplos">
+        O Dotenv é um pacote que serve justamente para gerenciar as variáveis de ambiente dentro de um projeto Node. js.
+        Essa ferramenta armazena a configuração dessas variáveis em um ambiente separado do código da aplicação.
+      </div>
+    </div>
+    <p>
+      Segundo passo tu cria um arquivo dentro da raiz do projeto com nome, <strong>.env</strong>, e dentro desse arquivo
+      ficará todas as coisas da base de dados.
+      <div class="anotacoes">
+        DATABASE=escola <br>
+        DATABASE_HOST = <span class="lembrete">ip do servidor</span> <br>
+        DATABASE_PORT = <span class="lembrete">porta(3306)</span> <br>
+        DATABASE_USERNAME = <span class="lembrete">usuario,(ROOT)</span> <br>
+        DATABASE_PASSWORD = <span class="lembrete">senha do servidor</span> <br>
+      </div>
+    </p>
   </section>
 </body>
 
