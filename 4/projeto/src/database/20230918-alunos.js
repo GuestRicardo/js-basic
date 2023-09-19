@@ -26,11 +26,11 @@ modules.exports ={
         allowNull: false
       },
       altura: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
         allowNull: false
       },
       peso: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
         allowNull: false
       },
     });
