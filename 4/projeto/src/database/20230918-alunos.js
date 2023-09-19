@@ -33,11 +33,11 @@ modules.exports ={
         type: Sequelize.FLOAT,
         allowNull: false
       },
-      craated_at:{
+      created_at:{
         type: Sequelize.DATE,
         allowNull: false,
       },
-      craated_at:{
+      updated_at:{
         type: Sequelize.DATE,
         allowNull: false,
       },
