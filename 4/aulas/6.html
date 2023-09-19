@@ -94,6 +94,23 @@
         };<br>
       </div>
     </p>
+    <p>
+      Quinto passo será entrar no mysql workbank e criar um scherma para poder ter as migrações, apos conectar ao server
+      na web, configuri-o da seguinte forma: <br>
+      <img src="../assets/img/schemas.png" alt="" class="imgM"> <br>
+      agora o resto é com sequelize
+    </p>
+    <h2>Agora o sequelize vai criar as tabelas</h2>
+    <p>
+      Antes de fazer qualquer comando sera preciso instalar o sequelize e o mariadb
+      <div class="anotacoes">
+        npm install sequelize mariadb
+      </div>
+      <div class="anotacoes">
+        npx sequelize migration:create --name=alunos
+      </div>
+
+    </p>
   </section>
 </body>
 
