@@ -33,6 +33,14 @@ modules.exports ={
         type: Sequelize.FLOAT,
         allowNull: false
       },
+      craated_at:{
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      craated_at:{
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
     });
   },
   down:(queryInterface)=>{
