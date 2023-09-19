@@ -20,7 +20,19 @@ modules.exports ={
       email: {
         type: Sequelize.STRING,
         allowNull: false,
-      }
+      },
+      idade: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      altura: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      peso: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
     });
   },
   down:(queryInterface)=>{
