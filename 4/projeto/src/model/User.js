@@ -19,21 +19,14 @@ export default class User extends Model {
         type: Sequelize.STRING,
         defaultValue: '',
         validade:{
-          len: {
-            args: [3, 15],
-            msg: 'Campo deve ter entre 3 e 15 caracteres',
+          isEmail: {
+            msg: 'Email inválido',
           },
         },
       },
       password_hash: {
         type: Sequelize.STRING,
         defaultValue: '',
-        validade:{
-          len: {
-            args: [3, 15],
-            msg: 'Campo deve ter entre 3 e 15 caracteres',
-          },
-        },
       },
       //este campo abaixo nao vai existir na base de dados
       password: {
@@ -41,8 +34,8 @@ export default class User extends Model {
         defaultValue: '',
         validade:{
           len: {
-            args: [3, 15],
-            msg: 'Campo deve ter entre 3 e 15 caracteres',
+            args: [8, 15],
+            msg: 'A senha precisa ter entre 8 e 15 caracteres',
           },
         },
       },
