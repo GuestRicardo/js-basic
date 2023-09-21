@@ -28,17 +28,25 @@
       no novo arquivo será preciso adicionar os seguintes dados:
       <img src="../assets/img/users.png" alt="" class="imgM">
       pós todas as configurações adicionadas acima, agora poderá fazer a <strong>migration</strong>
-    <div class="anotacoes">
-      npx sequelize db:migrate
-    </div>
-    se caso estiver errado na tabela e queira voltar ao estado anterior é só fazer:
-    <div class="anotacoes">
-      npx sequelize db:migrate:undo
-    </div>
+      <div class="anotacoes">
+        npx sequelize db:migrate
+      </div>
+      se caso estiver errado na tabela e queira voltar ao estado anterior é só fazer:
+      <div class="anotacoes">
+        npx sequelize db:migrate:undo
+      </div>
     </p>
     <h3>Criando Model</h3>
     <p>
-      Na pasta de <strong>model</strong> crie um novo arquivo com nome de <strong>User.js</strong> 
+      Na pasta de <strong>model</strong> crie um novo arquivo com nome de <strong>User.js</strong> ,segui abaixo todas
+      informações para que possa funcionar
+      <img src="../assets/img/usermodel.png" alt="" class="imgM">
+    </p>
+    <p>
+      Nesta tabela repara-se que tem uma propreiedade <strong>hash</strong> para embaralhar as letras, e criar tipo uma
+      criptografia para senha, para isso será preciso instalar o <strong>bcryptjs</strong>
+      
+
     </p>
   </section>
 </body>
