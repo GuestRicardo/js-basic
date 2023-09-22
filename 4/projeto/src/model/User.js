@@ -9,7 +9,7 @@ export default class User extends Model {
       nome: {
         type: Sequelize.STRING,
         defaultValue: '',
-        validade:{
+        validade: {
           len: {
             args: [3, 15],
             msg: 'Campo deve ter entre 3 e 15 caracteres',
@@ -19,7 +19,7 @@ export default class User extends Model {
       email: {
         type: Sequelize.STRING,
         defaultValue: '',
-        validade:{
+        validade: {
           isEmail: {
             msg: 'Email inválido',
           },
@@ -33,7 +33,7 @@ export default class User extends Model {
       password: {
         type: Sequelize.VIRTUAL,
         defaultValue: '',
-        validade:{
+        validade: {
           len: {
             args: [8, 15],
             msg: 'A senha precisa ter entre 8 e 15 caracteres',
@@ -43,6 +43,10 @@ export default class User extends Model {
     }, {
       sequelize,
     });
+    this.addHook('beforeSave', async (user) => {
+      user.password_hash = await bcryptjs.hash(user.password, 8);
+    });
+
     return this;
   }
 }
