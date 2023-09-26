@@ -8,7 +8,7 @@ const router = new Router();
 import usercontroller from '../controllers/UserControllerController';
 
 //rota criada
-router.get('/', usercontroller.store);
+router.post('/', usercontroller.store);
 
 //exportando a rota
 export default router;
