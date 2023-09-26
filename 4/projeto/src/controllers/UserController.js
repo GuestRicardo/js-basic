@@ -11,7 +11,7 @@ class UserController {
       });
       res.json(novoUser);
     } catch (erro) {
-      res.status(400).json('Erro refaça')
+      res.status(400).json(erro.errors.map((err)=> err.mensage));
     }
   }
 }
