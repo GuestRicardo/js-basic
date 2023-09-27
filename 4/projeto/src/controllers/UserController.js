@@ -12,9 +12,18 @@ class UserController {
       res.json(novoUser);
     } catch (erro) {
       res.status(400).json({
-        erros: erro.errors.map((err)=> err.mensage),
+        erros: erro.errors.map((err) => err.mensage),
       });
     }
+  }
+}
+//index
+async index(req, res) {
+  try {
+    const users = await User.findAll();
+    return res.json(users);
+  } catch (erro) {
+    return res.json(null);
   }
 }
 
