@@ -16,6 +16,16 @@
       Nesta parte será feito o fechamento da criação de usuario, E será usado todos os metodos citado na aula anterior:
     </p>
     <li>Index</li>
+    <div class="exemplos">
+      async index(req, res){
+      try{
+      const users = await User.findAll();
+      return res.json(users);
+      } catch(erro){
+      return res.json(null);
+      }
+      }
+    </div>
     <li>Show</li>
     <li>Update</li>
     <li>Delete</li>
