@@ -26,5 +26,16 @@ async index(req, res) {
     return res.json(null);
   }
 }
+//show
+async show(req, res) {
+  try {
+    const {id} = req.params;
+
+    const users = await User.findByPk();
+    return res.json(users);
+  } catch (erro) {
+    return res.json(null);
+  }
+}
 
 export default new UserController();

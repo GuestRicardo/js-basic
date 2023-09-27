@@ -9,6 +9,7 @@ import usercontroller from '../controllers/UserControllerController';
 
 //rota criada
 router.post('/', usercontroller.store);
+router.get('/', usercontroller.index);
 
 //exportando a rota
 export default router;
