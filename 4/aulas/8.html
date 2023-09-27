@@ -17,14 +17,19 @@
     </p>
     <li>Index</li>
     <div class="exemplos">
-      async index(req, res){
-      try{
-      const users = await User.findAll();
-      return res.json(users);
-      } catch(erro){
-      return res.json(null);
-      }
-      }
+      <span class="lembrete">Usercontroller.js</span> <br>
+      async index(req, res){ <br>
+      try{<br>
+      const users = await User.findAll();<br>
+      return res.json(users); <br>
+      } catch(erro){ <br>
+      return res.json(null);<br>
+      }<br>
+      }<br>
+    </div>
+    criando uma rota para o <strong>index</strong>
+    <div class="exemplos">
+      <span class="lembrete">useRotes.js</span> <br>
     </div>
     <li>Show</li>
     <li>Update</li>
