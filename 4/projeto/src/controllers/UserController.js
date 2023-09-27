@@ -29,10 +29,8 @@ async index(req, res) {
 //show
 async show(req, res) {
   try {
-    const {id} = req.params;
-
-    const users = await User.findByPk();
-    return res.json(users);
+    const user = await User.findByPk(req.params.id);
+    return res.json(user);
   } catch (erro) {
     return res.json(null);
   }

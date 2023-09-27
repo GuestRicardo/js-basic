@@ -33,6 +33,17 @@
       router.get('/', usercontroller.index);
     </div>
     <li>Show</li>
+    <div class="exemplos">
+      <span class="lembrete">Usercontroller.js</span> <br>
+      async show(req, res) { <br>
+        try { <br>
+          const user = await User.findByPk(req.params.id); <br>
+          return res.json(user); <br>
+        } catch (erro) { <br>
+          return res.json(null); <br>
+        } <br>
+      } <br>
+    </div>
     <li>Update</li>
     <li>Delete</li>
   </section>
