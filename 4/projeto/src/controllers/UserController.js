@@ -38,7 +38,21 @@ async show(req, res) {
 //update
 async show(req, res) {
   try {
+    if (req.params.id) {
+      return res.status(400).json({
+        errors: ['ID não enviado.'],
+      });
+    }
     const user = await User.findByPk(req.params.id);
+
+    if (!user) {
+      return res.status(400).json({
+        errors: ['USUÁRIO não enviado.'],
+      });
+    }
+    const novosDados = await user.update(req.body);
+    return res.json(novosDados);
+
     return res.json(user);
   } catch (erro) {
     return res.json(null);
