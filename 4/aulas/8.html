@@ -36,15 +36,40 @@
     <div class="exemplos">
       <span class="lembrete">Usercontroller.js</span> <br>
       async show(req, res) { <br>
-        try { <br>
-          const user = await User.findByPk(req.params.id); <br>
-          return res.json(user); <br>
-        } catch (erro) { <br>
-          return res.json(null); <br>
-        } <br>
+      try { <br>
+      const user = await User.findByPk(req.params.id); <br>
+      return res.json(user); <br>
+      } catch (erro) { <br>
+      return res.json(null); <br>
+      } <br>
       } <br>
     </div>
     <li>Update</li>
+    <div class="exemplos">
+      <span class="lembrete">Usercontroller.js</span> <br>
+      async show(req, res) { <br>
+      try {<br>
+      if (req.params.id) {<br>
+      return res.status(400).json({<br>
+      errors: ['ID não enviado.'],<br>
+      });<br>
+      }<br>
+      const user = await User.findByPk(req.params.id); <br>
+      <br>
+      if (!user) {<br>
+      return res.status(400).json({<br>
+      errors: ['USUÁRIO não enviado.'],<br>
+      });<br>
+      }<br>
+      const novosDados = await user.update(req.body);<br>
+      return res.json(novosDados);<br>
+      <br>
+      return res.json(user);<br>
+      } catch (erro) {<br>
+      return res.json(null);<br>
+      }<br>
+      }<br>
+    </div>
     <li>Delete</li>
   </section>
 </body>
