@@ -89,7 +89,9 @@
               errors: ['USUÁRIO não existe.'],<br>
             });<br>
           }<br>
-          await user.destroy();<br>
+          <div style="background-color: yellow;">
+            await user.destroy();<br>
+          </div>
           return res.json(user);<br>
         } catch (erro) {<br>
           res.status(400).json({<br>
