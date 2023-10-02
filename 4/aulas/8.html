@@ -76,29 +76,47 @@
     <div class="exemplos">
       <span class="lembrete">Usercontroller.js</span> <br>
       async delete(req, res) { <br>
-        try { <br>
-          if (req.params.id) {<br>
-            return res.status(400).json({<br>
-              errors: ['ID não enviado.'],<br>
-            });<br>
-          }<br>
-          const user = await User.findByPk(req.params.id);<br>
-          <br>
-          if (!user) {<br>
-            return res.status(400).json({<br>
-              errors: ['USUÁRIO não existe.'],<br>
-            });<br>
-          }<br>
-          <div style="background-color: yellow;">
-            await user.destroy();<br>
-          </div>
-          return res.json(user);<br>
-        } catch (erro) {<br>
-          res.status(400).json({<br>
-            erros: erro.errors.map((err) => err.mensage),<br>
-          });<br>
-        }<br>
+      try { <br>
+      if (req.params.id) {<br>
+      return res.status(400).json({<br>
+      errors: ['ID não enviado.'],<br>
+      });<br>
       }<br>
+      const user = await User.findByPk(req.params.id);<br>
+      <br>
+      if (!user) {<br>
+      return res.status(400).json({<br>
+      errors: ['USUÁRIO não existe.'],<br>
+      });<br>
+      }<br>
+      <div style="background-color: yellow;">
+        await user.destroy();<br>
+      </div>
+      return res.json(user);<br>
+      } catch (erro) {<br>
+      res.status(400).json({<br>
+      erros: erro.errors.map((err) => err.mensage),<br>
+      });<br>
+      }<br>
+      }<br>
+    </div>
+    E no arquivo <strong>userRoutes</strong> será preciso colocar as rotas e segui abaixo ela completa:
+    <div class="anotacoes">
+      
+      import { Router } from 'express'; <br>
+      const router = new Router(); <br>
+      <br>
+      import usercontroller from '../controllers/UserControllerController'; <br>
+      <br>
+      //rota criada <br>
+      router.post('/', usercontroller.store); <br>
+      router.get('/', usercontroller.index); <br>
+      router.get('/:id', usercontroller.show); <br>
+      router.put('/:id', usercontroller.update); <br>
+      router.delete('/:id', usercontroller.delete); <br>
+       <br>
+      //exportando a rota <br>
+      export default router; <br>
     </div>
   </section>
 </body>
