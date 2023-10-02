@@ -13,6 +13,71 @@
   <section class="container">
     <h1>JWT(json web token)</h1>
     <p>
+      JWT ou JSON Web Token é um padrão da indústria definido pela RFC7519 que tem como objetivo transmitir ou armazenar
+      de forma compacta e segura objetos JSON entre diferentes aplicações. O JWT é digitalmente assinado usando uma
+      chave secreta com o algoritmo HMAC ou um par de chaves pública e privada RSA ou ECDSA.
+    </p>
+    <h3>Introdução</h3>
+    <p>
+      Você já foi em algum evento que precisou apresentar um documento de identificação para comprovar que você era
+      realmente a pessoa que comprou o ingresso? O ato de solicitar o documento de identificação é uma forma de
+      autenticação para que você receba a autorização para entrar. Na web, esse processo funciona de forma parecida.
+      Para fazer requisições de alguns serviços ou acessar páginas específicas, você precisa se identificar de alguma
+      forma, e essa identificação precisa ser segura e única.
+    </p>
+    <h3>O que é um TOKEN?</h3>
+    <p>
+      Atualmente, ouvimos muito a palavra token relacionada a NFTs (sigla para “Tokens não fundíveis” em português),
+      metaverso, criptomoedas, etc. Porém, fora desse meio, um token é uma assinatura digital, uma chave. <br>
+
+      Quando você abre uma conta em um banco, você precisa definir uma senha e seus dados pessoais. Esses dados são
+      convertidos em uma assinatura digital que vai identificar você de forma única para aquele banco e, toda vez que
+      você acessar seu banco e entrar com sua senha e um dado pessoal, o banco entenderá e confirmará que você é aquele
+      usuário logado, semelhante a entrarmos no evento quando apresentamos nosso documento de identidade. <br>
+
+      Existem vários algoritmos e padrões que transformam suas informações em um token, isto é, uma chave de
+      autenticação única, que faz sentido para o serviço ou aplicação que esteja tentando acessar no momento. Um desses
+      padrões é o JWT, que é seguro por permitir uma autenticação entre duas partes através de um token assinado.
+    </p>
+    <h3>O que é JWT?</h3>
+    <p>
+      Um JWT é um padrão para autenticação e troca de informações definido pela RFC7519. Nele é possível armazenar de
+      forma segura e compacta objetos JSON. Este token é um código Base64 e pode ser assinado usando um segredo ou par
+      de chaves privadas/públicas. <br>
+
+      Tokens assinados podem verificar a integridade das informações contidas neles, diferente de tokens criptografados
+      que ocultam essas informações. Se um JWT é assinado por um par de chaves pública/privada, a assinatura certifica
+      que a parte que possui a chave privada é quem de fato assinou.
+    </p>
+    <h3>Quando e onde eu posso usar um JWT?</h3>
+    <p>
+      Você pode usar, por exemplo, em um cenário de autorização. Depois que o usuário estiver conectado, é possível
+      observar cada solicitação e verificar se esta inclui o JWT, permitindo que o usuário acesse rotas, serviços e
+      outros recursos. <br>
+
+      Outro cenário de utilização de JWTs são as trocas de informações pois, como eles são assinados, é possível ter
+      certeza de que os remetentes são quem dizem ser quem são. Além disso, podemos identificar se o conteúdo da
+      assinatura foi alterado ou não devido à composição de um JWT.
+    </p>
+    <h3>Componentes básicos de um JSON Web Token</h3>
+    <p>
+      Um JWT possui uma estrutura básica composta pelo <span class="lembrete">header, payload e a signature.</span>
+      Essas três partes são separadas
+      por pontos <span class="lembrete"> ( . )</span>. Dessa forma, seria algo do tipo: <span
+        class="lembrete">header.payload.signature</span>. Vamos entender melhor cada uma dessas
+      partes!
+    </p>
+    <div style="text-align: center; font-size: larger; ">
+      <a href="https://www.alura.com.br/artigos/o-que-e-json-web-tokens"
+        style="text-decoration: none; color: red;">Artigo
+        completo</a>
+    </div>
+    <hr>
+    <h3>Começando Aula</h3>
+    <p>
+      Nos exemplos anteriores, usamos sessões para logar, neste exemplo usaremos o <strong>JWT</strong>, a maior
+      diferença é q inves o servidor gerenciar a sessão será o usuario que usará uma chave para fazer o login ou editar
+      algo
     </p>
   </section>
 </body>
