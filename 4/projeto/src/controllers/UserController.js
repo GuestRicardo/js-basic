@@ -55,8 +55,9 @@ async show(req, res) {
 
     return res.json(user);
   } catch (erro) {
-    return res.json(null);
-  }
+    res.status(400).json({
+      erros: erro.errors.map((err) => err.mensage),
+  });
 }
 
 export default new UserController();

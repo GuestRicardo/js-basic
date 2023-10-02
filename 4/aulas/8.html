@@ -65,9 +65,10 @@
       return res.json(novosDados);<br>
       <br>
       return res.json(user);<br>
-      } catch (erro) {<br>
-      return res.json(null);<br>
-      }<br>
+      } catch (erro) { <br>
+      res.status(400).json({ <br>
+      erros: erro.errors.map((err) => err.mensage), <br>
+      }); <br>
       }<br>
     </div>
     <li>Delete</li>
