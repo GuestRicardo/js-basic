@@ -59,5 +59,6 @@ async show(req, res) {
       erros: erro.errors.map((err) => err.mensage),
   });
 }
+}
 
 export default new UserController();
