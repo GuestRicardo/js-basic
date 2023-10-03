@@ -21,7 +21,25 @@
       </div>
       E agora será peciso usar o <strong>middleware</strong> em uma das rotas.
       <div class="anotacoes">
-
+       
+        import { Router } from 'express'; <br>
+        const router = new Router(); <br>
+<br>
+        import usercontroller from '../controllers/UserControllerController'; <br>
+        <div style="background-color: yellow;">
+          import loginRequired from '../middleware/loginRequired'; 
+        </div>
+        <br>
+        <br>
+        router.post('/', usercontroller.store); <br>
+        router.get('/',loginRequired, usercontroller.index); <br>
+        router.get('/:id', usercontroller.show); <br>
+        router.put('/:id', usercontroller.update); <br>
+        router.delete('/:id', usercontroller.delete); <br>
+        <br>
+        <br>
+        export default router; <br>
+        
       </div>
     </div>
     conclusao: quem controla a sessao é o proprio usuario, com os tokens
