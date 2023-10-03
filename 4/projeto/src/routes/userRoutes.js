@@ -6,10 +6,11 @@ const router = new Router();
 //const router = new express.Router();
 /**++++++++++++++++++++++++++++++++++ */
 import usercontroller from '../controllers/UserControllerController';
+import loginRequired from '../middleware/loginRequired';
 
 //rota criada
 router.post('/', usercontroller.store);
-router.get('/', usercontroller.index);
+router.get('/',loginRequired, usercontroller.index);
 router.get('/:id', usercontroller.show);
 router.put('/:id', usercontroller.update);
 router.delete('/:id', usercontroller.delete);
