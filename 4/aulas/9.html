@@ -113,7 +113,40 @@
     <div class="exemplos">
       5- quinto passo é coloca-la no <strong>app.js</strong>
       <div class="anotacoes">
-
+        import dotenv from 'dotenv'; <br>
+        import express from 'express'; <br>
+        import userRoutes from './src/routes/userRoutes';<br>
+        import homeRoutes from './src/routes/homeRoutes';<br>
+        <div style="">
+          import tokenRoutes from './src/routes/tokenRoutes';
+        </div>
+        <br>
+        dotenv.config();<br>
+        <br>
+        import './src/database';<br>
+        <br>
+        class App {<br>
+          constructor() {<br>
+            this.app = express();<br>
+            this.middlewares();<br>
+            this.routes();<br>
+          }<br>
+          <br>
+          middlewares() {<br>
+            this.app.use(express.urlencoded({<br>
+              extended: true<br>
+            }));<br>
+            this.app.use(express.json());<br>
+          }<br>
+          <br>
+          routes() {<br>
+            this.app.use('/', homeRoutes);<br>
+            this.app.use('/users/', userRoutes);<br>
+            this.app.use('/tokens/', tokenRoutes);<br>
+          }<br>
+        }<br>
+        <br>
+        export default new App().app;<br>
       </div>
     </div>
   </section>
