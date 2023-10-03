@@ -21,6 +21,13 @@ class TokenController {
         errors: ['Usuario nao existe'],
       })
     }
+    if (!(await user.passwordIsValide(passsword))) {
+      return res.status(401).json({
+        errors: ['Senha Invalida'],
+      })
+    }
+    const {id} = user
+    const token = jwt.sign({ id, email });
 
     return res.json(user);
   }

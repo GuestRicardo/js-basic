@@ -54,4 +54,8 @@ export default class User extends Model {
 
     return this;
   }
+
+  passwordIsValide(passsword){
+    return bcryptjs.compare(passsword, this.password_hash);
+  }
 }
