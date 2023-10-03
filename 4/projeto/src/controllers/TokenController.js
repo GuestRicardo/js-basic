@@ -16,6 +16,11 @@ class TokenController {
         email
       }
     });
+    if (!user) {
+      return res.status(401).json({
+        errors: ['Usuario nao existe'],
+      })
+    }
 
     res.json("teste");
   }
