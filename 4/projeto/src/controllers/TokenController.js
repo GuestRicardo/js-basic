@@ -5,8 +5,17 @@ class TokenController {
     const {
       email = '', passsword = ''
     } = req.body;
+    if (!email || !passsword) {
+      return res.status(401).json({
+        errors: ['Credenciais invalidas'],
+      })
+    }
 
-    const user = await User.findOne( {were: {email}});
+    const user = await User.findOne({
+      were: {
+        email
+      }
+    });
 
     res.json("teste");
   }
