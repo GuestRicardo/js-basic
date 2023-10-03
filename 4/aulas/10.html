@@ -13,33 +13,67 @@
   <section class="container">
     <h1>Middleware de verificação do JWT</h1>
     <p>
-      Esse middleware vai servir para fazer autenticação dos usuarios, e sera responsavel pela checagem da chave de autorização
+      Esse middleware vai servir para fazer autenticação dos usuarios, e sera responsavel pela checagem da chave de
+      autorização
     </p>
     <div class="exemplos">
       <div class="anotacoes">
-        
+        import jwt from 'jsonwebtoken'; <br>
+        <br>
+        export default (res, req, next) {<br>
+        const {<br>
+        authorization<br>
+        } = req.headers;<br>
+        <br>
+        if (!authorization) {<br>
+        return res.staus(401).json({<br>
+        errors: ['Voce precisa fazer login'],<br>
+        })<br>
+        }<br>
+        <br>
+        const [token] = authorization.spli(' ');<br>
+        <br>
+        try {<br>
+        const dados = jwt.verify(token, process.env.TOKEN_SECRET);<br>
+        const {<br>
+        id,
+        email
+        } = dados;<br>
+        req.userId = id;<br>
+        req.userEmail = email;<br>
+        <br>
+        return next();<br>
+        <br>
+        } catch (erro) {<br>
+        return res.staus(401).json({<br>
+        errors: ['Voce precisa fazer login'],<br>
+        });<br>
+        }<br>
+        };<br>
       </div>
       E agora será peciso usar o <strong>middleware</strong> em uma das rotas.
       <div class="anotacoes">
-       
+
         import { Router } from 'express'; <br>
         const router = new Router(); <br>
-<br>
+        <br>
         import usercontroller from '../controllers/UserControllerController'; <br>
         <div style="background-color: yellow;">
-          import loginRequired from '../middleware/loginRequired'; 
+          import loginRequired from '../middleware/loginRequired';
         </div>
         <br>
         <br>
         router.post('/', usercontroller.store); <br>
-        router.get('/',loginRequired, usercontroller.index); <br>
+        <div style="background-color: yellow;">
+          router.get('/',loginRequired, usercontroller.index); <br>
+        </div>
         router.get('/:id', usercontroller.show); <br>
         router.put('/:id', usercontroller.update); <br>
         router.delete('/:id', usercontroller.delete); <br>
         <br>
         <br>
         export default router; <br>
-        
+
       </div>
     </div>
     conclusao: quem controla a sessao é o proprio usuario, com os tokens
