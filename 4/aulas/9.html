@@ -101,42 +101,42 @@
       3-terceiro passo: será preciso criar um <strong>controller</strong>, va na pasta controllers e crie o arquivo
       <strong>TokenController.js</strong>
       <div class="anotacoes">
-        class TokenController {
-          async store(req, res) {
-            const {
-              email = '', passsword = ''
-            } = req.body;
-            if (!email || !passsword) {
-              return res.status(401).json({
-                errors: ['Credenciais invalidas'],
-              })
-            }
-        
-            const user = await User.findOne({
-              were: {
-                email
-              }
-            });
-            if (!user) {
-              return res.status(401).json({
-                errors: ['Usuario nao existe'],
-              })
-            }
-            if (!(await user.passwordIsValide(passsword))) {
-              return res.status(401).json({
-                errors: ['Senha Invalida'],
-              })
-            }
-            const {id} = user
-            const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET,{
-              expiresIn: process.env.TOKEN_EXPIRATION,
-            });
-        
-            return res.json({token});
-          }
-        }
-        
-        export default new TokenController();
+        class TokenController { <br>
+          async store(req, res) {<br>
+            const { <br>
+              email = '', passsword = '' <br>
+            } = req.body; <br>
+            if (!email || !passsword) { <br>
+              return res.status(401).json({ <br>
+                errors: ['Credenciais invalidas'],<br>
+              })<br>
+            }<br>
+            <br>
+            const user = await User.findOne({<br>
+              were: {<br>
+                email<br>
+              }<br>
+            });<br>
+            if (!user) {<br>
+              return res.status(401).json({<br>
+                errors: ['Usuario nao existe'],<br>
+              })<br>
+            }<br>
+            if (!(await user.passwordIsValide(passsword))) {<br>
+              return res.status(401).json({<br>
+                errors: ['Senha Invalida'],<br>
+              })<br>
+            }<br>
+            const {id} = user<br>
+            const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET,{<br>
+              expiresIn: process.env.TOKEN_EXPIRATION,<br>
+            });<br>
+            <br>
+            return res.json({token});<br>
+          }<br>
+        }<br>
+        <br>
+        export default new TokenController();<br>
       </div>
     </div>
     <div class="exemplos">
