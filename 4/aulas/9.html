@@ -107,7 +107,7 @@
     <div class="exemplos">
       4- quarto passo será preciso criar uma rota
       <div class="anotacoes">
-        
+
       </div>
     </div>
     <div class="exemplos">
@@ -126,24 +126,26 @@
         import './src/database';<br>
         <br>
         class App {<br>
-          constructor() {<br>
-            this.app = express();<br>
-            this.middlewares();<br>
-            this.routes();<br>
-          }<br>
-          <br>
-          middlewares() {<br>
-            this.app.use(express.urlencoded({<br>
-              extended: true<br>
-            }));<br>
-            this.app.use(express.json());<br>
-          }<br>
-          <br>
-          routes() {<br>
-            this.app.use('/', homeRoutes);<br>
-            this.app.use('/users/', userRoutes);<br>
-            this.app.use('/tokens/', tokenRoutes);<br>
-          }<br>
+        constructor() {<br>
+        this.app = express();<br>
+        this.middlewares();<br>
+        this.routes();<br>
+        }<br>
+        <br>
+        middlewares() {<br>
+        this.app.use(express.urlencoded({<br>
+        extended: true<br>
+        }));<br>
+        this.app.use(express.json());<br>
+        }<br>
+        <br>
+        routes() {<br>
+        this.app.use('/', homeRoutes);<br>
+        this.app.use('/users/', userRoutes);<br>
+        <div style="background-color: yellow;">
+          this.app.use('/tokens/', tokenRoutes);<br>
+        </div>
+        }<br>
         }<br>
         <br>
         export default new App().app;<br>
