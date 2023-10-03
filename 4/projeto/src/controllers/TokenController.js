@@ -22,7 +22,7 @@ class TokenController {
       })
     }
 
-    res.json("teste");
+    return res.json(user);
   }
 }
 
