@@ -6,7 +6,7 @@ class TokenController {
       email = '', passsword = ''
     } = req.body;
 
-    const user = await User.findOne();
+    const user = await User.findOne( {were: {email}});
 
     res.json("teste");
   }
