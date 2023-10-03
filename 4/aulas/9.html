@@ -103,43 +103,42 @@
       <div class="anotacoes">
         class TokenController { <br>
         async store(req, res) {<br>
-          <div style="background-color: yellow;">
-            const { <br>
-            email = '', passsword = '' <br>
-            } = req.body; <br>
-            if (!email || !passsword) { <br>
-            return res.status(401).json({ <br>
-            errors: ['Credenciais invalidas'],<br>
-            })<br>
-            }<br>
-            <br>
-            const user = await User.findOne({<br>
-            were: {<br>
-            email<br>
-            }<br>
-            });<br>
-            if (!user) {<br>
-            return res.status(401).json({<br>
-            errors: ['Usuario nao existe'],<br>
-            })<br>
-            }<br>
-            if (!(await user.passwordIsValide(passsword))) {<br>
-            return res.status(401).json({<br>
-            errors: ['Senha Invalida'],<br>
-            })<br>
-            }<br>
-            const {id} = user<br>
-            const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET,{<br>
-            expiresIn: process.env.TOKEN_EXPIRATION,<br>
-            });<br>
-            <br>
-            return res.json({token});<br>
-            }<br>
-            }
-          
-          </div>
-        <br>
-        export default new TokenController();<br>
+        <div style="background-color: yellow;">
+          const { <br>
+          email = '', passsword = '' <br>
+          } = req.body; <br>
+          if (!email || !passsword) { <br>
+          return res.status(401).json({ <br>
+          errors: ['Credenciais invalidas'],<br>
+          })<br>
+          }<br>
+          <br>
+          const user = await User.findOne({<br>
+          were: {<br>
+          email<br>
+          }<br>
+          });<br>
+          if (!user) {<br>
+          return res.status(401).json({<br>
+          errors: ['Usuario nao existe'],<br>
+          })<br>
+          }<br>
+          if (!(await user.passwordIsValide(passsword))) {<br>
+          return res.status(401).json({<br>
+          errors: ['Senha Invalida'],<br>
+          })<br>
+          }<br>
+          const {id} = user<br>
+          const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET,{<br>
+          expiresIn: process.env.TOKEN_EXPIRATION,<br>
+          });<br>
+          <br>
+          return res.json({token});<br>
+          }<br>
+          }
+          <br>
+          export default new TokenController();<br>
+        </div>
       </div>
     </div>
     <div class="exemplos">
@@ -149,11 +148,11 @@
         <br>
         const router = new Router(); <br>
         <div style="background-color: yellow; font-size: small;">
-          import tokenController from '../controllers/TokenController';         
+          import tokenController from '../controllers/TokenController';
         </div>
         <br>
         <div style="background-color: yellow;">
-          router.post('/', tokenController.store);        
+          router.post('/', tokenController.store);
         </div>
         export default router; <br>
       </div>
