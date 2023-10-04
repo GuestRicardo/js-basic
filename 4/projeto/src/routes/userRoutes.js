@@ -9,11 +9,16 @@ import usercontroller from '../controllers/UserControllerController';
 import loginRequired from '../middleware/loginRequired';
 
 //rota criada
-router.post('/', usercontroller.store);
-router.get('/',loginRequired, usercontroller.index);
-router.get('/:id', usercontroller.show);
-router.put('/:id', usercontroller.update);
-router.delete('/:id', usercontroller.delete);
+
+
+//admin
+router.get('/',loginRequired, usercontroller.index);//lista usuarios
+router.get('/:id', usercontroller.show); //lista usuario
+
+//usuario
+router.post('/', usercontroller.store);//criar usuario
+router.put('/:id',loginRequired, usercontroller.update);//editar
+router.delete('/:id',loginRequired, usercontroller.delete);//deletar
 
 //exportando a rota
 export default router;
