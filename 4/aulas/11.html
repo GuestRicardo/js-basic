@@ -66,7 +66,26 @@
           }; <br>
         </div>
         <div class="anotacoes">
-          
+          //delete <br>
+          async delete(req, res) { <br>
+            try {      <br>
+              <div class="lembrete">
+                const user = await User.findByPk(req.userId);
+              </div>
+         <br>
+              if (!user) { <br>
+                return res.status(400).json({ <br>
+                  errors: ['USUÁRIO não existe.'], <br>
+                }); <br>
+              } <br>
+              await user.destroy(); <br>
+              return res.json(user);<br>
+            } catch (erro) { <br>
+              res.status(400).json({ <br>
+                erros: erro.errors.map((err) => err.mensage), <br>
+              }); <br>
+            } <br>
+          } <br>
         </div>
       </div>
     </p>
