@@ -43,6 +43,25 @@
             } <br>
           }; <br>
         </div>
+        <div class="anotacoes">
+          //update
+          async show(req, res) {
+            try {
+              const user = await User.findByPk(req.userId);
+              if (!user) {
+                return res.status(400).json({
+                  errors: ['USUÁRIO não existe.'],
+                });
+              }
+              const novosDados = await user.update(req.body);
+              return res.json(novosDados);
+            } catch (erro) {
+              res.status(400).json({
+                erros: erro.errors.map((err) => err.mensage),
+              });
+            }
+          };
+        </div>
     </p>
   </section>
 </body>
