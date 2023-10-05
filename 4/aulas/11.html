@@ -13,7 +13,22 @@
   <section class="container">
     <h1>Correção de segurança para usuarios</h1>
     <p>
-      Primeiramente precisaremos ocultar os dados de <strong>hash e senha</strong>, no arquivo 
+      Primeiramente precisaremos ocultar os dados de <strong>hash e senha</strong>, no arquivo <span
+        class="lembrete">UserController.js</span>
+
+        <div class="anotacoes">
+          //index <br>
+          async index(req, res) { <br>
+            try { <br>
+              <div class="lembrete">
+                const users = await User.findAll({ attributes: ['id', 'nome', 'email'] }); <br>
+              </div>
+              return res.json(users); <br>
+            } catch (erro) { <br>
+              return res.json(null); <br>
+            } <br>
+          }; <br>
+        </div>
     </p>
   </section>
 </body>
