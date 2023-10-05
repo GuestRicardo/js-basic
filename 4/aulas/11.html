@@ -13,57 +13,59 @@
   <section class="container">
     <h1>Correção de segurança para usuarios</h1>
     <p>
-      Primeiramente precisaremos ocultar os dados de <strong>hash e senha</strong>, e mostrar somente o desejado, no arquivo <span
-        class="lembrete">UserController.js</span>
-
+      Primeiramente precisaremos ocultar os dados de <strong>hash e senha</strong>, e mostrar somente o desejado, no
+      arquivo:
+      <div class="exemplos">
+        <span class="lembrete">UserController.js</span>
         <div class="anotacoes">
           //index <br>
           async index(req, res) { <br>
             try { <br>
               <div class="lembrete">
                 const users = await User.findAll({ attributes: ['id', 'nome', 'email'] }); <br>
-              </div>
-              return res.json(users); <br>
-            } catch (erro) { <br>
-              return res.json(null); <br>
-            } <br>
-          }; <br>
         </div>
-        <div class="anotacoes">
-          //show <br>
-          async show(req, res) { <br>
-            try { <br>
-              const user = await User.findByPk(req.params.id); <br>
+        return res.json(users); <br>
+        } catch (erro) { <br>
+        return res.json(null); <br>
+        } <br>
+        }; <br>
+      </div>
+      <div class="anotacoes">
+        //show <br>
+        async show(req, res) { <br>
+        try { <br>
+        const user = await User.findByPk(req.params.id); <br>
         <div class="lembrete">
-          const {id, nome, email} = user;  <br>  
+          const {id, nome, email} = user; <br>
           return res.json(id, nome, email); <br>
         </div>
-            } catch (erro) { <br>
-              return res.json(null); <br>
-            } <br>
-          }; <br>
+        } catch (erro) { <br>
+        return res.json(null); <br>
+        } <br>
+        }; <br>
+      </div>
+      <div class="anotacoes">
+        //update <br>
+        async show(req, res) { <br>
+        try { <br>
+        <div class="lembrete">
+          const user = await User.findByPk(req.userId); <br>
         </div>
-        <div class="anotacoes">
-          //update <br>
-          async show(req, res) { <br>
-            try { <br>
-              <div class="lembrete">
-                const user = await User.findByPk(req.userId); <br>
-              </div>
-              if (!user) { <br>
-                return res.status(400).json({ <br>
-                  errors: ['USUÁRIO não existe.'], <br>
-                }); <br>
-              } <br>
-              const novosDados = await user.update(req.body);
-              return res.json(novosDados);<br>
-            } catch (erro) { <br>
-              res.status(400).json({ <br>
-                erros: erro.errors.map((err) => err.mensage), <br>
-              }); <br>
-            } <br>
-          }; <br>
-        </div>
+        if (!user) { <br>
+        return res.status(400).json({ <br>
+        errors: ['USUÁRIO não existe.'], <br>
+        }); <br>
+        } <br>
+        const novosDados = await user.update(req.body);
+        return res.json(novosDados);<br>
+        } catch (erro) { <br>
+        res.status(400).json({ <br>
+        erros: erro.errors.map((err) => err.mensage), <br>
+        }); <br>
+        } <br>
+        }; <br>
+      </div>
+    </div>
     </p>
   </section>
 </body>
