@@ -44,23 +44,23 @@
           }; <br>
         </div>
         <div class="anotacoes">
-          //update
-          async show(req, res) {
-            try {
-              const user = await User.findByPk(req.userId);
-              if (!user) {
-                return res.status(400).json({
-                  errors: ['USUÁRIO não existe.'],
-                });
-              }
+          //update <br>
+          async show(req, res) { <br>
+            try { <br>
+              const user = await User.findByPk(req.userId); <br>
+              if (!user) { <br>
+                return res.status(400).json({ <br>
+                  errors: ['USUÁRIO não existe.'], <br>
+                }); <br>
+              } <br>
               const novosDados = await user.update(req.body);
-              return res.json(novosDados);
-            } catch (erro) {
-              res.status(400).json({
-                erros: erro.errors.map((err) => err.mensage),
-              });
-            }
-          };
+              return res.json(novosDados);<br>
+            } catch (erro) { <br>
+              res.status(400).json({ <br>
+                erros: erro.errors.map((err) => err.mensage), <br>
+              }); <br>
+            } <br>
+          }; <br>
         </div>
     </p>
   </section>
