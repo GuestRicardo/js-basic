@@ -62,8 +62,11 @@
           errors: ['USUÁRIO não existe.'], <br>
           }); <br>
           } <br>
-          const novosDados = await user.update(req.body);
-          return res.json(novosDados);<br>
+          <div class="lembrete">
+            const novosDados = await user.update(req.body); <br>
+            const {id, email, nome} = novosDados; <br>
+            return res.json({ id, email, nome}); <br>
+          </div>
           } catch (erro) { <br>
           res.status(400).json({ <br>
           erros: erro.errors.map((err) => err.mensage), <br>
