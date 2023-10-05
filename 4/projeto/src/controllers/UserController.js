@@ -30,6 +30,9 @@ class UserController {
   async show(req, res) {
     try {
       const user = await User.findByPk(req.params.id);
+
+      const {id, nome, email} = user;
+      return
       return res.json(user);
     } catch (erro) {
       return res.json(null);
