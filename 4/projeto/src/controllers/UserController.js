@@ -32,8 +32,8 @@ class UserController {
       const user = await User.findByPk(req.params.id);
 
       const {id, nome, email} = user;
-      return
-      return res.json(user);
+
+      return res.json(id, nome, email);
     } catch (erro) {
       return res.json(null);
     }
