@@ -47,7 +47,9 @@
           //update <br>
           async show(req, res) { <br>
             try { <br>
-              const user = await User.findByPk(req.userId); <br>
+              <div class="lembrete">
+                const user = await User.findByPk(req.userId); <br>
+              </div>
               if (!user) { <br>
                 return res.status(400).json({ <br>
                   errors: ['USUÁRIO não existe.'], <br>
