@@ -74,7 +74,10 @@
         <span class="lembrete">loginRquired.js</span>
         <div class="anotacoes">
           import jwt from 'jsonwebtoken'; <br>
-          import User from '../model/User'; <br>
+          <div class="lembrete">
+            import User from '../model/User'; <br>
+
+          </div>
           
           export default async (res, req, next) { <br>
             const { <br>
@@ -96,17 +99,20 @@
                 email
               } = dados;<br>
               <br>
-              const user = await User.findOne({<br>
-                where: {<br>
-                  id,<br>
-                  email,<br>
+              <div class="lembrete">
+                const user = await User.findOne({<br>
+                  where: {<br>
+                    id,<br>
+                    email,<br>
+                  }<br>
+                })<br>
+                if (!User) {<br>
+                  return res.staus(401).json({<br>
+                    errors: ['Usuario invalido'],<br>
+                  });<br>
                 }<br>
-              })<br>
-              if (!User) {<br>
-                return res.staus(401).json({<br>
-                  errors: ['Usuario invalido'],<br>
-                });<br>
-              }<br>
+
+              </div>
               req.userId = id;<br>
               req.userEmail = email;
               <br>
