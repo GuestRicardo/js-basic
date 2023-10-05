@@ -30,7 +30,18 @@
           }; <br>
         </div>
         <div class="anotacoes">
-          
+          //show <br>
+          async show(req, res) { <br>
+            try { <br>
+              const user = await User.findByPk(req.params.id); <br>
+        <div class="lembrete">
+          const {id, nome, email} = user;  <br>  
+          return res.json(id, nome, email); <br>
+        </div>
+            } catch (erro) { <br>
+              return res.json(null); <br>
+            } <br>
+          }; <br>
         </div>
     </p>
   </section>
