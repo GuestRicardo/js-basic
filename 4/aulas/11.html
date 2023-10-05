@@ -73,7 +73,51 @@
       <div class="exemplos">
         <span class="lembrete">loginRquired.js</span>
         <div class="anotacoes">
-
+          import jwt from 'jsonwebtoken'; <br>
+          import User from '../model/User'; <br>
+          
+          export default async (res, req, next) { <br>
+            const { <br>
+              authorization<br>
+            } = req.headers;<br>
+            <br>
+            if (!authorization) {<br>
+              return res.staus(401).json({<br>
+                errors: ['Voce precisa fazer login'],<br>
+              })<br>
+            }<br>
+            <br>
+            const [token] = authorization.spli(' ');<br>
+            <br>
+            try {<br>
+              const dados = jwt.verify(token, process.env.TOKEN_SECRET);<br>
+              const {<br>
+                id,
+                email
+              } = dados;<br>
+              <br>
+              const user = await User.findOne({<br>
+                where: {<br>
+                  id,<br>
+                  email,<br>
+                }<br>
+              })<br>
+              if (!User) {<br>
+                return res.staus(401).json({<br>
+                  errors: ['Usuario invalido'],<br>
+                });<br>
+              }<br>
+              req.userId = id;<br>
+              req.userEmail = email;
+              <br>
+              return next();<br>
+              <br>
+            } catch (erro) {<br>
+              return res.staus(401).json({<br>
+                errors: ['Voce precisa fazer login'],<br>
+              });<br>
+            }<br>
+          };<br>
         </div>
       </div>
     </p>
