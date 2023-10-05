@@ -65,7 +65,7 @@ class UserController {
         });
       }
       await user.destroy();
-      return res.json(user);
+      return res.json({null});
     } catch (erro) {
       res.status(400).json({
         erros: erro.errors.map((err) => err.mensage),

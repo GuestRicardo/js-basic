@@ -90,7 +90,7 @@
           }); <br>
           } <br>
           await user.destroy(); <br>
-          return res.json(user);<br>
+          return res.json({null});<br>
           } catch (erro) { <br>
           res.status(400).json({ <br>
           erros: erro.errors.map((err) => err.mensage), <br>
