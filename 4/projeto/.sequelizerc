@@ -3,8 +3,8 @@ const {
 } = require('path');
 
 module.exports = {
-  config: resolve(_dirname, 'src', 'database.js'),
-  'models-path': resolve(_dirname, 'src', 'models'),
-  'migrations-path': resolve(_dirname, 'src', 'database', 'migrations'),
-  'seeders-path-path': resolve(_dirname, 'src', 'database', 'seeds'),
+  config: resolve(__dirname, 'src', 'database.js'),
+  'models-path': resolve(__dirname, 'src', 'models'),
+  'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+  'seeders-path-path': resolve(__dirname, 'src', 'database', 'seeds'),
 };
