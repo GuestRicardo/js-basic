@@ -33,21 +33,21 @@
         module.exports = {<br>
         up: async (queryInterface, Sequelize) => {<br>
         return queryInterface.bulkInsert('nomeDaTabela', [{<br>
-        name: 'Joao',<br>
+        nome: 'Joao',<br>
         email: 'joao23@hotmail.com',<br>
         password_hash: await bcryptjs.hash('123456789', 9),<br>
         create_at: new Date(),<br>
         updated_at: new Date(),<br>
         },<br>
         {<br>
-        name: 'Maria',<br>
+        nome: 'Maria',<br>
         email: 'jssdsd23@hotmail.com',<br>
         password_hash: await bcryptjs.hash('123456789', 9),<br>
         create_at: new Date(),<br>
         updated_at: new Date(),<br>
         },<br>
         {<br>
-        name: 'Jo',<br>
+        nome: 'Jo',<br>
         email: 'jodd23@hotmail.com',<br>
         password_hash: await bcryptjs.hash('123456789', 9),<br>
         create_at: new Date(),<br>
