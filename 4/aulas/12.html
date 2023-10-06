@@ -18,9 +18,49 @@
       preencher as tabelas do banco de dados com dados de amostra ou de teste: <br>
       <div class="anotacoes">
         <span class="lembrete">
-          fazer via terminal dentro da pasta dentro do projeto, e o arquivo sera criado dentro da pasta onde foi configurado o  <strong>.sequelizerc</strong> <br>
+          fazer via terminal dentro da pasta dentro do projeto, e o arquivo sera criado dentro da pasta onde foi
+          configurado o <strong>.sequelizerc</strong> <br>
         </span>
         npx sequelize-cli seed:generate --name criar-usuarios
+      </div>
+      Arquivo gerado na pasta:
+      <div class="lembrete">
+        database/seeds/
+      </div>
+      <div class="anotacoes">
+        const bcryptjs = require('bcryptjs'); <br>
+<br>
+        module.exports = {<br>
+        up: async (queryInterface, Sequelize) => {<br>
+        return queryInterface.bulkInsert('nomeDaTabela', [{<br>
+        name: 'Joao',<br>
+        email: 'joao23@hotmail.com',<br>
+        password_hash: await bcryptjs.hash('123456789', 9),<br>
+        create_at: new Date(),<br>
+        updated_at: new Date(),<br>
+        },<br>
+        {<br>
+        name: 'Maria',<br>
+        email: 'jssdsd23@hotmail.com',<br>
+        password_hash: await bcryptjs.hash('123456789', 9),<br>
+        create_at: new Date(),<br>
+        updated_at: new Date(),<br>
+        },<br>
+        {<br>
+        name: 'Jo',<br>
+        email: 'jodd23@hotmail.com',<br>
+        password_hash: await bcryptjs.hash('123456789', 9),<br>
+        create_at: new Date(),<br>
+        updated_at: new Date(),<br>
+        },<br>
+        <br>
+        ], {});<br>
+        },<br>
+        <br>
+        dow: () => {<br>
+          <br>
+        },<br>
+        };<br>
       </div>
     </p>
   </section>
