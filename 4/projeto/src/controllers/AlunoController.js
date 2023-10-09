@@ -14,7 +14,7 @@ class AlunoController {
       })
     }
   }
-  //mostrar alunos
+  //mostrar um aluno
   async show(req, res) {
     try {
       const {
@@ -65,6 +65,7 @@ class AlunoController {
       })
     }
   }
+  //atualizar aluno
   async update(req, res) {
     try {
       const {
