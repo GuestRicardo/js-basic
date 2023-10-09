@@ -1,10 +1,7 @@
-import {
-  Sequelize
-} from "sequelize";
 
 modules.exports = {
     up: (queryInterface, Sequelize) => {
-      return queryInterface.changeColumn('users', 'email', {
+      return queryInterface.changeColumn('users', 'email',
 
             {
               type: Sequelize.STRING,

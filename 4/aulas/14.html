@@ -18,6 +18,24 @@
       <div class="anotacoes">
         npx sequelize migration:create --name=mudar-email-aluno-unique
       </div>
+      Agora sera gerado um arquivo com nome q colocou no comando acima <strong>mudar-email-aluno-unique</strong>
+      <div class="anotacoes">
+        modules.exports = { <br>
+          up: (queryInterface, Sequelize) => {<br>
+            return queryInterface.changeColumn('users', 'email',<br>
+            <br>
+                  {<br>
+                    type: Sequelize.STRING,<br>
+                    allowNull: false,<br>
+                    unique: true<br>
+                  },<br>
+                );<br>
+              },<br>
+              down: () => {
+                <br>
+              }<br>
+          };<br>
+      </div>
     </p>
   </section>
 </body>
