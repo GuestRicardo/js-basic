@@ -27,9 +27,9 @@
       <div style="background-color: yellow; margin-left: 15px; padding-left: 10px;">
         router.get('/', alunocontroller.index); <br>
         router.post('/', alunocontroller.store); <br>
-        router.put('/', alunocontroller.update); <br>
-        router.get('/', alunocontroller.show); <br>
-        router.delete('/', alunocontroller.delete); <br>
+        router.put('/:id', alunocontroller.update); <br>
+        router.get('/:id', alunocontroller.show); <br>
+        router.delete('/:id', alunocontroller.delete); <br>
       </div>
       <br>
       //exportando a rota<br>
