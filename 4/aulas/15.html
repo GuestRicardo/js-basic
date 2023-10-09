@@ -18,72 +18,72 @@
         <span class="lembrete">Aluno.js</span> <br>
         import Sequelize, {
           Model
-        } from "sequelize";
+        } from "sequelize"; <br>
         
-        export default class Aluno extends Model {
-          static init(sequelize) {
-            super.init({
-              nome: {
-                type: Sequelize.STRING,
-                defaultValue: '',
-                validate: {
-                  len: {
-                    args: [3, 255],
-                    msg: 'Nome precisa ter entre 3 a 255 caracteres',
-                  },
-                },
-              },
-        
-              sobrenome: {
-                type: Sequelize.STRING,
-                defaultValue: '',
-                validate: {
-                  len: {
-                    args: [3, 255],
-                    msg: 'sobrenome precisa ter entre 3 a 255 caracteres',
-                  },
-                },
-              },
-              email: {
-                type: Sequelize.STRING,
-                defaultValue: '',
-                validate: {
-                  msg: 'Email invalido',
-                },
-              },
-              idade: {
-                type: Sequelize.INTEGER,
-                defaultValue: '',
-                validate: {
-                  isInt: {
-                    msg: 'USE somente numeros inteiro',
-                  },
-                },
-              },
-              peso: {
-                type: Sequelize.FLOAT,
-                defaultValue: '',
-                validate: {
-                  isFloat: {
-                    msg: 'Valor invalido, somente numeros!',
-                  },
-                },
-              },
-              altura: {
-                type: Sequelize.FLOAT,
-                defaultValue: '',
-                validate: {
-                  isFloat: {
-                    msg: 'Valor invalido, somente numeros!',
-                  },
-                },
-              },
-            }, {
-              sequelize,
-            });
-            return this;
-          }
-        }
+        export default class Aluno extends Model {<br>
+          static init(sequelize) {<br>
+            super.init({<br>
+              nome: {<br>
+                type: Sequelize.STRING,<br>
+                defaultValue: '',<br>
+                validate: {<br>
+                  len: {<br>
+                    args: [3, 255],<br>
+                    msg: 'Nome precisa ter entre 3 a 255 caracteres',<br>
+                  },<br>
+                },<br>
+              },<br>
+              <br>
+              sobrenome: {<br>
+                type: Sequelize.STRING,<br>
+                defaultValue: '',<br>
+                validate: {<br>
+                  len: {<br>
+                    args: [3, 255],<br>
+                    msg: 'sobrenome precisa ter entre 3 a 255 caracteres',<br>
+                  },<br>
+                },<br>
+              },<br>
+              email: {<br>
+                type: Sequelize.STRING,<br>
+                defaultValue: '',<br>
+                validate: {<br>
+                  msg: 'Email invalido',<br>
+                },<br>
+              },<br>
+              idade: {<br>
+                type: Sequelize.INTEGER,<br>
+                defaultValue: '',<br>
+                validate: {<br>
+                  isInt: {<br>
+                    msg: 'USE somente numeros inteiro',<br>
+                  },<br>
+                },<br>
+              },<br>
+              peso: {<br>
+                type: Sequelize.FLOAT,<br>
+                defaultValue: '',<br>
+                validate: {<br>
+                  isFloat: {<br>
+                    msg: 'Valor invalido, somente numeros!',<br>
+                  },<br>
+                },<br>
+              },<br>
+              altura: {<br>
+                type: Sequelize.FLOAT,<br>
+                defaultValue: '',<br>
+                validate: {<br>
+                  isFloat: {<br>
+                    msg: 'Valor invalido, somente numeros!',<br>
+                  },<br>
+                },<br>
+              },<br>
+            }, {<br>
+              sequelize,<br>
+            });<br>
+            return this;<br>
+          }<br>
+        }<br>
         
       </div>
 
