@@ -15,6 +15,7 @@ class AlunoController {
           errors: ['faltando ID'],
         });
       }
+      const aluno = await Aluno.findByPk(id);
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err)=> err.message),
