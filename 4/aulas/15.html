@@ -13,80 +13,83 @@
   <section class="container">
     <h1>Validando os campos do model de Aluno</h1>
     <p>
-      Para validar os campos será primeiramente alterado nos <strong>Models</strong> q esta ja criado com nome de <strong>Aluno.js</strong>
+      Para validar os campos será primeiramente alterado nos <strong>Models</strong> q esta ja criado com nome de
+      <strong>Aluno.js</strong>
       <div class="exemplos">
         <span class="lembrete">Aluno.js</span> <br>
         import Sequelize, {
-          Model
+        Model
         } from "sequelize"; <br>
-        
-        export default class Aluno extends Model {<br>
-          static init(sequelize) {<br>
-            super.init({<br>
-              nome: {<br>
-                type: Sequelize.STRING,<br>
-                defaultValue: '',<br>
-                validate: {<br>
-                  len: {<br>
-                    args: [3, 255],<br>
-                    msg: 'Nome precisa ter entre 3 a 255 caracteres',<br>
-                  },<br>
-                },<br>
-              },<br>
-              <br>
-              sobrenome: {<br>
-                type: Sequelize.STRING,<br>
-                defaultValue: '',<br>
-                validate: {<br>
-                  len: {<br>
-                    args: [3, 255],<br>
-                    msg: 'sobrenome precisa ter entre 3 a 255 caracteres',<br>
-                  },<br>
-                },<br>
-              },<br>
-              email: {<br>
-                type: Sequelize.STRING,<br>
-                defaultValue: '',<br>
-                validate: {<br>
-                  msg: 'Email invalido',<br>
-                },<br>
-              },<br>
-              idade: {<br>
-                type: Sequelize.INTEGER,<br>
-                defaultValue: '',<br>
-                validate: {<br>
-                  isInt: {<br>
-                    msg: 'USE somente numeros inteiro',<br>
-                  },<br>
-                },<br>
-              },<br>
-              peso: {<br>
-                type: Sequelize.FLOAT,<br>
-                defaultValue: '',<br>
-                validate: {<br>
-                  isFloat: {<br>
-                    msg: 'Valor invalido, somente numeros!',<br>
-                  },<br>
-                },<br>
-              },<br>
-              altura: {<br>
-                type: Sequelize.FLOAT,<br>
-                defaultValue: '',<br>
-                validate: {<br>
-                  isFloat: {<br>
-                    msg: 'Valor invalido, somente numeros!',<br>
-                  },<br>
-                },<br>
-              },<br>
-            }, {<br>
-              sequelize,<br>
-            });<br>
-            return this;<br>
-          }<br>
-        }<br>
-        
-      </div>
 
+        export default class Aluno extends Model {<br>
+        static init(sequelize) {<br>
+        super.init({<br>
+        nome: {<br>
+        type: Sequelize.STRING,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        len: {<br>
+        args: [3, 255],<br>
+        msg: 'Nome precisa ter entre 3 a 255 caracteres',<br>
+        },<br>
+        },<br>
+        },<br>
+        <br>
+        sobrenome: {<br>
+        type: Sequelize.STRING,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        len: {<br>
+        args: [3, 255],<br>
+        msg: 'sobrenome precisa ter entre 3 a 255 caracteres',<br>
+        },<br>
+        },<br>
+        },<br>
+        email: {<br>
+        type: Sequelize.STRING,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        msg: 'Email invalido',<br>
+        },<br>
+        },<br>
+        idade: {<br>
+        type: Sequelize.INTEGER,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        isInt: {<br>
+        msg: 'USE somente numeros inteiro',<br>
+        },<br>
+        },<br>
+        },<br>
+        peso: {<br>
+        type: Sequelize.FLOAT,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        isFloat: {<br>
+        msg: 'Valor invalido, somente numeros!',<br>
+        },<br>
+        },<br>
+        },<br>
+        altura: {<br>
+        type: Sequelize.FLOAT,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        isFloat: {<br>
+        msg: 'Valor invalido, somente numeros!',<br>
+        },<br>
+        },<br>
+        },<br>
+        }, {<br>
+        sequelize,<br>
+        });<br>
+        return this;<br>
+        }<br>
+        }<br>
+
+      </div>
+      <div style="text-align: center;">
+        <a href="../aulas/13.html" style="text-decoration: none; color: brown;">CONTROLLERS E ROUTERS</a>
+      </div>
     </p>
   </section>
 </body>
