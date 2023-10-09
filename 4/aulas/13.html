@@ -19,8 +19,20 @@
       
     </div>
     <div class="anotacoes">
-      <span class="lembrete">ROUTER(alunoRouter.js)</span>
+      <span class="lembrete">ROUTER(alunoRouter.js)</span> <br>
+      import { Router } from 'express'; <br>
+      const router = new Router(); <br>
+      import alunocontroller from '../controllers/AlunoController'; <br>
+      //rota criada <br>
+      router.get('/', alunocontroller.index); <br>
+      router.post('/', alunocontroller.store); <br>
+      router.put('/', alunocontroller.update); <br>
+      router.get('/', alunocontroller.show); <br>
+      router.delete('/', alunocontroller.delete); <br>
+      <br>
+      //exportando a rota<br>
 
+      export default router;<br>
     </div>
     <div class="anotacoes">
       <span class="lembrete">app.js</span> <br>
