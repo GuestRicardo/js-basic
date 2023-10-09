@@ -38,7 +38,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isInt: {
-            msg: 'USE somente numeros',
+            msg: 'USE somente numeros inteiro',
           },
         },
       },
@@ -47,7 +47,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Valor invalido!',
+            msg: 'Valor invalido, somente numeros!',
           },
         },
       },
@@ -56,7 +56,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Valor invalido!',
+            msg: 'Valor invalido, somente numeros!',
           },
         },
       },
