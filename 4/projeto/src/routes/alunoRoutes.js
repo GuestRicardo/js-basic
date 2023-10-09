@@ -1,9 +1,9 @@
 
 import { Router } from 'express';
 const router = new Router();
-import homecontroller from '../controllers/HomeController';
+import alunocontroller from '../controllers/AlunoController';
 //rota criada
-router.get('/', homecontroller.index);
+router.get('/', alunocontroller.index);
 
 //exportando a rota
 export default router;
