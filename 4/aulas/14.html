@@ -20,9 +20,12 @@
       </div>
       Agora sera gerado um arquivo com nome q colocou no comando acima <strong>mudar-email-aluno-unique</strong>
       <div class="anotacoes">
+        <div class="lembrete">
+          arquivo migrations/202309-mudar-aluno-unique.js
+        </div>
         modules.exports = { <br>
           up: (queryInterface, Sequelize) => {<br>
-            return queryInterface.changeColumn('users', 'email',<br>
+            return queryInterface. <span class="lembrete">changeColumn('users', 'email',</span> changeColumn('users', 'email',<br>
             <br>
                   {<br>
                     type: Sequelize.STRING,<br>
