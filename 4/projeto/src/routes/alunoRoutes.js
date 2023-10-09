@@ -5,9 +5,9 @@ import alunocontroller from '../controllers/AlunoController';
 //rota criada
 router.get('/', alunocontroller.index);
 router.post('/', alunocontroller.store);
-router.put('/', alunocontroller.update);
-router.get('/', alunocontroller.show);
-router.delete('/', alunocontroller.delete);
+router.put('/:id', alunocontroller.update);
+router.get('/:id', alunocontroller.show);
+router.delete('/:id', alunocontroller.delete);
 
 //exportando a rota
 export default router;
