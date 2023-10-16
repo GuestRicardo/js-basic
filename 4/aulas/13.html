@@ -25,7 +25,7 @@ class AlunoController { <br>
   //criando aluno<br>
   async store(req, res) {<br>
     try {<br>
-     const aluno = Aluno.create(req.body)<br>
+     const aluno = await Aluno.create(req.body)<br>
     } catch (e) {<br>
       return res.status(400).json({<br>
         errors: e.errors.map((err)=> err.message),<br>
