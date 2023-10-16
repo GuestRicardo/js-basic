@@ -18,101 +18,101 @@
       <span class="lembrete">CONTROLLER(AlunoController.js)</span>
       import Aluno from "../model/Aluno";
 
-class AlunoController {
-  async index(req, res) {
-    const alunos = await Aluno.findAll();
-  };
-  //criando aluno
-  async store(req, res) {
-    try {
-     const aluno = Aluno.create(req.body)
-    } catch (e) {
-      return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
-      })
-    }
-  }
-  //mostrar um aluno
-  async show(req, res) {
-    try {
+class AlunoController { <br>
+  async index(req, res) { <br>
+    const alunos = await Aluno.findAll();<br>
+  };<br>
+  //criando aluno<br>
+  async store(req, res) {<br>
+    try {<br>
+     const aluno = Aluno.create(req.body)<br>
+    } catch (e) {<br>
+      return res.status(400).json({<br>
+        errors: e.errors.map((err)=> err.message),<br>
+      })<br>
+    }<br>
+  }<br>
+  //mostrar um aluno<br>
+  async show(req, res) {<br>
+    try {<br>
       const {
         id
-      } = req.params;
-      if (!id) {
-        return res.status(400).json({
-          errors: ['faltando ID'],
-        });
-      }
-      const aluno = await Aluno.findByPk(id);
-      if (!aluno) {
-        return res.status(400).json({
-          errors: ['Aluno Não existe'],
-        });
-      }
-      return res.json(aluno);
-    } catch (e) {
-      return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
-      })
-    }
-  }
-  //deletar aluno
-  async delete(req, res) {
-    try {
+      } = req.params;<br>
+      if (!id) {<br>
+        return res.status(400).json({<br>
+          errors: ['faltando ID'],<br>
+        });<br>
+      }<br>
+      const aluno = await Aluno.findByPk(id);<br>
+      if (!aluno) {<br>
+        return res.status(400).json({<br>
+          errors: ['Aluno Não existe'],<br>
+        });<br>
+      }<br>
+      return res.json(aluno);<br>
+    } catch (e) {<br>
+      return res.status(400).json({<br>
+        errors: e.errors.map((err)=> err.message),<br>
+      })<br>
+    }<br>
+  }<br>
+  //deletar aluno<br>
+  async delete(req, res) {<br>
+    try {<br>
       const {
         id
-      } = req.params;
-      if (!id) {
-        return res.status(400).json({
-          errors: ['faltando ID'],
-        });
-      }
-      const aluno = await Aluno.findByPk(id);
-      if (!aluno) {
-        return res.status(400).json({
-          errors: ['Aluno Não existe'],
-        });
-      }
-      await aluno.destroy();
-      return res.json({
-        apagado: true,
-      });
-    } catch (e) {
-      return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
-      })
-    }
-  }
-  //atualizar aluno
-  async update(req, res) {
-    try {
+      } = req.params;<br>
+      if (!id) {<br>
+        return res.status(400).json({<br>
+          errors: ['faltando ID'],<br>
+        });<br>
+      }<br>
+      const aluno = await Aluno.findByPk(id);<br>
+      if (!aluno) {<br>
+        return res.status(400).json({<br>
+          errors: ['Aluno Não existe'],<br>
+        });<br>
+      }<br>
+      await aluno.destroy();<br>
+      return res.json({<br>
+        apagado: true,<br>
+      });<br>
+    } catch (e) {<br>
+      return res.status(400).json({<br>
+        errors: e.errors.map((err)=> err.message),<br>
+      })<br>
+    }<br>
+  }<br>
+  //atualizar aluno<br>
+  async update(req, res) {<br>
+    try {<br>
       const {
         id
-      } = req.params;
-      if (!id) {
-        return res.status(400).json({
-          errors: ['faltando ID'],
-        });
-      }
-      const aluno = await Aluno.findByPk(id);
-      if (!aluno) {
-        return res.status(400).json({
-          errors: ['Aluno Não existe'],
-        });
-      }
+      } = req.params;<br>
+      if (!id) {<br>
+        return res.status(400).json({<br>
+          errors: ['faltando ID'],<br>
+        });<br>
+      }<br>
+      const aluno = await Aluno.findByPk(id);<br>
+      if (!aluno) {<br>
+        return res.status(400).json({<br>
+          errors: ['Aluno Não existe'],<br>
+        });<br>
+      }<br>
+      <br>
+      const alunoAtualizado = aluno.update(req.body);<br>
+      return res.json(alunoAtualizado);<br>
+    } catch (e) {<br>
+      return res.status(400).json({<br>
+        errors: e.errors.map((err)=> err.message),<br>
+      })<br>
+    }<br>
+  }<br>
+}<br>
 
-      const alunoAtualizado = aluno.update(req.body);
-      return res.json(alunoAtualizado);
-    } catch (e) {
-      return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
-      })
-    }
-  }
-}
-
-
-export default new AlunoController();
+<br>
+export default new AlunoController();<br>
     </div>
     <div class="anotacoes">
       <span class="lembrete">ROUTER(alunoRouter.js)</span> <br>
