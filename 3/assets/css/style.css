@@ -347,3 +347,6 @@ h1::first-letter {
   100% { opacity:0; transform: translateX(-15vw); }	
 }
 /*##################################-SETA-#########################################*/
+.marcada{
+  background-color: yellow;
+}
