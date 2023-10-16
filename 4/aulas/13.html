@@ -101,7 +101,7 @@ class AlunoController { <br>
         });<br>
       }<br>
       <br>
-      const alunoAtualizado = aluno.update(req.body);<br>
+      const alunoAtualizado = await aluno.update(req.body);<br>
       return res.json(alunoAtualizado);<br>
     } catch (e) {<br>
       return res.status(400).json({<br>
