@@ -29,8 +29,10 @@ export default class Aluno extends Model {
       email: {
         type: Sequelize.STRING,
         defaultValue: '',
-        validate: {
-          msg: 'Email invalido',
+        unique: {
+          isEmail:{
+            msg: 'Email invalido',
+          }
         },
       },
       idade: {
