@@ -8,7 +8,11 @@ export default {
     //local onde esta as fotos
     destination: (req, file, cb) => {
       cb(null, resolve(__dirname, '..', '..', 'uploads'));
+      //no primeiro parametro é o erro(null, caminho)
     },
-    filename: (req, file, cb) => {},
+    filename: (req, file, cb) => {
+      cd(null, )
+      //segundo parametro é o nome do arquivo
+    },
   })
 };
