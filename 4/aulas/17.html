@@ -42,7 +42,43 @@
     <div class="anotacoes">
       <span class="lembrete">
         app.js
-      </span>
+      </span><br>
+      import dotenv from 'dotenv'; <br>
+      import express from 'express'; <br>
+      import userRoutes from './src/routes/userRoutes'; <br>
+      import homeRoutes from './src/routes/homeRoutes'; <br>
+      import tokenRoutes from './src/routes/tokenRoutes'; <br>
+      import alunosRoutes from './src/routes/alunoRoutes'; <br>
+      import fotoRoutes from './src/routes/fotoRoutes';<br>
+      <br>
+      dotenv.config();<br>
+      <br>
+      import './src/database';<br>
+      <br>
+      class App {<br>
+      constructor() {<br>
+      this.app = express();<br>
+      this.middlewares();<br>
+      this.routes();<br>
+      }<br>
+      <br>
+      middlewares() {<br>
+      this.app.use(express.urlencoded({<br>
+      extended: true<br>
+      }));<br>
+      this.app.use(express.json());<br>
+      }<br>
+      <br>
+      routes() {
+      this.app.use('/', homeRoutes);<br>
+      this.app.use('/users/', userRoutes);<br>
+      this.app.use('/tokens/', tokenRoutes);<br>
+      this.app.use('/alunos/', alunosRoutes);<br>
+      this.app.use('/fotos/', fotoRoutes);<br>
+      }<br>
+      }<br>
+      <br>
+      export default new App().app;<br>
     </div>
   </section>
 </body>
