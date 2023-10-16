@@ -1,5 +1,5 @@
 class FotoController {
- async index(req, res){
+ async store(req, res){
     res.json('Index');
   }
 }
