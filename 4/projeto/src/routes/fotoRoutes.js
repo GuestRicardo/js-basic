@@ -1,9 +1,9 @@
 
 import { Router } from 'express';
+import fotocontroller from '../controllers/FotoController';
 const router = new Router();
 
-import homecontroller from '../controllers/HomeController';
-router.get('/', homecontroller.index);
+router.post('/', fotocontroller.index);
 
 
 export default router;
