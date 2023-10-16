@@ -45,12 +45,15 @@
         },<br>
         },<br>
         },<br>
-        email: {<br>
-        type: Sequelize.STRING,<br>
-        defaultValue: '',<br>
-        validate: {<br>
-        msg: 'Email invalido',<br>
-        },<br>
+        email: { <br>
+          type: Sequelize.STRING, <br>
+          defaultValue: '', <br>
+          unique: { <br>
+            isEmail:{ <br>
+              msg: 'Email invalido', <br>
+            } <br>
+          }, <br>
+        }, <br>
         },<br>
         idade: {<br>
         type: Sequelize.INTEGER,<br>
