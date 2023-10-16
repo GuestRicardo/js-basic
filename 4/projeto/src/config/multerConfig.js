@@ -3,6 +3,10 @@ import multer from "multer";
 //para tratar de caminhos
 import { extname, resolve} from 'path';
 
+//função para evitar de ser recebido 2 fotos com mesmo nome ao mesmo tempo
+//ela esta sendo usada para evitar possiveis erros
+const aleatorio = ()=> Math.floor(Math.random() *1000 + 1000);
+
 export default {
   storage: multer.diskStorage({
     //local onde esta as fotos
@@ -11,7 +15,7 @@ export default {
       //no primeiro parametro é o erro(null, caminho)
     },
     filename: (req, file, cb) => {
-      cd(null, `${Date.now()} ${extreme(file.originalname)}`)
+      cd(null, `${Date.now()}_${aleatorio()}${extreme(file.originalname)}`)
       //segundo parametro é o nome do arquivo, so q neste caso sera usado por data a busca
     },
   })

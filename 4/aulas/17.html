@@ -92,9 +92,42 @@
     <div class="exemplos">
       <span class="lembrete">
         multerConfig.js
+      </span> <br>
+      <span class="lembrete" style="background-color: greenyellow;">
+        //para o upload dos arquivos
+      </span> <br>
+      import multer from "multer"; <br>
+      <span class="lembrete" style="background-color: greenyellow;">
+        //para tratar de caminhos <br>
       </span>
+      import { extname, resolve} from 'path';<br>
+      <br>
+      <span class="lembrete" style="background-color: greenyellow;">
+        //função para evitar de ser recebido 2 fotos com mesmo nome ao mesmo tempo<br>
+        //ela esta sendo usada para evitar possiveis erros<br>
+      </span>
+      const aleatorio = ()=> Math.floor(Math.random() *1000 + 1000);<br>
+      <br>
+      export default {<br>
+      storage: multer.diskStorage({<br>
+      <span class="lembrete" style="background-color: greenyellow;">
+        //local onde esta as fotos<br>
+      </span>
+      destination: (req, file, cb) => {<br>
+      cb(null, resolve(__dirname, '..', '..', 'uploads'));<br>
+      //no primeiro parametro é o erro(null, caminho)<br>
+      },<br>
+      filename: (req, file, cb) => {<br>
+      cd(null, `${Date.now()}_${aleatorio()}${extreme(file.originalname)}`)<br>
+      <span class="lembrete" style="background-color: greenyellow;">
+        //segundo parametro é o nome do arquivo, so q neste caso sera usado por data a busca<br>
+      </span>
+      },<br>
+      })<br>
+      };<br>
 
     </div>
+    agora é ir na rota e importar as configurações do multer q acabou de ser criada
   </section>
 </body>
 
