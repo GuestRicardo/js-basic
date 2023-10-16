@@ -49,7 +49,9 @@
       import homeRoutes from './src/routes/homeRoutes'; <br>
       import tokenRoutes from './src/routes/tokenRoutes'; <br>
       import alunosRoutes from './src/routes/alunoRoutes'; <br>
-      import fotoRoutes from './src/routes/fotoRoutes';<br>
+      <div class="marcada">
+        import fotoRoutes from './src/routes/fotoRoutes';
+      </div>
       <br>
       dotenv.config();<br>
       <br>
@@ -74,7 +76,9 @@
       this.app.use('/users/', userRoutes);<br>
       this.app.use('/tokens/', tokenRoutes);<br>
       this.app.use('/alunos/', alunosRoutes);<br>
-      this.app.use('/fotos/', fotoRoutes);<br>
+      <div class="marcada">
+        this.app.use('/fotos/', fotoRoutes);<br>
+      </div>
       }<br>
       }<br>
       <br>
