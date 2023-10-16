@@ -11,8 +11,8 @@ export default {
       //no primeiro parametro é o erro(null, caminho)
     },
     filename: (req, file, cb) => {
-      cd(null, )
-      //segundo parametro é o nome do arquivo
+      cd(null, `${Date.now()} ${extreme(file.originalname)}`)
+      //segundo parametro é o nome do arquivo, so q neste caso sera usado por data a busca
     },
   })
 };
