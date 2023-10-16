@@ -39,6 +39,20 @@
       <span class="lembrete">
         fotoRoutes.js
       </span>
+      import { Router } from 'express'; <br>
+      import multer from 'multer'; <br>
+<br>
+      import fotocontroller from '../controllers/FotoController'; <br>
+      import multerConfig from '../config/multerConfig'; <br>
+<br>
+      const upload = multer(multerConfig); <br>
+<br>
+      const router = new Router(); <br>
+<br>
+      router.post('/',upload.single('foto'), fotocontroller.store); <br>
+<br>
+
+      export default router;
     </div>
     Agora será preciso ir no <strong>app.js</strong> e registrar
     <!--app-->

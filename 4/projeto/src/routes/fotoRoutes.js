@@ -9,7 +9,7 @@ const upload = multer(multerConfig);
 
 const router = new Router();
 
-router.post('/',upload.single(''), fotocontroller.store);
+router.post('/',upload.single('foto'), fotocontroller.store);
 
 
 export default router;
