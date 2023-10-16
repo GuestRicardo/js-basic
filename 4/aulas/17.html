@@ -41,16 +41,16 @@
       </span>
       import { Router } from 'express'; <br>
       import multer from 'multer'; <br>
-<br>
+      <br>
       import fotocontroller from '../controllers/FotoController'; <br>
       import multerConfig from '../config/multerConfig'; <br>
-<br>
+      <br>
       const upload = multer(multerConfig); <br>
-<br>
+      <br>
       const router = new Router(); <br>
-<br>
+      <br>
       router.post('/',upload.single('foto'), fotocontroller.store); <br>
-<br>
+      <br>
 
       export default router;
     </div>
