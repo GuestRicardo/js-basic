@@ -18,6 +18,38 @@
     </p>
     <div class="exemplos">
 
+      import multer from "multer"; <br>
+
+      import { extname, resolve} from 'path'; <br>
+
+
+
+      const aleatorio = () => Math.floor(Math.random() * 1000 + 1000); <br>
+
+
+      <div class="marcada">
+        export default { <br>
+
+        FileFilter: (req, file, cb) => {
+        if (file.mimetype === 'image/png' && file.mimetype === 'image/jpg') {
+        return cb(new multer.MulterError('Arquivo precisa ser PNG ou JPG'))
+        }
+        return cb(null, true);
+        },
+
+        storage: multer.diskStorage({
+
+        destination: (req, file, cb) => {
+        cb(null, resolve(__dirname, '..', '..', 'uploads'));
+
+        },
+        filename: (req, file, cb) => {
+        cd(null, `${Date.now()}_${aleatorio()}${extreme(file.originalname)}`)
+
+        },
+        })
+        };
+      </div>
     </div>
     Agora é capturar o erro para trata-lo na tela, para isso será preciso modificar o <strong>fotoController</strong> e
     o <strong>fotoRoutes</strong>
@@ -50,6 +82,19 @@
         </div>
         export default new FotoController();
       </div>
+    </div>
+    <div class="exemplos">
+      <span class="lembrete">fotoRoutes </span> <br>
+      import { Router } from 'express';<br>
+
+      import fotocontroller from '../controllers/FotoController'; <br>
+
+      const router = new Router(); <br>
+
+      router.post('/', fotocontroller.store); <br>
+
+      <br>
+      export default router; <br>
 
     </div>
   </section>
