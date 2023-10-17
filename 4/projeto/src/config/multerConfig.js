@@ -5,11 +5,15 @@ import { extname, resolve} from 'path';
 
 //função para evitar de ser recebido 2 fotos com mesmo nome ao mesmo tempo
 //ela esta sendo usada para evitar possiveis erros
-const aleatorio = ()=> Math.floor(Math.random() *1000 + 1000);
+const aleatorio = () => Math.floor(Math.random() * 1000 + 1000);
+
+
 
 export default {
-  FileFilter: (req, file, cb)=>{
-
+  FileFilter: (req, file, cb) => {
+    if (file.mimetype === 'image/png' && file.mimetype === 'image/jpg') {
+      return cb(new multer.MulterError('Arquivo precisa ser PNG ou JPG'))
+    }
   },
 
   storage: multer.diskStorage({
