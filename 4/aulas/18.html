@@ -30,26 +30,26 @@
       <div class="marcada">
         export default { <br>
 
-        FileFilter: (req, file, cb) => {
-        if (file.mimetype === 'image/png' && file.mimetype === 'image/jpg') {
-        return cb(new multer.MulterError('Arquivo precisa ser PNG ou JPG'))
-        }
-        return cb(null, true);
-        },
+        FileFilter: (req, file, cb) => { <br>
+        if (file.mimetype === 'image/png' && file.mimetype === 'image/jpg') { <br>
+        return cb(new multer.MulterError('Arquivo precisa ser PNG ou JPG')) <br>
+        } <br>
+        return cb(null, true); <br>
+        }, <br>
+<br>
+</div>
+        storage: multer.diskStorage({<br>
 
-        storage: multer.diskStorage({
+        destination: (req, file, cb) => {<br>
+        cb(null, resolve(__dirname, '..', '..', 'uploads'));<br>
 
-        destination: (req, file, cb) => {
-        cb(null, resolve(__dirname, '..', '..', 'uploads'));
+        },<br>
+        filename: (req, file, cb) => {<br>
+        cd(null, `${Date.now()}_${aleatorio()}${extreme(file.originalname)}`)<br>
 
-        },
-        filename: (req, file, cb) => {
-        cd(null, `${Date.now()}_${aleatorio()}${extreme(file.originalname)}`)
-
-        },
-        })
-        };
-      </div>
+        },<br>
+        })<br>
+        };<br>
     </div>
     Agora é capturar o erro para trata-lo na tela, para isso será preciso modificar o <strong>fotoController</strong> e
     o <strong>fotoRoutes</strong>
