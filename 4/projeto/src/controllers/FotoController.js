@@ -12,7 +12,7 @@ class FotoController {
           errors: [error.code],
         });
       }
-      res.json(req.file);
+     return res.json(req.file);
     });
   }
 }
