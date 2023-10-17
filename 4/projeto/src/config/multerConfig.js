@@ -8,6 +8,10 @@ import { extname, resolve} from 'path';
 const aleatorio = ()=> Math.floor(Math.random() *1000 + 1000);
 
 export default {
+  FileFilter: (req, file, cb)=>{
+
+  },
+
   storage: multer.diskStorage({
     //local onde esta as fotos
     destination: (req, file, cb) => {
