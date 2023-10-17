@@ -14,6 +14,7 @@ export default {
     if (file.mimetype === 'image/png' && file.mimetype === 'image/jpg') {
       return cb(new multer.MulterError('Arquivo precisa ser PNG ou JPG'))
     }
+    return cb(null, true);
   },
 
   storage: multer.diskStorage({
