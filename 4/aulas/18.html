@@ -19,9 +19,38 @@
     <div class="exemplos">
 
     </div>
-    Agora é capturar o erro para trata-lo na tela
+    Agora é capturar o erro para trata-lo na tela, para isso será preciso modificar o <strong>fotoController</strong> e
+    o <strong>fotoRoutes</strong>
     <div class="exemplos">
-      
+      <span class="lembrete">
+        fotoController.js
+      </span> <br>
+      Aqui esta agora fazendo toda a parte da função, sendo tirado tudo da rota.
+      <div class="anotacoes">
+        import multer from 'multer'; <br>
+        import multerConfig from '../config/multerConfig'; <br>
+        <br>
+
+        const upload = multer(multerConfig).single('foto'); <br>
+
+        <div class="marcada">
+
+          class FotoController { <br>
+          async store(req, res) { <br>
+          return upload(req, res, (error) => { <br>
+          if (error) { <br>
+          return res.status(400).json({ <br>
+          errors: [error.code], <br>
+          }); <br>
+          } <br>
+          return res.json(req.file); <br>
+          }); <br>
+          } <br>
+          } <br>
+        </div>
+        export default new FotoController();
+      </div>
+
     </div>
   </section>
 </body>
