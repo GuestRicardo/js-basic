@@ -1,35 +1,19 @@
 modules.exports ={
   up:(queryInterface, Sequelize) =>{
-    return queryInterface.createTable('alunos', {
+    return queryInterface.createTable('fotos', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
-      nome: {
+      originalname: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      sobreNome: {
+      filename: {
         type: Sequelize.STRING,
         allowNull: false,
-      },
-      email: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      idade: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      altura: {
-        type: Sequelize.FLOAT,
-        allowNull: false
-      },
-      peso: {
-        type: Sequelize.FLOAT,
-        allowNull: false
       },
       created_at:{
         type: Sequelize.DATE,
@@ -42,7 +26,7 @@ modules.exports ={
     });
   },
   down:(queryInterface)=>{
-    return queryInterface.dropTable('alunos');
+    return queryInterface.dropTable('fotos');
   }
 };
 
