@@ -45,11 +45,22 @@
       E para isso sera preciso criar uma nova migração
     </p>
     <div class="exemplos">
-      No terminal: 
+      No terminal:
       <div class="anotacoes">
         npx sequelize migration:create --name=criar-tabela-do-aluno
       </div>
+      Segue abaixo os significados das configurações usadas no migration.
+      <div class="anotacoes">
+        <ul>
+          <li><span class="marcada">ON delete CASCATE</span> se o registro pai for deletado, o filho tambem será.</li>
+          <li><span class="marcada">ON update CASCATE</span>  </li>
+          <li><span class="marcada">ON action</span> </li>
+          <li><span class="marcada">set null</span> </li>
+          <li><span class="marcada">no action</span> </li>
+        </ul>
+      </div>
     </div>
+
     </div>
   </section>
 </body>
