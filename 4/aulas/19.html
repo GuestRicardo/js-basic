@@ -20,6 +20,23 @@
       <span class="lembrete">
         fotoRoutes.js
       </span> <br>
+      A ideia aq é fechar a rota para o login.
+      <div class="anotacoes">
+
+        import { Router } from 'express'; <br>
+        <div class="marcada">
+          import loginRequired from '../middleware/loginRequired'
+        </div>
+
+        import fotocontroller from '../controllers/FotoController';<br>
+
+        const router = new Router();<br>
+
+        router.post('/',<span class="marcada">loginRequired,</span> fotocontroller.store);<br>
+
+        <br>
+        export default router;<br>
+      </div>
     </div>
     </div>
   </section>
