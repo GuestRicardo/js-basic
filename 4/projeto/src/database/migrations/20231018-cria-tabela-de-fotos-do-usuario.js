@@ -7,6 +7,19 @@ modules.exports ={
         autoIncrement: true,
         primaryKey: true,
       },
+      aluno_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        refereces:{
+          model:'alunos',
+          key:'id',
+        },
+        ondelete: 'CASCATE',
+        onupdate: 'CASCATE',
+
+        autoIncrement: true,
+        primaryKey: true,
+      },
       originalname: {
         type: Sequelize.STRING,
         allowNull: false,
