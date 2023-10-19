@@ -2,7 +2,7 @@ import Sequelize, {
   Model
 } from "sequelize";
 
-export default class Aluno extends Model {
+export default class Foto extends Model {
   static init(sequelize) {
     super.init({
       nome: {
@@ -16,52 +16,7 @@ export default class Aluno extends Model {
         },
       },
 
-      sobrenome: {
-        type: Sequelize.STRING,
-        defaultValue: '',
-        validate: {
-          len: {
-            args: [3, 255],
-            msg: 'sobrenome precisa ter entre 3 a 255 caracteres',
-          },
-        },
-      },
-      email: {
-        type: Sequelize.STRING,
-        defaultValue: '',
-        unique: {
-          isEmail:{
-            msg: 'Email invalido',
-          }
-        },
-      },
-      idade: {
-        type: Sequelize.INTEGER,
-        defaultValue: '',
-        validate: {
-          isInt: {
-            msg: 'USE somente numeros inteiro',
-          },
-        },
-      },
-      peso: {
-        type: Sequelize.FLOAT,
-        defaultValue: '',
-        validate: {
-          isFloat: {
-            msg: 'Valor invalido, somente numeros!',
-          },
-        },
-      },
-      altura: {
-        type: Sequelize.FLOAT,
-        defaultValue: '',
-        validate: {
-          isFloat: {
-            msg: 'Valor invalido, somente numeros!',
-          },
-        },
-      },
+   
     }, {
       sequelize,
     });
