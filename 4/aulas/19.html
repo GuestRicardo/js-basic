@@ -52,16 +52,17 @@
       Segue abaixo os significados das configurações usadas no migration.
       <div class="anotacoes">
         <ul>
-          <li><span class="marcada">ON delete CASCATE</span> se o registro pai for deletado, o filho tambem será.</li>
+          <li><span class="marcada">ON delete CASCATE</span> se o registro pai for deletado, o filho tambem será.</li><br>
           <li><span class="marcada">ON update CASCATE</span> se o primary key do registro pai for alterada, isso será
-            refletido no registro filho </li>
+            refletido no registro filho </li> <br>
           <li><span class="marcada">NO action</span> Sem ações. significa que o MYSQL não vai realizar nenhuma ação por
             você, porem, voce nao podera apagar ou atualizar a primary key do registro pai, nem consiguirá alterar a
             <strong>forekey</strong> do registro filho caso a <strong>primary key</strong> do registro pai ainda não
-            tiver sido atualizada</li>
+            tiver sido atualizada</li><br>
           <li><span class="marcada">RESTRICT</span> significada que qualquer tentativa de apagar ou atualizar o registro
-            pai vai falhar lançado um erro.</li>
-          <li><span class="marcada">set null</span> Se você apagar ou atualizar a primary key do registro pai, a foreign key do registro filho sera configurada para NULL</li>
+            pai vai falhar lançado um erro.</li><br>
+          <li><span class="marcada">set null</span> Se você apagar ou atualizar a primary key do registro pai, a foreign
+            key do registro filho sera configurada para NULL</li>
 
         </ul>
       </div>
