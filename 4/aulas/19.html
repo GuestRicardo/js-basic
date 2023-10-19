@@ -188,8 +188,11 @@
       <span class="lembrete">FotoController.js</span> <br>
       import multer from 'multer';<br>
       import multerConfig from '../config/multerConfig';<br>
-      import Foto from '../model/Foto';<br>
+      <div class="marcada">
+        import Foto from '../model/Foto';<br>
+      </div>
       <br>
+
       const upload = multer(multerConfig).single('foto');<br>
       <br>
 
@@ -201,9 +204,11 @@
       errors: [error.code],<br>
       });<br>
       }<br>
-      const {originalname, filename} = req.file;<br>
-      const { aluno_id } = req.body;<br>
-      const foto = await Foto.create({ originalname, filename, aluno_id });<br>
+      <div class="marcada">
+        const {originalname, filename} = req.file;<br>
+        const { aluno_id } = req.body;<br>
+        const foto = await Foto.create({ originalname, filename, aluno_id });<br>
+      </div>
       <br>
       return res.json(foto);<br>
       });<br>
