@@ -202,7 +202,8 @@
       });<br>
       }<br>
       const {originalname, filename} = req.file;<br>
-      const foto = await Foto.create({ originalname, filename });<br>
+      const { aluno_id } = req.body;<br>
+      const foto = await Foto.create({ originalname, filename, aluno_id });<br>
       <br>
       return res.json(foto);<br>
       });<br>
