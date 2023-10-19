@@ -16,9 +16,6 @@ modules.exports ={
         },
         ondelete: 'CASCATE',
         onupdate: 'CASCATE',
-
-        autoIncrement: true,
-        primaryKey: true,
       },
       originalname: {
         type: Sequelize.STRING,
