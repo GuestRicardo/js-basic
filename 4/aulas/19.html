@@ -172,7 +172,7 @@
       <div class="marcada">
         import Foto from "../model/Foto"<br>
       </div>
- 
+
       const models = [Aluno, User, Foto];<br>
       <br>
       const connection = new Sequelize(databaseConfig);<br>
@@ -186,6 +186,30 @@
     Agora é a vez do controller:
     <div class="exemplos">
       <span class="lembrete">FotoController.js</span> <br>
+      import multer from 'multer';<br>
+      import multerConfig from '../config/multerConfig';<br>
+      import Foto from '../model/Foto';<br>
+      <br>
+      const upload = multer(multerConfig).single('foto');<br>
+      <br>
+
+      class FotoController {<br>
+      store(req, res) {<br>
+      return upload(req, res, async (error) => {<br>
+      if (error) {<br>
+      return res.status(400).json({<br>
+      errors: [error.code],<br>
+      });<br>
+      }<br>
+      const {originalname, filename} = req.file;<br>
+      const foto = await Foto.create({ originalname, filename });<br>
+      <br>
+      return res.json(foto);<br>
+      });<br>
+      }<br>
+      }<br>
+
+      export default new FotoController();
     </div>
   </section>
 </body>
