@@ -169,14 +169,19 @@
       import databaseConfig from '../config/database';<br>
       import Aluno from "../model/Aluno";<br>
       import User from "../model/User";<br>
-      import Foto from "../model/Foto"<br>
-      <br>
+      <div class="marcada">
+        import Foto from "../model/Foto"<br>
+      </div>
+ 
       const models = [Aluno, User, Foto];<br>
       <br>
       const connection = new Sequelize(databaseConfig);<br>
       <br>
       models.forEach((model)=> model.init(connection));<br>
-      models.forEach((model)=> model.associate && model.associate(connection.models));<br>
+      <div class="marcada">
+        models.forEach((model)=> model.associate && model.associate(connection.models));<br>
+
+      </div>
     </div>
   </section>
 </body>
