@@ -94,24 +94,24 @@
               type: Sequelize.STRING,<br>
               allowNull: false,<br>
             },<br>
-            filename: {
-              type: Sequelize.STRING,
-              allowNull: false,
-            },
-            created_at:{
-              type: Sequelize.DATE,
-              allowNull: false,
-            },
-            updated_at:{
-              type: Sequelize.DATE,
-              allowNull: false,
-            },
-          });
-        },
-        down:(queryInterface)=>{
-          return queryInterface.dropTable('fotos');
-        }
-      };
+            filename: {<br>
+              type: Sequelize.STRING,<br>
+              allowNull: false,<br>
+            },<br>
+            created_at:{<br>
+              type: Sequelize.DATE,<br>
+              allowNull: false,<br>
+            },<br>
+            updated_at:{<br>
+              type: Sequelize.DATE,<br>
+              allowNull: false,<br>
+            },<br>
+          });<br>
+        },<br>
+        down:(queryInterface)=>{<br>
+          return queryInterface.dropTable('fotos');<br>
+        }<br>
+      };<br>
     </div>
   </section>
 </body>
