@@ -72,45 +72,45 @@
     <div class="exemplos">
       <span class="lembrete">20231018-cria-tabela-de-usuario.js</span><br><br>
       modules.exports ={ <br>
-        up:(queryInterface, Sequelize) =>{<br>
-          return queryInterface.createTable('fotos', {<br>
-            id: {<br>
-              type: Sequelize.INTEGER,<br>
-              allowNull: false,<br>
-              autoIncrement: true,<br>
-              primaryKey: true,<br>
-            },<br>
-            aluno_id: {<br>
-              type: Sequelize.INTEGER,<br>
-              allowNull: false,<br>
-              refereces:{<br>
-                model:'alunos',<br>
-                key:'id',<br>
-              },<br>
-              ondelete: 'CASCATE',<br>
-              onupdate: 'CASCATE',<br>
-            },<br>
-            originalname: {<br>
-              type: Sequelize.STRING,<br>
-              allowNull: false,<br>
-            },<br>
-            filename: {<br>
-              type: Sequelize.STRING,<br>
-              allowNull: false,<br>
-            },<br>
-            created_at:{<br>
-              type: Sequelize.DATE,<br>
-              allowNull: false,<br>
-            },<br>
-            updated_at:{<br>
-              type: Sequelize.DATE,<br>
-              allowNull: false,<br>
-            },<br>
-          });<br>
-        },<br>
-        down:(queryInterface)=>{<br>
-          return queryInterface.dropTable('fotos');<br>
-        }<br>
+      up:(queryInterface, Sequelize) =>{<br>
+      return queryInterface.createTable('fotos', {<br>
+      id: {<br>
+      type: Sequelize.INTEGER,<br>
+      allowNull: false,<br>
+      autoIncrement: true,<br>
+      primaryKey: true,<br>
+      },<br>
+      aluno_id: {<br>
+      type: Sequelize.INTEGER,<br>
+      allowNull: false,<br>
+      refereces:{<br>
+      model:'alunos',<br>
+      key:'id',<br>
+      },<br>
+      ondelete: 'CASCATE',<br>
+      onupdate: 'CASCATE',<br>
+      },<br>
+      originalname: {<br>
+      type: Sequelize.STRING,<br>
+      allowNull: false,<br>
+      },<br>
+      filename: {<br>
+      type: Sequelize.STRING,<br>
+      allowNull: false,<br>
+      },<br>
+      created_at:{<br>
+      type: Sequelize.DATE,<br>
+      allowNull: false,<br>
+      },<br>
+      updated_at:{<br>
+      type: Sequelize.DATE,<br>
+      allowNull: false,<br>
+      },<br>
+      });<br>
+      },<br>
+      down:(queryInterface)=>{<br>
+      return queryInterface.dropTable('fotos');<br>
+      }<br>
       };<br>
     </div>
     <p>
@@ -119,6 +119,13 @@
         npx sequelize db:migrate
       </div>
     </p>
+    <p>Agora o proximo passo será criar o model de fotos</p>
+    <div class="exemplos">
+      <span class="lembrete">
+        Aluno.js
+      </span> <br>
+      
+    </div>
   </section>
 </body>
 
