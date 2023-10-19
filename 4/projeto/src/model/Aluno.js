@@ -67,4 +67,5 @@ export default class Aluno extends Model {
     });
     return this;
   }
+
 }

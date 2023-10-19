@@ -26,8 +26,12 @@ export default class Foto extends Model {
 
     }, {
       sequelize,
-      tableName:'fotos',
+      tableName: 'fotos',
     });
     return this;
+  }
+  //associando foto a aluno
+  static associate(models) {
+    this.belongsTo(models.aluno, { foreignKey: 'aluno_id' });
   }
 }

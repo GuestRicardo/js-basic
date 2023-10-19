@@ -124,9 +124,43 @@
       <span class="lembrete">
         Aluno.js
       </span> <br>
-
+      export default class Foto extends Model { <br>
+      static init(sequelize) {<br>
+      super.init({<br>
+      originalname: {<br>
+      type: Sequelize.STRING,<br>
+      defaultValue: '',<br>
+      validate: {<br>
+      notEmpty: {<br>
+      msg: 'Campo nao pode ficar vazio',<br>
+      },<br>
+      },<br>
+      },<br>
+      filename: {<br>
+      type: Sequelize.STRING,<br>
+      defaultValue: '',<br>
+      validate: {<br>
+      notEmpty: {<br>
+      msg: 'Campo nao pode ficar vazio',<br>
+      },<br>
+      },<br>
+      },<br>
+      <br>
+      }, {<br>
+      sequelize,<br>
+      tableName: 'fotos',<br>
+      });<br>
+      return this;<br>
+      }<br>
+      <div class="marcada">
+        //associando foto a aluno<br>
+        static associate(models) {<br>
+        this.belongsTo(models.aluno, { foreignKey: 'aluno_id' });<br>
+        }
+      </div>
+      }<br>
     </div>
-    Agora é associar foto com aluno.
+   
   </section>
 </body>
 
