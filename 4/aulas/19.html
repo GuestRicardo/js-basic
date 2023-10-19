@@ -69,7 +69,50 @@
       </div>
     </div>
     </div>
-div.
+    <div class="exemplos">
+      <span class="lembrete">20231018-cria-tabela-de-usuario.js</span>
+      modules.exports ={ <br>
+        up:(queryInterface, Sequelize) =>{<br>
+          return queryInterface.createTable('fotos', {<br>
+            id: {<br>
+              type: Sequelize.INTEGER,<br>
+              allowNull: false,<br>
+              autoIncrement: true,<br>
+              primaryKey: true,<br>
+            },<br>
+            aluno_id: {<br>
+              type: Sequelize.INTEGER,<br>
+              allowNull: false,<br>
+              refereces:{<br>
+                model:'alunos',<br>
+                key:'id',<br>
+              },<br>
+              ondelete: 'CASCATE',<br>
+              onupdate: 'CASCATE',<br>
+            },<br>
+            originalname: {<br>
+              type: Sequelize.STRING,<br>
+              allowNull: false,<br>
+            },<br>
+            filename: {
+              type: Sequelize.STRING,
+              allowNull: false,
+            },
+            created_at:{
+              type: Sequelize.DATE,
+              allowNull: false,
+            },
+            updated_at:{
+              type: Sequelize.DATE,
+              allowNull: false,
+            },
+          });
+        },
+        down:(queryInterface)=>{
+          return queryInterface.dropTable('fotos');
+        }
+      };
+    </div>
   </section>
 </body>
 
