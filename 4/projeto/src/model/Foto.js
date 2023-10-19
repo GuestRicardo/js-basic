@@ -5,20 +5,28 @@ import Sequelize, {
 export default class Foto extends Model {
   static init(sequelize) {
     super.init({
-      nome: {
+      originalname: {
         type: Sequelize.STRING,
         defaultValue: '',
         validate: {
-          len: {
-            args: [3, 255],
-            msg: 'Nome precisa ter entre 3 a 255 caracteres',
+          notEmpty: {
+            msg: 'Campo nao pode ficar vazio',
+          },
+        },
+      },
+      filename: {
+        type: Sequelize.STRING,
+        defaultValue: '',
+        validate: {
+          notEmpty: {
+            msg: 'Campo nao pode ficar vazio',
           },
         },
       },
 
-   
     }, {
       sequelize,
+      tableName:'fotos',
     });
     return this;
   }
