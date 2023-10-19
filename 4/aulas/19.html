@@ -163,10 +163,21 @@
     <p>Agora nos <strong>seeds</strong> é adicionar as configurações no index.js</p>
     <h2 class="marcada">Lembre-se todo modo tera que ser trazido para o <span style="color: blue;"
         class="cyber">seeds/index.js</span> </h2>
-        <div class="anotacoes">
-          <span class="lembrete">database/seeds/index.js</span> <br>
-          
-        </div>
+    <div class="anotacoes">
+      <span class="lembrete">database/seeds/index.js</span> <br>
+      import { Sequelize } from "sequelize";<br>
+      import databaseConfig from '../config/database';<br>
+      import Aluno from "../model/Aluno";<br>
+      import User from "../model/User";<br>
+      import Foto from "../model/Foto"<br>
+      <br>
+      const models = [Aluno, User, Foto];<br>
+      <br>
+      const connection = new Sequelize(databaseConfig);<br>
+      <br>
+      models.forEach((model)=> model.init(connection));<br>
+      models.forEach((model)=> model.associate && model.associate(connection.models));<br>
+    </div>
   </section>
 </body>
 
