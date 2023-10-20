@@ -5,8 +5,8 @@ class AlunoController {
   async index(req, res) {
     const alunos = await Aluno.findAll({
       attributes: ['id', 'nome','sobrenome','email', 'idade', 'peso','altura'],
-      order: [['id', 'Desc']],
-     
+      order: [['id', 'DESC'], [foto, 'id', 'DESC']],
+
     });
   };
   //criando aluno
