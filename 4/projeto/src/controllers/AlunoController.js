@@ -2,7 +2,9 @@ import Aluno from "../model/Aluno";
 
 class AlunoController {
   async index(req, res) {
-    const alunos = await Aluno.findAll();
+    const alunos = await Aluno.findAll({
+      attributes: ['id', 'nome','sobrenome','email', 'idade', 'peso','altura']
+    });
   };
   //criando aluno
   async store(req, res) {
