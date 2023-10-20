@@ -6,7 +6,7 @@ class AlunoController {
     const alunos = await Aluno.findAll({
       attributes: ['id', 'nome','sobrenome','email', 'idade', 'peso','altura'],
       order: [['id', 'Desc']],
-      include:
+     
     });
   };
   //criando aluno
