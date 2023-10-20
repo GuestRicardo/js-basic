@@ -69,7 +69,145 @@
     <div class="exemplos">
       <span class="lembrete">
         AlunoController.js
-      </span>
+      </span> <br>
+      import Aluno from "../model/Aluno";<br>
+
+     <span class="marcada">
+       import Foto from "../model/Foto";
+     </span> <br>
+
+class AlunoController {<br>
+  async index(req, res) {<br>
+    const alunos = await Aluno.findAll({<br>
+      <span class="marcada">
+        //astributos do aluno
+      </span> <br>
+      attributes: ['id', 'nome', 'sobrenome', 'email', 'idade', 'peso', 'altura'],<br>
+      order: [<br>
+        ['id', 'DESC'],
+        [foto, 'id', 'DESC']<br>
+      ],<br>
+      <span class="marcada">
+        //atributos da foto
+      </span><br>
+      include: {<br>
+        model: Foto,<br>
+        attributes: ['filename'],<br>
+      },<br>
+    });<br>
+  };<br>
+  <span class="marcada">
+    //criando aluno
+  </span> <br>
+  async store(req, res) {<br>
+    try {<br>
+      const aluno = await Aluno.create(req.body)<br>
+    } catch (e) {<br>
+      return res.status(400).json({<br>
+        errors: e.errors.map((err) => err.message),<br>
+      })<br>
+    }<br>
+  }<br>
+  <span class="marcada">
+    //mostrar um aluno
+  </span> <br>
+  async show(req, res) {<br>
+    try {<br>
+      const {<br>
+        id
+      } = req.params;<br>
+      if (!id) {<br>
+        return res.status(400).json({<br>
+          errors: ['faltando ID'],<br>
+        });<br>
+      }<br>
+      const aluno = await Aluno.findByPk(id, {<br>
+        <span class="marcada">//atributos do aluno</span><br> 
+        attributes: ['id', 'nome', 'sobrenome', 'email', 'idade', 'peso', 'altura'],<br> 
+        order: [<br> 
+          ['id', 'DESC'],
+          [foto, 'id', 'DESC']<br> 
+        ],<br> 
+        <span class="marcada">//atributos da foto</span><br>  
+        include: {<br> 
+          model: Foto,<br> 
+          attributes: ['filename'],<br> 
+        },<br> 
+      });<br> 
+      if (!aluno) {<br> 
+        return res.status(400).json({<br> 
+          errors: ['Aluno Não existe'],<br> 
+        });<br> 
+      }<br> 
+      return res.json(aluno);<br> 
+    } catch (e) {<br> 
+      return res.status(400).json({<br> 
+        errors: e.errors.map((err) => err.message),<br> 
+      })<br> 
+    }<br> 
+  }<br> 
+  <span class="marcada">
+    //deletar aluno
+  </span> <br> 
+  async delete(req, res) {<br> 
+    try {<br> 
+      const {
+        id
+      } = req.params;<br> 
+      if (!id) {
+        return res.status(400).json({
+          errors: ['faltando ID'],<br> 
+        });<br> 
+      }<br> 
+      const aluno = await Aluno.findByPk(id);<br> 
+      if (!aluno) {<br> 
+        return res.status(400).json({<br> 
+          errors: ['Aluno Não existe'],<br> 
+        });<br> 
+      }<br> 
+      await aluno.destroy();<br> 
+      return res.json({
+        apagado: true,
+      });<br> 
+    } catch (e) {<br> 
+      return res.status(400).json({<br> 
+        errors: e.errors.map((err) => err.message),<br> 
+      })<br> 
+    }<br> 
+  }
+  <span class="marcada">
+    //atualizar aluno
+  </span>  <br>
+  async update(req, res) { <br>
+    try {<br>
+      const {
+        id
+      } = req.params;<br>
+      if (!id) {<br>
+        return res.status(400).json({<br>
+          errors: ['faltando ID'],<br>
+        });<br>
+      }<br>
+      const aluno = await Aluno.findByPk(id);<br>
+      if (!aluno) {<br>
+        return res.status(400).json({<br>
+          errors: ['Aluno Não existe'],<br>
+        });<br>
+      }<br>
+      <br>
+      const alunoAtualizado = await aluno.update(req.body);<br>
+      return res.json(alunoAtualizado);<br>
+    } catch (e) {<br>
+      return res.status(400).json({<br>
+        errors: e.errors.map((err) => err.message),<br>
+      })<br>
+    }<br>
+  }<br>
+}<br>
+
+
+export default new AlunoController();
+
     </div>
     <p>Como criou se a relação entre aluno para foto será preciso ir em
       model/Aluno.js e adicionatr comando para q inverta a opção selecionada
