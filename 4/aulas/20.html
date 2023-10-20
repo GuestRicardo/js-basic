@@ -165,6 +165,22 @@
       <span class="lembrete">
         userRoutes.js
       </span> <br>
+
+import { Router } from 'express'; <br>
+const router = new Router();<br>
+<br>
+import usercontroller from '../controllers/UserControllerController';<br>
+import loginRequired from '../middleware/loginRequired';<br>
+<br>
+
+router.get('/',loginRequired, usercontroller.index);<br>
+router.get('/:id', usercontroller.show); <br>
+<br>
+router.post('/',<span class="marcada">loginRequired</span>, usercontroller.store);//criar usuario<br>
+router.put('/:id',<span class="marcada">loginRequired</span>, usercontroller.update);//editar<br>
+router.delete('/:id',<span class="marcada">loginRequired</span>, usercontroller.delete);//deletar<br>
+<br>
+export default router;
     </div>
   </section>
 </body>
