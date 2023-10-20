@@ -20,7 +20,47 @@
       <span class="lembrete">
         FotoController.js
       </span> <br>
+      import multer from 'multer'; <br>
+      import multerConfig from '../config/multerConfig'; <br>
+      import Foto from '../model/Foto'; <br>
+      <br>
+      const upload = multer(multerConfig).single('foto');<br>
+      <br>
 
+      class FotoController {<br>
+      store(req, res) {<br>
+      return upload(req, res, async (error) => {<br>
+      if (error) {<br>
+      return res.status(400).json({<br>
+      errors: [error.code],<br>
+      });<br>
+      } <div class="marcada">
+        try {<br><span style="background-color: blue; color: aliceblue;">//caso aluno exista</span> <br>
+        const {<br>
+        originalname,<br>
+        filename<br>
+        } = req.file;<br>
+        const {<br>
+        aluno_id<br>
+        } = req.body;<br>
+        const foto = await Foto.create({<br>
+        originalname,<br>
+        filename,<br>
+        aluno_id<br>
+        });<br>
+        <br>
+        return res.json(foto);<br>
+        } catch (e) {<br> <span style="background-color: blue; color: aliceblue;">//caso aluno nao exista</span><br>
+        return res.status(400).json({<br>
+        errors: ["Aluno nao existe"]<br>
+        })<br>
+        }<br>
+        });<br>
+        }<br>
+      </div>
+      }
+
+      export default new FotoController();
     </div>
   </section>
 </body>
