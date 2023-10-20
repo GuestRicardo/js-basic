@@ -1,10 +1,12 @@
 import Aluno from "../model/Aluno";
+import Foto from "../model/Foto";
 
 class AlunoController {
   async index(req, res) {
     const alunos = await Aluno.findAll({
       attributes: ['id', 'nome','sobrenome','email', 'idade', 'peso','altura'],
       order: [['id', 'Desc']],
+      include:
     });
   };
   //criando aluno
