@@ -18,6 +18,7 @@
       endereço.
     </p>
     <p>Para isso funcionar primeiramente iremos ao model da foto.</p>
+    <!--foto-->
     <div class="exemplos">
       <span class="lembrete">
         model/Foto.js
@@ -26,6 +27,7 @@
     </div>
     E para que possa usar essa url virtual mais de um lugar, será preciso criar uma nova conguração
     dentro da pasta <strong>config</strong>
+    <!--appConfig-->
     <div class="exemplos">
       <span class="lembrete">
         config/appConfig.js
@@ -41,6 +43,51 @@
       Agora é configurar os arquivos estaticos,para isso é preciso configurar uma pasta para os arquivos erstaticos
       criando uma pasta e direcionar tudo pelo arquivo <strong>app.js</strong>
     </p>
+    <!--app-->
+    
+    <div class="exemplos">
+      <span class="lembrete">
+        app.js
+      </span> <br>
+      import dotenv from 'dotenv'; <br>
+      import express from 'express';<br>
+      import userRoutes from './src/routes/userRoutes';<br>
+      import homeRoutes from './src/routes/homeRoutes';<br>
+      import tokenRoutes from './src/routes/tokenRoutes';<br>
+      import alunosRoutes from './src/routes/alunoRoutes';<br>
+      import fotoRoutes from './src/routes/fotoRoutes';<br>
+      <span class="marcada">
+        import {resolve} from 'path';
+      </span><br>
+      <br>
+      dotenv.config();<br>
+      <br>
+      import './src/database';<br>
+      <br>
+      class App {<br>
+      constructor() {<br>
+      this.app = express();<br>
+      this.middlewares();<br>
+      this.routes();<br>
+      }<br>
+      <br>
+      middlewares() {<br>
+      this.app.use(express.urlencoded({ extended: true}));<br>
+      this.app.use(express.json());<br>
+      <span class="marcada">this.app.use(express.static(resolve(__dirname, 'uploads')));</span> <br>
+      }<br>
+      <br>
+      routes() {<br>
+      this.app.use('/', homeRoutes);<br>
+      this.app.use('/users/', userRoutes);<br>
+      this.app.use('/tokens/', tokenRoutes);<br>
+      this.app.use('/alunos/', alunosRoutes);<br>
+      this.app.use('/fotos/', fotoRoutes);<br>
+      }<br>
+      }<br>
+      <br>
+      export default new App().app;<br>
+    </div>
   </section>
 </body>
 
