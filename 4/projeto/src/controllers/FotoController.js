@@ -13,6 +13,12 @@ class FotoController {
           errors: [error.code],
         });
       }
+      try{
+
+      } catch(e){
+
+      }
+      
       const {originalname, filename} = req.file;
       const { aluno_id } = req.body;
       const foto = await Foto.create({ originalname, filename, aluno_id });
