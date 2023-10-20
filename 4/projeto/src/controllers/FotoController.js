@@ -13,17 +13,15 @@ class FotoController {
           errors: [error.code],
         });
       }
-      try{
+      try{//caso exista
+        const {originalname, filename} = req.file;
+        const { aluno_id } = req.body;
+        const foto = await Foto.create({ originalname, filename, aluno_id });
 
-      } catch(e){
+       return res.json(foto);
+      } catch(e){//caso nao exista
 
       }
-      
-      const {originalname, filename} = req.file;
-      const { aluno_id } = req.body;
-      const foto = await Foto.create({ originalname, filename, aluno_id });
-
-     return res.json(foto);
     });
   }
 }
