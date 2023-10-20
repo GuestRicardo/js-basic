@@ -4,18 +4,26 @@ import Foto from "../model/Foto";
 class AlunoController {
   async index(req, res) {
     const alunos = await Aluno.findAll({
-      attributes: ['id', 'nome','sobrenome','email', 'idade', 'peso','altura'],
-      order: [['id', 'DESC'], [foto, 'id', 'DESC']],
-
+      //astributos do aluno
+      attributes: ['id', 'nome', 'sobrenome', 'email', 'idade', 'peso', 'altura'],
+      order: [
+        ['id', 'DESC'],
+        [foto, 'id', 'DESC']
+      ],
+      //atributos da foto
+      include: {
+        model: Foto,
+        attributes: ['filename'],
+      },
     });
   };
   //criando aluno
   async store(req, res) {
     try {
-     const aluno = await Aluno.create(req.body)
+      const aluno = await Aluno.create(req.body)
     } catch (e) {
       return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
+        errors: e.errors.map((err) => err.message),
       })
     }
   }
@@ -39,7 +47,7 @@ class AlunoController {
       return res.json(aluno);
     } catch (e) {
       return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
+        errors: e.errors.map((err) => err.message),
       })
     }
   }
@@ -66,7 +74,7 @@ class AlunoController {
       });
     } catch (e) {
       return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
+        errors: e.errors.map((err) => err.message),
       })
     }
   }
@@ -92,7 +100,7 @@ class AlunoController {
       return res.json(alunoAtualizado);
     } catch (e) {
       return res.status(400).json({
-        errors: e.errors.map((err)=> err.message),
+        errors: e.errors.map((err) => err.message),
       })
     }
   }
