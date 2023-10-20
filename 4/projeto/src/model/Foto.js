@@ -23,7 +23,14 @@ export default class Foto extends Model {
           },
         },
       },
-
+      url: {
+        type: Sequelize.VIRTUAL,
+        //nome do arquivo
+        get(){
+          return `${this.getDataValue('filename')}`;
+        }
+        //url q acompanha
+      }
     }, {
       sequelize,
       tableName: 'fotos',
@@ -32,6 +39,8 @@ export default class Foto extends Model {
   }
   //associando foto a aluno
   static associate(models) {
-    this.belongsTo(models.aluno, { foreignKey: 'aluno_id' });
+    this.belongsTo(models.aluno, {
+      foreignKey: 'aluno_id'
+    });
   }
 }
