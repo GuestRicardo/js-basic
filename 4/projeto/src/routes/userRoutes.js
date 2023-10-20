@@ -16,7 +16,7 @@ router.get('/',loginRequired, usercontroller.index);//lista usuarios
 router.get('/:id', usercontroller.show); //lista usuario
 
 //usuario
-router.post('/', usercontroller.store);//criar usuario
+router.post('/',loginRequired, usercontroller.store);//criar usuario
 router.put('/:id',loginRequired, usercontroller.update);//editar
 router.delete('/:id',loginRequired, usercontroller.delete);//deletar
 
