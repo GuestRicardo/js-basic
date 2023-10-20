@@ -76,7 +76,86 @@
       <div class="exemplos">
         <span class="lembrete">
           model/Aluno.js
-        </span>
+        </span> <br>
+        import Sequelize, {<br>
+        Model<br>
+        } from "sequelize";<br>
+        <br>
+        export default class Aluno extends Model {<br>
+        static init(sequelize) {<br>
+        super.init({<br>
+        nome: {<br>
+        type: Sequelize.STRING,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        len: {<br>
+        args: [3, 255],<br>
+        msg: 'Nome precisa ter entre 3 a 255 caracteres',<br>
+        },<br>
+        },<br>
+        },<br>
+        <br>
+        sobrenome: {<br>
+        type: Sequelize.STRING,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        len: {<br>
+        args: [3, 255],<br>
+        msg: 'sobrenome precisa ter entre 3 a 255 caracteres',<br>
+        },<br>
+        },<br>
+        },<br>
+        email: {<br>
+        type: Sequelize.STRING,<br>
+        defaultValue: '',<br>
+        unique: {<br>
+        isEmail:{<br>
+        msg: 'Email invalido',
+        }<br>
+        },<br>
+        },<br>
+        idade: {<br>
+        type: Sequelize.INTEGER,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        isInt: {<br>
+        msg: 'USE somente numeros inteiro',<br>
+        },<br>
+        },<br>
+        },<br>
+        peso: {<br>
+        type: Sequelize.FLOAT,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        isFloat: {<br>
+        msg: 'Valor invalido, somente numeros!',<br>
+        },<br>
+        },<br>
+        },<br>
+        altura: {<br>
+        type: Sequelize.FLOAT,<br>
+        defaultValue: '',<br>
+        validate: {<br>
+        isFloat: {<br>
+        msg: 'Valor invalido, somente numeros!',<br>
+        },<br>
+        },<br>
+        },<br>
+        }, {<br>
+        sequelize,<br>
+        });<br>
+        return this;<br>
+        }
+        <div class="marcada">
+          <span style="color: bisque; background-color: blue;">
+            //aq esta falando que aluno recebe muitas fotos
+          </span> <br>
+          static associate(models){ <br>
+          this.hasMany(models.foto, { foreignKey: 'aluno_id'})<br>
+          }<br>
+        </div>
+        }
+
       </div>
     </p>
   </section>
