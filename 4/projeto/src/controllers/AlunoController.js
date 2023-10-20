@@ -38,7 +38,19 @@ class AlunoController {
           errors: ['faltando ID'],
         });
       }
-      const aluno = await Aluno.findByPk(id);
+      const aluno = await Aluno.findByPk(id, {
+        //atributos do aluno
+        attributes: ['id', 'nome', 'sobrenome', 'email', 'idade', 'peso', 'altura'],
+        order: [
+          ['id', 'DESC'],
+          [foto, 'id', 'DESC']
+        ],
+        //atributos da foto
+        include: {
+          model: Foto,
+          attributes: ['filename'],
+        },
+      });
       if (!aluno) {
         return res.status(400).json({
           errors: ['Aluno Não existe'],
