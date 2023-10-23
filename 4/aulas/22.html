@@ -87,14 +87,17 @@
     </p>
     </div>
     <strong>quarto passo:</strong> é adicionar o dominio da aplicação, pois ele esta na porta 3001, para isso é só ir no
-    arquivo <strong>appConfig.js</strong> e adicionar
+    arquivo <strong>appConfig.js</strong> e adicionar, e será feito um proxy reverso na porta 80
     <div class="exemplos">
       <span class="lembrete">
         appConfig.js
       </span> <br>
-
-      
+      export default { <br>
+      //url: 'http://localhost:3001', <br>
+      url: 'http://35.247.214.145',<br>
+      }
     </div>
+    
   </section>
 </body>
 
