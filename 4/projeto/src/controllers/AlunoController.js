@@ -13,7 +13,7 @@ class AlunoController {
       //atributos da foto
       include: {
         model: Foto,
-        attributes: ['filename'],
+        attributes: ['url','filename'],
       },
     });
   };
