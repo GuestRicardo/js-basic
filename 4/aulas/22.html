@@ -36,42 +36,43 @@
         O sucrase vai rodar dentro da pasta <strong>src</strong> e vai fazer a conversao para pasta
         <strong>dist(significa distribuição)</strong> <br>
         <hr>
-        <strong>Lembrando</strong> que será preciso adicionar os arquivos <strong>app.js</strong> e <strong>server.js</strong> para a pasta src, para que possa ser lidos.
+        <strong>Lembrando</strong> que será preciso adicionar os arquivos <strong>app.js</strong> e
+        <strong>server.js</strong> para a pasta src, para que possa ser lidos.
         <div class="anotacoes">
           { <br>
-            <div style="padding-left: 19px;">
-              "name": "projeto",<br>
-              "version": "1.0.0",<br>
-              "description": "",<br>
-              "main": "index.js",<br>
-              "scripts": {<br>
-                "test": "echo \"Error: no test specified\" && exit 1",<br>
-                "dev": "nodemon server.js",<br>
-                <div class="marcada">
-                  "build": "sucrase ./src -d ./dist --transforms imports",<br>
-                  "start": "node dist/server.js"
-                </div>
-              },<br>
-              "keywords": [],<br>
-              "author": "",<br>
-              "license": "ISC",<br>
-              "devDependencies": {<br>
-                "eslint": "^8.48.0",<br>
-                "eslint-config-airbnb-base": "^15.0.0",<br>
-                "eslint-plugin-import": "^2.28.1",<br>
-                "nodemon": "^3.0.1",<br>
-                "sequelize": "^6.33.0",<br>
-                "sucrase": "^3.34.0"<br>
-              },<br>
-              "dependencies": {<br>
-                "bcryptjs": "^2.4.3",<br>
-                "dotenv": "^16.3.1",<br>
-                "express": "^4.18.2",<br>
-                "jsonwebtoken": "^9.0.2",<br>
-                "mariadb": "^3.2.1",<br>
-                "multer": "^1.4.5-lts.1"<br>
-              }
+          <div style="padding-left: 19px;">
+            "name": "projeto",<br>
+            "version": "1.0.0",<br>
+            "description": "",<br>
+            "main": "index.js",<br>
+            "scripts": {<br>
+            "test": "echo \"Error: no test specified\" && exit 1",<br>
+            "dev": "nodemon server.js",<br>
+            <div class="marcada">
+              "build": "sucrase ./src -d ./dist --transforms imports",<br>
+              "start": "node dist/server.js"
             </div>
+            },<br>
+            "keywords": [],<br>
+            "author": "",<br>
+            "license": "ISC",<br>
+            "devDependencies": {<br>
+            "eslint": "^8.48.0",<br>
+            "eslint-config-airbnb-base": "^15.0.0",<br>
+            "eslint-plugin-import": "^2.28.1",<br>
+            "nodemon": "^3.0.1",<br>
+            "sequelize": "^6.33.0",<br>
+            "sucrase": "^3.34.0"<br>
+            },<br>
+            "dependencies": {<br>
+            "bcryptjs": "^2.4.3",<br>
+            "dotenv": "^16.3.1",<br>
+            "express": "^4.18.2",<br>
+            "jsonwebtoken": "^9.0.2",<br>
+            "mariadb": "^3.2.1",<br>
+            "multer": "^1.4.5-lts.1"<br>
+            }
+          </div>
           }<br>
         </div>
       </div>
@@ -85,6 +86,9 @@
       </div>
     </p>
     </div>
+    <strong>quarto passo:</strong> é adicionar o dominio da aplicação, pois ele esta na porta 3001, para isso é só ir no
+    arquivo <strong>appConfig.js</strong> e adicionar
+    
   </section>
 </body>
 
