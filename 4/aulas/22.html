@@ -98,13 +98,52 @@
           //url: 'http://localhost:3001',
         </del>
       </p>
-      url: 'http://35.247.214.145',<br>
+      url: process.env.APP_URL,<br>
       }
     </div>
     Agora é execultar o server em modo build, para refazer a build
     <div class="exemplos">
       npm run build
     </div>
+    Agora no arquivo server.js sera preciso deixa-lo da seguinte forma...
+    <div class="exemplos">
+      import app from './app'; <br>
+      <br>
+      const port = 3001; <br>
+      app.listen(port); <br>
+    </div>
+    <hr>
+    <p>
+      <strong>Quinto passo:</strong> no arquivo <strong>.env</strong> será adicionado a porta e o dominio deixando
+      tirando do <strong>appConfig.js</strong>
+      <div class="exemplos">
+        <span class="lembrete">
+          .env
+        </span><br>
+        DATABASE=escola <br>
+        DATABASE_HOST=35,247,154<br>
+        DATABASE_PORT=3306<br>
+        DATABASE_USERNAME=root<br>
+        DATABASE_PASSWORD=dasdasdasdas5165<br>
+        <br>
+        TOKEN_SECRET=adfasdfasd45asd4asd8asd848asd<br>
+        TOKEN_EXPIRATION=1d<br>
+        <br>
+        <div class="marcada">
+          APP_URL=http://35.247.214.145<br>
+          APP_PORT=3001
+        </div>
+      </div>
+      Agora no <strong>server.js</strong> será adicionado tambem as configurações.
+      <div class="exemplos">
+        import app from './app'; <br>
+        <br>
+        <div class="marcada">
+          const port = process.env.APP_PORT; 
+        </div>
+        app.listen(port);
+      </div>
+    </p>
   </section>
 </body>
 
